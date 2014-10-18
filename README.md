@@ -8,6 +8,7 @@ Julia package for connecting to eoddata.com and downloading data.
 * [HTTPClient.HTTPC](https://github.com/JuliaWeb/HTTPClient.jl)
 * [LibExpat](https://github.com/amitmurthy/LibExpat.jl)
 
+## Usage
 ```
 using EodData
 
