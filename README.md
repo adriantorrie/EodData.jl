@@ -15,10 +15,10 @@ using EodData
 const USERNAME = "string"
 const PASSWORD = "string"
 
-login_response = login(USERNAME,PASSWORD)
-println(login_response.message)
-println(login_response.token)
+resp = login(USERNAME,PASSWORD)
+println(resp.message)
+println(resp.token)
 
-countries = country_list(login_response.token)
+countries = country_list(resp.token)
 println(countries)
 ```
