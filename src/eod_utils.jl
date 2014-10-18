@@ -14,7 +14,7 @@ function get_response(call::String, params::Dict{ASCIIString,ASCIIString})
 	const WS = "http://ws.eoddata.com/data.asmx"
 	const HOST_ADDRESS = "ws.eoddata.com"
 	const CONTENT_TYPE = "application/x-www-form-urlencoded"
-	const REQUEST_TIMEOUT = 60.0
+	const REQUEST_TIMEOUT = 3.0
 
 	resp = HTTPC.post("$WS$call", params, RequestOptions(headers=[("Host",HOST_ADDRESS)], content_type=CONTENT_TYPE, request_timeout=REQUEST_TIMEOUT))
 

@@ -3,7 +3,7 @@
 
 # ===================================
 # Make functions available externally
-export country_list, data_client_latest_version, data_formats, login
+export country_list, login
 
 # =========
 # Functions
@@ -12,7 +12,7 @@ export country_list, data_client_latest_version, data_formats, login
 # -----------
 # Returns a list of available countries.
 # INPUT: Token (Login Token)
-# OUTPUT: Dict() of countries of type ::Dict{String, String}
+# OUTPUT: Dict() of countries
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=CountryList
 function country_list(token::String)
 	if token == nothing
@@ -35,85 +35,20 @@ end
 # -----------------------
 # Returns the latest version information of Data Client.
 # INPUT: Token (Login Token)
-# OUTPUT: Date Client Version of type ::String
+# OUTPUT: Date Client Version
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=DataClientLatestVersion
-function data_client_latest_version(token::String)
-	if is(token, nothing)
-		error("data_client_latest_version() failed: Missing value in parameter -> token::Sring")
-	else
-		call = "/DataClientLatestVersion"
-		args = ["Token"=>"$token"]
-		xml_tree = get_response(call, args)
-
-		version = strip(find(xml_tree, "/RESPONSE/VERSION[1]").elements[1])
-
-		return version
-	end
+function data_client_latest_version()
+	# Type code here
 end
 
 # DataFormats
 # -----------
 # Returns the list of data formats.
 # INPUT: Token (Login Token)
-# OUTPUT: Dict() of DataFormats of the type ::Dict{String, DataFormat}
+# OUTPUT: List of DataFormats
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=DataFormats
-function data_formats(token::String)
-	if is(token, nothing)
-		error("data_formats() failed: Missing value in parameter -> token::Sring")
-	else
-		call = "/DataFormats"
-		args = ["Token"=>"$token"]
-		xml_tree = get_response(call, args)
-
-		# Shred xml_tree into a Dict{String, DataFormat}
-		delimiters = [',', ';', ' ' ]
-		formats = Dict{String, DataFormat}()
-		for df in find(xml_tree, "/RESPONSE/DATAFORMATS/DATAFORMAT")
-			# Initialise local
-			format_header = []
-			columns = Dict{Int32, DataFormatColumn}()
-
-			# Assign
-			code::String = strip(get(df.attr,"Code",""))
-			name::String = strip(get(df.attr,"Name",""))
-			format_header::Vector{String} = convert(Array{String}, split(strip(get(df.attr,"Header","")), delimiters))
-			date_format::String = strip(get(df.attr,"DateFormat",""))
-			extension::String = strip(get(df.attr,"Extension",""))
-			include_suffix::Bool = lowercase(strip(get(df.attr,"IncludeSuffix",""))) == "true" ? true : false
-			tab_column_seperator::Bool = lowercase(strip(get(df.attr,"TabColumnSeperator","")))  == "true" ? true : false
-			column_seperator::String = strip(get(df.attr,"ColumnSeperator",""))
-			text_qualifier::String = strip(get(df.attr,"TextQualifier",""))
-			filename_prefix::String = strip(get(df.attr,"FilenamePrefix",""))
-			filename_exchange_code::Bool = lowercase(strip(get(df.attr,"FilenameExchangeCode",""))) == "true" ? true : false
-			filename_date::Bool = lowercase(strip(get(df.attr,"FilenameDate",""))) == "true" ? true : false
-			include_header_row::Bool = lowercase(strip(get(df.attr,"IncludeHeaderRow",""))) == "true" ? true : false
-			hour_format::String = strip(get(df.attr,"HourFormat",""))
-			datetime_seperator::String = strip(get(df.attr,"DateTimeSeperator",""))
-			exchange_filename_format_date::String = strip(get(df.attr,"ExchangeFilenameFormatDate",""))
-			exchange_filename_format_date_range::String = strip(get(df.attr,"ExchangeFilenameFormatDateRange",""))
-			symbol_filename_format_date::String = strip(get(df.attr,"SymbolFilenameFormatDate",""))
-			symbol_filename_format_date_range::String = strip(get(df.attr,"SymbolFilenameFormatDateRange",""))
-
-			for col in find(df, "COLUMNS/DATAFORMAT_COLUMN")
-				column_header::String = strip(get(col.attr,"Header",""))
-				sort_order::Int32 = int(strip(get(col.attr,"SortOrder","")))
-				data_format_code::String = strip(get(col.attr,"Code",""))
-				data_format_name::String = strip(get(col.attr,"DataFormat",""))
-				column_code::String = strip(get(col.attr,"ColumnCode",""))
-				column_name::String = strip(get(col.attr,"ColumnName",""))
-				column_type_id::Int32 = int(strip(get(col.attr,"ColumnTypeId","")))
-				column_type::String = strip(get(col.attr,"ColumnType",""))
-
-				columns[sort_order] = DataFormatColumn(column_header, sort_order, data_format_code, data_format_name, column_code, column_name, column_type_id, column_type)
-			end
-
-			formats[code] = DataFormat(code, name, format_header, date_format, extension, include_suffix, tab_column_seperator, column_seperator,
-										text_qualifier, filename_prefix, filename_exchange_code, filename_date, include_header_row, hour_format,
-										datetime_seperator, exchange_filename_format_date, exchange_filename_format_date_range,
-										symbol_filename_format_date, symbol_filename_format_date_range, columns)
-		end
-		return formats
-	end
+function data_formats()
+	# Type code here
 end
 
 # ExchangeGet
@@ -160,7 +95,7 @@ end
 # -----
 # Login to EODData Financial Information Web Service. Used for Web Authentication.
 # INPUT: Username, Password
-# OUTPUT: Login Token, which is a field in the type ::LoginResponse
+# OUTPUT: Login Token
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=Login
 function login(username::String, password::String)
 	call = "/Login"
@@ -168,8 +103,8 @@ function login(username::String, password::String)
 	xml_tree = get_response(call, args)
 
 	# Set returned fields
-	message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
-	token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
+	message = find(xml_tree, "/LOGINRESPONSE[1]{Message}")
+	token = find(xml_tree, "/LOGINRESPONSE[1]{Token}")
 
 	return LoginResponse(message,token)
 end
