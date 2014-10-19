@@ -27,30 +27,31 @@ module EodData
 	- https://github.com/amitmurthy/LibExpat.jl
 	- http://nbviewer.ipython.org/github/amitmurthy/LibExpat.jl/blob/master/libexpat_test.ipynb
 =#
+using Dates
 using HTTPClient.HTTPC
 using LibExpat
 
 # ============================
 # Make EodData types available
-export DataFormat, DataFormatColumn, LoginResponse
+export DataFormat, DataFormatColumn, Exchange, LoginResponse
 
 # =============
 # EodData Types
 type DataFormatColumn
 	column_header::String
-	sort_order::Int32
+	sort_order::Int
 	data_format_code::String
 	data_format_name::String
 	column_code::String
 	column_name::String
-	column_type_id::Int32
+	column_type_id::Int
 	column_type::String
 end
 
 type DataFormat
 	code::String
 	name::String
-	format_header::Vector{String}
+	header_format::Vector{String}
 	date_format::String
 	extension::String
 	include_suffix::Bool
@@ -67,7 +68,22 @@ type DataFormat
 	exchange_filename_format_date_range::String
 	symbol_filename_format_date::String
 	symbol_filename_format_date_range::String
-	columns::Dict{Int32, DataFormatColumn}
+	columns::Dict{Int, DataFormatColumn}
+end
+
+type Exchange
+	code::String
+	name::String
+	last_trade_date_time::DateTime
+	country_code::String
+	currency_code::String
+	advances::Float64
+	declines::Float64
+	suffix::String
+	time_zone::String
+	is_intraday::Bool
+	intraday_start_date::DateTime
+	has_intraday_product::Bool
 end
 
 type LoginResponse

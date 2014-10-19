@@ -10,7 +10,7 @@
 # INPUT: Web Service Call, Web Service Call Parameters
 # OUTPUT: Xml tree of the type ::ETree
 # http://ws.eoddata.com/data.asmx?op=CountryList
-function get_response(call::String, params::Dict{ASCIIString,ASCIIString})
+function get_response(call::String, params::Dict{ASCIIString, ASCIIString})
 	const WS = "http://ws.eoddata.com/data.asmx"
 	const HOST_ADDRESS = "ws.eoddata.com"
 	const CONTENT_TYPE = "application/x-www-form-urlencoded"

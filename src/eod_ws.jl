@@ -3,7 +3,7 @@
 
 # ===================================
 # Make functions available externally
-export country_list, data_client_latest_version, data_formats, login
+export country_list, data_client_latest_version, data_formats, exchange_list, login
 
 # =========
 # Functions
@@ -71,12 +71,12 @@ function data_formats(token::String)
 		for df in find(xml_tree, "/RESPONSE/DATAFORMATS/DATAFORMAT")
 			# Initialise local
 			format_header = []
-			columns = Dict{Int32, DataFormatColumn}()
+			columns = Dict{Int, DataFormatColumn}()
 
 			# Assign
 			code::String = strip(get(df.attr,"Code",""))
 			name::String = strip(get(df.attr,"Name",""))
-			format_header::Vector{String} = convert(Array{String}, split(strip(get(df.attr,"Header","")), delimiters))
+			header_format::Vector{String} = convert(Array{String}, split(strip(get(df.attr,"Header","")), delimiters))
 			date_format::String = strip(get(df.attr,"DateFormat",""))
 			extension::String = strip(get(df.attr,"Extension",""))
 			include_suffix::Bool = lowercase(strip(get(df.attr,"IncludeSuffix",""))) == "true" ? true : false
@@ -96,18 +96,18 @@ function data_formats(token::String)
 
 			for col in find(df, "COLUMNS/DATAFORMAT_COLUMN")
 				column_header::String = strip(get(col.attr,"Header",""))
-				sort_order::Int32 = int(strip(get(col.attr,"SortOrder","")))
+				sort_order::Int = int(strip(get(col.attr,"SortOrder","")))
 				data_format_code::String = strip(get(col.attr,"Code",""))
 				data_format_name::String = strip(get(col.attr,"DataFormat",""))
 				column_code::String = strip(get(col.attr,"ColumnCode",""))
 				column_name::String = strip(get(col.attr,"ColumnName",""))
-				column_type_id::Int32 = int(strip(get(col.attr,"ColumnTypeId","")))
+				column_type_id::Int = int(strip(get(col.attr,"ColumnTypeId","")))
 				column_type::String = strip(get(col.attr,"ColumnType",""))
 
 				columns[sort_order] = DataFormatColumn(column_header, sort_order, data_format_code, data_format_name, column_code, column_name, column_type_id, column_type)
 			end
 
-			formats[code] = DataFormat(code, name, format_header, date_format, extension, include_suffix, tab_column_seperator, column_seperator,
+			formats[code] = DataFormat(code, name, header_format, date_format, extension, include_suffix, tab_column_seperator, column_seperator,
 										text_qualifier, filename_prefix, filename_exchange_code, filename_date, include_header_row, hour_format,
 										datetime_seperator, exchange_filename_format_date, exchange_filename_format_date_range,
 										symbol_filename_format_date, symbol_filename_format_date_range, columns)
@@ -130,10 +130,39 @@ end
 # ------------
 # Returns a list of available exchanges.
 # INPUT: Token (Login Token)
-# OUTPUT: List of exchanges
+# OUTPUT: Dict() of exchanges of the type ::Dict{String, Exchange}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ExchangeList
-function exchange_list()
-	# Type code here
+function exchange_list(token::String)
+	if is(token, nothing)
+		error("exchange_list() failed: Missing value in parameter -> token::Sring")
+	else
+		call = "/ExchangeList"
+		args = ["Token"=>"$token"]
+		xml_tree = get_response(call, args)
+
+		# Shred xml_tree into a Dict{String, Exchange}
+		date_format = "yyyy-mm-ddTHH:MM:SS"
+		exchanges = Dict{String, Exchange}()
+		for ex in find(xml_tree, "/RESPONSE/EXCHANGES/EXCHANGE")
+			# Assign
+			code::String = strip(get(ex.attr,"Code",""))
+			name::String = strip(get(ex.attr,"Name",""))
+			last_trade_date_time::DateTime  = DateTime(strip(get(ex.attr,"LastTradeDateTime","")), date_format)
+			country_code::String = strip(get(ex.attr,"Country",""))
+			currency_code::String = strip(get(ex.attr,"Currency",""))
+			advances::Float64 = float(strip(get(ex.attr,"Advances","")))
+			declines::Float64 = float(strip(get(ex.attr,"Declines","")))
+			suffix::String = strip(get(ex.attr,"Suffix",""))
+			time_zone::String = strip(get(ex.attr,"TimeZone",""))
+			is_intraday::Bool = lowercase(strip(get(ex.attr,"IsIntraday",""))) == "true" ? true : false
+			intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), date_format)
+			has_intraday_product::Bool = lowercase(strip(get(ex.attr,"HasIntradayProduct",""))) == "true" ? true : false
+
+			exchanges[code] = Exchange(code, name, last_trade_date_time, country_code, currency_code, advances, declines,
+									   suffix, time_zone, is_intraday, intraday_start_date, has_intraday_product)
+		end
+		return exchanges
+	end
 end
 
 # ExchangeMonths
