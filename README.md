@@ -45,7 +45,7 @@ end
 # Call and assign the exchanges available, then assign the
 # New York Stock Exchange to work with at your leisure
 exchanges = exchange_list(resp.token)
-prinln(exchanges)
+println(exchanges)
 
 nyse = exchanges["NYSE"]
 println(nyse.name)
