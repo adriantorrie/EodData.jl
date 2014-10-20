@@ -2,10 +2,11 @@
 Julia package for connecting to EodData.com and downloading data.
 
 * The source files are heavily documented, please review the source
-for in-depth documentation, and references
-* The examples on this page can be found in `/examples/examples.jl`
+for in-depth documentation, and references.
+* The examples on this page can be found in `/examples/examples.jl`.
 
 ## Package Dependencies
+* [EodData Web Service (Membership required)](http://ws.eoddata.com/data.asmx)
 * [Dates.jl](https://github.com/JuliaLang/julia/tree/master/base/dates)
 * [HTTPClient.jl](https://github.com/JuliaWeb/HTTPClient.jl)
 * [LibExpat.jl](https://github.com/amitmurthy/LibExpat.jl)
