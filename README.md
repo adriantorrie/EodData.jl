@@ -1,7 +1,8 @@
 # EodData.jl
-Julia package for connecting to eoddata.com and downloading data.
+Julia package for connecting to EodData.com and downloading data.
 
-* The source files are heavily documented, please review the source for in-depth documentation.
+* The source files are heavily documented, please review the source
+for in-depth documentation, and references
 * The examples on this page can be found in `/examples/examples.jl`
 
 ## Package Dependencies
@@ -51,8 +52,8 @@ for column=values(csv.columns)
 end
 ```
 
-Call and assign a single exchange, in this case the NASDAQ
-and assign the NASDAQ to a variable to work with at your leisure
+Call and assign a single exchange, in this case the NASDAQ,
+and assign to a variable to work with at your leisure
 ```
 nasdaq = exchange_get(resp.token, "NASDAQ")
 println(nasdaq.name)
