@@ -3,7 +3,7 @@
 
 # ===================================
 # Make functions available externally
-export country_list, data_client_latest_version, data_formats, exchange_list, login
+export country_list, data_client_latest_version, data_formats, exchange_get, exchange_list, login
 
 # =========
 # Functions
@@ -122,8 +122,36 @@ end
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
 # OUTPUT: Exchange
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ExchangeGet
-function exchange_get()
-	# Type code here
+function exchange_get(token::String, exchange_code::String)
+	if is(token, nothing)
+		error("exchange_list() failed: Missing value in parameter -> token::Sring")
+	elseif exchange_code == "" || is(exchange_code, nothing)
+		error("exchange_list() failed: Missing value in parameter -> exchange_code::Sring")
+	else
+		call = "/ExchangeGet"
+		args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
+		xml_tree = get_response(call, args)
+
+		# Shred xml_tree into a Dict{String, Exchange}
+		date_format = "yyyy-mm-ddTHH:MM:SS"
+		ex = find(xml_tree, "/RESPONSE/EXCHANGE")[1]
+		# Assign
+		code::String = strip(get(ex.attr,"Code",""))
+		name::String = strip(get(ex.attr,"Name",""))
+		last_trade_date_time::DateTime  = DateTime(strip(get(ex.attr,"LastTradeDateTime","")), date_format)
+		country_code::String = strip(get(ex.attr,"Country",""))
+		currency_code::String = strip(get(ex.attr,"Currency",""))
+		advances::Float64 = float(strip(get(ex.attr,"Advances","")))
+		declines::Float64 = float(strip(get(ex.attr,"Declines","")))
+		suffix::String = strip(get(ex.attr,"Suffix",""))
+		time_zone::String = strip(get(ex.attr,"TimeZone",""))
+		is_intraday::Bool = lowercase(strip(get(ex.attr,"IsIntraday",""))) == "true" ? true : false
+		intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), date_format)
+		has_intraday_product::Bool = lowercase(strip(get(ex.attr,"HasIntradayProduct",""))) == "true" ? true : false
+
+		return exchange = Exchange(code, name, last_trade_date_time, country_code, currency_code, advances, declines,
+								   suffix, time_zone, is_intraday, intraday_start_date, has_intraday_product)
+	end
 end
 
 # ExchangeList
@@ -197,7 +225,7 @@ function login(username::String, password::String)
 	xml_tree = get_response(call, args)
 
 	# Set returned fields
-	message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
+ 	message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
 	token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
 
 	return LoginResponse(message,token)

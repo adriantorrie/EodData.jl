@@ -29,8 +29,17 @@ for column=values(csv.columns)
 	println("$(column.column_name) | $(column.column_header)")
 end
 
-# Call and assign the exchanges available, then assign the
-# New York Stock Exchange to work with at your leisure
+# Call and assign a single exchange, in this case the NASDAQ
+# and assign the NASDAQ to a variable to work with at your leisure
+nasdaq = exchange_get(resp.token, "NASDAQ")
+println(nasdaq.name)
+println(nasdaq.advances)
+println(nasdaq.declines)
+println("Advance/Decline Ratio \= $(nasdaq.advances / nasdaq.declines)")
+
+# Call and assign the exchanges available (these can be iterated over
+# if you wish), then assign the New York Stock Exchange to work with
+# at your leisure
 exchanges = exchange_list(resp.token)
 println(exchanges)
 
