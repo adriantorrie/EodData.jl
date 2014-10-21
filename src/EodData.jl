@@ -33,7 +33,7 @@ using LibExpat
 
 # ============================
 # Make EodData types available
-export DataFormat, DataFormatColumn, Exchange, LoginResponse
+export DataFormat, DataFormatColumn, Exchange, Fundamental, LoginResponse
 
 # =============
 # EodData Types
@@ -84,6 +84,30 @@ type Exchange
 	is_intraday::Bool
 	intraday_start_date::DateTime
 	has_intraday_product::Bool
+end
+
+type Fundamental
+	symbol::String
+	name::String
+	description::String
+	date_time::DateTime
+	industry::String
+	sector::String
+	shares::Float64
+	market_cap::Float64
+	pe_ratio::Float64
+	earnings_per_share::Float64
+	net_tangible_assets::Float64
+	dividend_yield::Float64
+	dividend::Float64
+	dividend_date::DateTime
+	dividend_per_share::Float64
+	imputation_credits::Float64
+	ebitda::Float64
+	peg_ratio::Float64
+	ps_ratio::Float64
+	pb_ratio::Float64
+	yield::Float64
 end
 
 type LoginResponse

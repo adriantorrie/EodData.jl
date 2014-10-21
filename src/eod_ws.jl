@@ -3,7 +3,8 @@
 
 # ===================================
 # Make functions available externally
-export country_list, data_client_latest_version, data_formats, exchange_get, exchange_list, login
+export country_list, data_client_latest_version, data_formats, exchange_get, exchange_list,
+	   exchange_months, fundamental_list, login
 
 # =========
 # Functions
@@ -23,7 +24,7 @@ function country_list(token::String)
 		xml_tree = get_response(call, args)
 
 		# Shred xml_tree into a Dict()
-		countries = Dict()
+		countries = Dict{String, String}()
 		for cb in find(xml_tree, "/RESPONSE/COUNTRIES/CountryBase")
 			countries[strip(get(cb.attr,"Code",""))] = strip(get(cb.attr,"Name",""))
 		end
@@ -45,9 +46,7 @@ function data_client_latest_version(token::String)
 		args = ["Token"=>"$token"]
 		xml_tree = get_response(call, args)
 
-		version = strip(find(xml_tree, "/RESPONSE/VERSION[1]").elements[1])
-
-		return version
+		return strip(find(xml_tree, "/RESPONSE/VERSION[1]").elements[1])
 	end
 end
 
@@ -107,6 +106,7 @@ function data_formats(token::String)
 				columns[sort_order] = DataFormatColumn(column_header, sort_order, data_format_code, data_format_name, column_code, column_name, column_type_id, column_type)
 			end
 
+			# Add format to Dict
 			formats[code] = DataFormat(code, name, header_format, date_format, extension, include_suffix, tab_column_seperator, column_seperator,
 										text_qualifier, filename_prefix, filename_exchange_code, filename_date, include_header_row, hour_format,
 										datetime_seperator, exchange_filename_format_date, exchange_filename_format_date_range,
@@ -114,7 +114,7 @@ function data_formats(token::String)
 		end
 		return formats
 	end
-end
+end # data_formats
 
 # ExchangeGet
 # -----------
@@ -186,6 +186,7 @@ function exchange_list(token::String)
 			intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), date_format)
 			has_intraday_product::Bool = lowercase(strip(get(ex.attr,"HasIntradayProduct",""))) == "true" ? true : false
 
+			# Add exchange to Dict
 			exchanges[code] = Exchange(code, name, last_trade_date_time, country_code, currency_code, advances, declines,
 									   suffix, time_zone, is_intraday, intraday_start_date, has_intraday_product)
 		end
@@ -197,10 +198,20 @@ end
 # --------------
 # Returns the number of Months history a user is allowed to download.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
-# OUTPUT: Number of Months
+# OUTPUT: Number of Months as an ::Int
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ExchangeMonths
-function exchange_months()
-	# Type code here
+function exchange_months(token::String, exchange_code::String)
+	if is(token, nothing)
+		error("exchange_list() failed: Missing value in parameter -> token::Sring")
+	elseif exchange_code == "" || is(exchange_code, nothing)
+		error("exchange_list() failed: Missing value in parameter -> exchange_code::Sring")
+	else
+		call = "/ExchangeMonths"
+		args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
+		xml_tree = get_response(call, args)
+
+		return int(strip(find(xml_tree, "/RESPONSE/MONTHS[1]").elements[1]))
+	end
 end
 
 # FundamentalList
@@ -209,9 +220,52 @@ end
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
 # OUTPUT: List of fundamentals
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=FundamentalList
-function fundamental_list()
-	# Type code here
-end
+function fundamental_list(token::String, exchange_code::String)
+	if is(token, nothing)
+		error("exchange_list() failed: Missing value in parameter -> token::Sring")
+	elseif exchange_code == "" || is(exchange_code, nothing)
+		error("exchange_list() failed: Missing value in parameter -> exchange_code::Sring")
+	else
+		call = "/FundamentalList"
+		args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
+		xml_tree = get_response(call, args)
+
+		# Shred xml_tree into a Dict()
+		date_format = "yyyy-mm-ddTHH:MM:SS"
+		fundamentals = Dict{String, Fundamental}()
+		for fl in find(xml_tree, "/RESPONSE/FUNDAMENTALS/FUNDAMENTAL")
+			# Assign
+			symbol::String = strip(get(fl.attr,"Symbol",""))
+			name::String = strip(get(fl.attr,"Name",""))
+			description::String = strip(get(fl.attr,"Description",""))
+			date_time::DateTime = DateTime(strip(get(fl.attr,"DateTime","")), date_format)
+			industry::String = strip(get(fl.attr,"Industry",""))
+			sector::String = strip(get(fl.attr,"Sector",""))
+			shares::Float64 = float(strip(get(fl.attr,"Shares","")))
+			market_cap::Float64 = float(strip(get(fl.attr,"MarketCap","")))
+			pe_ratio::Float64 = float(strip(get(fl.attr,"PE","")))
+			earnings_per_share::Float64 = float(strip(get(fl.attr,"EPS","")))
+			net_tangible_assets::Float64 = float(strip(get(fl.attr,"NTA","")))
+			dividend_yield::Float64 = float(strip(get(fl.attr,"DivYield","")))
+			dividend::Float64 = float(strip(get(fl.attr,"Dividend","")))
+			dividend_date::DateTime = DateTime(strip(get(fl.attr,"DividendDate","")), date_format)
+			dividend_per_share::Float64 = float(strip(get(fl.attr,"DPS","")))
+			imputation_credits::Float64 = float(strip(get(fl.attr,"ImputationCredits","")))
+			ebitda::Float64 = float(strip(get(fl.attr,"EBITDA","")))
+			peg_ratio::Float64 = float(strip(get(fl.attr,"PEG","")))
+			ps_ratio::Float64 = float(strip(get(fl.attr,"PtS","")))
+			pb_ratio::Float64 = float(strip(get(fl.attr,"PtB","")))
+			yield::Float64 = float(strip(get(fl.attr,"Yield","")))
+
+			# Add fundamental to Dict
+			fundamentals[symbol] = Fundamental(symbol, name, description, date_time, industry, sector, shares,
+											   market_cap, pe_ratio, earnings_per_share, net_tangible_assets,
+											   dividend_yield, dividend, dividend_date, dividend_per_share,
+											   imputation_credits, ebitda, peg_ratio, ps_ratio, pb_ratio, yield)
+		end
+		return fundamentals
+	end
+end # fundamental_list
 
 # Login
 # -----

@@ -76,3 +76,23 @@ println(nyse.advances)
 println(nyse.declines)
 println("Advance/Decline Ratio \= $(nyse.advances / nyse.declines)")
 ```
+
+Find out the number of Months history available to download.
+```
+months = exchange_months(resp.token,"NYSE")
+println(months)
+```
+
+Get the fundamentals of all the listings on a given exchange.
+Here we look at the New Zealand Exchange (NZX) which also
+has bonds listed on it, and from time-to-time options as well.
+```
+nzx_fundamentals = fundamental_list(resp.token,"NZX")
+
+nzx_market_cap = 0.0
+for listing = values(nzx_fundamentals)
+	nzx_market_cap += listing.market_cap
+end
+println(nzx_market_cap)
+@sprintf "%.2f" nzx_market_cap
+```

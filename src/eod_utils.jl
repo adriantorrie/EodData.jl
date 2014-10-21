@@ -27,7 +27,7 @@ function get_response(call::String, params::Dict{ASCIIString, ASCIIString})
 	parsed_xml = xp_parse(bytestring(resp.body))
 	xml_parent_path = call == "/Login" ? "/LOGINRESPONSE" : "/RESPONSE"
 	message = lowercase(strip(find(parsed_xml, "$xml_parent_path[1]{Message}")))
-	if message != "success" ? message != "login successful" : false
+	if message != "success" && message != "login successful"
 		error("get_response() failed with message returned of: $message")
 	end
 
