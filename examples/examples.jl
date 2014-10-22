@@ -65,3 +65,29 @@ for listing = values(nzx_fundamentals)
 end
 println(nzx_market_cap)
 @sprintf "%.2f" nzx_market_cap
+
+# Call and assign the response.
+# Not really necessary for end-users from what I can tell
+resp = login_2(USERNAME,PASSWORD,"0.1")
+
+# Call and assign the users membership level/account type with EodData.com
+membership = membership(resp.token)
+println(membership)
+
+# Call and assign the end-of-day quote for a given instrument
+# Here we get the quote for JP Morgan
+jpm = quote_get(resp.token, "NYSE", "JPM")
+println(jpm)
+println(jpm.close)
+println(jpm.previous)
+println(jpm.change)
+println(jpm.simple_return)
+
+# Call and assign the end-of-day quotes for an exchange.
+# The collection can be iterated over if you wish
+nyse_quotes = quote_list(resp.token, "NYSE")
+
+# Call and assign the end-of-day quotes for a custom group
+# The collection can be iterated over if you wish
+my_quotes = quote_list_2(resp.token, "NYSE", "C,MS,JPM,BAC,DB")
+println(my_quotes)

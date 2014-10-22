@@ -33,7 +33,7 @@ using LibExpat
 
 # ============================
 # Make EodData types available
-export DataFormat, DataFormatColumn, Exchange, Fundamental, LoginResponse
+export DataFormat, DataFormatColumn, Exchange, Fundamental, LoginResponse, Quote
 
 # =============
 # EodData Types
@@ -113,6 +113,27 @@ end
 type LoginResponse
 	message::String
 	token::String
+end
+
+type Quote
+	symbol::String
+	description::String
+	name::String
+	date_time::DateTime
+	open::Float64
+	high::Float64
+	low::Float64
+	close::Float64
+	volume::Float64
+	open_interest::Float64
+	previous::Float64
+	change::Float64
+	simple_return::Float64
+	bid::Float64
+	ask::Float64
+	previous_close::Float64
+	next_open::Float64
+	modified::DateTime
 end
 
 # =====

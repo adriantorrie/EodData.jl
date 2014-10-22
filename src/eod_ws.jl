@@ -1,10 +1,18 @@
-# =========================
-# EodData Web Service Calls
+#=
+	EodData Web Service Calls
+=#
+
+# ==================
+# Internal variables
+const DATETIMEFORMAT_SS = "yyyy-mm-ddTHH:MM:SS"
+const DATETIMEFORMAT_MS = "yyyy-mm-ddTHH:MM:SS.ss"
+const HEADER_DELIMITERS = [',', ';', ' ']
 
 # ===================================
 # Make functions available externally
 export country_list, data_client_latest_version, data_formats, exchange_get, exchange_list,
-	   exchange_months, fundamental_list, login
+	   exchange_months, fundamental_list, login, login_2, membership, quote_get, quote_list,
+	   quote_list_2
 
 # =========
 # Functions
@@ -65,7 +73,6 @@ function data_formats(token::String)
 		xml_tree = get_response(call, args)
 
 		# Shred xml_tree into a Dict{String, DataFormat}
-		delimiters = [',', ';', ' ' ]
 		formats = Dict{String, DataFormat}()
 		for df in find(xml_tree, "/RESPONSE/DATAFORMATS/DATAFORMAT")
 			# Initialise local
@@ -75,7 +82,7 @@ function data_formats(token::String)
 			# Assign
 			code::String = strip(get(df.attr,"Code",""))
 			name::String = strip(get(df.attr,"Name",""))
-			header_format::Vector{String} = convert(Array{String}, split(strip(get(df.attr,"Header","")), delimiters))
+			header_format::Vector{String} = convert(Array{String}, split(strip(get(df.attr,"Header","")), HEADER_DELIMITERS))
 			date_format::String = strip(get(df.attr,"DateFormat",""))
 			extension::String = strip(get(df.attr,"Extension",""))
 			include_suffix::Bool = lowercase(strip(get(df.attr,"IncludeSuffix",""))) == "true" ? true : false
@@ -133,12 +140,11 @@ function exchange_get(token::String, exchange_code::String)
 		xml_tree = get_response(call, args)
 
 		# Shred xml_tree into a Dict{String, Exchange}
-		date_format = "yyyy-mm-ddTHH:MM:SS"
 		ex = find(xml_tree, "/RESPONSE/EXCHANGE")[1]
 		# Assign
 		code::String = strip(get(ex.attr,"Code",""))
 		name::String = strip(get(ex.attr,"Name",""))
-		last_trade_date_time::DateTime  = DateTime(strip(get(ex.attr,"LastTradeDateTime","")), date_format)
+		last_trade_date_time::DateTime  = DateTime(strip(get(ex.attr,"LastTradeDateTime","")), DATETIMEFORMAT_SS)
 		country_code::String = strip(get(ex.attr,"Country",""))
 		currency_code::String = strip(get(ex.attr,"Currency",""))
 		advances::Float64 = float(strip(get(ex.attr,"Advances","")))
@@ -146,7 +152,7 @@ function exchange_get(token::String, exchange_code::String)
 		suffix::String = strip(get(ex.attr,"Suffix",""))
 		time_zone::String = strip(get(ex.attr,"TimeZone",""))
 		is_intraday::Bool = lowercase(strip(get(ex.attr,"IsIntraday",""))) == "true" ? true : false
-		intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), date_format)
+		intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), DATETIMEFORMAT_SS)
 		has_intraday_product::Bool = lowercase(strip(get(ex.attr,"HasIntradayProduct",""))) == "true" ? true : false
 
 		return exchange = Exchange(code, name, last_trade_date_time, country_code, currency_code, advances, declines,
@@ -169,13 +175,12 @@ function exchange_list(token::String)
 		xml_tree = get_response(call, args)
 
 		# Shred xml_tree into a Dict{String, Exchange}
-		date_format = "yyyy-mm-ddTHH:MM:SS"
 		exchanges = Dict{String, Exchange}()
 		for ex in find(xml_tree, "/RESPONSE/EXCHANGES/EXCHANGE")
 			# Assign
 			code::String = strip(get(ex.attr,"Code",""))
 			name::String = strip(get(ex.attr,"Name",""))
-			last_trade_date_time::DateTime  = DateTime(strip(get(ex.attr,"LastTradeDateTime","")), date_format)
+			last_trade_date_time::DateTime  = DateTime(strip(get(ex.attr,"LastTradeDateTime","")), DATETIMEFORMAT_SS)
 			country_code::String = strip(get(ex.attr,"Country",""))
 			currency_code::String = strip(get(ex.attr,"Currency",""))
 			advances::Float64 = float(strip(get(ex.attr,"Advances","")))
@@ -183,7 +188,7 @@ function exchange_list(token::String)
 			suffix::String = strip(get(ex.attr,"Suffix",""))
 			time_zone::String = strip(get(ex.attr,"TimeZone",""))
 			is_intraday::Bool = lowercase(strip(get(ex.attr,"IsIntraday",""))) == "true" ? true : false
-			intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), date_format)
+			intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), DATETIMEFORMAT_SS)
 			has_intraday_product::Bool = lowercase(strip(get(ex.attr,"HasIntradayProduct",""))) == "true" ? true : false
 
 			# Add exchange to Dict
@@ -231,14 +236,13 @@ function fundamental_list(token::String, exchange_code::String)
 		xml_tree = get_response(call, args)
 
 		# Shred xml_tree into a Dict()
-		date_format = "yyyy-mm-ddTHH:MM:SS"
 		fundamentals = Dict{String, Fundamental}()
 		for fl in find(xml_tree, "/RESPONSE/FUNDAMENTALS/FUNDAMENTAL")
 			# Assign
 			symbol::String = strip(get(fl.attr,"Symbol",""))
 			name::String = strip(get(fl.attr,"Name",""))
 			description::String = strip(get(fl.attr,"Description",""))
-			date_time::DateTime = DateTime(strip(get(fl.attr,"DateTime","")), date_format)
+			date_time::DateTime = DateTime(strip(get(fl.attr,"DateTime","")), DATETIMEFORMAT_SS)
 			industry::String = strip(get(fl.attr,"Industry",""))
 			sector::String = strip(get(fl.attr,"Sector",""))
 			shares::Float64 = float(strip(get(fl.attr,"Shares","")))
@@ -248,7 +252,7 @@ function fundamental_list(token::String, exchange_code::String)
 			net_tangible_assets::Float64 = float(strip(get(fl.attr,"NTA","")))
 			dividend_yield::Float64 = float(strip(get(fl.attr,"DivYield","")))
 			dividend::Float64 = float(strip(get(fl.attr,"Dividend","")))
-			dividend_date::DateTime = DateTime(strip(get(fl.attr,"DividendDate","")), date_format)
+			dividend_date::DateTime = DateTime(strip(get(fl.attr,"DividendDate","")), DATETIMEFORMAT_SS)
 			dividend_per_share::Float64 = float(strip(get(fl.attr,"DPS","")))
 			imputation_credits::Float64 = float(strip(get(fl.attr,"ImputationCredits","")))
 			ebitda::Float64 = float(strip(get(fl.attr,"EBITDA","")))
@@ -291,8 +295,16 @@ end
 # INPUT: Username, Password, Version (Application Version)
 # OUTPUT: Login Token
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=Login2
-function login_2()
-	# Type code here
+function login_2(username::String, password::String, version::String)
+	call = "/Login"
+	args = ["Username"=>"$username", "Password"=>"$password", "Version"=>"$version"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
+	token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
+
+	return LoginResponse(message,token)
 end
 
 # Membership
@@ -301,8 +313,12 @@ end
 # INPUT: Token (Login Token)
 # OUTPUT: Membership
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=Membership
-function membership()
-	# Type code here
+function membership(token::String)
+	call = "/Membership"
+	args = ["Token"=>"$token"]
+	xml_tree = get_response(call, args)
+
+	return strip(find(xml_tree, "/RESPONSE/MEMBERSHIP[1]").elements[1])
 end
 
 # QuoteGet
@@ -311,8 +327,41 @@ end
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ), Symbol (eg:MSFT)
 # OUTPUT: End of day quote
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteGet
-function quote_get()
-	# Type code here
+function quote_get(token::String, exchange::String, symbol::String)
+	call = "/QuoteGet"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$symbol"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("quote_get() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		qt = find(xml_tree, "/RESPONSE/QUOTE[1]")
+		# Assign
+		symbol::String = strip(get(qt.attr,"Symbol",""))
+		description::String = strip(get(qt.attr,"Description",""))
+		name::String = strip(get(qt.attr,"Name",""))
+		date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_MS)
+		open::Float64 = float(strip(get(qt.attr,"Open","")))
+		high::Float64 = float(strip(get(qt.attr,"High","")))
+		low::Float64 = float(strip(get(qt.attr,"Low","")))
+		close::Float64 = float(strip(get(qt.attr,"Close","")))
+		volume::Float64 = float(strip(get(qt.attr,"Volume","")))
+		open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
+		previous::Float64 = float(strip(get(qt.attr,"Previous","")))
+		change::Float64 = float(strip(get(qt.attr,"Change","")))
+		simple_return::Float64 = change / previous
+		bid::Float64 = float(strip(get(qt.attr,"Bid","")))
+		ask::Float64 = float(strip(get(qt.attr,"Ask","")))
+		previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
+		next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
+		modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
+
+		return Quote(symbol, description, name, date_time, open, high, low, close, volume, open_interest,
+					 previous, change, simple_return, bid, ask, previous_close, next_open, modified)
+	end
 end
 
 # QuoteList
@@ -321,8 +370,44 @@ end
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
 # OUTPUT: List of end of day quotes
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteList
-function quote_list()
-	# Type code here
+function quote_list(token::String, exchange::String)
+	call = "/QuoteList"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("QuoteList() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		quotes = Dict{String, Quote}()
+		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
+			# Assign
+			symbol::String = strip(get(qt.attr,"Symbol",""))
+			description::String = strip(get(qt.attr,"Description",""))
+			name::String = strip(get(qt.attr,"Name",""))
+			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_MS)
+			open::Float64 = float(strip(get(qt.attr,"Open","")))
+			high::Float64 = float(strip(get(qt.attr,"High","")))
+			low::Float64 = float(strip(get(qt.attr,"Low","")))
+			close::Float64 = float(strip(get(qt.attr,"Close","")))
+			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
+			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
+			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
+			change::Float64 = float(strip(get(qt.attr,"Change","")))
+			simple_return::Float64 = change / previous
+			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
+			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
+			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
+			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
+			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
+
+			quotes[symbol] = Quote(symbol, description, name, date_time, open, high, low, close, volume, open_interest,
+								   previous, change, simple_return, bid, ask, previous_close, next_open, modified)
+		end
+		return quotes
+	end
 end
 
 # QuoteList2
@@ -331,8 +416,44 @@ end
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ), Symbols (eg:MSFT,INTC)
 # OUTPUT: List of end of day quotes
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteList2
-function quote_list_2()
-	# Type code here
+function quote_list_2(token::String, exchange::String, symbols::String)
+	call = "/QuoteList2"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbols"=>"$symbols"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("QuoteList() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		quotes = Dict{String, Quote}()
+		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
+			# Assign
+			symbol::String = strip(get(qt.attr,"Symbol",""))
+			description::String = strip(get(qt.attr,"Description",""))
+			name::String = strip(get(qt.attr,"Name",""))
+			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_MS)
+			open::Float64 = float(strip(get(qt.attr,"Open","")))
+			high::Float64 = float(strip(get(qt.attr,"High","")))
+			low::Float64 = float(strip(get(qt.attr,"Low","")))
+			close::Float64 = float(strip(get(qt.attr,"Close","")))
+			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
+			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
+			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
+			change::Float64 = float(strip(get(qt.attr,"Change","")))
+			simple_return::Float64 = change / previous
+			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
+			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
+			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
+			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
+			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
+
+			quotes[symbol] = Quote(symbol, description, name, date_time, open, high, low, close, volume, open_interest,
+								   previous, change, simple_return, bid, ask, previous_close, next_open, modified)
+		end
+		return quotes
+	end
 end
 
 # QuoteListByDate
