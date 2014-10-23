@@ -19,6 +19,7 @@ const USERNAME = "string"
 const PASSWORD = "string"
 ```
 
+### login()
 Call login. This will assign you a token which is needed to
 make EodData web service calls
 ```
@@ -27,18 +28,21 @@ println(resp.message)
 println(resp.token)
 ```
 
+### country_list()
 Call and assign countries
 ```
 countries = country_list(resp.token)
 println(countries)
 ```
 
+### data_client_latest_version()
 Call and assign the latest version for EodData's data client
 ```
 version = data_client_latest_version(resp.token)
 println(version)
 ```
 
+### data_formats()
 Call and assign the formats available, then assign the
 Standard CSV format to work with at your leisure
 ```
@@ -53,6 +57,7 @@ for column=values(csv.columns)
 end
 ```
 
+### exchange_get()
 Call and assign a single exchange, in this case the NASDAQ,
 and assign to a variable to work with at your leisure
 ```
@@ -63,6 +68,7 @@ println(nasdaq.declines)
 println("Advance/Decline Ratio \= $(nasdaq.advances / nasdaq.declines)")
 ```
 
+### exchange_list()
 Call and assign the exchanges available (these can be iterated over
 if you wish), then assign the New York Stock Exchange to work with
 at your leisure
@@ -77,6 +83,7 @@ println(nyse.declines)
 println("Advance/Decline Ratio \= $(nyse.advances / nyse.declines)")
 ```
 
+### exchange_months()
 Call and assign the number of months history available to download
 for a given exchange.
 ```
@@ -84,6 +91,7 @@ months = exchange_months(resp.token,"NYSE")
 println(months)
 ```
 
+### fundamental_list()
 Call and assign the fundamentals of all the listings on a given exchange.
 Here we look at the New Zealand Exchange (NZX) market capitalisation which
 also has bonds listed on it, and from time-to-time options as well.
@@ -98,18 +106,21 @@ println(nzx_market_cap)
 @sprintf "%.2f" nzx_market_cap
 ```
 
+### login_2()
 Call and assign the response.
 Not really necessary for end-users from what I can tell
 ```
 resp = login_2(USERNAME,PASSWORD,"0.1")
 ```
 
+### membership()
 Call and assign the users membership level/account type with EodData.com
 ```
 membership = membership(resp.token)
 println(membership)
 ```
 
+### quote_get()
 Call and assign the end-of-day quote for a given instrument
 Here we get the quote for JP Morgan
 ```
@@ -121,12 +132,14 @@ println(jpm.change)
 println(jpm.simple_return)
 ```
 
+### quote_list()
 Call and assign the end-of-day quotes for an exchange.
 The collection can be iterated over if you wish
 ```
 nyse_quotes = quote_list(resp.token, "NYSE")
 ```
 
+### quote_list_2()
 Call and assign the end-of-day quotes for a custom group
 The collection can be iterated over if you wish
 ```
@@ -134,6 +147,7 @@ my_quotes = quote_list_2(resp.token, "NYSE", "C,MS,JPM,BAC,DB")
 println(my_quotes)
 ```
 
+### quote_list_by_date()
 Call and assign the end-of-day quotes for a custom date
 The collection can be iterated over if you wish
 ```
@@ -144,6 +158,7 @@ for qt = values(nyse_20140605)
 end
 ```
 
+### quote_list_by_date_period()
 Call and assign quotes for a custom date, and a custom period
 on a particular exchange. If you choose "h" this will return
 hourly data for the exchange
