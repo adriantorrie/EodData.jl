@@ -133,3 +133,31 @@ The collection can be iterated over if you wish
 my_quotes = quote_list_2(resp.token, "NYSE", "C,MS,JPM,BAC,DB")
 println(my_quotes)
 ```
+
+Call and assign the end-of-day quotes for a custom date
+The collection can be iterated over if you wish
+```
+nyse_20140605 = quote_list_by_date(resp.token, "NYSE", "20140605")
+
+for qt = values(nyse_20140605)
+	println("$(qt.name) | $(qt.close)")
+end
+```
+
+Call and assign quotes for a custom date, and a custom period
+on a particular exchange. If you choose "h" this will return
+hourly data for the exchange
+The collection can be iterated over if you wish
+```
+cme_20141008_h = quote_list_by_date_period(resp.token, "CME", "20141008", "h")
+
+for k = keys(cme_20141008_h)
+	println(k)
+end
+
+for qt = values(cme_20141008_h)
+	println("$(qt.symbol)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
+end
+
+gd = collect(cme_20141008_h)
+```

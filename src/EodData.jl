@@ -8,6 +8,7 @@ module EodData
 	- http://julia.readthedocs.org/en/latest/stdlib/base/
 	- http://learnxinyminutes.com/docs/julia/
 	- http://www.scolvin.com/juliabyexample/
+	- http://perldoc.perl.org/perlre.html (regular expressions : regex)
 
 	Hypertext Transfer Protocol
 	- http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Example_session
@@ -134,6 +135,19 @@ type Quote
 	previous_close::Float64
 	next_open::Float64
 	modified::DateTime
+end
+
+type Quote_2
+	symbol::String
+	date_time::DateTime
+	open::Float64
+	high::Float64
+	low::Float64
+	close::Float64
+	volume::Float64
+	open_interest::Float64
+	bid::Float64
+	ask::Float64
 end
 
 # =====

@@ -12,7 +12,7 @@ const HEADER_DELIMITERS = [',', ';', ' ']
 # Make functions available externally
 export country_list, data_client_latest_version, data_formats, exchange_get, exchange_list,
 	   exchange_months, fundamental_list, login, login_2, membership, quote_get, quote_list,
-	   quote_list_2
+	   quote_list_2, quote_list_by_date, quote_list_by_date_2, quote_list_by_date_period
 
 # =========
 # Functions
@@ -126,7 +126,7 @@ end # data_formats
 # ExchangeGet
 # -----------
 # Returns detailed information of a specific exchange.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ)
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Exchange
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ExchangeGet
 function exchange_get(token::String, exchange_code::String)
@@ -202,7 +202,7 @@ end
 # ExchangeMonths
 # --------------
 # Returns the number of Months history a user is allowed to download.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ)
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Number of Months as an ::Int
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ExchangeMonths
 function exchange_months(token::String, exchange_code::String)
@@ -222,8 +222,8 @@ end
 # FundamentalList
 # ---------------
 # Returns a complete list of fundamental data for an entire exchange.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ)
-# OUTPUT: List of fundamentals
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
+# OUTPUT: Dict() of fundamentals of type ::Dict{String, Fundamental}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=FundamentalList
 function fundamental_list(token::String, exchange_code::String)
 	if is(token, nothing)
@@ -293,7 +293,7 @@ end
 # ------
 # Login to EODData Financial Information Web Service. Used for Application Authentication.
 # INPUT: Username, Password, Version (Application Version)
-# OUTPUT: Login Token
+# OUTPUT: Login Token, which is a field in the type ::LoginResponse
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=Login2
 function login_2(username::String, password::String, version::String)
 	call = "/Login"
@@ -311,21 +311,21 @@ end
 # ----------
 # Returns membership of user.
 # INPUT: Token (Login Token)
-# OUTPUT: Membership
+# OUTPUT: Membership of type ::String
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=Membership
 function membership(token::String)
 	call = "/Membership"
 	args = ["Token"=>"$token"]
 	xml_tree = get_response(call, args)
 
-	return strip(find(xml_tree, "/RESPONSE/MEMBERSHIP[1]").elements[1])
+	return string(strip(find(xml_tree, "/RESPONSE/MEMBERSHIP[1]").elements[1]))
 end
 
 # QuoteGet
 # --------
 # Returns an end of day quote for a specific symbol.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ), Symbol (eg:MSFT)
-# OUTPUT: End of day quote
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Symbol (eg:"MSFT")
+# OUTPUT: End of day quote of type ::Quote
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteGet
 function quote_get(token::String, exchange::String, symbol::String)
 	call = "/QuoteGet"
@@ -367,8 +367,8 @@ end
 # QuoteList
 # ---------
 # Returns a complete list of end of day quotes for an entire exchange.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ)
-# OUTPUT: List of end of day quotes
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
+# OUTPUT: Dict() of end of day quotes of type ::Dict{String, Quote}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteList
 function quote_list(token::String, exchange::String)
 	call = "/QuoteList"
@@ -413,8 +413,8 @@ end
 # QuoteList2
 # ----------
 # Returns end of day quotes for a list of symbols of a specific exchange.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ), Symbols (eg:MSFT,INTC)
-# OUTPUT: List of end of day quotes
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Symbols (eg:"MSFT,INTC")
+# OUTPUT: Dict() of end of day quotes of type ::Dict{String, Quote}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteList2
 function quote_list_2(token::String, exchange::String, symbols::String)
 	call = "/QuoteList2"
@@ -459,37 +459,140 @@ end
 # QuoteListByDate
 # ---------------
 # Returns a complete list of end of day quotes for an entire exchange and a specific date.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225)
-# OUTPUT: List of end of day quotes
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225")
+# OUTPUT: Dict() of end of day quotes of type ::Dict{String, Quote}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteListByDate
-function quote_list_by_date()
-	# Type code here
+function quote_list_by_date(token::String, exchange::String, quote_date::String)
+	call = "/QuoteListByDate"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("QuoteList() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		quotes = Dict{String, Quote}()
+		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
+			# Assign
+			symbol::String = strip(get(qt.attr,"Symbol",""))
+			description::String = strip(get(qt.attr,"Description",""))
+			name::String = strip(get(qt.attr,"Name",""))
+			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_MS)
+			open::Float64 = float(strip(get(qt.attr,"Open","")))
+			high::Float64 = float(strip(get(qt.attr,"High","")))
+			low::Float64 = float(strip(get(qt.attr,"Low","")))
+			close::Float64 = float(strip(get(qt.attr,"Close","")))
+			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
+			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
+			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
+			change::Float64 = float(strip(get(qt.attr,"Change","")))
+			simple_return::Float64 = change / previous
+			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
+			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
+			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
+			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
+			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
+
+			quotes[symbol] = Quote(symbol, description, name, date_time, open, high, low, close, volume, open_interest,
+								   previous, change, simple_return, bid, ask, previous_close, next_open, modified)
+		end
+		return quotes
+	end
 end
 
 # QuoteListByDate2
 # ----------------
 # Returns a complete list of end of day quotes for an entire exchange and a specific date.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225)
-# OUTPUT: List of end of day quotes
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225")
+# OUTPUT: Dict() of end of day quotes of type ::Dict{String, Quote_2}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteListByDate2
-function quote_list_by_date_2()
-	# Type code here
+function quote_list_by_date_2(token::String, exchange::String, quote_date::String)
+	call = "/QuoteListByDate2"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("QuoteList() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		quotes = Dict{String, Quote_2}()
+		for qt in find(xml_tree, "/RESPONSE/QUOTES2/QUOTE2")
+			# Assign
+			symbol::String = strip(get(qt.attr,"s",""))
+			date_time::DateTime = DateTime(strip(get(qt.attr,"d","")), DATETIMEFORMAT_SS)
+			open::Float64 = float(strip(get(qt.attr,"o","")))
+			high::Float64 = float(strip(get(qt.attr,"h","")))
+			low::Float64 = float(strip(get(qt.attr,"l","")))
+			close::Float64 = float(strip(get(qt.attr,"c","")))
+			volume::Float64 = float(strip(get(qt.attr,"v","")))
+			open_interest::Float64 = float(strip(get(qt.attr,"i","")))
+			bid::Float64 = float(strip(get(qt.attr,"b","")))
+			ask::Float64 = float(strip(get(qt.attr,"a","")))
+
+			quotes[symbol] = Quote_2(symbol, date_time, open, high, low, close, volume, open_interest, bid, ask,)
+		end
+		return quotes
+	end
 end
 
 # QuoteListByDatePeriod
 # ---------------------
 # Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225"),
+#		 Period (eg: "1", "5", "10", "15", "30", "h", "d", "w", "m")
 # OUTPUT: List of quotes
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteListByDatePeriod
-function quote_list_by_date_period()
-	# Type code here
+function quote_list_by_date_period(token::String, exchange::String, quote_date::String, period::String)
+	call = "/QuoteListByDatePeriod"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date", "Period"=>"$period"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("QuoteList() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		quotes = Dict{String, Quote}()
+		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
+			# Assign
+			symbol::String = strip(get(qt.attr,"Symbol",""))
+			description::String = strip(get(qt.attr,"Description",""))
+			name::String = strip(get(qt.attr,"Name",""))
+			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
+			open::Float64 = float(strip(get(qt.attr,"Open","")))
+			high::Float64 = float(strip(get(qt.attr,"High","")))
+			low::Float64 = float(strip(get(qt.attr,"Low","")))
+			close::Float64 = float(strip(get(qt.attr,"Close","")))
+			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
+			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
+			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
+			change::Float64 = float(strip(get(qt.attr,"Change","")))
+			simple_return::Float64 = change / previous
+			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
+			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
+			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
+			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
+			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_SS)
+
+			quotes[symbol * "_" * string(date_time)] = Quote(symbol, description, name, date_time, open,
+															 high, low, close, volume, open_interest,
+															 previous, change, simple_return, bid, ask,
+															 previous_close, next_open, modified)
+		end
+		return quotes
+	end
 end
 
 # QuoteListByDatePeriod2
 # ----------------------
 # Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)
+# INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225),
+# Period (1, 5, 10, 15, 30, h, d, w, m)
 # OUTPUT: List of quotes
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteListByDatePeriod2
 function quote_list_by_date_period_2()
