@@ -247,7 +247,7 @@ function fundamental_list(token::String, exchange_code::String)
 			date_time::DateTime = DateTime(strip(get(fl.attr,"DateTime","")), DATETIMEFORMAT_SS)
 			industry::String = strip(get(fl.attr,"Industry",""))
 			sector::String = strip(get(fl.attr,"Sector",""))
-			shares::Float64 = float(strip(get(fl.attr,"Shares","")))
+			share_float::Float64 = float(strip(get(fl.attr,"Shares","")))
 			market_cap::Float64 = float(strip(get(fl.attr,"MarketCap","")))
 			pe_ratio::Float64 = float(strip(get(fl.attr,"PE","")))
 			earnings_per_share::Float64 = float(strip(get(fl.attr,"EPS","")))
@@ -264,7 +264,7 @@ function fundamental_list(token::String, exchange_code::String)
 			yield::Float64 = float(strip(get(fl.attr,"Yield","")))
 
 			# Add fundamental to Dict
-			fundamentals[symbol] = Fundamental(symbol, name, description, date_time, industry, sector, shares,
+			fundamentals[symbol] = Fundamental(symbol, name, description, date_time, industry, sector, share_float,
 											   market_cap, pe_ratio, earnings_per_share, net_tangible_assets,
 											   dividend_yield, dividend, dividend_date, dividend_per_share,
 											   imputation_credits, ebitda, peg_ratio, ps_ratio, pb_ratio, yield)

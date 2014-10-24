@@ -301,7 +301,7 @@ type Fundamental
 	date_time::DateTime
 	industry::String
 	sector::String
-	shares::Float64
+	share_float::Float64
 	market_cap::Float64
 	pe_ratio::Float64
 	earnings_per_share::Float64
