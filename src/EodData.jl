@@ -34,7 +34,8 @@ using LibExpat
 
 # ============================
 # Make EodData types available
-export DataFormat, DataFormatColumn, Exchange, Fundamental, LoginResponse, Quote
+export DataFormat, DataFormatColumn, Exchange, Fundamental, LoginResponse, Quote, Quote_2
+		,Split, SymbolChange
 
 # =============
 # EodData Types
