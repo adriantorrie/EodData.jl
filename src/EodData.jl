@@ -15,9 +15,9 @@ module EodData
 
  	EODData now offers a complete end of day Web Service ideal for trading
 	applications, web sites, portfolio management systems, etc.
-	- http://eoddata.com/products/webservice.aspx
 	- http://ws.eoddata.com/data.asmx
 	- http://ws.eoddata.com/data.asmx?wsdl
+	- http://eoddata.com/products/webservice.aspx
 
  	Package: HTTPClient
 	- https://github.com/JuliaWeb/HTTPClient.jl
@@ -148,6 +148,26 @@ type Quote_2
 	open_interest::Float64
 	bid::Float64
 	ask::Float64
+end
+
+type Split
+	exchange_code::String
+	symbol::String
+	date_time::DateTime
+	ratio::String
+	price_multiplier::Float64
+	share_float_multiplier::Float64
+	is_reverse_split::Bool
+end
+
+type SymbolChange
+	old_exchange_code::String
+	new_exchange_code::String
+	old_symbol::String
+	new_symbol::String
+	date_time::DateTime
+	is_change_of_exchange_code::Bool
+	is_change_of_symbol_code::Bool
 end
 
 # =====

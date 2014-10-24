@@ -174,5 +174,59 @@ for qt = values(cme_20141008_h)
 	println("$(qt.symbol)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
 end
 
-gd = collect(cme_20141008_h)
+cme_array = collect(cme_20141008_h)
 ```
+
+### quote_list_by_date_period_2()
+Call and assign quotes, with a smaller type ::Quote_2, for a custom date, and a custom period
+on a particular exchange. If you choose "h" this will return
+hourly data for the exchange
+The keys, values, and collection can be iterated over if you wish
+```
+cme_20141008_h_2 = quote_list_by_date_period_2(resp.token, "CME", "20141008", "h")
+
+for k = keys(cme_20141008_h_2)
+	println(k)
+end
+
+for qt = values(cme_20141008_h_2)
+	println("$(qt.symbol)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
+end
+
+cme_array = collect(cme_20141008_h_2)
+```
+
+### split_list_by_exchange()
+Call and assign the most recent splits for a given exchange
+```
+nyse_splits = split_list_by_exchange(resp.token, "NYSE")
+splits = collect(nyse_splits)
+println(splits)
+```
+
+### split_list_by_symbol()
+Call and assign the most recent splits for a given symbol on a particular exchange
+```
+nct_splits = split_list_by_symbol(resp.token, "NYSE", "NCT")
+for sp = values(nct_splits)
+	println("$(sp.symbol)\t|\tDate Time: $(sp.date_time)\t|\tRatio: $(sp.ratio)\t|\tPrice Multiplier: $(sp.price_multiplier)\t|\tReverse Split: $(sp.is_reverse_split)")
+end
+```
+
+### symbol_changes_by_exchange()
+Call and assign the most recent changes to stock symbols,
+and changes to exchanges
+```
+amex_changes = symbol_changes_by_exchange(resp.token, "AMEX")
+for sc = values(amex_changes)
+	println(sc)
+end
+```
+
+### symbol_chart()
+Call and assign the url for a chart of the symbol's price history.
+**Note:** There is no "safety" on this web service call, if you give it
+incorrect exchanges, symbols, or incorrect combinations you will receive
+no error.
+url = symbol_chart(resp.token, "NYSE", "A")
+println(url)

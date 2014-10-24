@@ -12,7 +12,9 @@ const HEADER_DELIMITERS = [',', ';', ' ']
 # Make functions available externally
 export country_list, data_client_latest_version, data_formats, exchange_get, exchange_list,
 	   exchange_months, fundamental_list, login, login_2, membership, quote_get, quote_list,
-	   quote_list_2, quote_list_by_date, quote_list_by_date_2, quote_list_by_date_period
+	   quote_list_2, quote_list_by_date, quote_list_by_date_2, quote_list_by_date_period,
+	   quote_list_by_date_period_2, split_list_by_exchange, split_list_by_symbol,
+	   symbol_changes_by_exchange, symbol_chart
 
 # =========
 # Functions
@@ -301,10 +303,15 @@ function login_2(username::String, password::String, version::String)
 	xml_tree = get_response(call, args)
 
 	# Set returned fields
- 	message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
-	token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
+	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("membership() failed with message returned of: $message")
+	else
+ 		message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
+		token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
 
-	return LoginResponse(message,token)
+		return LoginResponse(message,token)
+	end
 end
 
 # Membership
@@ -318,7 +325,13 @@ function membership(token::String)
 	args = ["Token"=>"$token"]
 	xml_tree = get_response(call, args)
 
-	return string(strip(find(xml_tree, "/RESPONSE/MEMBERSHIP[1]").elements[1]))
+	# Set returned fields
+	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("membership() failed with message returned of: $message")
+	else
+		return string(strip(find(xml_tree, "/RESPONSE/MEMBERSHIP[1]").elements[1]))
+	end
 end
 
 # QuoteGet
@@ -378,7 +391,7 @@ function quote_list(token::String, exchange::String)
 	# Set returned fields
  	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
 	if message != "success"
-		error("QuoteList() failed with message returned of: $message")
+		error("quote_list() failed with message returned of: $message")
 	else
 		# Shred xml_tree into a Dict{String, Exchange}
 		quotes = Dict{String, Quote}()
@@ -424,7 +437,7 @@ function quote_list_2(token::String, exchange::String, symbols::String)
 	# Set returned fields
  	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
 	if message != "success"
-		error("QuoteList() failed with message returned of: $message")
+		error("quote_list_2() failed with message returned of: $message")
 	else
 		# Shred xml_tree into a Dict{String, Exchange}
 		quotes = Dict{String, Quote}()
@@ -470,7 +483,7 @@ function quote_list_by_date(token::String, exchange::String, quote_date::String)
 	# Set returned fields
  	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
 	if message != "success"
-		error("QuoteList() failed with message returned of: $message")
+		error("quote_list_by_date() failed with message returned of: $message")
 	else
 		# Shred xml_tree into a Dict{String, Exchange}
 		quotes = Dict{String, Quote}()
@@ -516,7 +529,7 @@ function quote_list_by_date_2(token::String, exchange::String, quote_date::Strin
 	# Set returned fields
  	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
 	if message != "success"
-		error("QuoteList() failed with message returned of: $message")
+		error("quote_list_by_date_2() failed with message returned of: $message")
 	else
 		# Shred xml_tree into a Dict{String, Exchange}
 		quotes = Dict{String, Quote_2}()
@@ -544,7 +557,7 @@ end
 # Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225"),
 #		 Period (eg: "1", "5", "10", "15", "30", "h", "d", "w", "m")
-# OUTPUT: List of quotes
+# OUTPUT: Dict() of end of period quotes of type ::Dict{String, Quote}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteListByDatePeriod
 function quote_list_by_date_period(token::String, exchange::String, quote_date::String, period::String)
 	call = "/QuoteListByDatePeriod"
@@ -554,7 +567,7 @@ function quote_list_by_date_period(token::String, exchange::String, quote_date::
 	# Set returned fields
  	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
 	if message != "success"
-		error("QuoteList() failed with message returned of: $message")
+		error("quote_list_by_date_period() failed with message returned of: $message")
 	else
 		# Shred xml_tree into a Dict{String, Exchange}
 		quotes = Dict{String, Quote}()
@@ -593,40 +606,145 @@ end
 # Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225),
 # Period (1, 5, 10, 15, 30, h, d, w, m)
-# OUTPUT: List of quotes
+# OUTPUT: Dict() of end of period quotes of type ::Dict{String, Quote_2}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=QuoteListByDatePeriod2
-function quote_list_by_date_period_2()
-	# Type code here
+function quote_list_by_date_period_2(token::String, exchange::String, quote_date::String, period::String)
+	call = "/QuoteListByDatePeriod2"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date", "Period"=>"$period"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("quote_list_by_date_period_2() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		quotes = Dict{String, Quote_2}()
+		for qt in find(xml_tree, "/RESPONSE/QUOTES2/QUOTE2")
+			# Assign
+			symbol::String = strip(get(qt.attr,"s",""))
+			date_time::DateTime = DateTime(strip(get(qt.attr,"d","")), DATETIMEFORMAT_SS)
+			open::Float64 = float(strip(get(qt.attr,"o","")))
+			high::Float64 = float(strip(get(qt.attr,"h","")))
+			low::Float64 = float(strip(get(qt.attr,"l","")))
+			close::Float64 = float(strip(get(qt.attr,"c","")))
+			volume::Float64 = float(strip(get(qt.attr,"v","")))
+			open_interest::Float64 = float(strip(get(qt.attr,"i","")))
+			bid::Float64 = float(strip(get(qt.attr,"b","")))
+			ask::Float64 = float(strip(get(qt.attr,"a","")))
+
+			quotes[symbol] = Quote_2(symbol, date_time, open, high, low, close, volume, open_interest, bid, ask,)
+		end
+		return quotes
+	end
 end
 
 # SplitListByExchange
 # -------------------
 # Returns a list of Splits of a specific exchange.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
-# OUTPUT: List of splits
+# OUTPUT: Dict() of splits of type::Dict{String, Split}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=SplitListByExchange
-function split_list_by_exchange()
-	# Type code here
+function split_list_by_exchange(token::String, exchange::String)
+	call = "/SplitListByExchange"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("split_list_by_exchange() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		splits = Dict{String, Split}()
+		for sp in find(xml_tree, "/RESPONSE/SPLITS/SPLIT")
+			# Assign
+			exchange_code::String = strip(get(sp.attr,"Exchange",""))
+			symbol::String = strip(get(sp.attr,"Symbol",""))
+			date_time::DateTime = DateTime(strip(get(sp.attr,"DateTime","")), DATETIMEFORMAT_SS)
+			ratio::String = strip(get(sp.attr,"Ratio",""))
+			price_multiplier::Float64 = float(strip(split(ratio, "-")[2])) / float(strip(split(ratio, "-")[1]))
+			share_float_multiplier::Float64 = float(strip(split(ratio, "-")[1])) / float(strip(split(ratio, "-")[2]))
+			is_reverse_split::Bool = price_multiplier > 1.0 ? true : false
+
+			splits[exchange_code * "_" * symbol * "_" * string(date_time)] = Split(exchange_code, symbol, date_time, ratio,
+																				   price_multiplier, share_float_multiplier,
+																				   is_reverse_split)
+		end
+		return splits
+	end
 end
 
 # SplitListBySymbol
 # -----------------
 # Returns a list of Splits of a specific symbol.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ), Symbol (eg:MSFT)
-# OUTPUT: List of splits
+# OUTPUT: Dict() of splits of type::Dict{String, Split}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=SplitListBySymbol
-function split_list_by_symbol()
-	# Type code here
+function split_list_by_symbol(token::String, exchange::String, symbol::String)
+	call = "/SplitListBySymbol"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$symbol"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("split_list_by_exchange() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		splits = Dict{String, Split}()
+		for sp in find(xml_tree, "/RESPONSE/SPLITS/SPLIT")
+			# Assign
+			exchange_code::String = strip(get(sp.attr,"Exchange",""))
+			symbol::String = strip(get(sp.attr,"Symbol",""))
+			date_time::DateTime = DateTime(strip(get(sp.attr,"DateTime","")), DATETIMEFORMAT_SS)
+			ratio::String = strip(get(sp.attr,"Ratio",""))
+			price_multiplier::Float64 = float(strip(split(ratio, "-")[2])) / float(strip(split(ratio, "-")[1]))
+			share_float_multiplier::Float64 = float(strip(split(ratio, "-")[1])) / float(strip(split(ratio, "-")[2]))
+			is_reverse_split::Bool = price_multiplier > 1.0 ? true : false
+
+			splits[exchange_code * "_" * symbol * "_" * string(date_time)] = Split(exchange_code, symbol, date_time, ratio,
+																				   price_multiplier, share_float_multiplier,
+																				   is_reverse_split)
+		end
+		return splits
+	end
 end
 
 # SymbolChangesByExchange
 # -----------------------
 # Returns a list of symbol changes of a given exchange.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
-# OUTPUT: List of symbol changes
+# OUTPUT: Dict() of symbol changes of type::Dict{String, SymbolChange}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=SymbolChangesByExchange
-function symbol_changes_by_exchange()
-	# Type code here
+function symbol_changes_by_exchange(token::String, exchange::String)
+	call = "/SymbolChangesByExchange"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("symbol_changes_by_exchange() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Exchange}
+		symbol_changes = Dict{String, SymbolChange}()
+		for sc in find(xml_tree, "/RESPONSE/SYMBOLCHANGES/SYMBOLCHANGE")
+			# Assign
+			old_exchange_code::String = strip(get(sc.attr,"ExchangeCode",""))
+			new_exchange_code::String = strip(get(sc.attr,"NewExchangeCode",""))
+			old_symbol::String = strip(get(sc.attr,"OldSymbol",""))
+			new_symbol::String = strip(get(sc.attr,"NewSymbol",""))
+			date_time::DateTime = DateTime(strip(get(sc.attr,"DateTime","")), DATETIMEFORMAT_SS)
+			is_change_of_exchange_code::Bool = old_exchange_code != new_exchange_code ? true : false
+			is_change_of_symbol_code::Bool = old_symbol != new_symbol ? true : false
+
+			symbol_changes[old_exchange_code * "_" * old_symbol * "_" * string(date_time)] =
+				SymbolChange(old_exchange_code, new_exchange_code, old_symbol, new_symbol, date_time,
+							   is_change_of_exchange_code, is_change_of_symbol_code)
+		end
+		return symbol_changes
+	end
 end
 
 # SymbolChart
@@ -635,8 +753,20 @@ end
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ), Symbol (eg:MSFT)
 # OUTPUT: Chart URL
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=SymbolChart
-function symbol_chart()
-	# Type code here
+function symbol_chart(token::String, exchange::String, symbol::String)
+	call = "/SymbolChart"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$symbol"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("symbol_chart() failed with message returned of: $message")
+	else
+		# URL
+		return find(xml_tree, "/RESPONSE/CHART[1]#string")
+	end
+
 end
 
 # SymbolGet
