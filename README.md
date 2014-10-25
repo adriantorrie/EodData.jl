@@ -21,7 +21,7 @@ for in-depth documentation, and references.
 * [exchange_list()]()
 * [exchange_months()]()
 * [fundamental_list()]()
-* [login()](./EodData.jl#login)
+* [login()](/EodData.jl#login)
 * [login_2()]()
 * [membership()]()
 * [quote_get()]()
