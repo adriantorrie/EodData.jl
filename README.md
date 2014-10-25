@@ -14,42 +14,56 @@ for in-depth documentation, and references.
 
 
 ## Web Service Calls
-* [country_list()]()
-* [data_client_latest_version()]()
-* [data_formats()]()
-* [exchange_get()]()
-* [exchange_list()]()
-* [exchange_months()]()
-* [fundamental_list()]()
-* [login()](/EodData.jl#login)
-* [login_2()]()
-* [membership()]()
-* [quote_get()]()
-* [quote_list()]()
-* [quote_list_2()]()
-* [quote_list_by_date()]()
-* [quote_list_by_date_2()]()
-* [quote_list_by_date_period()]()
-* [quote_list_by_date_period_2()]()
-* [split_list_by_exchange()]()
-* [split_list_by_symbol()]()
-* [symbol_changes_by_exchange()]()
-* [symbol_chart()]()
-* [symbol_get()]()
-* [symbol_history()]()
-* [symbol_history_period()]()
-* [symbol_history_period_by_date_range()]()
-* [symbol_list()]()
-* [symbol_list_2()]()
-* [technical_list()]()
-* [top_10_gains()]()
-* [top_10_losses()]()
-* update_data_format() **not implemented**
-* [validate_access()]()
+* [country_list()](../blob/master/README.md#country_list)
+* [data_client_latest_version()](../blob/master/README.md#data_client_latest_version)
+* [data_formats()](../blob/master/README.md#data_formats)
+* [exchange_get()](../blob/master/README.md#exchange_get)
+* [exchange_list()](../blob/master/README.md#exchange_list)
+* [exchange_months()](../blob/master/README.md#exchange_months)
+* [fundamental_list()](../blob/master/README.md#fundamental_list)
+* [login()](../blob/master/README.md#login)
+* [login_2()](../blob/master/README.md#login_2)
+* [membership()](../blob/master/README.md#membership)
+* [quote_get()](../blob/master/README.md#quote_get)
+* [quote_list()](../blob/master/README.md#quote_list)
+* [quote_list_2()](../blob/master/README.md#quote_list_2)
+* [quote_list_by_date()](../blob/master/README.md#quote_list_by_date)
+* [quote_list_by_date_2()](../blob/master/README.md#quote_list_by_date_2)
+* [quote_list_by_date_period()](../blob/master/README.md#quote_list_by_date_period)
+* [quote_list_by_date_period_2()](../blob/master/README.md#quote_list_by_date_period_2)
+* [split_list_by_exchange()](../blob/master/README.md#split_list_by_exchange)
+* [split_list_by_symbol()](../blob/master/README.md#split_list_by_symbol)
+* [symbol_changes_by_exchange()](../blob/master/README.md#symbol_changes_by_exchange)
+* [symbol_chart()](../blob/master/README.md#symbol_chart)
+* [symbol_get()](../blob/master/README.md#symbol_get)
+* [symbol_history()](../blob/master/README.md#symbol_history)
+* [symbol_history_period()](../blob/master/README.md#symbol_history_period)
+* [symbol_history_period_by_date_range()](../blob/master/README.md#symbol_history_period_by_date_range)
+* [symbol_list()](../blob/master/README.md#symbol_list)
+* [symbol_list_2()](../blob/master/README.md#symbol_list_2)
+* [technical_list()](../blob/master/README.md#technical_list)
+* [top_10_gains()](../blob/master/README.md#top_10_gains)
+* [top_10_losses()](../blob/master/README.md#top_10_losses)
+* update_data_format() ... **not implemented**
+* [validate_access()](../blob/master/README.md#validate_access)
 
+
+## Types
+* [DataFormatColumn](../blob/master/README.md#dataformatcolumn)
+* [DataFormat](../blob/master/README.md#dataformat)
+* [Exchange](../blob/master/README.md#exchange)
+* [Fundamental](../blob/master/README.md#fundamental)
+* [LoginResponse](../blob/master/README.md#loginresponse)
+* [Quote](../blob/master/README.md#quote)
+* [Quote_2](../blob/master/README.md#quote_2)
+* [Split](../blob/master/README.md#split)
+* [TickerChange](../blob/master/README.md#tickerchange)
+* [Ticker](../blob/master/README.md#ticker)
+* [Ticker_2](../blob/master/README.md#ticker_2)
+* [Technical](../blob/master/README.md#technical)
 
 ## Usage
-```
+```julia
 using EodData
 
 const USERNAME = "string"
@@ -59,7 +73,7 @@ const PASSWORD = "string"
 ### login()
 Call login. This will assign you a token which is needed to
 make EodData web service calls.
-```
+```Julia
 resp = login(USERNAME, PASSWORD)
 println(resp.message)
 println(resp.token)
