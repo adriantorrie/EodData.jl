@@ -392,7 +392,7 @@ end
 ### Fundamental
 ```
 type Fundamental
-	ticker::String
+	ticker_code::String
 	name::String
 	description::String
 	date_time::DateTime
@@ -427,7 +427,7 @@ end
 ### Quote
 ```
 type Quote
-	ticker::String
+	ticker_code::String
 	description::String
 	name::String
 	date_time::DateTime
@@ -451,7 +451,7 @@ end
 ### Quote_2
 ```
 type Quote_2
-	ticker::String
+	ticker_code::String
 	date_time::DateTime
 	open::Float64
 	high::Float64
@@ -468,7 +468,7 @@ end
 ```
 type Split
 	exchange_code::String
-	ticker::String
+	ticker_code::String
 	date_time::DateTime
 	ratio::String
 	price_multiplier::Float64
@@ -482,8 +482,8 @@ end
 type TickerChange
 	old_exchange_code::String
 	new_exchange_code::String
-	old_ticker::String
-	new_ticker::String
+	old_ticker_code::String
+	new_ticker_code::String
 	date_time::DateTime
 	is_change_of_exchange_code::Bool
 	is_change_of_ticker_code::Bool
@@ -493,9 +493,68 @@ end
 ### Ticker
 ```
 type Ticker
-	ticker::String
+	code::String
 	name::String
 	long_name::String
 	date_time::DateTime
+end
+```
+
+### Ticker_2
+```
+type Ticker_2
+	code::String
+	name::String
+end
+```
+
+### Technical
+```
+type Technical
+	ticker_code::String
+	name::String
+	description::String
+	date_time::DateTime
+	previous::Float64
+	change::Float64
+	ma_1::Float64
+	ma_2::Float64
+	ma_5::Float64
+	ma_20::Float64
+	ma_50::Float64
+	ma_100::Float64
+	ma_200::Float64
+	ma_percent::Float64
+	ma_return::Float64
+	volume_change::Float64
+	three_month_change::Float64
+	six_month_change::Float64
+	week_high::Float64
+	week_low::Float64
+	week_change::Float64
+	avg_week_change::Float64
+	avg_week_volume::Float64
+	week_volume::Float64
+	month_high::Float64
+	month_low::Float64
+	month_change::Float64
+	avg_month_change::Float64
+	avg_month_volume::Float64
+	month_volume::Float64
+	year_high::Float64
+	year_low::Float64
+	year_change::Float64
+	avg_year_change::Float64
+	avg_year_volume::Float64
+	ytd_change::Float64
+	rsi_14::Float64
+	sto_9::Float64
+	wpr_14::Float64
+	mtm_14::Float64
+	roc_14::Float64
+	ptc::Float64
+	sar::Float64
+	volatility::Float64
+	liquidity::Float64
 end
 ```
