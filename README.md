@@ -14,7 +14,7 @@ for in-depth documentation, and references.
 
 
 ## Web Service Calls
-* [country_list()](./blob/master/README.md#country_list)
+* [country_list()](./README.md#country_list)
 * [data_client_latest_version()](./blob/master/README.md#data_client_latest_version)
 * [data_formats()](./blob/master/README.md#data_formats)
 * [exchange_get()](./blob/master/README.md#exchange_get)
