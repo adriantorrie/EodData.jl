@@ -15,7 +15,8 @@ export country_list, data_client_latest_version, data_formats, exchange_get, exc
 		quote_list_2, quote_list_by_date, quote_list_by_date_2, quote_list_by_date_period,
 		quote_list_by_date_period_2, split_list_by_exchange, split_list_by_symbol,
 		symbol_changes_by_exchange, symbol_chart, symbol_get, symbol_history, symbol_history_period,
-		symbol_history_period_by_date_range, symbol_list, symbol_list_2, technical_list
+		symbol_history_period_by_date_range, symbol_list, symbol_list_2, technical_list,
+		top_10_gains, top_10_losses
 
 # =========
 # Functions
@@ -992,7 +993,7 @@ function symbol_list_2(token::String, exchange::String)
 	# Set returned fields
  	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
 	if message != "success"
-		error("symbol_list() failed with message returned of: $message")
+		error("symbol_list_2() failed with message returned of: $message")
 	else
 		# Shred xml_tree into a Dict{String, Ticker_2}
 		tickers = Dict{String, Ticker_2}()
@@ -1010,8 +1011,8 @@ end
 # TechnicalList
 # -------------
 # Returns a complete list of technical data for an entire exchange.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ)
-# OUTPUT: List of quotes
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
+# OUTPUT: Dict() of technical indicators for each ticker of type ::Dict{String, Technical}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=TechnicalList
 function technical_list(token::String, exchange::String)
 	call = "/TechnicalList"
@@ -1021,7 +1022,7 @@ function technical_list(token::String, exchange::String)
 	# Set returned fields
  	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
 	if message != "success"
-		error("symbol_list() failed with message returned of: $message")
+		error("technical_list() failed with message returned of: $message")
 	else
 		# Shred xml_tree into a Dict{String, Ticker_2}
 		technicals = Dict{String, Technical}()
@@ -1092,8 +1093,44 @@ end
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
 # OUTPUT: List of quotes
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=Top10Gains
-function top_10_gains()
-	# Type code here
+function top_10_gains(token::String, exchange::String)
+	call = "/Top10Gains"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("top_10_gains() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Quote}
+		quotes = Dict{String, Quote}()
+		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
+			# Assign
+			ticker_code::String = strip(get(qt.attr,"Symbol",""))
+			description::String = strip(get(qt.attr,"Description",""))
+			name::String = strip(get(qt.attr,"Name",""))
+			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
+			open::Float64 = float(strip(get(qt.attr,"Open","")))
+			high::Float64 = float(strip(get(qt.attr,"High","")))
+			low::Float64 = float(strip(get(qt.attr,"Low","")))
+			close::Float64 = float(strip(get(qt.attr,"Close","")))
+			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
+			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
+			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
+			change::Float64 = float(strip(get(qt.attr,"Change","")))
+			simple_return::Float64 = change / previous
+			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
+			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
+			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
+			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
+			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
+
+			quotes[ticker_code] = Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
+										previous, change, simple_return, bid, ask, previous_close, next_open, modified)
+		end
+		return quotes
+	end
 end
 
 # Top10Losses
@@ -1102,8 +1139,44 @@ end
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
 # OUTPUT: List of quotes
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=Top10Losses
-function top_10_losses()
-	# Type code here
+function top_10_losses(token::String, exchange::String)
+	call = "/Top10Losses"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
+	xml_tree = get_response(call, args)
+
+	# Set returned fields
+ 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
+	if message != "success"
+		error("top_10_losses() failed with message returned of: $message")
+	else
+		# Shred xml_tree into a Dict{String, Quote}
+		quotes = Dict{String, Quote}()
+		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
+			# Assign
+			ticker_code::String = strip(get(qt.attr,"Symbol",""))
+			description::String = strip(get(qt.attr,"Description",""))
+			name::String = strip(get(qt.attr,"Name",""))
+			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
+			open::Float64 = float(strip(get(qt.attr,"Open","")))
+			high::Float64 = float(strip(get(qt.attr,"High","")))
+			low::Float64 = float(strip(get(qt.attr,"Low","")))
+			close::Float64 = float(strip(get(qt.attr,"Close","")))
+			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
+			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
+			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
+			change::Float64 = float(strip(get(qt.attr,"Change","")))
+			simple_return::Float64 = change / previous
+			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
+			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
+			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
+			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
+			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
+
+			quotes[ticker_code] = Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
+										previous, change, simple_return, bid, ask, previous_close, next_open, modified)
+		end
+		return quotes
+	end
 end
 
 # UpdateDataFormat

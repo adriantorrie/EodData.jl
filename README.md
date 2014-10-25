@@ -330,6 +330,25 @@ nyse_technicals = technical_list(resp.token, "NYSE")
 println(nyse_technicals)
 ```
 
+### top_10_gains()
+# Call and assign the quotes for the top 10 gains for the NZX,
+# also collect the ticker codes into an array, as the ticker codes
+# are the dictionary keys.
+```
+nzx_top_10_gains_dict = top_10_gains(resp.token, "NZX")
+nzx_top_10_gains_tickers = collect(keys(nzx_top_10_gains_dict))
+```
+
+### top_10_losses()
+Call and assign the quotes for the top 10 losses for the NZX,
+also collect the ticker codes into an array, as the ticker codes
+are the dictionary keys.
+```
+nzx_top_10_losses_dict = top_10_losses(resp.token, "NZX")
+nzx_top_10_losses_tickers = collect(keys(nzx_top_10_losses_dict))
+println(nzx_top_10_losses_tickers)
+```
+
 ## Data Types
 ### DataFormatColumn
 ```
