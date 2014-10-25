@@ -1,6 +1,7 @@
 #=
 	EodData internal module functions
 =#
+export set_date_string
 
 # =========
 # Functions
@@ -11,6 +12,6 @@
 # INPUT: Date data type
 # OUTPUT: Xml tree of the type ::ETree
 # http://ws.eoddata.com/data.asmx?op=CountryList
-function set_date_string(date::DateTime)
+function set_date_string(date)
 	return string(year(date)) * string(month(date)) * string(day(date))
 end

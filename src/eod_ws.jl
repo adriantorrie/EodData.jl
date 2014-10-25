@@ -1206,4 +1206,4 @@ function validate_access(token::String, exchange::String, quote_date::String, pe
 	xml_tree = get_response(call, args)
 
 	return lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}"))) == "success" ? true : false
-end
+end # validate_access

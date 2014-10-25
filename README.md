@@ -404,6 +404,18 @@ println(nzx_top_10_losses_tickers)
 ### update_data_format()
 This is not implemented.
 
+### validate_access()
+The first call shows what is expected
+The second and third calls show the use of a utility function that's found in:
+`/src/eod_utils_external.jl` called `set_date_string()` that converts
+values that are type ::Date and ::DateTime into the correctly formatted
+string expected by the web service.
+```julia
+validate_access(resp.token, "NZX", "20141001", "h")
+validate_access(resp.token, "NYSE", set_date_string(today()), "h")
+validate_access(resp.token, "NYSE", set_date_string(now()), "h")
+```
+
 ## Data Types
 ### DataFormatColumn
 ```julia
