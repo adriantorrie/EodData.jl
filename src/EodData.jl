@@ -233,7 +233,8 @@ end
 
 # =====
 # Files
-include("eod_utils.jl")
+include("eod_utils_external.jl")
+include("eod_utils_internal.jl")
 include("eod_ws.jl")
 
 end # module

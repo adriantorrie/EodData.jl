@@ -5,11 +5,48 @@ Julia package for connecting to EodData.com and downloading data.
 for in-depth documentation, and references.
 * The examples on this page can be found in `/examples/examples.jl`.
 
+
 ## Package Dependencies
 * [EodData Web Service (Membership required)](http://ws.eoddata.com/data.asmx)
 * [Dates.jl](https://github.com/JuliaLang/julia/tree/master/base/dates)
 * [HTTPClient.jl](https://github.com/JuliaWeb/HTTPClient.jl)
 * [LibExpat.jl](https://github.com/amitmurthy/LibExpat.jl)
+
+
+## Web Service Calls
+* [country_list()]()
+* [data_client_latest_version()]()
+* [data_formats()]()
+* [exchange_get()]()
+* [exchange_list()]()
+* [exchange_months()]()
+* [fundamental_list()]()
+* [login()](./EodData.jl#login)
+* [login_2()]()
+* [membership()]()
+* [quote_get()]()
+* [quote_list()]()
+* [quote_list_2()]()
+* [quote_list_by_date()]()
+* [quote_list_by_date_2()]()
+* [quote_list_by_date_period()]()
+* [quote_list_by_date_period_2()]()
+* [split_list_by_exchange()]()
+* [split_list_by_symbol()]()
+* [symbol_changes_by_exchange()]()
+* [symbol_chart()]()
+* [symbol_get()]()
+* [symbol_history()]()
+* [symbol_history_period()]()
+* [symbol_history_period_by_date_range()]()
+* [symbol_list()]()
+* [symbol_list_2()]()
+* [technical_list()]()
+* [top_10_gains()]()
+* [top_10_losses()]()
+* update_data_format() **not implemented**
+* [validate_access()]()
+
 
 ## Usage
 ```
@@ -349,6 +386,9 @@ nzx_top_10_losses_dict = top_10_losses(resp.token, "NZX")
 nzx_top_10_losses_tickers = collect(keys(nzx_top_10_losses_dict))
 println(nzx_top_10_losses_tickers)
 ```
+
+### update_data_format()
+This is not implemented.
 
 ## Data Types
 ### DataFormatColumn

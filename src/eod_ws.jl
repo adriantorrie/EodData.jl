@@ -16,13 +16,13 @@ export country_list, data_client_latest_version, data_formats, exchange_get, exc
 		quote_list_by_date_period_2, split_list_by_exchange, split_list_by_symbol,
 		symbol_changes_by_exchange, symbol_chart, symbol_get, symbol_history, symbol_history_period,
 		symbol_history_period_by_date_range, symbol_list, symbol_list_2, technical_list,
-		top_10_gains, top_10_losses
+		top_10_gains, top_10_losses, validate_access
 
 # =========
 # Functions
 
-# CountryList
-# -----------
+# country_list()
+# --------------
 # Returns a list of available countries.
 # INPUT: Token (Login Token)
 # OUTPUT: Dict() of countries of type ::Dict{String, String}
@@ -42,10 +42,10 @@ function country_list(token::String)
 		end
 		return countries
 	end
-end
+end # country_list
 
-# DataClientLatestVersion
-# -----------------------
+# data_client_latest_version()
+# ----------------------------
 # Returns the latest version information of Data Client.
 # INPUT: Token (Login Token)
 # OUTPUT: Date Client Version of type ::String
@@ -60,10 +60,10 @@ function data_client_latest_version(token::String)
 
 		return strip(find(xml_tree, "/RESPONSE/VERSION[1]").elements[1])
 	end
-end
+end # data_client_latest_version
 
-# DataFormats
-# -----------
+# data_formats()
+# --------------
 # Returns the list of data formats.
 # INPUT: Token (Login Token)
 # OUTPUT: Dict() of DataFormats of the type ::Dict{String, DataFormat}
@@ -127,8 +127,8 @@ function data_formats(token::String)
 	end
 end # data_formats
 
-# ExchangeGet
-# -----------
+# exchange_get()
+# --------------
 # Returns detailed information of a specific exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Exchange
@@ -162,10 +162,10 @@ function exchange_get(token::String, exchange_code::String)
 		return exchange = Exchange(code, name, last_trade_date_time, country_code, currency_code, advances, declines,
 								   suffix, time_zone, is_intraday, intraday_start_date, has_intraday_product)
 	end
-end
+end # exchange_get
 
-# ExchangeList
-# ------------
+# exchange_list()
+# ---------------
 # Returns a list of available exchanges.
 # INPUT: Token (Login Token)
 # OUTPUT: Dict() of exchanges of the type ::Dict{String, Exchange}
@@ -201,10 +201,10 @@ function exchange_list(token::String)
 		end
 		return exchanges
 	end
-end
+end # exchange_list
 
-# ExchangeMonths
-# --------------
+# exchange_months()
+# -----------------
 # Returns the number of Months history a user is allowed to download.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Number of Months as an ::Int
@@ -221,19 +221,19 @@ function exchange_months(token::String, exchange_code::String)
 
 		return int(strip(find(xml_tree, "/RESPONSE/MONTHS[1]").elements[1]))
 	end
-end
+end # exchange_months
 
-# FundamentalList
-# ---------------
+# fundamental_list()
+# ------------------
 # Returns a complete list of fundamental data for an entire exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Dict() of fundamentals of type ::Dict{String, Fundamental}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=FundamentalList
 function fundamental_list(token::String, exchange_code::String)
 	if is(token, nothing)
-		error("exchange_list() failed: Missing value in parameter -> token::Sring")
+		error("fundamental_list() failed: Missing value in parameter -> token::Sring")
 	elseif exchange_code == "" || is(exchange_code, nothing)
-		error("exchange_list() failed: Missing value in parameter -> exchange_code::Sring")
+		error("fundamental_list() failed: Missing value in parameter -> exchange_code::Sring")
 	else
 		call = "/FundamentalList"
 		args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
@@ -276,8 +276,8 @@ function fundamental_list(token::String, exchange_code::String)
 	end
 end # fundamental_list
 
-# Login
-# -----
+# login()
+# -------
 # Login to EODData Financial Information Web Service. Used for Web Authentication.
 # INPUT: Username, Password
 # OUTPUT: Login Token, which is a field in the type ::LoginResponse
@@ -288,14 +288,19 @@ function login(username::String, password::String)
 	xml_tree = get_response(call, args)
 
 	# Set returned fields
- 	message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
-	token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
+	message = lowercase(strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}")))
+	if message != "login successful"
+		error("login() failed with message returned of: $message")
+	else
+		message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
+		token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
 
-	return LoginResponse(message,token)
-end
+		return LoginResponse(message, token)
+	end
+end # login
 
-# Login2
-# ------
+# login_2()
+# ---------
 # Login to EODData Financial Information Web Service. Used for Application Authentication.
 # INPUT: Username, Password, Version (Application Version)
 # OUTPUT: Login Token, which is a field in the type ::LoginResponse
@@ -306,19 +311,19 @@ function login_2(username::String, password::String, version::String)
 	xml_tree = get_response(call, args)
 
 	# Set returned fields
-	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("membership() failed with message returned of: $message")
+	message = lowercase(strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}")))
+	if message != "login successful"
+		error("login_2() failed with message returned of: $message")
 	else
  		message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
 		token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
 
-		return LoginResponse(message,token)
+		return LoginResponse(message, token)
 	end
-end
+end # login_2
 
-# Membership
-# ----------
+# membership()
+# ------------
 # Returns membership of user.
 # INPUT: Token (Login Token)
 # OUTPUT: Membership of type ::String
@@ -335,10 +340,10 @@ function membership(token::String)
 	else
 		return string(strip(find(xml_tree, "/RESPONSE/MEMBERSHIP[1]").elements[1]))
 	end
-end
+end # membership
 
-# QuoteGet
-# --------
+# quote_get()
+# -----------
 # Returns an end of day quote for a specific ticker.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), ticker (eg:"MSFT")
 # OUTPUT: End of day quote of type ::Quote
@@ -378,10 +383,10 @@ function quote_get(token::String, exchange::String, ticker::String)
 		return Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
 					 previous, change, simple_return, bid, ask, previous_close, next_open, modified)
 	end
-end
+end # quote_get
 
-# QuoteList
-# ---------
+# quote_list()
+# ------------
 # Returns a complete list of end of day quotes for an entire exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Dict() of end of day quotes of type ::Dict{String, Quote}
@@ -424,10 +429,10 @@ function quote_list(token::String, exchange::String)
 		end
 		return quotes
 	end
-end
+end # quote_list
 
-# QuoteList2
-# ----------
+# quote_list_2()
+# --------------
 # Returns end of day quotes for a list of tickers of a specific exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Symbols (eg:"MSFT,INTC")
 # OUTPUT: Dict() of end of day quotes of type ::Dict{String, Quote}
@@ -470,10 +475,10 @@ function quote_list_2(token::String, exchange::String, tickers::String)
 		end
 		return quotes
 	end
-end
+end # quote_list_2
 
-# QuoteListByDate
-# ---------------
+# quote_list_by_date()
+# --------------------
 # Returns a complete list of end of day quotes for an entire exchange and a specific date.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225")
 # OUTPUT: Dict() of end of day quotes of type ::Dict{String, Quote}
@@ -516,10 +521,10 @@ function quote_list_by_date(token::String, exchange::String, quote_date::String)
 		end
 		return quotes
 	end
-end
+end # quote_list_by_date
 
-# QuoteListByDate2
-# ----------------
+# quote_list_by_date_2()
+# ----------------------
 # Returns a complete list of end of day quotes for an entire exchange and a specific date.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225")
 # OUTPUT: Dict() of end of day quotes of type ::Dict{String, Quote_2}
@@ -553,10 +558,10 @@ function quote_list_by_date_2(token::String, exchange::String, quote_date::Strin
 		end
 		return quotes
 	end
-end
+end # quote_list_by_date_2
 
-# QuoteListByDatePeriod
-# ---------------------
+# quote_list_by_date_period()
+# ---------------------------
 # Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225"),
 #		 Period (eg: "1", "5", "10", "15", "30", "h", "d", "w", "m")
@@ -602,10 +607,10 @@ function quote_list_by_date_period(token::String, exchange::String, quote_date::
 		end
 		return quotes
 	end
-end
+end # quote_list_by_date_period
 
-# QuoteListByDatePeriod2
-# ----------------------
+# quote_list_by_date_period_2()
+# -----------------------------
 # Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225"),
 # Period ("1", "5", "10", "15", "30", "h", "d", "w", "m")
@@ -640,10 +645,10 @@ function quote_list_by_date_period_2(token::String, exchange::String, quote_date
 		end
 		return quotes
 	end
-end
+end # quote_list_by_date_period_2
 
-# SplitListByExchange
-# -------------------
+# split_list_by_exchange()
+# ------------------------
 # Returns a list of Splits of a specific exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Dict() of splits of type::Dict{String, Split}
@@ -676,10 +681,10 @@ function split_list_by_exchange(token::String, exchange::String)
 		end
 		return splits
 	end
-end
+end # split_list_by_exchange
 
-# SplitListBySymbol
-# -----------------
+# split_list_by_symbol()
+# ----------------------
 # Returns a list of Splits of a specific ticker.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Ticker (eg:"MSFT")
 # OUTPUT: Dict() of splits of type::Dict{String, Split}
@@ -712,10 +717,10 @@ function split_list_by_symbol(token::String, exchange::String, ticker::String)
 		end
 		return splits
 	end
-end
+end # split_list_by_symbol
 
-# SymbolChangesByExchange
-# -----------------------
+# symbol_changes_by_exchange()
+# ----------------------------
 # Returns a list of ticker changes of a given exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Dict() of ticker changes of type::Dict{String, TickerChange}
@@ -748,10 +753,10 @@ function symbol_changes_by_exchange(token::String, exchange::String)
 		end
 		return ticker_changes
 	end
-end
+end # symbol_changes_by_exchange
 
-# SymbolChart
-# -----------
+# symbol_chart()
+# --------------
 # Returns a URL to a chart image of a specific ticker.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ), Ticker (eg:MSFT)
 # OUTPUT: Chart URL
@@ -769,11 +774,10 @@ function symbol_chart(token::String, exchange::String, ticker::String)
 		# URL
 		return find(xml_tree, "/RESPONSE/CHART[1]#string")
 	end
+end # symbol_chart
 
-end
-
-# SymbolGet
-# ---------
+# symbol_get()
+# ------------
 # Returns detailed information of a specific ticker.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Ticker (eg:"MSFT")
 # OUTPUT: Ticker of type ::Ticker
@@ -798,10 +802,10 @@ function symbol_get(token::String, exchange::String, ticker::String)
 
 		return Ticker(code, name, long_name, date_time)
 	end
-end
+end # symbol_get
 
-# SymbolHistory
-# -------------
+# symbol_history()
+# ----------------
 # Returns a list of historical end of day data of a specified symbol and specified start date up to today's date.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Ticker (eg:"MSFT"), StartDate (format:yyyyMMdd eg:"20080225")
 # OUTPUT: Dict() of quotes of type ::Dict{String, Quote}
@@ -846,10 +850,10 @@ function symbol_history(token::String, exchange::String, ticker::String, start_d
 		end
 		return quotes
 	end
-end
+end # symbol_history
 
-# SymbolHistoryPeriod
-# -------------------
+# symbol_history_period()
+# -----------------------
 # Returns a list of historical data of a specified symbol, specified date and specified period.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Symbol (eg:"MSFT"), Date (format:yyyyMMdd eg:"20080225"),
 # 		  Period ("1", "5", "10", "15", "30", "h", "d", "w", "m")
@@ -895,10 +899,10 @@ function symbol_history_period(token::String, exchange::String, ticker::String, 
 		end
 		return quotes
 	end
-end
+end # symbol_history_period
 
-# SymbolHistoryPeriodByDateRange
-# ------------------------------
+# symbol_history_period_by_date_range()
+# -------------------------------------
 # Returns a list of historical data of a specified symbol, specified date range and specified period.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Symbol (eg:"MSFT"),
 # 		  StartDate (format:yyyyMMdd eg:"20080225"), EndDate (format:yyyyMMdd eg:"20080225"),
@@ -946,10 +950,10 @@ function symbol_history_period_by_date_range(token::String, exchange::String, ti
  		end
 		return quotes
 	end
-end
+end # symbol_history_period_by_date_range
 
-# SymbolList
-# ----------
+# symbol_list()
+# -------------
 # Returns a list of symbols of a specified exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Dict() of tickers of type ::Dict{String, Ticker}
@@ -977,10 +981,10 @@ function symbol_list(token::String, exchange::String)
 		end
 		return  tickers
 	end
-end
+end # symbol_list
 
-# SymbolList2
-# -----------
+# symbol_list_2()
+# ---------------
 # Returns a list of symbols of a specified exchange.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
 # OUTPUT: Dict() of tickers of type ::Dict{String, Ticker_2}
@@ -1006,10 +1010,10 @@ function symbol_list_2(token::String, exchange::String)
 		end
 		return  tickers
 	end
-end
+end # symbol_list_2
 
-# TechnicalList
-# -------------
+# technical_list()
+# ----------------
 # Returns a complete list of technical data for an entire exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
 # OUTPUT: Dict() of technical indicators for each ticker of type ::Dict{String, Technical}
@@ -1085,10 +1089,10 @@ function technical_list(token::String, exchange::String)
 		end
 		return  technicals
 	end
-end
+end # technical_list
 
-# Top10Gains
-# ----------
+# top_10_gains()
+# --------------
 # Returns a list of the Top 10 Gains of a specified exchange.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
 # OUTPUT: List of quotes
@@ -1131,10 +1135,10 @@ function top_10_gains(token::String, exchange::String)
 		end
 		return quotes
 	end
-end
+end # top_10_gains
 
-# Top10Losses
-# -----------
+# top_10_losses()
+# ---------------
 # Returns a list of the Top 10 Losses of a specified exchange.
 # INPUT: Token (Login Token), Exchange (eg: NASDAQ)
 # OUTPUT: List of quotes
@@ -1177,24 +1181,29 @@ function top_10_losses(token::String, exchange::String)
 		end
 		return quotes
 	end
-end
+end # top_10_losses
 
-# UpdateDataFormat
-# ----------------
+# update_data_format()
+# --------------------
 # Update preferred Data Format
 # INPUT: Token (Login Token), IncludeHeader, IncludeSuffix
 # OUTPUT: List of DataFormats
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=UpdateDataFormat
-function update_data_format()
-	# Type code here
-end
+# function update_data_format()
+	# This function is not implemented
+# end # update_data_format
 
-# ValidateAccess
-# --------------
+# validate_access()
+# -----------------
 # Validate access for an entire exchange, specific date, and specific period.
-# INPUT: Token (Login Token), Exchange (eg: NASDAQ), QuoteDate (format:yyyyMMdd eg:20080225), Period (1, 5, 10, 15, 30, h, d, w, m)
-# OUTPUT: RESPONSE
+# INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), QuoteDate (format:yyyyMMdd eg:"20080225"),
+# Period ("1", "5", "10", "15", "30", "h", "d", "w", "m")
+# OUTPUT: Boolean
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ValidateAccess
-function validate_access()
-	# Type code here
+function validate_access(token::String, exchange::String, quote_date::String, period::String)
+	call = "/ValidateAccess"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date", "Period"=>"$period"]
+	xml_tree = get_response(call, args)
+
+	return lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}"))) == "success" ? true : false
 end
