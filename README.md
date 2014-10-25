@@ -73,7 +73,7 @@ const PASSWORD = "string"
 ### login()
 Call login. This will assign you a token which is needed to
 make EodData web service calls.
-```Julia
+```julia
 resp = login(USERNAME, PASSWORD)
 println(resp.message)
 println(resp.token)
@@ -81,14 +81,14 @@ println(resp.token)
 
 ### country_list()
 Call and assign countries.
-```
+```julia
 countries = country_list(resp.token)
 println(countries)
 ```
 
 ### data_client_latest_version()
 Call and assign the latest version for EodData's data client.
-```
+```julia
 version = data_client_latest_version(resp.token)
 println(version)
 ```
@@ -96,7 +96,7 @@ println(version)
 ### data_formats()
 Call and assign the formats available, then assign the
 Standard CSV format to work with at your leisure.
-```
+```julia
 formats = data_formats(resp.token)
 println(formats)
 
@@ -111,7 +111,7 @@ end
 ### exchange_get()
 Call and assign a single exchange, in this case the NASDAQ,
 and assign to a variable to work with at your leisure.
-```
+```julia
 nasdaq = exchange_get(resp.token, "NASDAQ")
 println(nasdaq.name)
 println(nasdaq.advances)
@@ -123,7 +123,7 @@ println("Advance/Decline Ratio \= $(nasdaq.advances / nasdaq.declines)")
 Call and assign the exchanges available (these can be iterated over
 if you wish), then assign the New York Stock Exchange to work with
 at your leisure.
-```
+```julia
 exchanges = exchange_list(resp.token)
 println(exchanges)
 
@@ -137,7 +137,7 @@ println("Advance/Decline Ratio \= $(nyse.advances / nyse.declines)")
 ### exchange_months()
 Call and assign the number of months history available to download
 for a given exchange.
-```
+```julia
 months = exchange_months(resp.token,"NYSE")
 println(months)
 ```
@@ -146,7 +146,7 @@ println(months)
 Call and assign the fundamentals of all the listings on a given exchange.
 Here we look at the New Zealand Exchange (NZX) market capitalisation which
 also has bonds listed on it, and from time-to-time options as well.
-```
+```julia
 nzx_fundamentals = fundamental_list(resp.token,"NZX")
 
 nzx_market_cap = 0.0
@@ -160,13 +160,13 @@ println(nzx_market_cap)
 ### login_2()
 Call and assign the response.
 Not really necessary for end-users from what I can tell.
-```
+```julia
 resp = login_2(USERNAME,PASSWORD,"0.1")
 ```
 
 ### membership()
 Call and assign the users membership level/account type with EodData.com.
-```
+```julia
 membership = membership(resp.token)
 println(membership)
 ```
@@ -174,7 +174,7 @@ println(membership)
 ### quote_get()
 Call and assign the end-of-day quote for a given instrument.
 Here we get the quote for JP Morgan.
-```
+```julia
 jpm = quote_get(resp.token, "NYSE", "JPM")
 println(jpm)
 println(jpm.close)
@@ -186,14 +186,14 @@ println(jpm.simple_return)
 ### quote_list()
 Call and assign the end-of-day quotes for an exchange.
 The collection can be iterated over if you wish.
-```
+```julia
 nyse_quotes = quote_list(resp.token, "NYSE")
 ```
 
 ### quote_list_2()
 Call and assign the end-of-day quotes for a custom group.
 The collection can be iterated over if you wish.
-```
+```julia
 my_quotes = quote_list_2(resp.token, "NYSE", "C,MS,JPM,BAC,DB")
 println(my_quotes)
 ```
@@ -201,7 +201,7 @@ println(my_quotes)
 ### quote_list_by_date()
 Call and assign the end-of-day quotes for a custom date.
 The collection can be iterated over if you wish.
-```
+```julia
 nyse_20140605 = quote_list_by_date(resp.token, "NYSE", "20140605")
 
 for qt = values(nyse_20140605)
@@ -213,7 +213,7 @@ end
 Call and assign end-of-day quotes, with a smaller type ::Quote_2
 for a custom date on a particular exchange.
 The collection can be iterated over if you wish.
-```
+```julia
 asx_20131203 = quote_list_by_date_2(resp.token, "ASX", "20131203")
 for qt = values(asx_20131203)
 	println("$(qt.ticker_code) | $(qt.close)")
@@ -225,7 +225,7 @@ Call and assign quotes for a custom date, and a custom period
 on a particular exchange. If you choose "h" this will return
 hourly data for the exchange.
 The collection can be iterated over if you wish.
-```
+```julia
 cme_20141008_h = quote_list_by_date_period(resp.token, "CME", "20141008", "h")
 
 for k = keys(cme_20141008_h)
@@ -244,7 +244,7 @@ Call and assign quotes, with a smaller type ::Quote_2, for a custom date, and a 
 on a particular exchange. If you choose "h" this will return
 hourly data for the exchange.
 The keys, values, and collection can be iterated over if you wish.
-```
+```julia
 cme_20141008_h_2 = quote_list_by_date_period_2(resp.token, "CME", "20141008", "h")
 
 for k = keys(cme_20141008_h_2)
@@ -260,7 +260,7 @@ cme_h_2 = collect(cme_20141008_h_2)
 
 ### split_list_by_exchange()
 Call and assign the most recent splits for a given exchange.
-```
+```julia
 nyse_splits = split_list_by_exchange(resp.token, "NYSE")
 splits = collect(nyse_splits)
 println(splits)
@@ -268,7 +268,7 @@ println(splits)
 
 ### split_list_by_symbol()
 Call and assign the most recent splits for a given symbol on a particular exchange.
-```
+```julia
 nct_splits = split_list_by_symbol(resp.token, "NYSE", "NCT")
 for sp = values(nct_splits)
 	println("$(sp.exchange_code)\t|\t$(sp.ticker_code)\t|\tDate Time: $(sp.date_time)\t|\tRatio: $(sp.ratio)\t|\tPrice Multiplier: $(sp.price_multiplier)\t|\tReverse Split: $(sp.is_reverse_split)")
@@ -278,7 +278,7 @@ end
 ### symbol_changes_by_exchange()
 Call and assign the most recent changes to stock symbols,
 and changes to exchanges
-```
+```julia
 amex_changes = symbol_changes_by_exchange(resp.token, "AMEX")
 for sc = values(amex_changes)
 	println(sc)
@@ -290,14 +290,14 @@ Call and assign the url for a chart of the symbol's price history.
 **Note:** There is no "safety" on this web service call, if you give it
 incorrect exchanges, symbols, or incorrect combinations you will receive
 no error.
-```
+```julia
 url = symbol_chart(resp.token, "NYSE", "A")
 println(url)
 ```
 
 ### symbol_get()
 Call and assign the detail for a ticker.
-```
+```julia
 fb = symbol_get(resp.token, "NASDAQ", "FB")
 println(fb)
 ```
@@ -315,7 +315,7 @@ be 0, or NaN:
 * previous_close
 * next_open
 * modified
-```
+```julia
 c_20140601_today = symbol_history(resp.token, "NYSE", "C", "20140601")
 println(c_20140601_today)
 ```
@@ -333,7 +333,7 @@ be 0, or NaN:
 * previous_close
 * next_open
 * modified
-```
+```julia
 pg_2014102_h = symbol_history_period(resp.token, "NYSE", "PG", "20141002", "h")
 println(pg_2014102_h)
 ```
@@ -353,14 +353,14 @@ be "", 0, or NaN:
 * previous_close
 * next_open
 * modified
-```
+```julia
 amzn_20141020_20141024_30 = symbol_history_period_by_date_range(resp.token, "NASDAQ", "AMZN", "20141020", "20141024", "30")
 println(amzn_20141020_20141024_30)
 ```
 
 ### symbol_list()
 Call and assign the tickers for a given exchange.
-```
+```julia
 nyse_tickers = symbol_list(resp.token, "NYSE")
 println(nyse_tickers)
 ```
@@ -369,14 +369,14 @@ println(nyse_tickers)
 Call and assign the tickers for a given exchange.
 This is a "smaller" version of the ticker object with only the
 ticker code and ticker name
-```
+```julia
 nyse_tickers_2 = symbol_list_2(resp.token, "NYSE")
 println(nyse_tickers_2)
 ```
 
 ### technical_list()
 Call and assign the technical indicator values for each ticker on a given exchange.
-```
+```julia
 nyse_technicals = technical_list(resp.token, "NYSE")
 println(nyse_technicals)
 ```
@@ -385,7 +385,7 @@ println(nyse_technicals)
 Call and assign the quotes for the top 10 gains for the NZX,
 also collect the ticker codes into an array, as the ticker codes
 are the dictionary keys.
-```
+```julia
 nzx_top_10_gains_dict = top_10_gains(resp.token, "NZX")
 nzx_top_10_gains_tickers = collect(keys(nzx_top_10_gains_dict))
 println(nzx_top_10_gains_tickers)
@@ -395,7 +395,7 @@ println(nzx_top_10_gains_tickers)
 Call and assign the quotes for the top 10 losses for the NZX,
 also collect the ticker codes into an array, as the ticker codes
 are the dictionary keys.
-```
+```julia
 nzx_top_10_losses_dict = top_10_losses(resp.token, "NZX")
 nzx_top_10_losses_tickers = collect(keys(nzx_top_10_losses_dict))
 println(nzx_top_10_losses_tickers)
@@ -406,7 +406,7 @@ This is not implemented.
 
 ## Data Types
 ### DataFormatColumn
-```
+```julia
 type DataFormatColumn
 	column_header::String
 	sort_order::Int
@@ -420,7 +420,7 @@ end
 ```
 
 ### DataFormat
-```
+```julia
 type DataFormat
 	code::String
 	name::String
@@ -446,7 +446,7 @@ end
 ```
 
 ### Exchange
-```
+```julia
 type Exchange
 	code::String
 	name::String
@@ -464,7 +464,7 @@ end
 ```
 
 ### Fundamental
-```
+```julia
 type Fundamental
 	ticker_code::String
 	name::String
@@ -491,7 +491,7 @@ end
 ```
 
 ### LoginResponse
-```
+```julia
 type LoginResponse
 	message::String
 	token::String
@@ -499,7 +499,7 @@ end
 ```
 
 ### Quote
-```
+```julia
 type Quote
 	ticker_code::String
 	description::String
@@ -523,7 +523,7 @@ end
 ```
 
 ### Quote_2
-```
+```julia
 type Quote_2
 	ticker_code::String
 	date_time::DateTime
@@ -539,7 +539,7 @@ end
 ```
 
 ### Split
-```
+```julia
 type Split
 	exchange_code::String
 	ticker_code::String
@@ -552,7 +552,7 @@ end
 ```
 
 ### TickerChange
-```
+```julia
 type TickerChange
 	old_exchange_code::String
 	new_exchange_code::String
@@ -565,7 +565,7 @@ end
 ```
 
 ### Ticker
-```
+```julia
 type Ticker
 	code::String
 	name::String
@@ -575,7 +575,7 @@ end
 ```
 
 ### Ticker_2
-```
+```julia
 type Ticker_2
 	code::String
 	name::String
@@ -583,7 +583,7 @@ end
 ```
 
 ### Technical
-```
+```julia
 type Technical
 	ticker_code::String
 	name::String
