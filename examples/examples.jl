@@ -105,8 +105,8 @@ end
 # for a custom date on a particular exchange.
 # The collection can be iterated over if you wish
 asx_20131203 = quote_list_by_date_2(resp.token, "ASX", "20131203")
-for qt = values(asx_20131202)
-	println("$(qt.symbol) | $(qt.close)")
+for qt = values(asx_20131203)
+	println("$(qt.ticker_code) | $(qt.close)")
 end
 
 
@@ -121,10 +121,10 @@ for k = keys(cme_20141008_h)
 end
 
 for qt = values(cme_20141008_h)
-	println("$(qt.symbol)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
+	println("$(qt.ticker_code)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
 end
 
-cme_array = collect(cme_20141008_h)
+cme_h = collect(cme_20141008_h)
 
 # Call and assign quotes, with a smaller type ::Quote_2, for a custom date, and a custom period
 # on a particular exchange. If you choose "h" this will return
@@ -137,10 +137,10 @@ for k = keys(cme_20141008_h_2)
 end
 
 for qt = values(cme_20141008_h_2)
-	println("$(qt.symbol)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
+	println("$(qt.ticker_code)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
 end
 
-cme_array = collect(cme_20141008_h_2)
+cme_h_2 = collect(cme_20141008_h_2)
 
 # Call and assign the most recent splits for a given exchange
 nyse_splits = split_list_by_exchange(resp.token, "NYSE")
@@ -150,7 +150,7 @@ println(splits)
 # Call and assign the most recent splits for a given symbol on a particular exchange
 nct_splits = split_list_by_symbol(resp.token, "NYSE", "NCT")
 for sp = values(nct_splits)
-	println("$(sp.symbol)\t|\tDate Time: $(sp.date_time)\t|\tRatio: $(sp.ratio)\t|\tPrice Multiplier: $(sp.price_multiplier)\t|\tReverse Split: $(sp.is_reverse_split)")
+	println("$(sp.exchange_code)\t|\t$(sp.ticker_code)\t|\tDate Time: $(sp.date_time)\t|\tRatio: $(sp.ratio)\t|\tPrice Multiplier: $(sp.price_multiplier)\t|\tReverse Split: $(sp.is_reverse_split)")
 end
 
 # Call and assign the most recent changes to stock symbols,
@@ -167,3 +167,69 @@ end
 # no error.
 url = symbol_chart(resp.token, "NYSE", "A")
 println(url)
+
+# Call and assign the detail for a ticker
+fb = symbol_get(resp.token, "NASDAQ", "FB")
+println(fb)
+
+# Call and assign quotes for a ticker from a start date until "today"
+# Due to the web service not returning 100% data, the following fields of the quote type will
+# be 0, or NaN:
+# * open_interest
+# * previous
+# * change
+# * simple_return
+# * bid
+# * ask
+# * previous_close
+# * next_open
+# * modified
+c_20140601_today = symbol_history(resp.token, "NYSE", "C", "20140601")
+println(c_20140601_today)
+
+# Call and assign quotes for a ticker, for a date, and a custom period
+# Due to the web service not returning 100% data, the following fields of the quote type will
+# be 0, or NaN:
+# * open_interest
+# * previous
+# * change
+# * simple_return
+# * bid
+# * ask
+# * previous_close
+# * next_open
+# * modified
+pg_2014102_h = symbol_history_period(resp.token, "NYSE", "PG", "20141002", "h")
+println(pg_2014102_h)
+
+# Call and assign quotes for a ticker, between a start date and end date, and a custom period
+# Due to the web service not returning 100% data, the following fields of the quote type will
+# be "", 0, or NaN:
+# * description
+# * name
+# * open_interest
+# * previous
+# * change
+# * simple_return
+# * bid
+# * ask
+# * previous_close
+# * next_open
+# * modified
+amzn_20141020_20141024_30 =
+	symbol_history_period_by_date_range(resp.token, "NASDAQ", "AMZN", "20141020", "20141024", "30")
+println(amzn_20141020_20141024_30)
+
+# Call and assign the tickers for a given exchange
+nyse_tickers = symbol_list(resp.token, "NYSE")
+println(nyse_tickers)
+
+# Call and assign the tickers for a given exchange
+# This is a "smaller" version of the ticker object with only the
+# ticker code and ticker name
+nyse_tickers_2 = symbol_list_2(resp.token, "NYSE")
+println(nyse_tickers_2)
+
+# Call and assign the technical indicator values for each ticker on a given exchange
+nyse_technicals = technical_list(resp.token, "NYSE")
+println(nyse_technicals)

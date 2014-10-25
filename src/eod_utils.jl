@@ -1,5 +1,5 @@
 #=
-EodData internal module functions
+	EodData internal module functions
 =#
 
 # ==================
@@ -24,7 +24,7 @@ function get_response(call::String, params::Dict{ASCIIString, ASCIIString})
 
 	# An http code other than 200 indicates an http response has NOT been successfully received from the server
 	if resp.http_code != 200
-		error("get_response() failed with the following information: $resp")
+		error("get_response() http post failed with the following information: $resp")
 	end
 
 	# A valid response may be received from the server (above), but the web service call may still not be successful
