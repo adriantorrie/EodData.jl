@@ -2,12 +2,6 @@
 	EodData Web Service Calls
 =#
 
-# ==================
-# Internal variables
-const DATETIMEFORMAT_SS = "yyyy-mm-ddTHH:MM:SS"
-const DATETIMEFORMAT_MS = "yyyy-mm-ddTHH:MM:SS.ss"
-const HEADER_DELIMITERS = [',', ';', ' ']
-
 # ===================================
 # Make functions available externally
 export country_list, data_client_latest_version, data_formats, exchange_get, exchange_list,
@@ -51,16 +45,12 @@ end # country_list
 # OUTPUT: Date Client Version of type ::String
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=DataClientLatestVersion
 function data_client_latest_version(token::String)
-	if is(token, nothing)
-		error("data_client_latest_version() failed: Missing value in parameter -> token::Sring")
-	else
-		call = "/DataClientLatestVersion"
-		args = ["Token"=>"$token"]
-		xml_tree = get_response(call, args)
+	call = "/DataClientLatestVersion"
+	args = ["Token"=>"$token"]
+	xml_tree = get_response(call, args)
 
-		return strip(find(xml_tree, "/RESPONSE/VERSION[1]").elements[1])
-	end
-end # data_client_latest_version
+	validate_xml(xml_tree) && return find(xml_tree, "/RESPONSE/VERSION[1]#string")
+end
 
 # data_formats()
 # --------------
@@ -333,14 +323,8 @@ function membership(token::String)
 	args = ["Token"=>"$token"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
-	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("membership() failed with message returned of: $message")
-	else
-		return string(strip(find(xml_tree, "/RESPONSE/MEMBERSHIP[1]").elements[1]))
-	end
-end # membership
+	validate_xml(xml_tree) && return find(xml_tree, "/RESPONSE/MEMBERSHIP[1]#string")
+end
 
 # quote_get()
 # -----------
@@ -353,37 +337,8 @@ function quote_get(token::String, exchange::String, ticker::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$ticker"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("quote_get() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a ::Quote
-		qt = find(xml_tree, "/RESPONSE/QUOTE[1]")
-		# Assign
-		ticker_code::String = strip(get(qt.attr,"Symbol",""))
-		description::String = strip(get(qt.attr,"Description",""))
-		name::String = strip(get(qt.attr,"Name",""))
-		date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_MS)
-		open::Float64 = float(strip(get(qt.attr,"Open","")))
-		high::Float64 = float(strip(get(qt.attr,"High","")))
-		low::Float64 = float(strip(get(qt.attr,"Low","")))
-		close::Float64 = float(strip(get(qt.attr,"Close","")))
-		volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-		open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-		previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-		change::Float64 = float(strip(get(qt.attr,"Change","")))
-		simple_return::Float64 = change / previous
-		bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-		ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-		previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-		next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-		modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
-
-		return Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
-					 previous, change, simple_return, bid, ask, previous_close, next_open, modified)
-	end
-end # quote_get
+	validate_xml(xml_tree) && return Quote(find(xml_tree, "/RESPONSE/QUOTE[1]"))
+end
 
 # quote_list()
 # ------------
@@ -396,40 +351,8 @@ function quote_list(token::String, exchange::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("quote_list() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_MS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
-
-			quotes[ticker_code] = Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
-										previous, change, simple_return, bid, ask, previous_close, next_open, modified)
-		end
-		return quotes
-	end
-end # quote_list
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # quote_list_2()
 # --------------
@@ -442,40 +365,8 @@ function quote_list_2(token::String, exchange::String, tickers::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbols"=>"$tickers"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("quote_list_2() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_MS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
-
-			quotes[ticker_code] = Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
-										previous, change, simple_return, bid, ask, previous_close, next_open, modified)
-		end
-		return quotes
-	end
-end # quote_list_2
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # quote_list_by_date()
 # --------------------
@@ -488,40 +379,8 @@ function quote_list_by_date(token::String, exchange::String, quote_date::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("quote_list_by_date() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_MS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
-
-			quotes[ticker_code] = Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
-										previous, change, simple_return, bid, ask, previous_close, next_open, modified)
-		end
-		return quotes
-	end
-end # quote_list_by_date
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # quote_list_by_date_2()
 # ----------------------
@@ -572,42 +431,8 @@ function quote_list_by_date_period(token::String, exchange::String, quote_date::
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date", "Period"=>"$period"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("quote_list_by_date_period() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_SS)
-
-			quotes[ticker_code * "_" * string(date_time)] = Quote(ticker_code, description, name, date_time, open,
-																  high, low, close, volume, open_interest,
-																  previous, change, simple_return, bid, ask,
-																  previous_close, next_open, modified)
-		end
-		return quotes
-	end
-end # quote_list_by_date_period
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # quote_list_by_date_period_2()
 # -----------------------------
@@ -762,19 +587,13 @@ end # symbol_changes_by_exchange
 # OUTPUT: Chart URL
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=SymbolChart
 function symbol_chart(token::String, exchange::String, ticker::String)
+	symbol_get(token, exchange, ticker)
 	call = "/SymbolChart"
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$ticker"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("symbol_chart() failed with message returned of: $message")
-	else
-		# URL
-		return find(xml_tree, "/RESPONSE/CHART[1]#string")
-	end
-end # symbol_chart
+	validate_xml(xml_tree) && return find(xml_tree, "/RESPONSE/CHART[1]#string")
+end
 
 # symbol_get()
 # ------------
@@ -787,22 +606,8 @@ function symbol_get(token::String, exchange::String, ticker::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$ticker"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("symbol_get() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a ::Ticker
-		sy = find(xml_tree, "/RESPONSE/SYMBOL[1]")
-		# Assign
-		code::String = strip(get(sy.attr,"Code",""))
-		name::String = strip(get(sy.attr,"Name",""))
-		long_name::String = strip(get(sy.attr,"LongName",""))
-		date_time::DateTime = DateTime(strip(get(sy.attr,"DateTime","")), DATETIMEFORMAT_SS)
-
-		return Ticker(code, name, long_name, date_time)
-	end
-end # symbol_get
+	validate_xml(xml_tree) && return Ticker(find(xml_tree, "/RESPONSE/SYMBOL[1]"))
+end
 
 # symbol_history()
 # ----------------
@@ -815,42 +620,8 @@ function symbol_history(token::String, exchange::String, ticker::String, start_d
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$ticker", "StartDate"=>"$start_date"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("symbol_history() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
-
-			quotes[ticker_code * "_" * string(date_time)] = Quote(ticker_code, description, name, date_time, open,
-																  high, low, close, volume, open_interest,
-																  previous, change, simple_return, bid, ask,
-																  previous_close, next_open, modified)
-		end
-		return quotes
-	end
-end # symbol_history
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # symbol_history_period()
 # -----------------------
@@ -864,42 +635,8 @@ function symbol_history_period(token::String, exchange::String, ticker::String, 
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$ticker", "Date"=>"$quote_date", "Period"=>"$period"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("symbol_history_period() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_SS)
-
-			quotes[ticker_code * "_" * string(date_time)] = Quote(ticker_code, description, name, date_time, open,
-																  high, low, close, volume, open_interest,
-																  previous, change, simple_return, bid, ask,
-																  previous_close, next_open, modified)
-		end
-		return quotes
-	end
-end # symbol_history_period
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # symbol_history_period_by_date_range()
 # -------------------------------------
@@ -915,42 +652,8 @@ function symbol_history_period_by_date_range(token::String, exchange::String, ti
 			"StartDate"=>"$start_date", "EndDate"=>"$end_date","Period"=>"$period"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("symbol_history_period_by_date_range() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
- 			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
-
-			quotes[ticker_code * "_" * string(date_time)] = Quote(ticker_code, description, name, date_time, open,
-																  high, low, close, volume, open_interest,
-																  previous, change, simple_return, bid, ask,
-																  previous_close, next_open, modified)
- 		end
-		return quotes
-	end
-end # symbol_history_period_by_date_range
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # symbol_list()
 # -------------
@@ -963,25 +666,8 @@ function symbol_list(token::String, exchange::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("symbol_list() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Ticker}
-		tickers = Dict{String, Ticker}()
-		for sy in find(xml_tree, "/RESPONSE/SYMBOLS/SYMBOL")
-			# Assign
-			code::String = strip(get(sy.attr,"Code",""))
-			name::String = strip(get(sy.attr,"Name",""))
-			long_name::String = strip(get(sy.attr,"LongName",""))
-			date_time::DateTime = DateTime(strip(get(sy.attr,"DateTime","")), DATETIMEFORMAT_SS)
-
-			tickers[code] = Ticker(code, name, long_name, date_time)
-		end
-		return  tickers
-	end
-end # symbol_list
+	validate_xml(xml_tree) && return set_tickers(xml_tree)
+end
 
 # symbol_list_2()
 # ---------------
@@ -994,23 +680,8 @@ function symbol_list_2(token::String, exchange::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("symbol_list_2() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Ticker_2}
-		tickers = Dict{String, Ticker_2}()
-		for sy in find(xml_tree, "/RESPONSE/SYMBOLS2/SYMBOL2")
-			# Assign
-			code::String = strip(get(sy.attr,"c",""))
-			name::String = strip(get(sy.attr,"n",""))
-
-			tickers[code] = Ticker_2(code, name)
-		end
-		return  tickers
-	end
-end # symbol_list_2
+	validate_xml(xml_tree) && return set_tickers_2(xml_tree)
+end
 
 # technical_list()
 # ----------------
@@ -1023,73 +694,8 @@ function technical_list(token::String, exchange::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("technical_list() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Ticker_2}
-		technicals = Dict{String, Technical}()
-		for tc in find(xml_tree, "/RESPONSE/TECHNICALS/TECHNICAL")
-			# Assign
-			ticker_code::String = strip(get(tc.attr,"Symbol",""))
-			name::String = strip(get(tc.attr,"Name",""))
-			description::String = strip(get(tc.attr,"Description",""))
-			date_time::DateTime = DateTime(strip(get(tc.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			previous::Float64 = float(strip(get(tc.attr,"Previous","")))
-			change::Float64 = float(strip(get(tc.attr,"Change","")))
-			ma_1::Float64 = float(strip(get(tc.attr,"MA1","")))
-			ma_2::Float64 = float(strip(get(tc.attr,"MA2","")))
-			ma_5::Float64 = float(strip(get(tc.attr,"MA5","")))
-			ma_20::Float64 = float(strip(get(tc.attr,"MA20","")))
-			ma_50::Float64 = float(strip(get(tc.attr,"MA50","")))
-			ma_100::Float64 = float(strip(get(tc.attr,"MA100","")))
-			ma_200::Float64 = float(strip(get(tc.attr,"MA200","")))
-			ma_percent::Float64 = float(strip(get(tc.attr,"MAPercent","")))
-			ma_return::Float64 = float(strip(get(tc.attr,"MAReturn","")))
-			volume_change::Float64 = float(strip(get(tc.attr,"VolumeChange","")))
-			three_month_change::Float64 = float(strip(get(tc.attr,"ThreeMonthChange","")))
-			six_month_change::Float64 = float(strip(get(tc.attr,"SixMonthChange","")))
-			week_high::Float64 = float(strip(get(tc.attr,"WeekHigh","")))
-			week_low::Float64 = float(strip(get(tc.attr,"WeekLow","")))
-			week_change::Float64 = float(strip(get(tc.attr,"WeekChange","")))
-			avg_week_change::Float64 = float(strip(get(tc.attr,"AvgWeekChange","")))
-			avg_week_volume::Float64 = float(strip(get(tc.attr,"AvgWeekVolume","")))
-			week_volume::Float64 = float(strip(get(tc.attr,"WeekVolume","")))
-			month_high::Float64 = float(strip(get(tc.attr,"MonthHigh","")))
-			month_low::Float64 = float(strip(get(tc.attr,"MonthLow","")))
-			month_change::Float64 = float(strip(get(tc.attr,"MonthChange","")))
-			avg_month_change::Float64 = float(strip(get(tc.attr,"AvgMonthChange","")))
-			avg_month_volume::Float64 = float(strip(get(tc.attr,"AvgMonthVolume","")))
-			month_volume::Float64 = float(strip(get(tc.attr,"MonthVolume","")))
-			year_high::Float64 = float(strip(get(tc.attr,"YearHigh","")))
-			year_low::Float64 = float(strip(get(tc.attr,"YearLow","")))
-			year_change::Float64 = float(strip(get(tc.attr,"YearChange","")))
-			avg_year_change::Float64 = float(strip(get(tc.attr,"AvgYearChange","")))
-			avg_year_volume::Float64 = float(strip(get(tc.attr,"AvgYearVolume","")))
-			ytd_change::Float64 = float(strip(get(tc.attr,"YTDChange","")))
-			rsi_14::Float64 = float(strip(get(tc.attr,"RSI14","")))
-			sto_9::Float64 = float(strip(get(tc.attr,"STO9","")))
-			wpr_14::Float64 = float(strip(get(tc.attr,"WPR14","")))
-			mtm_14::Float64 = float(strip(get(tc.attr,"MTM14","")))
-			roc_14::Float64 = float(strip(get(tc.attr,"ROC14","")))
-			ptc::Float64 = float(strip(get(tc.attr,"PTC","")))
-			sar::Float64 = float(strip(get(tc.attr,"SAR","")))
-			volatility::Float64 = float(strip(get(tc.attr,"Volatility","")))
-			liquidity::Float64 = float(strip(get(tc.attr,"Liquidity","")))
-
-			technicals[ticker_code] = Technical(ticker_code, name, description, date_time, previous, change,
-												ma_1, ma_2, ma_5, ma_20, ma_50, ma_100, ma_200, ma_percent,
-												ma_return, volume_change, three_month_change, six_month_change,
-												week_high, week_low, week_change, avg_week_change, avg_week_volume,
-												week_volume, month_high, month_low, month_change, avg_month_change,
-												avg_month_volume, month_volume, year_high, year_low, year_change,
-												avg_year_change, avg_year_volume, ytd_change, rsi_14, sto_9,
-												wpr_14, mtm_14, roc_14, ptc, sar, volatility, liquidity)
-		end
-		return  technicals
-	end
-end # technical_list
+	validate_xml(xml_tree) && return set_technicals(xml_tree)
+end
 
 # top_10_gains()
 # --------------
@@ -1102,40 +708,8 @@ function top_10_gains(token::String, exchange::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("top_10_gains() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
-
-			quotes[ticker_code] = Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
-										previous, change, simple_return, bid, ask, previous_close, next_open, modified)
-		end
-		return quotes
-	end
-end # top_10_gains
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # top_10_losses()
 # ---------------
@@ -1148,40 +722,8 @@ function top_10_losses(token::String, exchange::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("top_10_losses() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote}
-		quotes = Dict{String, Quote}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"Symbol",""))
-			description::String = strip(get(qt.attr,"Description",""))
-			name::String = strip(get(qt.attr,"Name",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			open::Float64 = float(strip(get(qt.attr,"Open","")))
-			high::Float64 = float(strip(get(qt.attr,"High","")))
-			low::Float64 = float(strip(get(qt.attr,"Low","")))
-			close::Float64 = float(strip(get(qt.attr,"Close","")))
-			volume::Float64 = float(strip(get(qt.attr,"Volume","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
-			previous::Float64 = float(strip(get(qt.attr,"Previous","")))
-			change::Float64 = float(strip(get(qt.attr,"Change","")))
-			simple_return::Float64 = change / previous
-			bid::Float64 = float(strip(get(qt.attr,"Bid","")))
-			ask::Float64 = float(strip(get(qt.attr,"Ask","")))
-			previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
-			next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
-			modified::DateTime = DateTime(strip(get(qt.attr,"Modified","")), DATETIMEFORMAT_MS)
-
-			quotes[ticker_code] = Quote(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
-										previous, change, simple_return, bid, ask, previous_close, next_open, modified)
-		end
-		return quotes
-	end
-end # top_10_losses
+	validate_xml(xml_tree) && return set_quotes(xml_tree)
+end
 
 # update_data_format()
 # --------------------
@@ -1191,7 +733,7 @@ end # top_10_losses
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=UpdateDataFormat
 # function update_data_format()
 	# This function is not implemented
-# end # update_data_format
+# end
 
 # validate_access()
 # -----------------
@@ -1206,4 +748,4 @@ function validate_access(token::String, exchange::String, quote_date::String, pe
 	xml_tree = get_response(call, args)
 
 	return lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}"))) == "success" ? true : false
-end # validate_access
+end

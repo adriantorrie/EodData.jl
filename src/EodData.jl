@@ -32,6 +32,12 @@ using Dates
 using HTTPClient.HTTPC
 using LibExpat
 
+# ==================
+# Internal constants
+const DATETIMEFORMAT_SS = "yyyy-mm-ddTHH:MM:SS"
+const DATETIMEFORMAT_MS = "yyyy-mm-ddTHH:MM:SS.ss"
+const HEADER_DELIMITERS = [',', ';', ' ']
+
 # ============================
 # Make EodData types available
 export DataFormat, DataFormatColumn, Exchange, Fundamental, LoginResponse, Quote, Quote_2,
@@ -39,6 +45,8 @@ export DataFormat, DataFormatColumn, Exchange, Fundamental, LoginResponse, Quote
 
 # =============
 # EodData Types
+
+# ::DataFormatColumn
 type DataFormatColumn
 	column_header::String
 	sort_order::Int
@@ -50,6 +58,7 @@ type DataFormatColumn
 	column_type::String
 end
 
+# ::DataFormat
 type DataFormat
 	code::String
 	name::String
@@ -73,6 +82,7 @@ type DataFormat
 	columns::Dict{Int, DataFormatColumn}
 end
 
+# ::Exchange
 type Exchange
 	code::String
 	name::String
@@ -88,6 +98,7 @@ type Exchange
 	has_intraday_product::Bool
 end
 
+# ::Fundamental
 type Fundamental
 	ticker_code::String
 	name::String
@@ -112,11 +123,13 @@ type Fundamental
 	yield::Float64
 end
 
+# ::LoginResponse
 type LoginResponse
 	message::String
 	token::String
 end
 
+# ::Quote
 type Quote
 	ticker_code::String
 	description::String
@@ -136,8 +149,43 @@ type Quote
 	previous_close::Float64
 	next_open::Float64
 	modified::DateTime
+
+	# Default constructor
+	Quote(ticker_code::String, description::String, name::String, date_time::DateTime, open::Float64,
+		  high::Float64, low::Float64, close::Float64, volume::Float64, open_interest::Float64,
+		  previous::Float64, change::Float64, simple_return::Float64, bid::Float64, ask::Float64,
+		  previous_close::Float64, next_open::Float64, modified::DateTime) =
+		new(ticker_code, description, name, date_time, open, high, low, close, volume, open_interest,
+				   previous, change, simple_return, bid, ask, previous_close, next_open, modified)
+
+	# Construct from XML ::ETree
+	function Quote(qt::ETree)
+		ticker_code::String = strip(get(qt.attr,"Symbol",""))
+		description::String = strip(get(qt.attr,"Description",""))
+		name::String = strip(get(qt.attr,"Name",""))
+		date_time::DateTime = DateTime(strip(get(qt.attr,"DateTime",""))[1:19], DATETIMEFORMAT_SS)
+		open::Float64 = float(strip(get(qt.attr,"Open","")))
+		high::Float64 = float(strip(get(qt.attr,"High","")))
+		low::Float64 = float(strip(get(qt.attr,"Low","")))
+		close::Float64 = float(strip(get(qt.attr,"Close","")))
+		volume::Float64 = float(strip(get(qt.attr,"Volume","")))
+		open_interest::Float64 = float(strip(get(qt.attr,"OpenInterest","")))
+		previous::Float64 = float(strip(get(qt.attr,"Previous","")))
+		change::Float64 = float(strip(get(qt.attr,"Change","")))
+		simple_return::Float64 = change / previous
+		bid::Float64 = float(strip(get(qt.attr,"Bid","")))
+		ask::Float64 = float(strip(get(qt.attr,"Ask","")))
+		previous_close::Float64 = float(strip(get(qt.attr,"PreviousClose","")))
+		next_open::Float64 = float(strip(get(qt.attr,"NextOpen","")))
+		modified::DateTime = DateTime(strip(get(qt.attr,"Modified",""))[1:19], DATETIMEFORMAT_SS)
+
+		return new(ticker_code, description, name, date_time, open, high, low, close, volume,
+				   open_interest, previous, change, simple_return, bid, ask, previous_close,
+				   next_open, modified)
+	end
 end
 
+# ::Quote_2
 type Quote_2
 	ticker_code::String
 	date_time::DateTime
@@ -151,6 +199,7 @@ type Quote_2
 	ask::Float64
 end
 
+# ::Split
 type Split
 	exchange_code::String
 	ticker_code::String
@@ -161,6 +210,7 @@ type Split
 	is_reverse_split::Bool
 end
 
+# ::TickerChange
 type TickerChange
 	old_exchange_code::String
 	new_exchange_code::String
@@ -171,18 +221,46 @@ type TickerChange
 	is_change_of_ticker_code::Bool
 end
 
+# ::Ticker
 type Ticker
 	code::String
 	name::String
 	long_name::String
 	date_time::DateTime
+
+	# Default constructor
+	Ticker(code::String, name::String, long_name::String, date_time::DateTime) =
+		new(code, name, long_name, date_time)
+
+	# Construct from XML ::ETree
+	function Ticker(tk::ETree)
+		code::String = strip(get(tk.attr,"Code",""))
+		name::String = strip(get(tk.attr,"Name",""))
+		long_name::String = strip(get(tk.attr,"LongName",""))
+		date_time::DateTime = DateTime(strip(get(tk.attr,"DateTime",""))[1:19], DATETIMEFORMAT_SS)
+
+		return new(code, name, long_name, date_time)
+	end
 end
 
+# ::Ticker_2
 type Ticker_2
 	code::String
 	name::String
+
+	# Default constructor
+	Ticker_2(code::String, name::String) = new(code, name)
+
+	# Construct from XML ::ETree
+	function Ticker_2(tk::ETree)
+		code::String = strip(get(tk.attr,"Code",""))
+		name::String = strip(get(tk.attr,"Name",""))
+
+		return new(code, name)
+	end
 end
 
+# ::Technical
 type Technical
 	ticker_code::String
 	name::String
@@ -229,6 +307,83 @@ type Technical
 	sar::Float64
 	volatility::Float64
 	liquidity::Float64
+
+	# Default constructor
+	Technical(ticker_code::String, name::String, description::String, date_time::DateTime,
+			  previous::Float64, change::Float64, ma_1::Float64, ma_2::Float64, ma_5::Float64,
+			  ma_20::Float64, ma_50::Float64, ma_100::Float64, ma_200::Float64, ma_percent::Float64,
+			  ma_return::Float64, volume_change::Float64, three_month_change::Float64,
+			  six_month_change::Float64, week_high::Float64, week_low::Float64, week_change::Float64,
+			  avg_week_change::Float64, avg_week_volume::Float64, week_volume::Float64,
+			  month_high::Float64, month_low::Float64, month_change::Float64, avg_month_change::Float64,
+			  avg_month_volume::Float64, month_volume::Float64, year_high::Float64, year_low::Float64,
+			  year_change::Float64, avg_year_change::Float64, avg_year_volume::Float64,
+			  ytd_change::Float64, rsi_14::Float64, sto_9::Float64, wpr_14::Float64, mtm_14::Float64,
+			  roc_14::Float64, ptc::Float64, sar::Float64, volatility::Float64, liquidity::Float64) =
+		new(ticker_code, name, description, date_time, previous, change, ma_1, ma_2, ma_5,
+			ma_20, ma_50, ma_100, ma_200, ma_percent, ma_return, volume_change,
+			three_month_change, six_month_change, week_high, week_low, week_change,
+			avg_week_change, avg_week_volume, week_volume, month_high, month_low,
+			month_change, avg_month_change, avg_month_volume, month_volume, year_high,
+			year_low, year_change, avg_year_change, avg_year_volume, ytd_change, rsi_14,
+			sto_9, wpr_14, mtm_14, roc_14, ptc, sar, volatility, liquidity)
+
+	# Construct from XML ::ETree
+	function Technical(tc::ETree)
+		ticker_code::String = strip(get(tc.attr,"Symbol",""))
+		name::String = strip(get(tc.attr,"Name",""))
+		description::String = strip(get(tc.attr,"Description",""))
+		date_time::DateTime = DateTime(strip(get(tc.attr,"DateTime",""))[1:19], DATETIMEFORMAT_SS)
+		previous::Float64 = float(strip(get(tc.attr,"Previous","")))
+		change::Float64 = float(strip(get(tc.attr,"Change","")))
+		ma_1::Float64 = float(strip(get(tc.attr,"MA1","")))
+		ma_2::Float64 = float(strip(get(tc.attr,"MA2","")))
+		ma_5::Float64 = float(strip(get(tc.attr,"MA5","")))
+		ma_20::Float64 = float(strip(get(tc.attr,"MA20","")))
+		ma_50::Float64 = float(strip(get(tc.attr,"MA50","")))
+		ma_100::Float64 = float(strip(get(tc.attr,"MA100","")))
+		ma_200::Float64 = float(strip(get(tc.attr,"MA200","")))
+		ma_percent::Float64 = float(strip(get(tc.attr,"MAPercent","")))
+		ma_return::Float64 = float(strip(get(tc.attr,"MAReturn","")))
+		volume_change::Float64 = float(strip(get(tc.attr,"VolumeChange","")))
+		three_month_change::Float64 = float(strip(get(tc.attr,"ThreeMonthChange","")))
+		six_month_change::Float64 = float(strip(get(tc.attr,"SixMonthChange","")))
+		week_high::Float64 = float(strip(get(tc.attr,"WeekHigh","")))
+		week_low::Float64 = float(strip(get(tc.attr,"WeekLow","")))
+		week_change::Float64 = float(strip(get(tc.attr,"WeekChange","")))
+		avg_week_change::Float64 = float(strip(get(tc.attr,"AvgWeekChange","")))
+		avg_week_volume::Float64 = float(strip(get(tc.attr,"AvgWeekVolume","")))
+		week_volume::Float64 = float(strip(get(tc.attr,"WeekVolume","")))
+		month_high::Float64 = float(strip(get(tc.attr,"MonthHigh","")))
+		month_low::Float64 = float(strip(get(tc.attr,"MonthLow","")))
+		month_change::Float64 = float(strip(get(tc.attr,"MonthChange","")))
+		avg_month_change::Float64 = float(strip(get(tc.attr,"AvgMonthChange","")))
+		avg_month_volume::Float64 = float(strip(get(tc.attr,"AvgMonthVolume","")))
+		month_volume::Float64 = float(strip(get(tc.attr,"MonthVolume","")))
+		year_high::Float64 = float(strip(get(tc.attr,"YearHigh","")))
+		year_low::Float64 = float(strip(get(tc.attr,"YearLow","")))
+		year_change::Float64 = float(strip(get(tc.attr,"YearChange","")))
+		avg_year_change::Float64 = float(strip(get(tc.attr,"AvgYearChange","")))
+		avg_year_volume::Float64 = float(strip(get(tc.attr,"AvgYearVolume","")))
+		ytd_change::Float64 = float(strip(get(tc.attr,"YTDChange","")))
+		rsi_14::Float64 = float(strip(get(tc.attr,"RSI14","")))
+		sto_9::Float64 = float(strip(get(tc.attr,"STO9","")))
+		wpr_14::Float64 = float(strip(get(tc.attr,"WPR14","")))
+		mtm_14::Float64 = float(strip(get(tc.attr,"MTM14","")))
+		roc_14::Float64 = float(strip(get(tc.attr,"ROC14","")))
+		ptc::Float64 = float(strip(get(tc.attr,"PTC","")))
+		sar::Float64 = float(strip(get(tc.attr,"SAR","")))
+		volatility::Float64 = float(strip(get(tc.attr,"Volatility","")))
+		liquidity::Float64 = float(strip(get(tc.attr,"Liquidity","")))
+
+		return new(ticker_code, name, description, date_time, previous, change, ma_1, ma_2,
+				   ma_5, ma_20, ma_50, ma_100, ma_200, ma_percent, ma_return, volume_change,
+				   three_month_change, six_month_change, week_high, week_low, week_change,
+				   avg_week_change, avg_week_volume, week_volume, month_high, month_low,
+				   month_change, avg_month_change, avg_month_volume, month_volume, year_high,
+				   year_low, year_change, avg_year_change, avg_year_volume, ytd_change,
+				   rsi_14, sto_9, wpr_14, mtm_14, roc_14, ptc, sar, volatility, liquidity)
+	end
 end
 
 # =====
