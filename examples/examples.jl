@@ -11,6 +11,9 @@ resp = login(USERNAME, PASSWORD)
 println(resp.message)
 println(resp.token)
 
+token = login(USERNAME, PASSWORD).token
+println(token)
+
 # country_list()
 # --------------
 # Call and assign countries
