@@ -287,9 +287,6 @@ end
 
 ### symbol_chart()
 Call and assign the url for a chart of the symbol's price history.
-**Note:** There is no "safety" on this web service call, if you give it
-incorrect exchanges, symbols, or incorrect combinations you will receive
-no error.
 ```julia
 url = symbol_chart(resp.token, "NYSE", "A")
 println(url)
