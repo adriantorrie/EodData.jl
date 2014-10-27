@@ -1,5 +1,5 @@
 # EodData.jl
-Julia package for connecting to EodData.com and downloading data.
+Julia package for connecting to EodData.com and downloading financial markets data.
 
 * The source files are heavily documented, please review the source
 for in-depth documentation, and references.
