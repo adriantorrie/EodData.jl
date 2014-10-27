@@ -77,7 +77,7 @@ const PASSWORD = "string"
 Call login. This will assign you a token which is needed to
 make EodData web service calls.
 The second call directly assigns a token, which is merely
-an ::ASCIIString.
+an `::ASCIIString`.
 ```julia
 resp = login(USERNAME, PASSWORD)
 println(resp.message)
@@ -154,8 +154,8 @@ println(months)
 
 ### fundamental_list()
 Call and assign the fundamentals of all the listings on a given exchange.
-Here we look at the New Zealand Exchange (NZX) market capitalisation which
-also has bonds listed on it, and from time-to-time options as well.
+Here we look at the New Zealand Exchange (NZX) market capitalisation, which
+also has bonds listed on it, and from time-to-time, options as well.
 ```julia
 nzx_fundamentals = fundamental_list(resp.token,"NZX")
 
@@ -220,7 +220,7 @@ end
 ```
 
 ### quote_list_by_date_2
-Call and assign end-of-day quotes, with a smaller type ::Quote_2
+Call and assign end-of-day quotes, with a smaller type `::Quote_2`
 for a custom date on a particular exchange.
 The collection can be iterated over if you wish.
 ```julia
@@ -232,7 +232,7 @@ end
 
 ### quote_list_by_date_period()
 Call and assign quotes for a custom date, and a custom period
-on a particular exchange. If you choose "h" this will return
+on a particular exchange. If you choose `"h"` this will return
 hourly data for the exchange.
 The collection can be iterated over if you wish.
 ```julia
@@ -250,8 +250,8 @@ cme_h = collect(cme_20141008_h)
 ```
 
 ### quote_list_by_date_period_2()
-Call and assign quotes, with a smaller type ::Quote_2, for a custom date, and a custom period
-on a particular exchange. If you choose "h" this will return
+Call and assign quotes, with a smaller type `::Quote_2`, for a custom date, and a custom period
+on a particular exchange. If you choose `"h"` this will return
 hourly data for the exchange.
 The keys, values, and collection can be iterated over if you wish.
 ```julia
@@ -311,8 +311,8 @@ println(fb)
 
 ### symbol_history()
 Call and assign quotes for a ticker from a start date until "today".
-Due to the web service not returning 100% data, the following fields of the ::Quote type will
-be 0, or NaN:
+Due to the web service not returning 100% data, the following fields of the `::Quote` type will
+be `0`, or `NaN`:
 * open_interest
 * previous
 * change
@@ -329,8 +329,8 @@ println(c_20140601_today)
 
 ### symbol_history_period
 Call and assign quotes for a ticker, for a date, and a custom period.
-Due to the web service not returning 100% data, the following fields of the ::Quote type will
-be 0, or NaN:
+Due to the web service not returning 100% data, the following fields of the `::Quote` type will
+be `0`, or `NaN`:
 * open_interest
 * previous
 * change
@@ -347,8 +347,8 @@ println(pg_2014102_h)
 
 ### symbol_history_period_by_date_range()
 Call and assign quotes for a ticker, between a start date and end date, and a custom period.
-Due to the web service not returning 100% data, the following fields of the ::Quote type will
-be "", 0, or NaN:
+Due to the web service not returning 100% data, the following fields of the `::Quote` type will
+be `""`, `0`, or `NaN`:
 * description
 * name
 * open_interest
@@ -415,7 +415,7 @@ This is not implemented.
 The first call shows what is expected
 The second and third calls show the use of a utility function that's found in:
 `/src/eod_utils_external.jl` called `set_date_string()` that converts
-values that are type ::Date and ::DateTime into the correctly formatted
+values that are type `::Date` and `::DateTime` into the correctly formatted
 string expected by the web service.
 ```julia
 validate_access(resp.token, "NZX", "20141001", "h")
@@ -425,8 +425,8 @@ validate_access(resp.token, "NYSE", set_date_string(now()), "h")
 
 # Utility Functions
 ### set_date_string()
-The first call passes in a ::DateTime
-The secondcall passes in a ::Date
+The first call passes in a `::DateTime`
+The secondcall passes in a `::Date`
 Calls 3-6 show how further dynamic strings can be set
 ```julia
 set_date_string(now())
