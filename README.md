@@ -48,7 +48,7 @@ for in-depth documentation, and references.
 * [validate_access()](./README.md#validate_access)
 
 ## Utility Functions
-* [set_date_string()](./README.md#setdatestring)
+* [set_date_string()](./README.md#set_date_string)
 
 ## Types
 * [Country](./README.md#country)
