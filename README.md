@@ -425,9 +425,11 @@ validate_access(resp.token, "NYSE", set_date_string(now()), "h")
 
 # Utility Functions
 ### set_date_string()
-The first call passes in a `::DateTime`
-The secondcall passes in a `::Date`
-Calls 3-6 show how further dynamic strings can be set
+Converts values that are type `::Date` and `::DateTime` into the correctly formatted
+string expected by the web service.
+* The first call passes in a `::DateTime`
+* The second call passes in a `::Date`
+* Calls 3-6 show how further dynamic strings can be set
 ```julia
 set_date_string(now())
 set_date_string(today())
