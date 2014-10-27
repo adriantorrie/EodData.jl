@@ -12,6 +12,6 @@ export set_date_string
 # INPUT: Date data type
 # OUTPUT: Xml tree of the type ::ETree
 # http://ws.eoddata.com/data.asmx?op=CountryList
-function set_date_string(date)
-	return string(year(date)) * string(month(date)) * string(day(date))
+function set_date_string(dt)
+	return string(year(dt)) * string(month(dt)) * string(day(dt))
 end
