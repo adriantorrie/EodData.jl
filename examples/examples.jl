@@ -3,16 +3,24 @@ using EodData
 const USERNAME = "string"
 const PASSWORD = "string"
 
+#=
+	EodData Web Service Calls
+=#
+
 # login()
 # -------
 # Call login. This will assign you a token which is needed to
-# make EodData web service calls
+# make EodData web service calls.
+# The second call directly assigns a token, which is merely
+# an ::ASCIIString.
 resp = login(USERNAME, PASSWORD)
 println(resp.message)
 println(resp.token)
+println(typeof(resp))
 
 token = login(USERNAME, PASSWORD).token
 println(token)
+println(typeof(token))
 
 # country_list()
 # --------------
@@ -317,3 +325,19 @@ println(nzx_top_10_losses_tickers)
 # build a ::String argument based on today's date.
 validate_access(resp.token, "NZX", "20141001", "h")
 validate_access(resp.token, "NYSE", set_date_string(today()), "h")
+
+
+#=
+	EodData external utility functions
+=#
+# set_date_string()
+# -----------------
+# The first call passes in a ::DateTime
+# The secondcall passes in a ::Date
+# Calls 3-6 show how further dynamic strings can be set
+set_date_string(now())
+set_date_string(today())
+quarter_1 = set_date_string(Date(year(today()), 1, 1))
+quarter_2 = set_date_string(Date(year(today()), 4, 1))
+quarter_3 = set_date_string(Date(year(today()), 7, 1))
+quarter_4 = set_date_string(Date(year(today()), 9, 1))

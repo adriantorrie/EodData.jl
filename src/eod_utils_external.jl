@@ -1,5 +1,5 @@
 #=
-	EodData internal module functions
+	EodData external utility functions
 =#
 export set_date_string
 

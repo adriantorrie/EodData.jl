@@ -19,24 +19,15 @@ export country_list, data_client_latest_version, data_formats, exchange_get, exc
 # --------------
 # Returns a list of available countries.
 # INPUT: Token (Login Token)
-# OUTPUT: Dict() of countries of type ::Dict{String, String}
+# OUTPUT: Dict() of countries of type ::Dict{String, Country}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=CountryList
 function country_list(token::String)
-	if token == nothing
-		error("country_list() failed: Missing value in parameter -> token::Sring")
-	else
-		call = "/CountryList"
-		args = ["Token"=>"$token"]
-		xml_tree = get_response(call, args)
+	call = "/CountryList"
+	args = ["Token"=>"$token"]
+	xml_tree = get_response(call, args)
 
-		# Shred xml_tree into a Dict()
-		countries = Dict{String, String}()
-		for cb in find(xml_tree, "/RESPONSE/COUNTRIES/CountryBase")
-			countries[strip(get(cb.attr,"Code",""))] = strip(get(cb.attr,"Name",""))
-		end
-		return countries
-	end
-end # country_list
+	validate_xml(xml_tree) && return set_countries(xml_tree)
+end
 
 # data_client_latest_version()
 # ----------------------------
@@ -59,100 +50,26 @@ end
 # OUTPUT: Dict() of DataFormats of the type ::Dict{String, DataFormat}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=DataFormats
 function data_formats(token::String)
-	if is(token, nothing)
-		error("data_formats() failed: Missing value in parameter -> token::Sring")
-	else
-		call = "/DataFormats"
-		args = ["Token"=>"$token"]
-		xml_tree = get_response(call, args)
+	call = "/DataFormats"
+	args = ["Token"=>"$token"]
+	xml_tree = get_response(call, args)
 
-		# Shred xml_tree into a Dict{String, DataFormat}
-		formats = Dict{String, DataFormat}()
-		for df in find(xml_tree, "/RESPONSE/DATAFORMATS/DATAFORMAT")
-			# Initialise local
-			format_header = []
-			columns = Dict{Int, DataFormatColumn}()
-
-			# Assign
-			code::String = strip(get(df.attr,"Code",""))
-			name::String = strip(get(df.attr,"Name",""))
-			header_format::Vector{String} = convert(Array{String}, split(strip(get(df.attr,"Header","")), HEADER_DELIMITERS))
-			date_format::String = strip(get(df.attr,"DateFormat",""))
-			extension::String = strip(get(df.attr,"Extension",""))
-			include_suffix::Bool = lowercase(strip(get(df.attr,"IncludeSuffix",""))) == "true" ? true : false
-			tab_column_seperator::Bool = lowercase(strip(get(df.attr,"TabColumnSeperator","")))  == "true" ? true : false
-			column_seperator::String = strip(get(df.attr,"ColumnSeperator",""))
-			text_qualifier::String = strip(get(df.attr,"TextQualifier",""))
-			filename_prefix::String = strip(get(df.attr,"FilenamePrefix",""))
-			filename_exchange_code::Bool = lowercase(strip(get(df.attr,"FilenameExchangeCode",""))) == "true" ? true : false
-			filename_date::Bool = lowercase(strip(get(df.attr,"FilenameDate",""))) == "true" ? true : false
-			include_header_row::Bool = lowercase(strip(get(df.attr,"IncludeHeaderRow",""))) == "true" ? true : false
-			hour_format::String = strip(get(df.attr,"HourFormat",""))
-			datetime_seperator::String = strip(get(df.attr,"DateTimeSeperator",""))
-			exchange_filename_format_date::String = strip(get(df.attr,"ExchangeFilenameFormatDate",""))
-			exchange_filename_format_date_range::String = strip(get(df.attr,"ExchangeFilenameFormatDateRange",""))
-			ticker_filename_format_date::String = strip(get(df.attr,"SymbolFilenameFormatDate",""))
-			ticker_filename_format_date_range::String = strip(get(df.attr,"SymbolFilenameFormatDateRange",""))
-
-			for col in find(df, "COLUMNS/DATAFORMAT_COLUMN")
-				column_header::String = strip(get(col.attr,"Header",""))
-				sort_order::Int = int(strip(get(col.attr,"SortOrder","")))
-				data_format_code::String = strip(get(col.attr,"Code",""))
-				data_format_name::String = strip(get(col.attr,"DataFormat",""))
-				column_code::String = strip(get(col.attr,"ColumnCode",""))
-				column_name::String = strip(get(col.attr,"ColumnName",""))
-				column_type_id::Int = int(strip(get(col.attr,"ColumnTypeId","")))
-				column_type::String = strip(get(col.attr,"ColumnType",""))
-
-				columns[sort_order] = DataFormatColumn(column_header, sort_order, data_format_code, data_format_name, column_code, column_name, column_type_id, column_type)
-			end
-
-			# Add format to Dict
-			formats[code] = DataFormat(code, name, header_format, date_format, extension, include_suffix, tab_column_seperator, column_seperator,
-										text_qualifier, filename_prefix, filename_exchange_code, filename_date, include_header_row, hour_format,
-										datetime_seperator, exchange_filename_format_date, exchange_filename_format_date_range,
-										ticker_filename_format_date, ticker_filename_format_date_range, columns)
-		end
-		return formats
-	end
-end # data_formats
+	validate_xml(xml_tree) && return set_data_formats(xml_tree)
+end
 
 # exchange_get()
 # --------------
 # Returns detailed information of a specific exchange.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ")
-# OUTPUT: Exchange
+# OUTPUT: Exchange of type ::Exchange
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ExchangeGet
 function exchange_get(token::String, exchange_code::String)
-	if is(token, nothing)
-		error("exchange_list() failed: Missing value in parameter -> token::Sring")
-	elseif exchange_code == "" || is(exchange_code, nothing)
-		error("exchange_list() failed: Missing value in parameter -> exchange_code::Sring")
-	else
-		call = "/ExchangeGet"
-		args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
-		xml_tree = get_response(call, args)
+	call = "/ExchangeGet"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
+	xml_tree = get_response(call, args)
 
-		# Shred xml_tree into a Dict{String, Exchange}
-		ex = find(xml_tree, "/RESPONSE/EXCHANGE")[1]
-		# Assign
-		code::String = strip(get(ex.attr,"Code",""))
-		name::String = strip(get(ex.attr,"Name",""))
-		last_trade_date_time::DateTime  = DateTime(strip(get(ex.attr,"LastTradeDateTime","")), DATETIMEFORMAT_SS)
-		country_code::String = strip(get(ex.attr,"Country",""))
-		currency_code::String = strip(get(ex.attr,"Currency",""))
-		advances::Float64 = float(strip(get(ex.attr,"Advances","")))
-		declines::Float64 = float(strip(get(ex.attr,"Declines","")))
-		suffix::String = strip(get(ex.attr,"Suffix",""))
-		time_zone::String = strip(get(ex.attr,"TimeZone",""))
-		is_intraday::Bool = lowercase(strip(get(ex.attr,"IsIntraday",""))) == "true" ? true : false
-		intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), DATETIMEFORMAT_SS)
-		has_intraday_product::Bool = lowercase(strip(get(ex.attr,"HasIntradayProduct",""))) == "true" ? true : false
-
-		return exchange = Exchange(code, name, last_trade_date_time, country_code, currency_code, advances, declines,
-								   suffix, time_zone, is_intraday, intraday_start_date, has_intraday_product)
-	end
-end # exchange_get
+	validate_xml(xml_tree) && return Exchange(find(xml_tree, "/RESPONSE/EXCHANGE[1]"))
+end
 
 # exchange_list()
 # ---------------
@@ -161,37 +78,13 @@ end # exchange_get
 # OUTPUT: Dict() of exchanges of the type ::Dict{String, Exchange}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ExchangeList
 function exchange_list(token::String)
-	if is(token, nothing)
-		error("exchange_list() failed: Missing value in parameter -> token::Sring")
-	else
-		call = "/ExchangeList"
-		args = ["Token"=>"$token"]
-		xml_tree = get_response(call, args)
+	call = "/ExchangeList"
+	args = ["Token"=>"$token"]
+	xml_tree = get_response(call, args)
 
-		# Shred xml_tree into a Dict{String, Exchange}
-		exchanges = Dict{String, Exchange}()
-		for ex in find(xml_tree, "/RESPONSE/EXCHANGES/EXCHANGE")
-			# Assign
-			code::String = strip(get(ex.attr,"Code",""))
-			name::String = strip(get(ex.attr,"Name",""))
-			last_trade_date_time::DateTime  = DateTime(strip(get(ex.attr,"LastTradeDateTime","")), DATETIMEFORMAT_SS)
-			country_code::String = strip(get(ex.attr,"Country",""))
-			currency_code::String = strip(get(ex.attr,"Currency",""))
-			advances::Float64 = float(strip(get(ex.attr,"Advances","")))
-			declines::Float64 = float(strip(get(ex.attr,"Declines","")))
-			suffix::String = strip(get(ex.attr,"Suffix",""))
-			time_zone::String = strip(get(ex.attr,"TimeZone",""))
-			is_intraday::Bool = lowercase(strip(get(ex.attr,"IsIntraday",""))) == "true" ? true : false
-			intraday_start_date::DateTime = DateTime(strip(get(ex.attr,"IntradayStartDate","")), DATETIMEFORMAT_SS)
-			has_intraday_product::Bool = lowercase(strip(get(ex.attr,"HasIntradayProduct",""))) == "true" ? true : false
+	validate_xml(xml_tree) && return set_exchanges(xml_tree)
 
-			# Add exchange to Dict
-			exchanges[code] = Exchange(code, name, last_trade_date_time, country_code, currency_code, advances, declines,
-									   suffix, time_zone, is_intraday, intraday_start_date, has_intraday_product)
-		end
-		return exchanges
-	end
-end # exchange_list
+end
 
 # exchange_months()
 # -----------------
@@ -200,18 +93,12 @@ end # exchange_list
 # OUTPUT: Number of Months as an ::Int
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=ExchangeMonths
 function exchange_months(token::String, exchange_code::String)
-	if is(token, nothing)
-		error("exchange_list() failed: Missing value in parameter -> token::Sring")
-	elseif exchange_code == "" || is(exchange_code, nothing)
-		error("exchange_list() failed: Missing value in parameter -> exchange_code::Sring")
-	else
-		call = "/ExchangeMonths"
-		args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
-		xml_tree = get_response(call, args)
+	call = "/ExchangeMonths"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
+	xml_tree = get_response(call, args)
 
-		return int(strip(find(xml_tree, "/RESPONSE/MONTHS[1]").elements[1]))
-	end
-end # exchange_months
+	validate_xml(xml_tree) && return int(find(xml_tree, "/RESPONSE/MONTHS[1]#string"))
+end
 
 # fundamental_list()
 # ------------------
@@ -220,51 +107,12 @@ end # exchange_months
 # OUTPUT: Dict() of fundamentals of type ::Dict{String, Fundamental}
 # REFERENCE: http://ws.eoddata.com/data.asmx?op=FundamentalList
 function fundamental_list(token::String, exchange_code::String)
-	if is(token, nothing)
-		error("fundamental_list() failed: Missing value in parameter -> token::Sring")
-	elseif exchange_code == "" || is(exchange_code, nothing)
-		error("fundamental_list() failed: Missing value in parameter -> exchange_code::Sring")
-	else
-		call = "/FundamentalList"
-		args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
-		xml_tree = get_response(call, args)
+	call = "/FundamentalList"
+	args = ["Token"=>"$token", "Exchange"=>"$exchange_code"]
+	xml_tree = get_response(call, args)
 
-		# Shred xml_tree into a ::Dict{String, Fundamental}
-		fundamentals = Dict{String, Fundamental}()
-		for fl in find(xml_tree, "/RESPONSE/FUNDAMENTALS/FUNDAMENTAL")
-			# Assign
-			ticker_code::String = strip(get(fl.attr,"Symbol",""))
-			name::String = strip(get(fl.attr,"Name",""))
-			description::String = strip(get(fl.attr,"Description",""))
-			date_time::DateTime = DateTime(strip(get(fl.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			industry::String = strip(get(fl.attr,"Industry",""))
-			sector::String = strip(get(fl.attr,"Sector",""))
-			share_float::Float64 = float(strip(get(fl.attr,"Shares","")))
-			market_cap::Float64 = float(strip(get(fl.attr,"MarketCap","")))
-			pe_ratio::Float64 = float(strip(get(fl.attr,"PE","")))
-			earnings_per_share::Float64 = float(strip(get(fl.attr,"EPS","")))
-			net_tangible_assets::Float64 = float(strip(get(fl.attr,"NTA","")))
-			dividend_yield::Float64 = float(strip(get(fl.attr,"DivYield","")))
-			dividend::Float64 = float(strip(get(fl.attr,"Dividend","")))
-			dividend_date::DateTime = DateTime(strip(get(fl.attr,"DividendDate","")), DATETIMEFORMAT_SS)
-			dividend_per_share::Float64 = float(strip(get(fl.attr,"DPS","")))
-			imputation_credits::Float64 = float(strip(get(fl.attr,"ImputationCredits","")))
-			ebitda::Float64 = float(strip(get(fl.attr,"EBITDA","")))
-			peg_ratio::Float64 = float(strip(get(fl.attr,"PEG","")))
-			ps_ratio::Float64 = float(strip(get(fl.attr,"PtS","")))
-			pb_ratio::Float64 = float(strip(get(fl.attr,"PtB","")))
-			yield::Float64 = float(strip(get(fl.attr,"Yield","")))
-
-			# Add fundamental to Dict
-			fundamentals[ticker_code] = Fundamental(ticker_code, name, description, date_time, industry,
-													sector, share_float, market_cap, pe_ratio, earnings_per_share,
-													net_tangible_assets, dividend_yield, dividend, dividend_date,
-													dividend_per_share, imputation_credits, ebitda, peg_ratio,
-													ps_ratio, pb_ratio, yield)
-		end
-		return fundamentals
-	end
-end # fundamental_list
+	validate_xml(xml_tree) && return set_fundamentals(xml_tree)
+end
 
 # login()
 # -------
@@ -277,17 +125,8 @@ function login(username::String, password::String)
 	args = ["Username"=>"$username", "Password"=>"$password"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
-	message = lowercase(strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}")))
-	if message != "login successful"
-		error("login() failed with message returned of: $message")
-	else
-		message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
-		token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
-
-		return LoginResponse(message, token)
-	end
-end # login
+	validate_xml_login(xml_tree) && return LoginResponse(xml_tree)
+end
 
 # login_2()
 # ---------
@@ -300,17 +139,8 @@ function login_2(username::String, password::String, version::String)
 	args = ["Username"=>"$username", "Password"=>"$password", "Version"=>"$version"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
-	message = lowercase(strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}")))
-	if message != "login successful"
-		error("login_2() failed with message returned of: $message")
-	else
- 		message = strip(find(xml_tree, "/LOGINRESPONSE[1]{Message}"))
-		token = strip(find(xml_tree, "/LOGINRESPONSE[1]{Token}"))
-
-		return LoginResponse(message, token)
-	end
-end # login_2
+	validate_xml_login(xml_tree) && return LoginResponse(xml_tree)
+end
 
 # membership()
 # ------------
@@ -393,31 +223,8 @@ function quote_list_by_date_2(token::String, exchange::String, quote_date::Strin
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("quote_list_by_date_2() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote_2}
-		quotes = Dict{String, Quote_2}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES2/QUOTE2")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"s",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"d","")), DATETIMEFORMAT_SS)
-			open::Float64 = float(strip(get(qt.attr,"o","")))
-			high::Float64 = float(strip(get(qt.attr,"h","")))
-			low::Float64 = float(strip(get(qt.attr,"l","")))
-			close::Float64 = float(strip(get(qt.attr,"c","")))
-			volume::Float64 = float(strip(get(qt.attr,"v","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"i","")))
-			bid::Float64 = float(strip(get(qt.attr,"b","")))
-			ask::Float64 = float(strip(get(qt.attr,"a","")))
-
-			quotes[ticker_code] = Quote_2(ticker_code, date_time, open, high, low, close, volume, open_interest, bid, ask,)
-		end
-		return quotes
-	end
-end # quote_list_by_date_2
+	validate_xml(xml_tree) && return set_quotes_2(xml_tree)
+end
 
 # quote_list_by_date_period()
 # ---------------------------
@@ -446,31 +253,8 @@ function quote_list_by_date_period_2(token::String, exchange::String, quote_date
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "QuoteDate"=>"$quote_date", "Period"=>"$period"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("quote_list_by_date_period_2() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Quote_2}
-		quotes = Dict{String, Quote_2}()
-		for qt in find(xml_tree, "/RESPONSE/QUOTES2/QUOTE2")
-			# Assign
-			ticker_code::String = strip(get(qt.attr,"s",""))
-			date_time::DateTime = DateTime(strip(get(qt.attr,"d","")), DATETIMEFORMAT_SS)
-			open::Float64 = float(strip(get(qt.attr,"o","")))
-			high::Float64 = float(strip(get(qt.attr,"h","")))
-			low::Float64 = float(strip(get(qt.attr,"l","")))
-			close::Float64 = float(strip(get(qt.attr,"c","")))
-			volume::Float64 = float(strip(get(qt.attr,"v","")))
-			open_interest::Float64 = float(strip(get(qt.attr,"i","")))
-			bid::Float64 = float(strip(get(qt.attr,"b","")))
-			ask::Float64 = float(strip(get(qt.attr,"a","")))
-
-			quotes[ticker_code] = Quote_2(ticker_code, date_time, open, high, low, close, volume, open_interest, bid, ask,)
-		end
-		return quotes
-	end
-end # quote_list_by_date_period_2
+	validate_xml(xml_tree) && return set_quotes_2(xml_tree)
+end
 
 # split_list_by_exchange()
 # ------------------------
@@ -483,66 +267,22 @@ function split_list_by_exchange(token::String, exchange::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("split_list_by_exchange() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Split}
-		splits = Dict{String, Split}()
-		for sp in find(xml_tree, "/RESPONSE/SPLITS/SPLIT")
-			# Assign
-			exchange_code::String = strip(get(sp.attr,"Exchange",""))
-			ticker_code::String = strip(get(sp.attr,"Symbol",""))
-			date_time::DateTime = DateTime(strip(get(sp.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			ratio::String = strip(get(sp.attr,"Ratio",""))
-			price_multiplier::Float64 = float(strip(split(ratio, "-")[2])) / float(strip(split(ratio, "-")[1]))
-			share_float_multiplier::Float64 = float(strip(split(ratio, "-")[1])) / float(strip(split(ratio, "-")[2]))
-			is_reverse_split::Bool = price_multiplier > 1.0 ? true : false
-
-			splits[ticker_code * "_" * string(date_time)] = Split(exchange_code, ticker_code, date_time, ratio,
-																  price_multiplier, share_float_multiplier,
-																  is_reverse_split)
-		end
-		return splits
-	end
-end # split_list_by_exchange
+	validate_xml(xml_tree) && return set_splits(xml_tree)
+end
 
 # split_list_by_symbol()
 # ----------------------
-# Returns a list of Splits of a specific ticker.
+# Returns a list of splits of a specific ticker.
 # INPUT: Token (Login Token), Exchange (eg: "NASDAQ"), Ticker (eg:"MSFT")
 # OUTPUT: Dict() of splits of type::Dict{String, Split}
-# REFERENCE: http://ws.eoddata.com/data.asmx?op=SplitListByticker
+# REFERENCE: http://ws.eoddata.com/data.asmx?op=SplitListBySymbol
 function split_list_by_symbol(token::String, exchange::String, ticker::String)
 	call = "/SplitListBySymbol"
 	args = ["Token"=>"$token", "Exchange"=>"$exchange", "Symbol"=>"$ticker"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("split_list_by_exchange() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, Split}
-		splits = Dict{String, Split}()
-		for sp in find(xml_tree, "/RESPONSE/SPLITS/SPLIT")
-			# Assign
-			exchange_code::String = strip(get(sp.attr,"Exchange",""))
-			ticker_code::String = strip(get(sp.attr,"Symbol",""))
-			date_time::DateTime = DateTime(strip(get(sp.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			ratio::String = strip(get(sp.attr,"Ratio",""))
-			price_multiplier::Float64 = float(strip(split(ratio, "-")[2])) / float(strip(split(ratio, "-")[1]))
-			share_float_multiplier::Float64 = float(strip(split(ratio, "-")[1])) / float(strip(split(ratio, "-")[2]))
-			is_reverse_split::Bool = price_multiplier > 1.0 ? true : false
-
-			splits[ticker_code * "_" * string(date_time)] = Split(exchange_code, ticker_code, date_time, ratio,
-																  price_multiplier, share_float_multiplier,
-																  is_reverse_split)
-		end
-		return splits
-	end
-end # split_list_by_symbol
+	validate_xml(xml_tree) && return set_splits(xml_tree)
+end
 
 # symbol_changes_by_exchange()
 # ----------------------------
@@ -555,30 +295,8 @@ function symbol_changes_by_exchange(token::String, exchange::String)
 	args = ["Token"=>"$token", "Exchange"=>"$exchange"]
 	xml_tree = get_response(call, args)
 
-	# Set returned fields
- 	message = lowercase(strip(find(xml_tree, "/RESPONSE[1]{Message}")))
-	if message != "success"
-		error("symbol_changes_by_exchange() failed with message returned of: $message")
-	else
-		# Shred xml_tree into a Dict{String, TickerChange}
-		ticker_changes = Dict{String, TickerChange}()
-		for sc in find(xml_tree, "/RESPONSE/SYMBOLCHANGES/SYMBOLCHANGE")
-			# Assign
-			old_exchange_code::String = strip(get(sc.attr,"ExchangeCode",""))
-			new_exchange_code::String = strip(get(sc.attr,"NewExchangeCode",""))
-			old_ticker_code::String = strip(get(sc.attr,"OldSymbol",""))
-			new_ticker_code::String = strip(get(sc.attr,"NewSymbol",""))
-			date_time::DateTime = DateTime(strip(get(sc.attr,"DateTime","")), DATETIMEFORMAT_SS)
-			is_change_of_exchange_code::Bool = old_exchange_code != new_exchange_code ? true : false
-			is_change_of_ticker_code::Bool = old_ticker_code != new_ticker_code ? true : false
-
-			ticker_changes[old_ticker_code * "_" * string(date_time)] =
-				TickerChange(old_exchange_code, new_exchange_code, old_ticker_code, new_ticker_code,
-							 date_time, is_change_of_exchange_code, is_change_of_ticker_code)
-		end
-		return ticker_changes
-	end
-end # symbol_changes_by_exchange
+	validate_xml(xml_tree) && return set_ticker_changes(xml_tree)
+end
 
 # symbol_chart()
 # --------------

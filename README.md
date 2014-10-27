@@ -47,8 +47,11 @@ for in-depth documentation, and references.
 * update_data_format() ... **not implemented**
 * [validate_access()](./README.md#validate_access)
 
+## Utility Functions
+* [set_date_string()](./README.md#setdatestring)
 
 ## Types
+* [Country](./README.md#country)
 * [DataFormatColumn](./README.md#dataformatcolumn)
 * [DataFormat](./README.md#dataformat)
 * [Exchange](./README.md#exchange)
@@ -62,7 +65,7 @@ for in-depth documentation, and references.
 * [Ticker_2](./README.md#ticker_2)
 * [Technical](./README.md#technical)
 
-## Usage
+# Web Service Calls
 ```julia
 using EodData
 
@@ -73,13 +76,17 @@ const PASSWORD = "string"
 ### login()
 Call login. This will assign you a token which is needed to
 make EodData web service calls.
+The second call directly assigns a token, which is merely
+an ::ASCIIString.
 ```julia
 resp = login(USERNAME, PASSWORD)
 println(resp.message)
 println(resp.token)
+println(typeof(resp))
 
 token = login(USERNAME, PASSWORD).token
 println(token)
+println(typeof(token))
 ```
 
 ### country_list()
@@ -416,7 +423,29 @@ validate_access(resp.token, "NYSE", set_date_string(today()), "h")
 validate_access(resp.token, "NYSE", set_date_string(now()), "h")
 ```
 
-## Data Types
+# Utility Functions
+### set_date_string()
+The first call passes in a ::DateTime
+The secondcall passes in a ::Date
+Calls 3-6 show how further dynamic strings can be set
+```julia
+set_date_string(now())
+set_date_string(today())
+quarter_1 = set_date_string(Date(year(today()), 1, 1))
+quarter_2 = set_date_string(Date(year(today()), 4, 1))
+quarter_3 = set_date_string(Date(year(today()), 7, 1))
+quarter_4 = set_date_string(Date(year(today()), 9, 1))
+```
+
+# Data Types
+### Country
+```julia
+type Country
+	code::String
+	name::String
+end
+```
+
 ### DataFormatColumn
 ```julia
 type DataFormatColumn
