@@ -1,6 +1,7 @@
 # EodData.jl
-Julia package for connecting to EodData.com and downloading financial markets data.
 [![Build Status](https://travis-ci.org/adriantorrie/EodData.jl.svg?branch=master)](https://travis-ci.org/adriantorrie/EodData.jl)
+
+Julia package for connecting to EodData.com and downloading financial markets data.
 
 * The source files are heavily documented, please review the source
 for in-depth documentation, and references.
