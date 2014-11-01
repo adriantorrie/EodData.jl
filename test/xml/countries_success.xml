@@ -1,0 +1,249 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.CountryList" Message="Success" Date="0001-01-01T00:00:00">
+	<COUNTRIES>
+		<CountryBase Code="AF" Name="Afghanistan"/>
+		<CountryBase Code="AL" Name="Albania"/>
+		<CountryBase Code="DZ" Name="Algeria"/>
+		<CountryBase Code="AS" Name="American Samoa"/>
+		<CountryBase Code="AD" Name="Andorra"/>
+		<CountryBase Code="AO" Name="Angola"/>
+		<CountryBase Code="AI" Name="Anguilla"/>
+		<CountryBase Code="AG" Name="Antigua"/>
+		<CountryBase Code="AR" Name="Argentina"/>
+		<CountryBase Code="AM" Name="Armenia"/>
+		<CountryBase Code="AW" Name="Aruba"/>
+		<CountryBase Code="AU" Name="Australia"/>
+		<CountryBase Code="AT" Name="Austria"/>
+		<CountryBase Code="AZ" Name="Azerbaijan"/>
+		<CountryBase Code="BS" Name="Bahamas"/>
+		<CountryBase Code="BH" Name="Bahrain"/>
+		<CountryBase Code="BD" Name="Bangladesh"/>
+		<CountryBase Code="BB" Name="Barbados"/>
+		<CountryBase Code="BX" Name="Barbuda"/>
+		<CountryBase Code="BY" Name="Belarus"/>
+		<CountryBase Code="BE" Name="Belgium"/>
+		<CountryBase Code="BZ" Name="Belize"/>
+		<CountryBase Code="BJ" Name="Benin"/>
+		<CountryBase Code="BM" Name="Bermuda"/>
+		<CountryBase Code="BT" Name="Bhutan"/>
+		<CountryBase Code="BO" Name="Bolivia"/>
+		<CountryBase Code="BA" Name="Bosnia"/>
+		<CountryBase Code="BW" Name="Botswana"/>
+		<CountryBase Code="BV" Name="Bouvet Island"/>
+		<CountryBase Code="BR" Name="Brazil"/>
+		<CountryBase Code="IO" Name="British Indian Ocean Territory"/>
+		<CountryBase Code="BN" Name="Brunei Darussalam"/>
+		<CountryBase Code="BG" Name="Bulgaria"/>
+		<CountryBase Code="BF" Name="Burkinia Faso"/>
+		<CountryBase Code="BI" Name="Burundi"/>
+		<CountryBase Code="KH" Name="Cambodia"/>
+		<CountryBase Code="CM" Name="Cameroon"/>
+		<CountryBase Code="CA" Name="Canada"/>
+		<CountryBase Code="CV" Name="Cape Verde"/>
+		<CountryBase Code="KY" Name="Cayman Islands"/>
+		<CountryBase Code="CF" Name="Central African Republic"/>
+		<CountryBase Code="TD" Name="Chad"/>
+		<CountryBase Code="CL" Name="Chile"/>
+		<CountryBase Code="CN" Name="China"/>
+		<CountryBase Code="CX" Name="Christmas Island"/>
+		<CountryBase Code="CC" Name="Cocos Keeling Islands"/>
+		<CountryBase Code="CO" Name="Colombia"/>
+		<CountryBase Code="KM" Name="Comores"/>
+		<CountryBase Code="CG" Name="Congo"/>
+		<CountryBase Code="CK" Name="Cook Islands"/>
+		<CountryBase Code="CR" Name="Costa Rica"/>
+		<CountryBase Code="CI" Name="Cote Di'voire"/>
+		<CountryBase Code="HR" Name="Croatia"/>
+		<CountryBase Code="CU" Name="Cuba"/>
+		<CountryBase Code="CY" Name="Cyprus"/>
+		<CountryBase Code="CZ" Name="Czech Republic"/>
+		<CountryBase Code="DK" Name="Denmark"/>
+		<CountryBase Code="DJ" Name="Djibouti"/>
+		<CountryBase Code="DM" Name="Dominica"/>
+		<CountryBase Code="DO" Name="Dominican Republic"/>
+		<CountryBase Code="TP" Name="East Timor"/>
+		<CountryBase Code="EC" Name="Ecuador"/>
+		<CountryBase Code="EG" Name="Egypt"/>
+		<CountryBase Code="SV" Name="El Salvador"/>
+		<CountryBase Code="EQ" Name="Equatorial Guinea"/>
+		<CountryBase Code="ER" Name="Eritrea"/>
+		<CountryBase Code="EE" Name="Estonia"/>
+		<CountryBase Code="ET" Name="Ethiopia"/>
+		<CountryBase Code="FK" Name="Falkland Islands"/>
+		<CountryBase Code="FO" Name="Faroe Islands"/>
+		<CountryBase Code="FJ" Name="Fiji"/>
+		<CountryBase Code="FI" Name="Finland"/>
+		<CountryBase Code="FR" Name="France"/>
+		<CountryBase Code="FA" Name="French Antilles"/>
+		<CountryBase Code="GF" Name="French Guyana"/>
+		<CountryBase Code="PF" Name="French Polynesia"/>
+		<CountryBase Code="TF" Name="French Southern Territories"/>
+		<CountryBase Code="GA" Name="Gabon"/>
+		<CountryBase Code="GM" Name="Gambia"/>
+		<CountryBase Code="GE" Name="Georgia"/>
+		<CountryBase Code="DE" Name="Germany"/>
+		<CountryBase Code="GH" Name="Ghana"/>
+		<CountryBase Code="GI" Name="Gibraltar"/>
+		<CountryBase Code="GR" Name="Greece"/>
+		<CountryBase Code="GL" Name="Greenland"/>
+		<CountryBase Code="GD" Name="Grenada"/>
+		<CountryBase Code="GR" Name="Grenadines"/>
+		<CountryBase Code="GP" Name="Guadeloupe"/>
+		<CountryBase Code="GU" Name="Guam"/>
+		<CountryBase Code="GT" Name="Guatemala"/>
+		<CountryBase Code="GS" Name="Guernsey"/>
+		<CountryBase Code="GN" Name="Guinea"/>
+		<CountryBase Code="GW" Name="Guinea Bissau"/>
+		<CountryBase Code="GY" Name="Guyana"/>
+		<CountryBase Code="HT" Name="Haiti"/>
+		<CountryBase Code="HM" Name="Heard Island and McDonald Islands"/>
+		<CountryBase Code="HZ" Name="Herzegovina"/>
+		<CountryBase Code="HN" Name="Honduras"/>
+		<CountryBase Code="HK" Name="Hong Kong"/>
+		<CountryBase Code="HU" Name="Hungary"/>
+		<CountryBase Code="IS" Name="Iceland"/>
+		<CountryBase Code="IN" Name="India"/>
+		<CountryBase Code="ID" Name="Indonesia"/>
+		<CountryBase Code="IR" Name="Iran"/>
+		<CountryBase Code="IQ" Name="Iraq"/>
+		<CountryBase Code="IE" Name="Ireland"/>
+		<CountryBase Code="IM" Name="Isle of Man"/>
+		<CountryBase Code="IL" Name="Israel"/>
+		<CountryBase Code="IT" Name="Italy"/>
+		<CountryBase Code="IV" Name="Ivory Coast"/>
+		<CountryBase Code="JM" Name="Jamaica"/>
+		<CountryBase Code="JN" Name="Jan Mayen"/>
+		<CountryBase Code="JP" Name="Japan"/>
+		<CountryBase Code="JE" Name="Jersey"/>
+		<CountryBase Code="JO" Name="Jordan"/>
+		<CountryBase Code="KZ" Name="Kazakhstan"/>
+		<CountryBase Code="KE" Name="Kenya"/>
+		<CountryBase Code="KI" Name="Kiribati"/>
+		<CountryBase Code="KW" Name="Kuwait"/>
+		<CountryBase Code="KG" Name="Kyrgyzstan"/>
+		<CountryBase Code="LA" Name="Laos"/>
+		<CountryBase Code="LV" Name="Latvia"/>
+		<CountryBase Code="LB" Name="Lebanon"/>
+		<CountryBase Code="LS" Name="Lesotho"/>
+		<CountryBase Code="LR" Name="Liberia"/>
+		<CountryBase Code="LY" Name="Libya"/>
+		<CountryBase Code="LI" Name="Liechtenstein"/>
+		<CountryBase Code="LT" Name="Lithuania"/>
+		<CountryBase Code="LU" Name="Luxembourg"/>
+		<CountryBase Code="MO" Name="Macau"/>
+		<CountryBase Code="MK" Name="Macedonia"/>
+		<CountryBase Code="MG" Name="Madagascar"/>
+		<CountryBase Code="MW" Name="Malawi"/>
+		<CountryBase Code="MY" Name="Malaysia"/>
+		<CountryBase Code="MV" Name="Maldives"/>
+		<CountryBase Code="ML" Name="Mali"/>
+		<CountryBase Code="MT" Name="Malta"/>
+		<CountryBase Code="MQ" Name="Martinique"/>
+		<CountryBase Code="MR" Name="Mauritania"/>
+		<CountryBase Code="MU" Name="Mauritius"/>
+		<CountryBase Code="MX" Name="Mexico"/>
+		<CountryBase Code="FM" Name="Micronesia"/>
+		<CountryBase Code="MD" Name="Miquelon"/>
+		<CountryBase Code="MD" Name="Moldova"/>
+		<CountryBase Code="MC" Name="Monaco"/>
+		<CountryBase Code="MN" Name="Mongolia"/>
+		<CountryBase Code="MS" Name="Montserrat"/>
+		<CountryBase Code="MA" Name="Morocco"/>
+		<CountryBase Code="MZ" Name="Mozambique"/>
+		<CountryBase Code="MM" Name="Myanmar"/>
+		<CountryBase Code="NA" Name="Namibia"/>
+		<CountryBase Code="NR" Name="Nauru"/>
+		<CountryBase Code="NP" Name="Nepal"/>
+		<CountryBase Code="NL" Name="Netherlands"/>
+		<CountryBase Code="AN" Name="Netherlands Antilles"/>
+		<CountryBase Code="NV" Name="Nevis"/>
+		<CountryBase Code="NC" Name="New Caledonia"/>
+		<CountryBase Code="NZ" Name="New Zealand"/>
+		<CountryBase Code="NI" Name="Nicaragua"/>
+		<CountryBase Code="NE" Name="Niger"/>
+		<CountryBase Code="NG" Name="Nigeria"/>
+		<CountryBase Code="NU" Name="Niue"/>
+		<CountryBase Code="NF" Name="Norfolk Island"/>
+		<CountryBase Code="KP" Name="North Korea"/>
+		<CountryBase Code="MP" Name="North Mariana Islands"/>
+		<CountryBase Code="NO" Name="Norway"/>
+		<CountryBase Code="OM" Name="Oman"/>
+		<CountryBase Code="PK" Name="Pakistan"/>
+		<CountryBase Code="PW" Name="Palau"/>
+		<CountryBase Code="PA" Name="Panama"/>
+		<CountryBase Code="PG" Name="Papua New Guinea"/>
+		<CountryBase Code="PY" Name="Paraguay"/>
+		<CountryBase Code="PE" Name="Peru"/>
+		<CountryBase Code="PH" Name="Philippines"/>
+		<CountryBase Code="PN" Name="Pitcairn Island"/>
+		<CountryBase Code="PL" Name="Poland"/>
+		<CountryBase Code="PT" Name="Portugal"/>
+		<CountryBase Code="PC" Name="Principe"/>
+		<CountryBase Code="PR" Name="Puerto Rico"/>
+		<CountryBase Code="QA" Name="Qatar"/>
+		<CountryBase Code="RE" Name="Reunion"/>
+		<CountryBase Code="RO" Name="Romania"/>
+		<CountryBase Code="RU" Name="Russia"/>
+		<CountryBase Code="RW" Name="Rwanda"/>
+		<CountryBase Code="LC" Name="Saint Lucia"/>
+		<CountryBase Code="WS" Name="Samoa"/>
+		<CountryBase Code="SM" Name="San Marino"/>
+		<CountryBase Code="ST" Name="Sao Tome"/>
+		<CountryBase Code="SA" Name="Saudi Arabia"/>
+		<CountryBase Code="SN" Name="Senegal"/>
+		<CountryBase Code="CS" Name="Serbia and Montenegro"/>
+		<CountryBase Code="SC" Name="Seychelles"/>
+		<CountryBase Code="SL" Name="Sierra Leone"/>
+		<CountryBase Code="SG" Name="Singapore"/>
+		<CountryBase Code="SK" Name="Slovakia"/>
+		<CountryBase Code="SI" Name="Slovenia"/>
+		<CountryBase Code="SB" Name="Solomon Islands"/>
+		<CountryBase Code="SO" Name="Somalia"/>
+		<CountryBase Code="ZA" Name="South Africa"/>
+		<CountryBase Code="KR" Name="South Korea"/>
+		<CountryBase Code="ES" Name="Spain"/>
+		<CountryBase Code="LK" Name="Sri Lanka"/>
+		<CountryBase Code="SH" Name="St Helena"/>
+		<CountryBase Code="KN" Name="St Kitts"/>
+		<CountryBase Code="PM" Name="St Pierre"/>
+		<CountryBase Code="VC" Name="St Vincent"/>
+		<CountryBase Code="SD" Name="Sudan"/>
+		<CountryBase Code="SR" Name="Surinaam"/>
+		<CountryBase Code="SJ" Name="Svalbard"/>
+		<CountryBase Code="SZ" Name="Swaziland"/>
+		<CountryBase Code="SE" Name="Sweden"/>
+		<CountryBase Code="CH" Name="Switzerland"/>
+		<CountryBase Code="SY" Name="Syria"/>
+		<CountryBase Code="TJ" Name="Tadzhikstan"/>
+		<CountryBase Code="TW" Name="Taiwan"/>
+		<CountryBase Code="TZ" Name="Tanzania"/>
+		<CountryBase Code="TH" Name="Thailand"/>
+		<CountryBase Code="TG" Name="Togo"/>
+		<CountryBase Code="TK" Name="Tokelau"/>
+		<CountryBase Code="TO" Name="Tonga"/>
+		<CountryBase Code="TT" Name="Trinidad and Tobago"/>
+		<CountryBase Code="TN" Name="Tunisia"/>
+		<CountryBase Code="TR" Name="Turkey"/>
+		<CountryBase Code="TM" Name="Turkmenistan"/>
+		<CountryBase Code="TC" Name="Turks and Caicos Islands"/>
+		<CountryBase Code="TV" Name="Tuvalu"/>
+		<CountryBase Code="UG" Name="Uganda"/>
+		<CountryBase Code="UA" Name="Ukraine"/>
+		<CountryBase Code="UF" Name="Unidades Fomento"/>
+		<CountryBase Code="AE" Name="United Arab Emirates"/>
+		<CountryBase Code="UK" Name="United Kingdom"/>
+		<CountryBase Code="US" Name="United States"/>
+		<CountryBase Code="UY" Name="Uruguay"/>
+		<CountryBase Code="UZ" Name="Uzbekistan"/>
+		<CountryBase Code="VU" Name="Vanuatu"/>
+		<CountryBase Code="VA" Name="Vatican City"/>
+		<CountryBase Code="VE" Name="Venezuela"/>
+		<CountryBase Code="VN" Name="Vietnam"/>
+		<CountryBase Code="VG" Name="Virgin Islands"/>
+		<CountryBase Code="WF" Name="Wallis and Futuna Islands"/>
+		<CountryBase Code="EH" Name="Western Sahara"/>
+		<CountryBase Code="YE" Name="Yemen"/>
+		<CountryBase Code="YU" Name="Yugoslavia"/>
+		<CountryBase Code="ZM" Name="Zambia"/>
+		<CountryBase Code="ZW" Name="Zimbabwe"/>
+	</COUNTRIES>
+</RESPONSE>

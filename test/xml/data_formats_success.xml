@@ -1,0 +1,284 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.DataFormats" Message="Success" Date="0001-01-01T00:00:00">
+	<DATAFORMATS>
+		<DATAFORMAT Code="3FV" Name="3F VIP Trading" Header="<TICKER>,<PER>,<DTYYYYMMDD>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOL>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="3FV" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="3FV" DataFormat="3F VIP Trading" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<TICKER>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="3FV" DataFormat="3F VIP Trading" ColumnCode="PER" ColumnName="Period" ColumnTypeId="3" ColumnType="String" Header="<PER>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="3FV" DataFormat="3F VIP Trading" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<DTYYYMMDD>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="3FV" DataFormat="3F VIP Trading" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<OPEN>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="3FV" DataFormat="3F VIP Trading" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<HIGH>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="3FV" DataFormat="3F VIP Trading" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<LOW>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="3FV" DataFormat="3F VIP Trading" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<CLOSE>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="3FV" DataFormat="3F VIP Trading" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<VOL>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="AdvGet" Name="Advanced Get ASCII" Header="<ticker>,<per>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="AdvGet" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="PER" ColumnName="Period" ColumnTypeId="3" ColumnType="String" Header="<per>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="8" Code="AdvGet" DataFormat="Advanced Get ASCII" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="AGet" Name="AGet ASCII" Header="<ticker>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yy/MM/dd" Extension="prn" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="AGet" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="AGet" DataFormat="AGet ASCII" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="AGet" DataFormat="AGet ASCII" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="AGet" DataFormat="AGet ASCII" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="AGet" DataFormat="AGet ASCII" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="AGet" DataFormat="AGet ASCII" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="AGet" DataFormat="AGet ASCII" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="AGet" DataFormat="AGet ASCII" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="AGet" DataFormat="AGet ASCII" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="AIQ" Name="AIQ Trading Expert Pro" Header="<ticker>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyMMdd" Extension="asc" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="AIQ" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="AIQ" DataFormat="AIQ Trading Expert Pro" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="AIQ" DataFormat="AIQ Trading Expert Pro" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="AIQ" DataFormat="AIQ Trading Expert Pro" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="AIQ" DataFormat="AIQ Trading Expert Pro" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="AIQ" DataFormat="AIQ Trading Expert Pro" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="AIQ" DataFormat="AIQ Trading Expert Pro" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="AIQ" DataFormat="AIQ Trading Expert Pro" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="AIQ" DataFormat="AIQ Trading Expert Pro" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="AMI" Name="Ami Broker" Header="<ticker>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="AMI" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="," ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="AMI" DataFormat="Ami Broker" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="AMI" DataFormat="Ami Broker" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="AMI" DataFormat="Ami Broker" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="AMI" DataFormat="Ami Broker" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="AMI" DataFormat="Ami Broker" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="AMI" DataFormat="Ami Broker" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="AMI" DataFormat="Ami Broker" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="AMI" DataFormat="Ami Broker" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="AMIN" Name="Ami Broker with Names" Header="<name>,<ticker>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="AMIN" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="," ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="AMIN" DataFormat="Ami Broker with Names" ColumnCode="Description" ColumnName="Symbol Name" ColumnTypeId="3" ColumnType="String" Header="<name>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="AMIN" DataFormat="Ami Broker with Names" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="AMIN" DataFormat="Ami Broker with Names" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="AMIN" DataFormat="Ami Broker with Names" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="AMIN" DataFormat="Ami Broker with Names" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="AMIN" DataFormat="Ami Broker with Names" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="AMIN" DataFormat="Ami Broker with Names" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="AMIN" DataFormat="Ami Broker with Names" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="AND" Name="Andromeda" Header="" DateFormat="MM/dd/yyyy" Extension="asc" IncludeSuffix="false" TabColumnSeperator="true" ColumnSeperator="" TextQualifier="" FilenamePrefix="AND" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="false" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="AND" DataFormat="Andromeda" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header=""/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="AND" DataFormat="Andromeda" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header=""/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="AND" DataFormat="Andromeda" ColumnCode="Description" ColumnName="Symbol Name" ColumnTypeId="3" ColumnType="String" Header=""/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="AND" DataFormat="Andromeda" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header=""/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="AND" DataFormat="Andromeda" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header=""/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="AND" DataFormat="Andromeda" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header=""/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="AND" DataFormat="Andromeda" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header=""/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="AND" DataFormat="Andromeda" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header=""/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="AI" Name="ASCII (Intraday)" Header="<ticker>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="MSI" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator=" " ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="AI" DataFormat="ASCII (Intraday)" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="AI" DataFormat="ASCII (Intraday)" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="AI" DataFormat="ASCII (Intraday)" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="AI" DataFormat="ASCII (Intraday)" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="AI" DataFormat="ASCII (Intraday)" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="AI" DataFormat="ASCII (Intraday)" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="AI" DataFormat="ASCII (Intraday)" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="AI" DataFormat="ASCII (Intraday)" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="EzyCharts" Name="EzyCharts" Header="<ticker>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="EzyCharts" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="EzyCharts" DataFormat="EzyCharts" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="EzyCharts" DataFormat="EzyCharts" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="EzyCharts" DataFormat="EzyCharts" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="EzyCharts" DataFormat="EzyCharts" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="EzyCharts" DataFormat="EzyCharts" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="EzyCharts" DataFormat="EzyCharts" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="EzyCharts" DataFormat="EzyCharts" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="EzyCharts" DataFormat="EzyCharts" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="FC" Name="FCharts" Header="<TICKER>,<DTYYYYMMDD>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOLUME>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="FC" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="," ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="FC" DataFormat="FCharts" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<TICKER>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="FC" DataFormat="FCharts" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<DTYYYYMMDD>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="FC" DataFormat="FCharts" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<OPEN>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="FC" DataFormat="FCharts" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<HIGH>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="FC" DataFormat="FCharts" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<LOW>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="FC" DataFormat="FCharts" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<CLOSE>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="FC" DataFormat="FCharts" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<VOLUME>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="FC" DataFormat="FCharts" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<OI>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="FCI" Name="FCharts (Intraday)" Header="<TICKER>,<DTYYYYMMDD>,<TIME>,<OPEN>,<HIGH>,<LOW>,<CLOSE>,<VOLUME>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="FCI" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="," ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="FCI" DataFormat="FCharts (Intraday)" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<TICKER>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="FCI" DataFormat="FCharts (Intraday)" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<DTYYYYMMDD>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="FCI" DataFormat="FCharts (Intraday)" ColumnCode="Time" ColumnName="Time" ColumnTypeId="1" ColumnType="DateTime" Header="<TIME>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="FCI" DataFormat="FCharts (Intraday)" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<OPEN>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="FCI" DataFormat="FCharts (Intraday)" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<HIGH>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="FCI" DataFormat="FCharts (Intraday)" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<LOW>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="FCI" DataFormat="FCharts (Intraday)" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<CLOSE>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="FCI" DataFormat="FCharts (Intraday)" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<VOLUME>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="MS7" Name="MetaStock ASCII (7 column)" Header="<ticker>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="MS7" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="MS7" DataFormat="MetaStock ASCII (7 column)" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="MS7" DataFormat="MetaStock ASCII (7 column)" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="MS7" DataFormat="MetaStock ASCII (7 column)" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="MS7" DataFormat="MetaStock ASCII (7 column)" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="MS7" DataFormat="MetaStock ASCII (7 column)" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="MS7" DataFormat="MetaStock ASCII (7 column)" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="MS7" DataFormat="MetaStock ASCII (7 column)" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="MS7" DataFormat="MetaStock ASCII (7 column)" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="MS8" Name="MetaStock ASCII (8 column)" Header="<ticker>,<per>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="MS8" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="PER" ColumnName="Period" ColumnTypeId="3" ColumnType="String" Header="<per>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="8" Code="MS8" DataFormat="MetaStock ASCII (8 column)" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="MSAI" Name="Metastock ASCII (Intraday)" Header="<ticker>,<per>,<date>,<time>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="MSI2" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="," ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="PER" ColumnName="Period" ColumnTypeId="3" ColumnType="String" Header="<per>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="Time" ColumnName="Time" ColumnTypeId="1" ColumnType="DateTime" Header="<time>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="8" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="9" Code="MSAI" DataFormat="Metastock ASCII (Intraday)" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="MSN" Name="MetaStock ASCII with Names" Header="<name>,<ticker>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="MSN" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="Description" ColumnName="Symbol Name" ColumnTypeId="3" ColumnType="String" Header="<name>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="8" Code="MSN" DataFormat="MetaStock ASCII with Names" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="PSS" Name="Personal Stock Streamer" Header="<ticker>,<open>,<high>,<low>,<close>,<vol>,<name>,<oi>" DateFormat="yyMMdd" Extension="sp" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="PSS" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="PSS" DataFormat="Personal Stock Streamer" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="PSS" DataFormat="Personal Stock Streamer" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="PSS" DataFormat="Personal Stock Streamer" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="PSS" DataFormat="Personal Stock Streamer" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="PSS" DataFormat="Personal Stock Streamer" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="PSS" DataFormat="Personal Stock Streamer" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="PSS" DataFormat="Personal Stock Streamer" ColumnCode="Description" ColumnName="Symbol Name" ColumnTypeId="3" ColumnType="String" Header="<name>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="PSS" DataFormat="Personal Stock Streamer" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="Quicken" Name="Quicken" Header="!Type:Prices" DateFormat="MM-dd-yyyy" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="Quicken" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HH:mm" DateTimeSeperator=" " ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="Quicken" DataFormat="Quicken" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="!Type:Prices"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="Quicken" DataFormat="Quicken" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="Quicken" DataFormat="Quicken" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="Quicken" DataFormat="Quicken" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="Quicken" DataFormat="Quicken" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="Quicken" DataFormat="Quicken" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="Quicken" DataFormat="Quicken" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="Spread" Name="Spreadsheet (eg: Excel)" Header="Symbol,Date,Open,High,Low,Close,Volume,OpenInt" DateFormat="dd MMM yyyy" Extension="csv" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="Spread" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HH:mm" DateTimeSeperator=" " ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="Spread" DataFormat="Spreadsheet (eg: Excel)" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="Symbol"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="Spread" DataFormat="Spreadsheet (eg: Excel)" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="Date"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="Spread" DataFormat="Spreadsheet (eg: Excel)" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="Open"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="Spread" DataFormat="Spreadsheet (eg: Excel)" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="High"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="Spread" DataFormat="Spreadsheet (eg: Excel)" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="Low"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="Spread" DataFormat="Spreadsheet (eg: Excel)" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="Close"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="Spread" DataFormat="Spreadsheet (eg: Excel)" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="Volume"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="Spread" DataFormat="Spreadsheet (eg: Excel)" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="OpenInt"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="CSV" Name="Standard CSV" Header="Symbol,Date,Open,High,Low,Close,Volume,OpenInt" DateFormat="dd-MMM-yyyy" Extension="csv" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="CSV" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HH:mm" DateTimeSeperator=" " ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="CSV" DataFormat="Standard CSV" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="Symbol"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="CSV" DataFormat="Standard CSV" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="Date"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="CSV" DataFormat="Standard CSV" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="Open"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="CSV" DataFormat="Standard CSV" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="High"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="CSV" DataFormat="Standard CSV" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="Low"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="CSV" DataFormat="Standard CSV" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="Close"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="CSV" DataFormat="Standard CSV" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="Volume"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="CSV" DataFormat="Standard CSV" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="OpenInt"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="SSP" Name="Stock Screener Pro" Header="<ticker>,<name>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="ddMMyyyy" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="SSP" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="Description" ColumnName="Symbol Name" ColumnTypeId="3" ColumnType="String" Header="<name>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="8" Code="SSP" DataFormat="Stock Screener Pro" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="SuperChart" Name="SuperCharts ASCII" Header="ticker,date,open,high,low,close,vol,oi" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="SuperChart" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="HHmm" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="SuperChart" DataFormat="SuperCharts ASCII" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="ticker"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="SuperChart" DataFormat="SuperCharts ASCII" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="date"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="SuperChart" DataFormat="SuperCharts ASCII" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="open"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="SuperChart" DataFormat="SuperCharts ASCII" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="high"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="SuperChart" DataFormat="SuperCharts ASCII" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="low"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="SuperChart" DataFormat="SuperCharts ASCII" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="close"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="SuperChart" DataFormat="SuperCharts ASCII" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="vol"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="SuperChart" DataFormat="SuperCharts ASCII" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="oi"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="WDP" Name="Wal Data Platinum" Header="<ticker>;<date>;<open>;<high>;<low>;<close>;<vol>" DateFormat="dd/MM/yy" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator=";" TextQualifier="" FilenamePrefix="WDP" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="WDP" DataFormat="Wal Data Platinum" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="WDP" DataFormat="Wal Data Platinum" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="WDP" DataFormat="Wal Data Platinum" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="WDP" DataFormat="Wal Data Platinum" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="WDP" DataFormat="Wal Data Platinum" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="WDP" DataFormat="Wal Data Platinum" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="WDP" DataFormat="Wal Data Platinum" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+		<DATAFORMAT Code="WOW" Name="Windows on Wallstreet" Header="<ticker>,<date>,<open>,<high>,<low>,<close>,<vol>,<oi>" DateFormat="yyyyMMdd" Extension="txt" IncludeSuffix="false" TabColumnSeperator="false" ColumnSeperator="," TextQualifier="" FilenamePrefix="WOW" FilenameExchangeCode="true" FilenameDate="true" IncludeHeaderRow="true" HourFormat="" DateTimeSeperator="" ExchangeFilenameFormatDate="<Field:ExchangeCode><Text:_><Field:Date:yyyyMMdd>" ExchangeFilenameFormatDateRange="" SymbolFilenameFormatDate="<Field:SymbolCode><Text:_><Field:Date:yyyyMMdd>" SymbolFilenameFormatDateRange="<Field:SymbolCode><Text:_><Field:DateFrom:yyyyMMdd><Text:_><Field:DateTo:yyyyMMdd>">
+			<COLUMNS>
+				<DATAFORMAT_COLUMN SortOrder="0" Code="WOW" DataFormat="Windows on Wallstreet" ColumnCode="Code" ColumnName="Symbol Code" ColumnTypeId="3" ColumnType="String" Header="<ticker>"/>
+				<DATAFORMAT_COLUMN SortOrder="1" Code="WOW" DataFormat="Windows on Wallstreet" ColumnCode="DateTime" ColumnName="Date" ColumnTypeId="1" ColumnType="DateTime" Header="<date>"/>
+				<DATAFORMAT_COLUMN SortOrder="2" Code="WOW" DataFormat="Windows on Wallstreet" ColumnCode="Open" ColumnName="Open" ColumnTypeId="2" ColumnType="Numeric" Header="<open>"/>
+				<DATAFORMAT_COLUMN SortOrder="3" Code="WOW" DataFormat="Windows on Wallstreet" ColumnCode="High" ColumnName="High" ColumnTypeId="2" ColumnType="Numeric" Header="<high>"/>
+				<DATAFORMAT_COLUMN SortOrder="4" Code="WOW" DataFormat="Windows on Wallstreet" ColumnCode="Low" ColumnName="Low" ColumnTypeId="2" ColumnType="Numeric" Header="<low>"/>
+				<DATAFORMAT_COLUMN SortOrder="5" Code="WOW" DataFormat="Windows on Wallstreet" ColumnCode="Close" ColumnName="Close" ColumnTypeId="2" ColumnType="Numeric" Header="<close>"/>
+				<DATAFORMAT_COLUMN SortOrder="6" Code="WOW" DataFormat="Windows on Wallstreet" ColumnCode="Volume" ColumnName="Volume" ColumnTypeId="2" ColumnType="Numeric" Header="<vol>"/>
+				<DATAFORMAT_COLUMN SortOrder="7" Code="WOW" DataFormat="Windows on Wallstreet" ColumnCode="OpenInterest" ColumnName="Open Interest" ColumnTypeId="2" ColumnType="Numeric" Header="<oi>"/>
+			</COLUMNS>
+		</DATAFORMAT>
+	</DATAFORMATS>
+</RESPONSE>
