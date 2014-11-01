@@ -28,7 +28,11 @@ module EodData
 	- https://github.com/amitmurthy/LibExpat.jl
 	- http://nbviewer.ipython.org/github/amitmurthy/LibExpat.jl/blob/master/libexpat_test.ipynb
 =#
-VERSION < v"0.4-" && using Dates
+if VERSION < v"0.4-"
+	using Dates
+else
+	using Base.Dates
+end
 using HTTPClient.HTTPC
 using LibExpat
 
