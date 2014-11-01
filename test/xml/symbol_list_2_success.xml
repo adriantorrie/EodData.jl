@@ -1,0 +1,3305 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.SymbolList2" Message="Success" Date="0001-01-01T00:00:00">
+  <SYMBOLS2>
+    <SYMBOL2 c="A" n="Agilent Technologies"/>
+    <SYMBOL2 c="AA" n="Alcoa Inc"/>
+    <SYMBOL2 c="AA-B" n="Alcoa Inc."/>
+    <SYMBOL2 c="AAC" n="Aac Holdings Inc."/>
+    <SYMBOL2 c="AAN" n="Aaron's Inc"/>
+    <SYMBOL2 c="AAP" n="Advance Auto Parts Inc"/>
+    <SYMBOL2 c="AAT" n="American Assets Trust"/>
+    <SYMBOL2 c="AAV" n="Advantage Oil & Gas Ltd"/>
+    <SYMBOL2 c="AB" n="Alliance Capital Management L.P."/>
+    <SYMBOL2 c="ABB" n="Abb Ltd"/>
+    <SYMBOL2 c="ABBV" n="Abbvie Inc. Common Stock"/>
+    <SYMBOL2 c="ABC" n="Amerisourcebergen Corp"/>
+    <SYMBOL2 c="ABEV" n="Ambev S.A."/>
+    <SYMBOL2 c="ABG" n="Asbury Automotive Group Inc"/>
+    <SYMBOL2 c="ABM" n="ABM Industries Incorporated"/>
+    <SYMBOL2 c="ABR" n="Arbor Realty Trust"/>
+    <SYMBOL2 c="ABR-A" n="Arbor Realty Trust Inc"/>
+    <SYMBOL2 c="ABR-B" n="Arbor Realty Trust Inc"/>
+    <SYMBOL2 c="ABR-C" n="Arbor Realty Trust"/>
+    <SYMBOL2 c="ABRN" n="Arbor Realty Trust 7.375% Senio"/>
+    <SYMBOL2 c="ABT" n="Abbott Laboratories"/>
+    <SYMBOL2 c="ABW-B" n="Associated Banc-Corp Depositary"/>
+    <SYMBOL2 c="ABX" n="Barrick Gold Corp"/>
+    <SYMBOL2 c="ACC" n="American Campus Communities Inc"/>
+    <SYMBOL2 c="ACCO" n="Acco Brands Corp"/>
+    <SYMBOL2 c="ACE" n="Ace Limited"/>
+    <SYMBOL2 c="ACG" n="Alliancebernstein Income Fund Inc"/>
+    <SYMBOL2 c="ACH" n="Aluminum Corporation of China Ltd"/>
+    <SYMBOL2 c="ACI" n="Arch Coal"/>
+    <SYMBOL2 c="ACM" n="Aecom Technology Corp"/>
+    <SYMBOL2 c="ACMP" n="Access Midstream Partners L.P."/>
+    <SYMBOL2 c="ACN" n="Accenture Plc."/>
+    <SYMBOL2 c="ACP" n="Avenue Income Credit Strategies"/>
+    <SYMBOL2 c="ACRE" n="Ares Commercial Real Estate Cor"/>
+    <SYMBOL2 c="ACT" n="Actavis Inc"/>
+    <SYMBOL2 c="ACW" n="Accuride Corporation"/>
+    <SYMBOL2 c="ADC" n="Agree Realty Corp"/>
+    <SYMBOL2 c="ADM" n="Archer Daniels Midland Company"/>
+    <SYMBOL2 c="ADPT" n="Adeptus Health Inc."/>
+    <SYMBOL2 c="ADS" n="Alliance Data Systems Corp"/>
+    <SYMBOL2 c="ADT" n="ADT Corp"/>
+    <SYMBOL2 c="ADX" n="Adams Express Company"/>
+    <SYMBOL2 c="AEB" n="Aegon Nv"/>
+    <SYMBOL2 c="AEC" n="Associated Estates Realty Corp"/>
+    <SYMBOL2 c="AED" n="Aegon Nv"/>
+    <SYMBOL2 c="AEE" n="Ameren Corp"/>
+    <SYMBOL2 c="AEG" n="Aegon Nv"/>
+    <SYMBOL2 c="AEH" n="Aegon Nv"/>
+    <SYMBOL2 c="AEK" n="Aegon N.V. 8.00%"/>
+    <SYMBOL2 c="AEL" n="American Equity Investment Life"/>
+    <SYMBOL2 c="AEM" n="Agnico-Eagle Mines Limited"/>
+    <SYMBOL2 c="AEO" n="American Eagle Outfitters"/>
+    <SYMBOL2 c="AEP" n="American Electric Power Company"/>
+    <SYMBOL2 c="AER" n="Aercap Holdings N.V."/>
+    <SYMBOL2 c="AES" n="The Aes Corp"/>
+    <SYMBOL2 c="AES-C" n="Aes TR III 6.75 Pfd"/>
+    <SYMBOL2 c="AET" n="Aetna Inc"/>
+    <SYMBOL2 c="AF" n="Astoria Financial Corp"/>
+    <SYMBOL2 c="AF-C" n="Astoria Financial Corp"/>
+    <SYMBOL2 c="AFA" n="American Financial Group Inc"/>
+    <SYMBOL2 c="AFB" n="Alliance National Municipal"/>
+    <SYMBOL2 c="AFC" n="Allied Capital Corp"/>
+    <SYMBOL2 c="AFG" n="American Financial Group"/>
+    <SYMBOL2 c="AFGE" n="American Financial Group Inc"/>
+    <SYMBOL2 c="AFL" n="Aflac Incorporated"/>
+    <SYMBOL2 c="AFM" n="Affiliated Managers Group Inc"/>
+    <SYMBOL2 c="AFQ" n="American Financial Group"/>
+    <SYMBOL2 c="AFS-A" n="Amtrust Financial Services Inc."/>
+    <SYMBOL2 c="AFSD" n="Aflac Incorporated"/>
+    <SYMBOL2 c="AFT" n="Apollo Senior Floating Rate Fund Inc"/>
+    <SYMBOL2 c="AFW" n="American Financial Group Inc"/>
+    <SYMBOL2 c="AG" n="First Majestic Silver"/>
+    <SYMBOL2 c="AGC" n="Advent Claymore Convertible Securities"/>
+    <SYMBOL2 c="AGCO" n="Agco Corp"/>
+    <SYMBOL2 c="AGD" n="Alpine Global Dynamic Dividend Fund"/>
+    <SYMBOL2 c="AGI" n="Alamos Gold Inc"/>
+    <SYMBOL2 c="AGM" n="Federal Agricultural Mortgage Corp"/>
+    <SYMBOL2 c="AGM-A" n="Federal Agricultural Mortgage"/>
+    <SYMBOL2 c="AGM-B" n="Federal Ag"/>
+    <SYMBOL2 c="AGM-C" n="Federal Agricultural Mortgage"/>
+    <SYMBOL2 c="AGM.A" n="Federal Agricultural Mortgage Corp"/>
+    <SYMBOL2 c="AGN" n="Allergan Inc"/>
+    <SYMBOL2 c="AGO" n="Assured Guaranty Ltd"/>
+    <SYMBOL2 c="AGO-B" n="Assured Guaranty Ltd [B]"/>
+    <SYMBOL2 c="AGO-E" n="Assured Guaranty Ltd [E]"/>
+    <SYMBOL2 c="AGO-F" n="Assured Guaranty Ltd [F]"/>
+    <SYMBOL2 c="AGRO" n="Adecoagro S.A."/>
+    <SYMBOL2 c="AGU" n="Agrium Inc"/>
+    <SYMBOL2 c="AGX" n="Argan Inc"/>
+    <SYMBOL2 c="AHC" n="A.H. Belo Corp"/>
+    <SYMBOL2 c="AHH" n="Armada Hoffler Properties Inc"/>
+    <SYMBOL2 c="AHL" n="Aspen Insurance Holdings"/>
+    <SYMBOL2 c="AHL-A" n="Aspen Insurance Pfd"/>
+    <SYMBOL2 c="AHL-B" n="Aspen Insurance Holdings Limit"/>
+    <SYMBOL2 c="AHL-C" n="Aspen Ins Pfd Inc"/>
+    <SYMBOL2 c="AHP" n="Ashford Hospitality Prime Inc."/>
+    <SYMBOL2 c="AHS" n="Amn Healthcare Services Inc"/>
+    <SYMBOL2 c="AHT" n="Ashford Hospitality Trust Inc"/>
+    <SYMBOL2 c="AHT-A" n="Ashford Hsop TR Pfd"/>
+    <SYMBOL2 c="AHT-D" n="Ashford Hosp D Pfd"/>
+    <SYMBOL2 c="AHT-E" n="Ashford Hospitality Trust Inc 9"/>
+    <SYMBOL2 c="AI" n="Arlington Asset Investment Corp"/>
+    <SYMBOL2 c="AIB" n="Apollo Investment Corp"/>
+    <SYMBOL2 c="AIF" n="Apollo Tactical Income Fund Inc"/>
+    <SYMBOL2 c="AIG" n="American International Group"/>
+    <SYMBOL2 c="AIG.W" n="American International Group"/>
+    <SYMBOL2 c="AIN" n="Albany International Corp"/>
+    <SYMBOL2 c="AIR" n="AAR Corp"/>
+    <SYMBOL2 c="AIT" n="Applied Industrial Technologies"/>
+    <SYMBOL2 c="AIV" n="Apartment Investment and Management"/>
+    <SYMBOL2 c="AIV-A" n="Apartment Investment and Manag"/>
+    <SYMBOL2 c="AIV-Z" n="Apartment Inv. & Mgt. Co."/>
+    <SYMBOL2 c="AIW" n="Arlington Asset Investment Cor"/>
+    <SYMBOL2 c="AIY" n="Apollo Investment Corp"/>
+    <SYMBOL2 c="AIZ" n="Assurant Inc"/>
+    <SYMBOL2 c="AJG" n="Arthur J. Gallagher & Co."/>
+    <SYMBOL2 c="AKO.A" n="Embotell Andina Sa A"/>
+    <SYMBOL2 c="AKO.B" n="Embotell Andna Sa B"/>
+    <SYMBOL2 c="AKP" n="Alliance California Muni"/>
+    <SYMBOL2 c="AKR" n="Acadia Realty Trust"/>
+    <SYMBOL2 c="AKS" n="AK Steel Holding Corp"/>
+    <SYMBOL2 c="AL" n="Air Lease Corporation Class A C"/>
+    <SYMBOL2 c="ALB" n="Albemarle Corp"/>
+    <SYMBOL2 c="ALDW" n="Alon USA Partners LP"/>
+    <SYMBOL2 c="ALE" n="Allete Inc"/>
+    <SYMBOL2 c="ALEX" n="Alexander and Baldwin Inc"/>
+    <SYMBOL2 c="ALG" n="Alamo Group"/>
+    <SYMBOL2 c="ALJ" n="Alon USA Energy"/>
+    <SYMBOL2 c="ALK" n="Alaska Air Group"/>
+    <SYMBOL2 c="ALL" n="Allstate Corp"/>
+    <SYMBOL2 c="ALL-A" n="Allstate Corporation Pfd."/>
+    <SYMBOL2 c="ALL-B" n="Ally Financial Inc Fixed Rate F"/>
+    <SYMBOL2 c="ALL-C" n="The Allstate Corp"/>
+    <SYMBOL2 c="ALL-D" n="Allstate Corp"/>
+    <SYMBOL2 c="ALL-E" n="The Allstate Corporation"/>
+    <SYMBOL2 c="ALL-F" n="The Allstate Corporation"/>
+    <SYMBOL2 c="ALLE" n="Allegion Plc Ordinary Shares Wh"/>
+    <SYMBOL2 c="ALLY" n="Ally Financial"/>
+    <SYMBOL2 c="ALP-N" n="Alabama Pwr 5.2A Pfd"/>
+    <SYMBOL2 c="ALP-O" n="Alabama Pwr 5.83A Pf"/>
+    <SYMBOL2 c="ALP-P" n="Alabama Power 5.30 A"/>
+    <SYMBOL2 c="ALR" n="Alere Inc"/>
+    <SYMBOL2 c="ALR-B" n="Alere Inc. Inverness Medical In"/>
+    <SYMBOL2 c="ALSN" n="Allison Transmission Holdings"/>
+    <SYMBOL2 c="ALU" n="Alcatel Lucent"/>
+    <SYMBOL2 c="ALV" n="Autoliv Inc"/>
+    <SYMBOL2 c="ALX" n="Alexander's Inc"/>
+    <SYMBOL2 c="AMBR" n="Amber Road Inc."/>
+    <SYMBOL2 c="AMC" n="Amc Entertainment Holdings Inc"/>
+    <SYMBOL2 c="AMD" n="Advanced Micro Devices"/>
+    <SYMBOL2 c="AME" n="Amtek Inc"/>
+    <SYMBOL2 c="AMG" n="Affiliated Managers Group"/>
+    <SYMBOL2 c="AMH" n="American Homes 4 Rent"/>
+    <SYMBOL2 c="AMH-A" n="American Homes"/>
+    <SYMBOL2 c="AMH-B" n="American Homes 4 Rent 5% Series"/>
+    <SYMBOL2 c="AMH-C" n="American Homes"/>
+    <SYMBOL2 c="AMID" n="American Midstreampartners LP"/>
+    <SYMBOL2 c="AMP" n="Ameriprise Financial Services"/>
+    <SYMBOL2 c="AMRC" n="Ameresco Inc"/>
+    <SYMBOL2 c="AMRE" n="Amreit Inc"/>
+    <SYMBOL2 c="AMT" n="American Tower Corp"/>
+    <SYMBOL2 c="AMT-A" n="Apollo Residential Preferred"/>
+    <SYMBOL2 c="AMTD" n="TD Ameritrade Holding Corp"/>
+    <SYMBOL2 c="AMTG" n="Apollo Residential Mortgage In"/>
+    <SYMBOL2 c="AMX" n="America Movil S.A.B. De C.V."/>
+    <SYMBOL2 c="AN" n="Autonation Inc"/>
+    <SYMBOL2 c="ANET" n="Arista Networks Inc."/>
+    <SYMBOL2 c="ANF" n="Abercrombie & Fitch Company"/>
+    <SYMBOL2 c="ANFI" n="Amira Nature Foods Ltd"/>
+    <SYMBOL2 c="ANH" n="Anworth Mortgage Asset Corp"/>
+    <SYMBOL2 c="ANH-A" n="Anworth Mtg Pfd A"/>
+    <SYMBOL2 c="ANH-B" n="Anworth 6.25 Pr S B"/>
+    <SYMBOL2 c="ANN" n="Ann Inc"/>
+    <SYMBOL2 c="ANR" n="Alpha Natural Resources"/>
+    <SYMBOL2 c="ANW" n="Aegean Marine Petroleum Network"/>
+    <SYMBOL2 c="AOD" n="Alpine Total Dynamic Dividend"/>
+    <SYMBOL2 c="AOI" n="Alliance One International"/>
+    <SYMBOL2 c="AOL" n="AOL Inc"/>
+    <SYMBOL2 c="AON" n="AON Plc"/>
+    <SYMBOL2 c="AOS" n="Smith [A.O.] Corp"/>
+    <SYMBOL2 c="AP" n="Ampco-Pittsburgh Corp"/>
+    <SYMBOL2 c="APA" n="Apache Corp"/>
+    <SYMBOL2 c="APAM" n="Artisan Partners Asset Manageme"/>
+    <SYMBOL2 c="APB" n="Asia Pacific Fund Inc"/>
+    <SYMBOL2 c="APC" n="Anadarko Petroleum Corp"/>
+    <SYMBOL2 c="APD" n="Air Products and Chemicals"/>
+    <SYMBOL2 c="APF" n="Morgan Stanley Asia Pacific Fund Inc"/>
+    <SYMBOL2 c="APH" n="Amphenol Corp"/>
+    <SYMBOL2 c="APL" n="Atlas Pipeline Partners L.P."/>
+    <SYMBOL2 c="APL-E" n="Atlas Pipeline Partners L.P"/>
+    <SYMBOL2 c="APO" n="Apollo Global Management Llc C"/>
+    <SYMBOL2 c="APU" n="Amerigas Partners L.P."/>
+    <SYMBOL2 c="AR" n="Antero Resources Corp"/>
+    <SYMBOL2 c="ARC" n="American Reprographics Company"/>
+    <SYMBOL2 c="ARCO" n="Arcos Dorados Holdings Inc"/>
+    <SYMBOL2 c="ARCX" n="Arc Logistics Partners LP"/>
+    <SYMBOL2 c="ARDC" n="Ares Dynamic Credit Allocation"/>
+    <SYMBOL2 c="ARE" n="Alexandria Real Estate Equities"/>
+    <SYMBOL2 c="ARE-E" n="Alexandria Real Estate Equitie"/>
+    <SYMBOL2 c="ARES" n="Ares Management LP"/>
+    <SYMBOL2 c="ARG" n="Airgas Inc"/>
+    <SYMBOL2 c="ARH-C" n="Arch Capital Group Ltd. 6.75% P"/>
+    <SYMBOL2 c="ARI" n="Apollo Commercial Real Estate"/>
+    <SYMBOL2 c="ARI-A" n="Apollo Commercial Real Estate"/>
+    <SYMBOL2 c="ARL" n="American Realty Investors"/>
+    <SYMBOL2 c="ARMF" n="Ares Multi-Strategy Credit Fund"/>
+    <SYMBOL2 c="ARMK" n="Aramark Holdings Corp."/>
+    <SYMBOL2 c="ARN" n="Ares Capital Corporation 7.00%"/>
+    <SYMBOL2 c="ARO" n="Aeropostale Inc"/>
+    <SYMBOL2 c="ARP" n="Atlas Resource Partners L.P. C"/>
+    <SYMBOL2 c="ARP-D" n="Atlas Resource Partners L.P."/>
+    <SYMBOL2 c="ARPI" n="American Residential Properties"/>
+    <SYMBOL2 c="ARR" n="Armour Residential R"/>
+    <SYMBOL2 c="ARR-A" n="Armour Residential REIT Inc"/>
+    <SYMBOL2 c="ARR-B" n="Armour Residential REIT Inc"/>
+    <SYMBOL2 c="ARU" n="Ares Capital Corp"/>
+    <SYMBOL2 c="ARW" n="Arrow Electronics"/>
+    <SYMBOL2 c="ARY" n="Ares Capital Corp"/>
+    <SYMBOL2 c="ASA" n="ASA Gold and Precious Metals"/>
+    <SYMBOL2 c="ASC" n="Ardmore Shipping Corp"/>
+    <SYMBOL2 c="ASG" n="Liberty All-Star Growth Fund"/>
+    <SYMBOL2 c="ASGN" n="On Assignment"/>
+    <SYMBOL2 c="ASH" n="Ashland Inc"/>
+    <SYMBOL2 c="ASPN" n="Aspen Aerogels Inc"/>
+    <SYMBOL2 c="ASR" n="Grupo Aeroportuario Del Sureste"/>
+    <SYMBOL2 c="ASX" n="Advanced Semiconductor Engineering"/>
+    <SYMBOL2 c="AT" n="Atlantic Power Corp"/>
+    <SYMBOL2 c="ATE" n="Advantest Corporation Ads"/>
+    <SYMBOL2 c="ATEN" n="A10 Networks Inc."/>
+    <SYMBOL2 c="ATHL" n="Athlon Energy Inc"/>
+    <SYMBOL2 c="ATHM" n="Autohome Inc."/>
+    <SYMBOL2 c="ATI" n="Allegheny Technologies Inc"/>
+    <SYMBOL2 c="ATK" n="Alliant Techsystems Inc"/>
+    <SYMBOL2 c="ATLS" n="Atlas Energy Llc"/>
+    <SYMBOL2 c="ATO" n="Atmos Energy Corp"/>
+    <SYMBOL2 c="ATR" n="Aptargroup"/>
+    <SYMBOL2 c="ATTO" n="Atento S.A."/>
+    <SYMBOL2 c="ATU" n="Actuant Corp"/>
+    <SYMBOL2 c="ATV" n="Acorn International"/>
+    <SYMBOL2 c="ATW" n="Atwood Oceanics"/>
+    <SYMBOL2 c="AU" n="Anglogold Ashanti Ltd"/>
+    <SYMBOL2 c="AUO" n="Au Optronics Corp"/>
+    <SYMBOL2 c="AUQ" n="Aurico Gold Inc"/>
+    <SYMBOL2 c="AUY" n="Yamana Gold"/>
+    <SYMBOL2 c="AV" n="Aviva Plc"/>
+    <SYMBOL2 c="AVA" n="Avista Corp"/>
+    <SYMBOL2 c="AVAL" n="Grupo Aval Acciones Y Valores S"/>
+    <SYMBOL2 c="AVB" n="Avalonbay Communities"/>
+    <SYMBOL2 c="AVD" n="American Vanguard Corp"/>
+    <SYMBOL2 c="AVG" n="Avg Technologies N.V."/>
+    <SYMBOL2 c="AVH" n="Avianca Holdings S.A."/>
+    <SYMBOL2 c="AVIV" n="Aviv REIT Inc. Common Stock"/>
+    <SYMBOL2 c="AVK" n="Advent Claymore Convertible Securities"/>
+    <SYMBOL2 c="AVP" n="Avon Products"/>
+    <SYMBOL2 c="AVT" n="Avnet Inc"/>
+    <SYMBOL2 c="AVV" n="Aviva Plc"/>
+    <SYMBOL2 c="AVX" n="Avx Corp"/>
+    <SYMBOL2 c="AVY" n="Avery Dennison Corp"/>
+    <SYMBOL2 c="AWF" n="Alliance World Dollar Fund II"/>
+    <SYMBOL2 c="AWH" n="Allied World Assurance Company"/>
+    <SYMBOL2 c="AWI" n="Armstrong World Industries Inc"/>
+    <SYMBOL2 c="AWK" n="American Water Works"/>
+    <SYMBOL2 c="AWP" n="Alpine Global Premier Propertie"/>
+    <SYMBOL2 c="AWR" n="American States Water Company"/>
+    <SYMBOL2 c="AXE" n="Anixter International Inc"/>
+    <SYMBOL2 c="AXL" n="American Axle & Manufacturing"/>
+    <SYMBOL2 c="AXLL" n="Georgia Gulf Corp"/>
+    <SYMBOL2 c="AXP" n="American Express Company"/>
+    <SYMBOL2 c="AXR" n="Amrep Corp"/>
+    <SYMBOL2 c="AXS" n="Axis Capital Holdings"/>
+    <SYMBOL2 c="AXS-C" n="Axis Capital Holdings Limited P"/>
+    <SYMBOL2 c="AXS-D" n="Axis Capital Holdings Limited"/>
+    <SYMBOL2 c="AYI" n="Acuity Brands Inc"/>
+    <SYMBOL2 c="AYN" n="Alliance New York Muni"/>
+    <SYMBOL2 c="AYR" n="Aircastle Limited"/>
+    <SYMBOL2 c="AZN" n="Astrazeneca Plc"/>
+    <SYMBOL2 c="AZO" n="Autozone"/>
+    <SYMBOL2 c="AZZ" n="Azz Inc"/>
+    <SYMBOL2 c="B" n="Barnes Group"/>
+    <SYMBOL2 c="BA" n="Boeing Company"/>
+    <SYMBOL2 c="BABA" n="Alibaba Group Holding Ltd."/>
+    <SYMBOL2 c="BAC" n="Bank of America Corp"/>
+    <SYMBOL2 c="BAC-D" n="Bac Dep Share D"/>
+    <SYMBOL2 c="BAC-E" n="Bank Amer Corp Dep R"/>
+    <SYMBOL2 c="BAC-I" n="Bank Amer Corp Pfd"/>
+    <SYMBOL2 c="BAC-L" n="Bank Amer Pfd Ser L"/>
+    <SYMBOL2 c="BAC-W" n="Bank of America Corp"/>
+    <SYMBOL2 c="BAC-Z" n="Bac Cap TR ViII"/>
+    <SYMBOL2 c="BAC.A" n="Bank of America Corporation Bac"/>
+    <SYMBOL2 c="BAC.B" n="Bank of America Corporation Bac"/>
+    <SYMBOL2 c="BAF" n="Blackrock Income Inv Quality Trust"/>
+    <SYMBOL2 c="BAH" n="Booz Allen Hamilton Holding Corp"/>
+    <SYMBOL2 c="BAK" n="Copene-Petroquimica Do Nordeste"/>
+    <SYMBOL2 c="BALT" n="Baltic Trading Limited"/>
+    <SYMBOL2 c="BAM" n="Brookfield Asset Management Inc"/>
+    <SYMBOL2 c="BANC" n="First Pactrust Bancorp"/>
+    <SYMBOL2 c="BAP" n="Credicorp Ltd"/>
+    <SYMBOL2 c="BAS" n="Basic Energy Services"/>
+    <SYMBOL2 c="BAX" n="Baxter International Inc"/>
+    <SYMBOL2 c="BBD" n="Banco Bradesco Sa"/>
+    <SYMBOL2 c="BBDO" n="Banco Bradesco S.A."/>
+    <SYMBOL2 c="BBF" n="Blackrock Muni Income Trust"/>
+    <SYMBOL2 c="BBG" n="Bill Barrett Corp"/>
+    <SYMBOL2 c="BBK" n="Blackrock Muni Trust"/>
+    <SYMBOL2 c="BBL" n="Bhp Billiton Plc"/>
+    <SYMBOL2 c="BBN" n="Balckrock Build America Trust"/>
+    <SYMBOL2 c="BBT" n="BB&T Corp"/>
+    <SYMBOL2 c="BBT-D" n="BB&T Corp"/>
+    <SYMBOL2 c="BBT-E" n="BB&T Corp"/>
+    <SYMBOL2 c="BBT-F" n="BB&T Corp"/>
+    <SYMBOL2 c="BBT-G" n="BB&T Corporation Ser G"/>
+    <SYMBOL2 c="BBVA" n="Banco Bilbao Viscaya Argentaria S.A."/>
+    <SYMBOL2 c="BBW" n="Build-A-Bear Workshop"/>
+    <SYMBOL2 c="BBX" n="Bankatlantic Bancorp"/>
+    <SYMBOL2 c="BBY" n="Best Buy Co."/>
+    <SYMBOL2 c="BC" n="Brunswick Corp"/>
+    <SYMBOL2 c="BCA" n="Corpbanca"/>
+    <SYMBOL2 c="BCC" n="Boise Cascade L.L.C. Common ST"/>
+    <SYMBOL2 c="BCE" n="BCE Inc"/>
+    <SYMBOL2 c="BCEI" n="Bonanza Creek Energy Inc"/>
+    <SYMBOL2 c="BCF" n="Blackrock Real Asset Equity Trust"/>
+    <SYMBOL2 c="BCH" n="Banco De Chile"/>
+    <SYMBOL2 c="BCO" n="Brink's Company"/>
+    <SYMBOL2 c="BCR" n="C.R. Bard"/>
+    <SYMBOL2 c="BCRH" n="Blue Capital Reinsurance Holdi"/>
+    <SYMBOL2 c="BCS" n="Barclays Plc"/>
+    <SYMBOL2 c="BCS-A" n="Barclays Ads"/>
+    <SYMBOL2 c="BCS-C" n="Barclays Bank 4 Ads"/>
+    <SYMBOL2 c="BCS-D" n="Barclays Bank Plc"/>
+    <SYMBOL2 c="BCS.P" n="Barclays Bk ADR Sr 2"/>
+    <SYMBOL2 c="BCX" n="Blackrock Resources Common Shar"/>
+    <SYMBOL2 c="BDC" n="Belden Inc"/>
+    <SYMBOL2 c="BDJ" n="Blackrock Enhanced Dividend Achievers"/>
+    <SYMBOL2 c="BDN" n="Brandywine Realty Trust"/>
+    <SYMBOL2 c="BDN-E" n="Brandywine Realty Trust"/>
+    <SYMBOL2 c="BDX" n="Becton Dickinson and Company"/>
+    <SYMBOL2 c="BEE" n="Strategic Hotels & Resorts Inc"/>
+    <SYMBOL2 c="BEE-B" n="Strategic Hotel Pf B"/>
+    <SYMBOL2 c="BEL" n="Belmond Ltd"/>
+    <SYMBOL2 c="BEN" n="Franklin Resources"/>
+    <SYMBOL2 c="BEP" n="Brookfield Renewable"/>
+    <SYMBOL2 c="BERY" n="Berry Plastics Group Inc"/>
+    <SYMBOL2 c="BF.A" n="Brown Forman Inc A"/>
+    <SYMBOL2 c="BF.B" n="Brown Forman Inc B"/>
+    <SYMBOL2 c="BFAM" n="Bright Horizons Family Solutions Inc"/>
+    <SYMBOL2 c="BFK" n="Blackrock Muni Income Trust"/>
+    <SYMBOL2 c="BFO" n="Blackrock Florida Muni 2020 Trust"/>
+    <SYMBOL2 c="BFR" n="Bbva Banco Frances S.A."/>
+    <SYMBOL2 c="BFS" n="Saul Centers"/>
+    <SYMBOL2 c="BFS-A" n="Saul Ctrs Dep Pfd A"/>
+    <SYMBOL2 c="BFS-C" n="Saul Centers Inc"/>
+    <SYMBOL2 c="BFZ" n="Blackrock California Muni Trust"/>
+    <SYMBOL2 c="BG" n="Bunge Limited"/>
+    <SYMBOL2 c="BGB" n="Blackstone / Gso Strategic Cre"/>
+    <SYMBOL2 c="BGC" n="General Cable Corp"/>
+    <SYMBOL2 c="BGCA" n="Bgc Partners Inc"/>
+    <SYMBOL2 c="BGE-B" n="Bge Capital Trust II"/>
+    <SYMBOL2 c="BGG" n="Briggs & Stratton Corp"/>
+    <SYMBOL2 c="BGH" n="Babson Capital Global Short Du"/>
+    <SYMBOL2 c="BGR" n="Blackrock Energy and Resources Trust"/>
+    <SYMBOL2 c="BGS" n="B&G Foods Holdings"/>
+    <SYMBOL2 c="BGT" n="Blackrock Global"/>
+    <SYMBOL2 c="BGX" n="Blackstone Gso Long Short Credit Fund"/>
+    <SYMBOL2 c="BGY" n="Blackrock International"/>
+    <SYMBOL2 c="BH" n="Biglari Holdings Inc"/>
+    <SYMBOL2 c="BHE" n="Benchmark Electronics"/>
+    <SYMBOL2 c="BHI" n="Baker Hughes Inc"/>
+    <SYMBOL2 c="BHK" n="Blackrock Core Trust"/>
+    <SYMBOL2 c="BHL" n="Blackrock Defined Opportunity Trust"/>
+    <SYMBOL2 c="BHLB" n="Berkshire Hills Bancorp"/>
+    <SYMBOL2 c="BHP" n="Bhp Billiton Limited"/>
+    <SYMBOL2 c="BID" n="Sotheby's Holdings"/>
+    <SYMBOL2 c="BIE" n="Blackrock Muni Bond Investment Trust"/>
+    <SYMBOL2 c="BIF" n="Uslife Income Fund"/>
+    <SYMBOL2 c="BIG" n="Big Lots"/>
+    <SYMBOL2 c="BIN" n="Iesi-Bfc Ltd"/>
+    <SYMBOL2 c="BIO" n="Bio-Rad Laboratories"/>
+    <SYMBOL2 c="BIO.B" n="Bio Rad Labs Cl B"/>
+    <SYMBOL2 c="BIO.W" n="Bio-Rad Laboratories Inc."/>
+    <SYMBOL2 c="BIOA" n="Bioamber Inc"/>
+    <SYMBOL2 c="BIP" n="Brookfield Infrastructure Partners LP"/>
+    <SYMBOL2 c="BIT" n="Blackrock Multi-Sector Income T"/>
+    <SYMBOL2 c="BITA" n="Bitauto Holdings Limited"/>
+    <SYMBOL2 c="BJZ" n="Blackrock California Muni 2018 Trust"/>
+    <SYMBOL2 c="BK" n="Bank of New York Mellon Corp"/>
+    <SYMBOL2 c="BK-C" n="The Bank of New York Mellon Co"/>
+    <SYMBOL2 c="BKD" n="Brookdale Senior Living Inc"/>
+    <SYMBOL2 c="BKE" n="Buckle Inc"/>
+    <SYMBOL2 c="BKH" n="Black Hills Corp"/>
+    <SYMBOL2 c="BKK" n="Blackrock Muni 2020 Trust"/>
+    <SYMBOL2 c="BKN" n="Blackrock Investment Quality Municipal"/>
+    <SYMBOL2 c="BKS" n="Barnes & Noble"/>
+    <SYMBOL2 c="BKT" n="Blackrock Income Trust Inc"/>
+    <SYMBOL2 c="BKU" n="BankUnited Inc."/>
+    <SYMBOL2 c="BKW" n="Burger King Worldwide"/>
+    <SYMBOL2 c="BLH" n="Blackrock New York Muni 2018 Trust"/>
+    <SYMBOL2 c="BLK" n="Blackrock"/>
+    <SYMBOL2 c="BLL" n="Ball Corp"/>
+    <SYMBOL2 c="BLOX" n="Infoblox Inc"/>
+    <SYMBOL2 c="BLT" n="Blount International"/>
+    <SYMBOL2 c="BLW" n="Blackrock Limited Duration Income Trust"/>
+    <SYMBOL2 c="BLX" n="Banco Latinoamericano De Comercio"/>
+    <SYMBOL2 c="BMA" n="Banco Macro S.A."/>
+    <SYMBOL2 c="BME" n="Blackrock Health Sciences Trust"/>
+    <SYMBOL2 c="BMI" n="Badger Meter"/>
+    <SYMBOL2 c="BML-G" n="Bank America Dep G"/>
+    <SYMBOL2 c="BML-H" n="Bank America Dep H"/>
+    <SYMBOL2 c="BML-I" n="Bank America Dep I"/>
+    <SYMBOL2 c="BML-J" n="Bank America Dep J"/>
+    <SYMBOL2 c="BML-L" n="Bank America Dep L"/>
+    <SYMBOL2 c="BMO" n="Bank of Montreal"/>
+    <SYMBOL2 c="BMR" n="Biomed Realty Trust"/>
+    <SYMBOL2 c="BMS" n="Bemis Company"/>
+    <SYMBOL2 c="BMY" n="Bristol-Myers Squibb Company"/>
+    <SYMBOL2 c="BNA" n="Blackrock Income Opportunity Trust Inc"/>
+    <SYMBOL2 c="BNJ" n="Blackrock New Jersey Muni Income Trust"/>
+    <SYMBOL2 c="BNK" n="C1 Financial Inc."/>
+    <SYMBOL2 c="BNNY" n="Annie's Inc"/>
+    <SYMBOL2 c="BNS" n="Bank of Nova Scotia"/>
+    <SYMBOL2 c="BNY" n="Blackrock New York Muni Trust Inc"/>
+    <SYMBOL2 c="BOCA" n="Banc of California Inc."/>
+    <SYMBOL2 c="BOE" n="Blackrock Global"/>
+    <SYMBOL2 c="BOH" n="Bank of Hawaii Corp"/>
+    <SYMBOL2 c="BOI" n="Brookfield Mortgage Opportunit"/>
+    <SYMBOL2 c="BORN" n="China New Borun Corp"/>
+    <SYMBOL2 c="BOXC" n="Brookfield Office Properties C"/>
+    <SYMBOL2 c="BP" n="BP P.L.C."/>
+    <SYMBOL2 c="BPI" n="Bridgepoint Education"/>
+    <SYMBOL2 c="BPK" n="Blackrock Muni 2018 Trust"/>
+    <SYMBOL2 c="BPL" n="Buckeye Partners L.P."/>
+    <SYMBOL2 c="BPT" n="BP Prudhoe Bay Royalty Trust"/>
+    <SYMBOL2 c="BPY" n="Brookfield Property Partners L."/>
+    <SYMBOL2 c="BPZ" n="Bpz Resources Inc"/>
+    <SYMBOL2 c="BQH" n="Blackrock New York Muni Trust"/>
+    <SYMBOL2 c="BQR" n="Blackrock Ecosolutions Investment Trust"/>
+    <SYMBOL2 c="BR" n="Broadridge Financial Solutions Llc"/>
+    <SYMBOL2 c="BRC" n="Brady Corp"/>
+    <SYMBOL2 c="BRFS" n="Brf-Brasil Foods S.A."/>
+    <SYMBOL2 c="BRK.A" n="Berkshire Hath Hld A"/>
+    <SYMBOL2 c="BRK.B" n="Berkshire Hath Hld B"/>
+    <SYMBOL2 c="BRO" n="Brown & Brown"/>
+    <SYMBOL2 c="BRP" n="Brookfield Residential Propert"/>
+    <SYMBOL2 c="BRS" n="Bristow Group Inc"/>
+    <SYMBOL2 c="BRSS" n="Global Brass and Copper Holdin"/>
+    <SYMBOL2 c="BRT" n="BRT Realty Trust"/>
+    <SYMBOL2 c="BRX" n="Brixmor Property Group Inc. Com"/>
+    <SYMBOL2 c="BSAC" n="Banco Santander-Chile Ads"/>
+    <SYMBOL2 c="BSBR" n="Banco Santander Brasil Sa"/>
+    <SYMBOL2 c="BSD" n="Blackrock Strategic Muni Trust Inc"/>
+    <SYMBOL2 c="BSE" n="Blackrock New York Muni Income Trust"/>
+    <SYMBOL2 c="BSI" n="Alon Holdings - Blue Square Israel Ltd"/>
+    <SYMBOL2 c="BSL" n="Blackstone Gso Senior Floating Rate"/>
+    <SYMBOL2 c="BSMX" n="Grupo Financiero Santander Mxi"/>
+    <SYMBOL2 c="BST" n="Blackrock Science and Technolo"/>
+    <SYMBOL2 c="BSX" n="Boston Scientific Corp"/>
+    <SYMBOL2 c="BT" n="Bt Group Plc"/>
+    <SYMBOL2 c="BTA" n="Blackrock Long-Term Muni Advantage Trust"/>
+    <SYMBOL2 c="BTE" n="Baytex Energy Corp"/>
+    <SYMBOL2 c="BTF" n="Boulder Total Return Fund"/>
+    <SYMBOL2 c="BTH" n="Blyth Inc"/>
+    <SYMBOL2 c="BTO" n="John Hancock Bank and Thrift Fund"/>
+    <SYMBOL2 c="BTT" n="Blackrock Municipal Target Term"/>
+    <SYMBOL2 c="BTU" n="Peabody Energy Corp"/>
+    <SYMBOL2 c="BTZ" n="Blackrock Preferred"/>
+    <SYMBOL2 c="BUD" n="Anheuser-Busch Inbev Sa"/>
+    <SYMBOL2 c="BUI" n="Blackrock Utility and Infrastr"/>
+    <SYMBOL2 c="BURL" n="Burlington Stores Inc"/>
+    <SYMBOL2 c="BVN" n="Compania Mina Buenaventura S.A."/>
+    <SYMBOL2 c="BWA" n="Borgwarner Inc"/>
+    <SYMBOL2 c="BWC" n="Babcock & Wilcox Company"/>
+    <SYMBOL2 c="BWG" n="Legg Mason Bw Global Income Op"/>
+    <SYMBOL2 c="BWP" n="Boardwalk Pipeline Partners L.P."/>
+    <SYMBOL2 c="BWS" n="Brown Shoe Company"/>
+    <SYMBOL2 c="BX" n="The Blackstone Group L.P."/>
+    <SYMBOL2 c="BXC" n="Bluelinx Holdings Inc"/>
+    <SYMBOL2 c="BXE" n="Bellatrix Exploration Ltd"/>
+    <SYMBOL2 c="BXMT" n="Blackstone Mortgage Trust Inc. Cl A"/>
+    <SYMBOL2 c="BXP" n="Boston Properties"/>
+    <SYMBOL2 c="BXP-B" n="Boston Properties Inc"/>
+    <SYMBOL2 c="BXS" n="Bancorpsouth Inc"/>
+    <SYMBOL2 c="BYD" n="Boyd Gaming Corp"/>
+    <SYMBOL2 c="BYI" n="Bally Technologies"/>
+    <SYMBOL2 c="BYM" n="Blackrock Muni Income Quality Trust"/>
+    <SYMBOL2 c="BZH" n="Beazer Homes USA"/>
+    <SYMBOL2 c="BZT" n="Beazer Homes USA Inc. 7.50% Tangible Equity"/>
+    <SYMBOL2 c="C" n="Citigroup Inc"/>
+    <SYMBOL2 c="C-C" n="Citigroup Inc"/>
+    <SYMBOL2 c="C-J" n="Citigroup Inc"/>
+    <SYMBOL2 c="C-K" n="Citigroup Inc"/>
+    <SYMBOL2 c="C-L" n="Citigroup Inc."/>
+    <SYMBOL2 c="C-N" n="Citigroup Capital XiII"/>
+    <SYMBOL2 c="C-P" n="Citigroup Pfd Ser Aa"/>
+    <SYMBOL2 c="C.A" n="Citigroup Inc Wrnt 'A'"/>
+    <SYMBOL2 c="C.B" n="Citigroup Inc Wrnt 'B'"/>
+    <SYMBOL2 c="CAB" n="Cabela's Inc"/>
+    <SYMBOL2 c="CACI" n="Caci International"/>
+    <SYMBOL2 c="CAE" n="Cae Inc"/>
+    <SYMBOL2 c="CAF" n="Morgan Stanley China A Share Fund Inc"/>
+    <SYMBOL2 c="CAG" n="Conagra Foods"/>
+    <SYMBOL2 c="CAH" n="Cardinal Health"/>
+    <SYMBOL2 c="CAJ" n="Canon Inc"/>
+    <SYMBOL2 c="CALX" n="Calix Inc"/>
+    <SYMBOL2 c="CAM" n="Cameron International Corp"/>
+    <SYMBOL2 c="CAP" n="Cai International"/>
+    <SYMBOL2 c="CAPL" n="Crossamerica Partners LP"/>
+    <SYMBOL2 c="CAS" n="Castle [A.M.] & Co."/>
+    <SYMBOL2 c="CAT" n="Caterpillar Inc"/>
+    <SYMBOL2 c="CATO" n="Cato Corp"/>
+    <SYMBOL2 c="CB" n="Chubb Corp"/>
+    <SYMBOL2 c="CBA" n="Clearbridge American Energy ML"/>
+    <SYMBOL2 c="CBB" n="Cincinnati Bell Inc"/>
+    <SYMBOL2 c="CBB-B" n="Cincinnati Bell Pr B"/>
+    <SYMBOL2 c="CBD" n="Companhia Brasileira De Distribuicao"/>
+    <SYMBOL2 c="CBG" n="CBRE Group Inc"/>
+    <SYMBOL2 c="CBI" n="Chicago Bridge & Iron Company N.V."/>
+    <SYMBOL2 c="CBK" n="Christopher & Banks Corp"/>
+    <SYMBOL2 c="CBL" n="Cbl & Associates Properties"/>
+    <SYMBOL2 c="CBL-D" n="Cbl Pfd D"/>
+    <SYMBOL2 c="CBL-E" n="Cbl & Associates Properties I"/>
+    <SYMBOL2 c="CBM" n="Cambrex Corp"/>
+    <SYMBOL2 c="CBO" n="Cbo [Listing Market - NYSE - Ne"/>
+    <SYMBOL2 c="CBPX" n="Continental Building Products"/>
+    <SYMBOL2 c="CBR" n="Ciber Inc"/>
+    <SYMBOL2 c="CBS" n="CBS Corp"/>
+    <SYMBOL2 c="CBS.A" n="CBS Corp"/>
+    <SYMBOL2 c="CBSO" n="CBS Outdoor Americas Inc."/>
+    <SYMBOL2 c="CBT" n="Cabot Corp"/>
+    <SYMBOL2 c="CBU" n="Community Bank System"/>
+    <SYMBOL2 c="CBZ" n="Cbiz Inc"/>
+    <SYMBOL2 c="CCC" n="Calgon Carbon Corp"/>
+    <SYMBOL2 c="CCE" n="Coca-Cola Enterprises"/>
+    <SYMBOL2 c="CCG" n="Campus Crest Communities"/>
+    <SYMBOL2 c="CCG-A" n="Campus Crest Communities Inc"/>
+    <SYMBOL2 c="CCI" n="Crown Castle International Corp"/>
+    <SYMBOL2 c="CCI-A" n="Crown Castle International Cor"/>
+    <SYMBOL2 c="CCJ" n="Cameco Corp"/>
+    <SYMBOL2 c="CCK" n="Crown Cork & Seal Company"/>
+    <SYMBOL2 c="CCL" n="Carnival Corp"/>
+    <SYMBOL2 c="CCM" n="Concord Medical Services"/>
+    <SYMBOL2 c="CCO" n="Clear Channel Outdoor Holdings"/>
+    <SYMBOL2 c="CCS" n="Century Communities Inc."/>
+    <SYMBOL2 c="CCSC" n="Country Style Cooking"/>
+    <SYMBOL2 c="CCU" n="Compania Cervecerias Unidas S.A."/>
+    <SYMBOL2 c="CCV" n="Comcast Corp"/>
+    <SYMBOL2 c="CCZ" n="Comcast Corp"/>
+    <SYMBOL2 c="CDE" n="Coeur D'Alene Mines Corp"/>
+    <SYMBOL2 c="CDE.W" n="Coeur D'Alene Mines Corporatio"/>
+    <SYMBOL2 c="CDI" n="Cdi Corp"/>
+    <SYMBOL2 c="CDR" n="Cedar Shopping Centers Inc"/>
+    <SYMBOL2 c="CDR-B" n="Cedar Realty Trust Inc"/>
+    <SYMBOL2 c="CE" n="Celanese Corp"/>
+    <SYMBOL2 c="CEA" n="China Eastern Airlines Corp Ltd"/>
+    <SYMBOL2 c="CEB" n="The Corporate Executive Board Company"/>
+    <SYMBOL2 c="CEE" n="Central Europe and Russia Fund"/>
+    <SYMBOL2 c="CEL" n="Cellcom Israel"/>
+    <SYMBOL2 c="CELP" n="Cypress Energy Partners L.P."/>
+    <SYMBOL2 c="CEM" n="Clearbridge Energy MLP Fund Inc"/>
+    <SYMBOL2 c="CEN" n="Center Coast MLP & Infrastructure"/>
+    <SYMBOL2 c="CEO" n="Cnooc Limited"/>
+    <SYMBOL2 c="CEQP" n="Crestwood Equity Partners LP"/>
+    <SYMBOL2 c="CF" n="Cf Industries Holdings"/>
+    <SYMBOL2 c="CFC-A" n="Countrywide Cap IV"/>
+    <SYMBOL2 c="CFC-B" n="Countrywide Cap V"/>
+    <SYMBOL2 c="CFG" n="Citizens Financial Group Inc/Ri"/>
+    <SYMBOL2 c="CFI" n="Culp Inc"/>
+    <SYMBOL2 c="CFN" n="Carefusion Corp"/>
+    <SYMBOL2 c="CFR" n="Cullen/Frost Bankers"/>
+    <SYMBOL2 c="CFR-A" n="Cullen/Frost Bankers Inc"/>
+    <SYMBOL2 c="CFX" n="Colfax Corp"/>
+    <SYMBOL2 c="CGA" n="China Green Agriculture"/>
+    <SYMBOL2 c="CGG" n="Compagnie Generale De Gephysqu"/>
+    <SYMBOL2 c="CGI" n="Celadon Group"/>
+    <SYMBOL2 c="CHA" n="China Telecom Corp Ltd"/>
+    <SYMBOL2 c="CHD" n="Church & Dwight Company"/>
+    <SYMBOL2 c="CHE" n="Chemed Inc"/>
+    <SYMBOL2 c="CHGG" n="Chegg Inc"/>
+    <SYMBOL2 c="CHH" n="Choice Hotels International"/>
+    <SYMBOL2 c="CHK" n="Chesapeake Energy Corp"/>
+    <SYMBOL2 c="CHK-D" n="Chesapeake En Cv Pfd"/>
+    <SYMBOL2 c="CHKR" n="Chesapeake Granite Wash Trust"/>
+    <SYMBOL2 c="CHL" n="China Mobile [Hong Kong] Ltd"/>
+    <SYMBOL2 c="CHMI" n="Cherry Hill Mortgage Investmen"/>
+    <SYMBOL2 c="CHMT" n="Chemtura Corp"/>
+    <SYMBOL2 c="CHN" n="China Fund"/>
+    <SYMBOL2 c="CHS" n="Chico's Fas"/>
+    <SYMBOL2 c="CHS-A" n="Chesapeake Lodging Trust 7.75%"/>
+    <SYMBOL2 c="CHSP" n="Chesapeake Lodging Trust"/>
+    <SYMBOL2 c="CHT" n="Chunghwa Telecom Co Ltd"/>
+    <SYMBOL2 c="CHU" n="China Unicom [Hong Kong] Ltd"/>
+    <SYMBOL2 c="CI" n="Cigna Corp"/>
+    <SYMBOL2 c="CIA" n="Citizens Inc"/>
+    <SYMBOL2 c="CIB" n="Bancolombia S.A."/>
+    <SYMBOL2 c="CIE" n="Cobalt International Energy"/>
+    <SYMBOL2 c="CIEN" n="Ciena Corp"/>
+    <SYMBOL2 c="CIF" n="Colonial Intermediate High"/>
+    <SYMBOL2 c="CIG" n="Comp En De Mn Cemig Ads"/>
+    <SYMBOL2 c="CIG.C" n="Comp En De Mn Cemig Ads"/>
+    <SYMBOL2 c="CII" n="Blackrock Capital and Income Strategies"/>
+    <SYMBOL2 c="CIM" n="Chimera Investment Corp"/>
+    <SYMBOL2 c="CIO" n="City Office REIT Inc."/>
+    <SYMBOL2 c="CIR" n="Circor International"/>
+    <SYMBOL2 c="CIT" n="Cit Group Inc [Del]"/>
+    <SYMBOL2 c="CIVI" n="Civitas Solutions Inc."/>
+    <SYMBOL2 c="CJES" n="C&J Energy Services Inc"/>
+    <SYMBOL2 c="CKH" n="Seacor Smit Inc"/>
+    <SYMBOL2 c="CKP" n="Checkpoint Systms"/>
+    <SYMBOL2 c="CL" n="Colgate-Palmolive Company"/>
+    <SYMBOL2 c="CLA" n="Capitala Finance Corp."/>
+    <SYMBOL2 c="CLB" n="Core Laboratories N.V."/>
+    <SYMBOL2 c="CLC" n="Clarcor Inc"/>
+    <SYMBOL2 c="CLD" n="Cloud Peak Energy Inc"/>
+    <SYMBOL2 c="CLDT" n="Chatham Lodging Trust [Reit]"/>
+    <SYMBOL2 c="CLF" n="Cliffs Natural Resources Inc"/>
+    <SYMBOL2 c="CLGX" n="Corelogic"/>
+    <SYMBOL2 c="CLH" n="Clean Harbors"/>
+    <SYMBOL2 c="CLI" n="Mack-Cali Realty Corp"/>
+    <SYMBOL2 c="CLN-A" n="Colony Financial Inc"/>
+    <SYMBOL2 c="CLNY" n="Colony Financial Inc"/>
+    <SYMBOL2 c="CLR" n="Continental Resources"/>
+    <SYMBOL2 c="CLS" n="Celestica Inc"/>
+    <SYMBOL2 c="CLV" n="Cliffs Natural Resources Inc. Dep. Pfd."/>
+    <SYMBOL2 c="CLW" n="Clearwater Paper Corp"/>
+    <SYMBOL2 c="CLX" n="Clorox Company"/>
+    <SYMBOL2 c="CM" n="Canadian Imperial Bank of Commerce"/>
+    <SYMBOL2 c="CMA" n="Comerica Inc"/>
+    <SYMBOL2 c="CMA.W" n="Comerica Inc"/>
+    <SYMBOL2 c="CMC" n="Commercial Metals Company"/>
+    <SYMBOL2 c="CMCM" n="Cheetah Mobile Inc."/>
+    <SYMBOL2 c="CMG" n="Chipotle Mexican Grill"/>
+    <SYMBOL2 c="CMI" n="Cummins Inc"/>
+    <SYMBOL2 c="CMK" n="Colonial Intermarket Income Trust I"/>
+    <SYMBOL2 c="CMLP" n="Crestwood Midstream Partners LP"/>
+    <SYMBOL2 c="CMN" n="Cantel Medical"/>
+    <SYMBOL2 c="CMO" n="Capstead Mortgage Corp"/>
+    <SYMBOL2 c="CMO-E" n="Capstead Mortgage Corp"/>
+    <SYMBOL2 c="CMP" n="Compass Minerals Intl Inc"/>
+    <SYMBOL2 c="CMR-B" n="Costamare Inc. Perpetual Prefer"/>
+    <SYMBOL2 c="CMR-C" n="Costamare Inc. Perpetual Prefer"/>
+    <SYMBOL2 c="CMRE" n="Costamare Inc"/>
+    <SYMBOL2 c="CMS" n="Cms Energy Corp"/>
+    <SYMBOL2 c="CMS-B" n="Consumers Engry 4.50"/>
+    <SYMBOL2 c="CMU" n="Colonial Muni Income Trust"/>
+    <SYMBOL2 c="CNA" n="Cna Financial Corp"/>
+    <SYMBOL2 c="CNC" n="Centene Corp"/>
+    <SYMBOL2 c="CNCO" n="Cencosud S.A."/>
+    <SYMBOL2 c="CNHI" n="Cnh Industrial N.V."/>
+    <SYMBOL2 c="CNI" n="Canadian National Railway Company"/>
+    <SYMBOL2 c="CNK" n="Cinemark Holdings Inc"/>
+    <SYMBOL2 c="CNL" n="Cleco Power Llc"/>
+    <SYMBOL2 c="CNNX" n="Cone Midstream Partners LP"/>
+    <SYMBOL2 c="CNO" n="Cno Financial Group"/>
+    <SYMBOL2 c="CNP" n="Centerpoint Energy Inc"/>
+    <SYMBOL2 c="CNQ" n="Canadian Natural Resources"/>
+    <SYMBOL2 c="CNS" n="Cohn & Steers Inc"/>
+    <SYMBOL2 c="CNW" n="Con-Way Inc"/>
+    <SYMBOL2 c="CNX" n="Consol Energy Inc"/>
+    <SYMBOL2 c="CO" n="China Cord Blood Corporation."/>
+    <SYMBOL2 c="CODE" n="Spansion Inc"/>
+    <SYMBOL2 c="CODI" n="Compass Diversified Holdings"/>
+    <SYMBOL2 c="COF" n="Capital One Financial Corp"/>
+    <SYMBOL2 c="COF-C" n="Capital One Financial Corporat"/>
+    <SYMBOL2 c="COF-P" n="Capital One Financial Corp Pfd"/>
+    <SYMBOL2 c="COF.W" n="Capital One Financial Corp"/>
+    <SYMBOL2 c="COG" n="Cabot Oil & Gas Corp"/>
+    <SYMBOL2 c="COH" n="Coach Inc"/>
+    <SYMBOL2 c="COL" n="Rockwell Collins"/>
+    <SYMBOL2 c="COO" n="Cooper Companies"/>
+    <SYMBOL2 c="COP" n="Conocophillips"/>
+    <SYMBOL2 c="COR" n="Coresite Realty Corp"/>
+    <SYMBOL2 c="COR-A" n="Coresite Realty Corp"/>
+    <SYMBOL2 c="CORR" n="Corenergy Infrastructure Trust Inc"/>
+    <SYMBOL2 c="COT" n="Cott Corp"/>
+    <SYMBOL2 c="COTY" n="Coty Inc"/>
+    <SYMBOL2 c="COUP" n="Coupons.Com Inc"/>
+    <SYMBOL2 c="COV" n="Covidien Plc."/>
+    <SYMBOL2 c="CP" n="Canadian Pacific Railway"/>
+    <SYMBOL2 c="CPA" n="Copa Holdings S.A."/>
+    <SYMBOL2 c="CPAC" n="Cementos Pacasmayo S.A.A."/>
+    <SYMBOL2 c="CPB" n="Campbell Soup Company"/>
+    <SYMBOL2 c="CPE" n="Callon Petroleum Company"/>
+    <SYMBOL2 c="CPE-A" n="Callon Petroleum Company Prefer"/>
+    <SYMBOL2 c="CPF" n="Central Pacific Financial Co"/>
+    <SYMBOL2 c="CPG" n="Crescent Pt Energy"/>
+    <SYMBOL2 c="CPK" n="Chesapeake Utilities Corp"/>
+    <SYMBOL2 c="CPL" n="Cpfl Energia S.A."/>
+    <SYMBOL2 c="CPN" n="Calpine Corp"/>
+    <SYMBOL2 c="CPS" n="Cooper Std Hldg Inc"/>
+    <SYMBOL2 c="CPT" n="Camden Property Trust"/>
+    <SYMBOL2 c="CQB" n="Chiquita Brands International"/>
+    <SYMBOL2 c="CR" n="Crane Company"/>
+    <SYMBOL2 c="CRCM" n="Care.Com Inc"/>
+    <SYMBOL2 c="CRD.A" n="Crawford Co Cl A"/>
+    <SYMBOL2 c="CRD.B" n="Crawford Co Cl B"/>
+    <SYMBOL2 c="CRH" n="CRH Plc"/>
+    <SYMBOL2 c="CRI" n="Carter's Inc"/>
+    <SYMBOL2 c="CRK" n="Comstock Resources"/>
+    <SYMBOL2 c="CRL" n="Charles River Laboratories Intl"/>
+    <SYMBOL2 c="CRM" n="Salesforce.Com Inc"/>
+    <SYMBOL2 c="CRR" n="Carbo Ceramics"/>
+    <SYMBOL2 c="CRS" n="Carpenter Technology Corp"/>
+    <SYMBOL2 c="CRT" n="Cross Timbers Royalty Trust"/>
+    <SYMBOL2 c="CRY" n="Cryolife"/>
+    <SYMBOL2 c="CS" n="Credit Suisse Group"/>
+    <SYMBOL2 c="CSC" n="Computer Sciences Corp"/>
+    <SYMBOL2 c="CSG" n="Chambers Street Properties"/>
+    <SYMBOL2 c="CSH" n="Cash America International"/>
+    <SYMBOL2 c="CSI" n="Cutwater Select Income Fund"/>
+    <SYMBOL2 c="CSL" n="Carlisle Companies Inc"/>
+    <SYMBOL2 c="CSLT" n="Castlight Health Inc."/>
+    <SYMBOL2 c="CSS" n="Css Industries"/>
+    <SYMBOL2 c="CST" n="Cst Brands Inc. Common Stock"/>
+    <SYMBOL2 c="CSTM" n="Constellium N.V."/>
+    <SYMBOL2 c="CSU" n="Capital Senior Living Corp"/>
+    <SYMBOL2 c="CSV" n="Carriage Services"/>
+    <SYMBOL2 c="CSX" n="CSX Corp"/>
+    <SYMBOL2 c="CTB" n="Cooper Tire & Rubber Company"/>
+    <SYMBOL2 c="CTC" n="Ifm Investments Limited"/>
+    <SYMBOL2 c="CTL" n="Centurylink"/>
+    <SYMBOL2 c="CTLT" n="Catalent Inc."/>
+    <SYMBOL2 c="CTQ" n="Qwest Corp"/>
+    <SYMBOL2 c="CTR" n="Clearbridge Energy MLP Fund In"/>
+    <SYMBOL2 c="CTS" n="Cts Corp"/>
+    <SYMBOL2 c="CTT" n="Catchmark Timber Trust Inc."/>
+    <SYMBOL2 c="CTU" n="Qwest Corp"/>
+    <SYMBOL2 c="CTV" n="Qwest Corporation"/>
+    <SYMBOL2 c="CTW" n="Qwest Corp"/>
+    <SYMBOL2 c="CTX" n="Qwest Corp"/>
+    <SYMBOL2 c="CTY" n="Qwest Corp"/>
+    <SYMBOL2 c="CUB" n="Cubic Corp"/>
+    <SYMBOL2 c="CUB-A" n="Cubesmart 7.75% Series A Cumula"/>
+    <SYMBOL2 c="CUBE" n="Cubesmart"/>
+    <SYMBOL2 c="CUDA" n="Barracuda Networks Inc"/>
+    <SYMBOL2 c="CUK" n="Carnival Plc Ads"/>
+    <SYMBOL2 c="CUZ" n="Cousins Properties Inc"/>
+    <SYMBOL2 c="CVA" n="Covanta Holding Corp"/>
+    <SYMBOL2 c="CVB" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="CVC" n="Cablevision Systems Corp"/>
+    <SYMBOL2 c="CVD" n="Covance Inc"/>
+    <SYMBOL2 c="CVE" n="Cenovus Energy Inc"/>
+    <SYMBOL2 c="CVEO" n="Civeo Corporation Common Stock"/>
+    <SYMBOL2 c="CVG" n="Convergys Corp"/>
+    <SYMBOL2 c="CVI" n="Cvr Energy Inc"/>
+    <SYMBOL2 c="CVO" n="Cenveo Inc"/>
+    <SYMBOL2 c="CVRR" n="Cvr Refining LP"/>
+    <SYMBOL2 c="CVS" n="CVS Corp"/>
+    <SYMBOL2 c="CVT" n="Cvent Inc"/>
+    <SYMBOL2 c="CVX" n="Chevron Corp"/>
+    <SYMBOL2 c="CW" n="Curtiss-Wright Corp"/>
+    <SYMBOL2 c="CWEI" n="Clayton Williams Energy"/>
+    <SYMBOL2 c="CWT" n="California Water Service Group Holding"/>
+    <SYMBOL2 c="CX" n="Cemex S.A.B. De C.V. Sponsored"/>
+    <SYMBOL2 c="CXE" n="Colonial High Income Muni Trust"/>
+    <SYMBOL2 c="CXH" n="Colonial Investment Grade Muni Trust"/>
+    <SYMBOL2 c="CXO" n="Concho Resources Inc"/>
+    <SYMBOL2 c="CXP" n="Columbia Property Trust Inc"/>
+    <SYMBOL2 c="CXW" n="Corrections Corporation of America"/>
+    <SYMBOL2 c="CYD" n="China Yuchai International"/>
+    <SYMBOL2 c="CYH" n="Community Health Systems"/>
+    <SYMBOL2 c="CYN" n="City National Corp"/>
+    <SYMBOL2 c="CYN-C" n="City National Corp"/>
+    <SYMBOL2 c="CYN-D" n="City National Corporation Repr"/>
+    <SYMBOL2 c="CYNI" n="Cyan Inc. Common Stock"/>
+    <SYMBOL2 c="CYS" n="Cys Investments Inc"/>
+    <SYMBOL2 c="CYS-A" n="Cys Investments Inc"/>
+    <SYMBOL2 c="CYS-B" n="Cys Investments Inc"/>
+    <SYMBOL2 c="CYT" n="Cytec Industries Inc"/>
+    <SYMBOL2 c="CZZ" n="Cosan Limited"/>
+    <SYMBOL2 c="D" n="Dominion Resources"/>
+    <SYMBOL2 c="DAC" n="Danaos Corp"/>
+    <SYMBOL2 c="DAL" n="Delta Air Lines Inc"/>
+    <SYMBOL2 c="DAN" n="Dana Holding Corp"/>
+    <SYMBOL2 c="DANG" n="E-Commerce China Dangdang Inc"/>
+    <SYMBOL2 c="DAR" n="Darling International Inc"/>
+    <SYMBOL2 c="DATA" n="Tableau Software Inc. Class A"/>
+    <SYMBOL2 c="DB" n="Deutsche Bank Ag"/>
+    <SYMBOL2 c="DBD" n="Diebold Inc"/>
+    <SYMBOL2 c="DBL" n="Doubleline Opportunistic Credi"/>
+    <SYMBOL2 c="DCA" n="Dca Total Return Fund"/>
+    <SYMBOL2 c="DCI" n="Donaldson Company"/>
+    <SYMBOL2 c="DCM" n="Ntt Docomo Inc"/>
+    <SYMBOL2 c="DCO" n="Ducommun Inc"/>
+    <SYMBOL2 c="DCT" n="Dct Industrial Trust Inc"/>
+    <SYMBOL2 c="DCUA" n="Dominion Resources"/>
+    <SYMBOL2 c="DCUB" n="Dominion Resources Inc. Un Series B"/>
+    <SYMBOL2 c="DCUC" n="Dominion Res Inc Va"/>
+    <SYMBOL2 c="DD" n="E.I. Du Pont De Nemours and Company"/>
+    <SYMBOL2 c="DD-A" n="Du Pont E I 3.50 Pfd"/>
+    <SYMBOL2 c="DD-B" n="Du Pont E I 4.50 Pfd"/>
+    <SYMBOL2 c="DDC" n="Dominion Diamond Corp"/>
+    <SYMBOL2 c="DDD" n="3D Systems Corp"/>
+    <SYMBOL2 c="DDE" n="Dover Downs Gaming & Entertainment Inc"/>
+    <SYMBOL2 c="DDF" n="Delaware Dividend & Income"/>
+    <SYMBOL2 c="DDR" n="Ddr Corp"/>
+    <SYMBOL2 c="DDR-J" n="Ddr Corp"/>
+    <SYMBOL2 c="DDR-K" n="Ddr Corp"/>
+    <SYMBOL2 c="DDS" n="Dillard's"/>
+    <SYMBOL2 c="DDT" n="Dillard's"/>
+    <SYMBOL2 c="DE" n="Deere & Company"/>
+    <SYMBOL2 c="DECK" n="Deckers Outdoor Corp"/>
+    <SYMBOL2 c="DEG" n="Etablissements Delhaize Freres"/>
+    <SYMBOL2 c="DEI" n="Douglas Emmett"/>
+    <SYMBOL2 c="DEL" n="Deltic Timber Corp"/>
+    <SYMBOL2 c="DEO" n="Diageo Plc"/>
+    <SYMBOL2 c="DEX" n="Delaware Enhanced Global Dividend"/>
+    <SYMBOL2 c="DF" n="Dean Foods Company"/>
+    <SYMBOL2 c="DFP" n="Flaherty & Crumrine Dynamic"/>
+    <SYMBOL2 c="DFS" n="Discover Financial Services"/>
+    <SYMBOL2 c="DFS-B" n="Discover Financial Services"/>
+    <SYMBOL2 c="DFT" n="Dupont Fabros Technology"/>
+    <SYMBOL2 c="DFT-A" n="Dupont Fabros Technology Inc"/>
+    <SYMBOL2 c="DFT-B" n="Dupont Fabros Technology Inc"/>
+    <SYMBOL2 c="DG" n="Dollar General Corp"/>
+    <SYMBOL2 c="DGI" n="Digitalglobe Inc"/>
+    <SYMBOL2 c="DGX" n="Quest Diagnostics Inc"/>
+    <SYMBOL2 c="DHF" n="Dreyfus High Yield Strategies Fund"/>
+    <SYMBOL2 c="DHG" n="Dws High Income Opportunities Fund"/>
+    <SYMBOL2 c="DHI" n="D.R. Horton"/>
+    <SYMBOL2 c="DHR" n="Danaher Corp"/>
+    <SYMBOL2 c="DHT" n="Dht Holdings"/>
+    <SYMBOL2 c="DHX" n="Dice Holdings"/>
+    <SYMBOL2 c="DIN" n="Dineequity Inc"/>
+    <SYMBOL2 c="DIS" n="Walt Disney Company"/>
+    <SYMBOL2 c="DK" n="Delek US Holdings"/>
+    <SYMBOL2 c="DKL" n="Delek Logistics Partners LP"/>
+    <SYMBOL2 c="DKS" n="Dick's Sporting Goods Inc"/>
+    <SYMBOL2 c="DKT" n="Deutsch Bk Contingent Cap TR V"/>
+    <SYMBOL2 c="DL" n="China Distance Education Holdings"/>
+    <SYMBOL2 c="DLB" n="Dolby Laboratories"/>
+    <SYMBOL2 c="DLPH" n="Delphi Automotive Plc"/>
+    <SYMBOL2 c="DLR" n="Digital Realty Trust"/>
+    <SYMBOL2 c="DLR-E" n="Digital Realtytrust Inc"/>
+    <SYMBOL2 c="DLR-F" n="Digital Realty Trust Inc"/>
+    <SYMBOL2 c="DLR-G" n="Digital Realty Trust Inc"/>
+    <SYMBOL2 c="DLR-H" n="Digital Realty"/>
+    <SYMBOL2 c="DLX" n="Deluxe Corp"/>
+    <SYMBOL2 c="DM" n="Dominion Midstream Partners LP"/>
+    <SYMBOL2 c="DMB" n="Dreyfus Municipal Bond Infrastr"/>
+    <SYMBOL2 c="DMD" n="Demand Media Inc"/>
+    <SYMBOL2 c="DMO" n="Western Asset Mortgage Defined Opp"/>
+    <SYMBOL2 c="DNB" n="Dun & Bradstreet Corp"/>
+    <SYMBOL2 c="DNI" n="Chartwell Dividend & Income Fund"/>
+    <SYMBOL2 c="DNOW" n="Now Inc. Common Stock When Issu"/>
+    <SYMBOL2 c="DNP" n="Duff & Phelps Utilities Income"/>
+    <SYMBOL2 c="DNR" n="Denbury Resources"/>
+    <SYMBOL2 c="DNY" n="The Denali Fund"/>
+    <SYMBOL2 c="DO" n="Diamond Offshore Drilling"/>
+    <SYMBOL2 c="DOC" n="Physicians Realty Trust"/>
+    <SYMBOL2 c="DOM" n="Dominion Resources Black Warrior"/>
+    <SYMBOL2 c="DOOR" n="Masonite Wrldwde Hld"/>
+    <SYMBOL2 c="DOV" n="Dover Corp"/>
+    <SYMBOL2 c="DOW" n="DOW Chemical Company"/>
+    <SYMBOL2 c="DPD" n="DOW 30 Premium"/>
+    <SYMBOL2 c="DPG" n="Duff & Phelps Global Utility I"/>
+    <SYMBOL2 c="DPLO" n="Dplo"/>
+    <SYMBOL2 c="DPM" n="Dcp Midstream Partners LP"/>
+    <SYMBOL2 c="DPO" n="DOW 30 Premium"/>
+    <SYMBOL2 c="DPS" n="Dr Pepper Snapple Group Inc"/>
+    <SYMBOL2 c="DPZ" n="Domino's Pizza Inc"/>
+    <SYMBOL2 c="DQ" n="Daqq New Energy"/>
+    <SYMBOL2 c="DRA" n="Diversified Real Asset Income"/>
+    <SYMBOL2 c="DRC" n="Dresser-Rand Group Inc"/>
+    <SYMBOL2 c="DRD" n="Drdgold Limited"/>
+    <SYMBOL2 c="DRE" n="Duke Realty Corp"/>
+    <SYMBOL2 c="DRE-K" n="Duke Realty K"/>
+    <SYMBOL2 c="DRE-L" n="Duke Rlty Dep Sh"/>
+    <SYMBOL2 c="DRH" n="Diamondrock Hospitality Company"/>
+    <SYMBOL2 c="DRI" n="Darden Restaurants"/>
+    <SYMBOL2 c="DRII" n="Diamond Resorts International"/>
+    <SYMBOL2 c="DRL" n="Doral Financial Corp"/>
+    <SYMBOL2 c="DRQ" n="Dril-Quip"/>
+    <SYMBOL2 c="DRU" n="Dominion Resources"/>
+    <SYMBOL2 c="DSE" n="Duff & Phelps Select Energy ML"/>
+    <SYMBOL2 c="DSL" n="Doubleline Income Solutions Fun"/>
+    <SYMBOL2 c="DSM" n="Dreyfus Strategic Muni Bond Fund"/>
+    <SYMBOL2 c="DST" n="Dst Systems"/>
+    <SYMBOL2 c="DSU" n="Blackrock Debt Strategies Fund"/>
+    <SYMBOL2 c="DSW" n="DSW Inc"/>
+    <SYMBOL2 c="DSX" n="Diana Shipping Inc"/>
+    <SYMBOL2 c="DSX-B" n="Diana Shipping"/>
+    <SYMBOL2 c="DTE" n="Dte Energy Company"/>
+    <SYMBOL2 c="DTF" n="Duff & Phelps Utilities Tax-Free Income"/>
+    <SYMBOL2 c="DTK" n="Deutsche Bk Contingent Cap TR I"/>
+    <SYMBOL2 c="DTL.P" n="Datalink Corporation"/>
+    <SYMBOL2 c="DTQ" n="Dte Energy Co."/>
+    <SYMBOL2 c="DTT" n="Deutsche Bk Cap Fdg TR Ix Gua"/>
+    <SYMBOL2 c="DTZ" n="Dte Energy Co."/>
+    <SYMBOL2 c="DUA" n="Deutsche Bk Cap Fdg TR ViII 6"/>
+    <SYMBOL2 c="DUC" n="Duff & Phelps Utility & Corporate Trust"/>
+    <SYMBOL2 c="DUK" n="Duke Energy Corp"/>
+    <SYMBOL2 c="DUKH" n="Duke Energy Corp"/>
+    <SYMBOL2 c="DV" n="Devry Inc"/>
+    <SYMBOL2 c="DVA" n="Davita Healthcare Partners Inc"/>
+    <SYMBOL2 c="DVD" n="Dover Downs Entertainment"/>
+    <SYMBOL2 c="DVN" n="Devon Energy Corp"/>
+    <SYMBOL2 c="DVR" n="Cal Dive International"/>
+    <SYMBOL2 c="DW" n="Drew Industries Inc"/>
+    <SYMBOL2 c="DWRE" n="Demandware Inc"/>
+    <SYMBOL2 c="DX" n="Dynex Capital"/>
+    <SYMBOL2 c="DX-A" n="Dynex Capital Inc"/>
+    <SYMBOL2 c="DX-B" n="Dynex Capital Inc"/>
+    <SYMBOL2 c="DXB" n="Deutsche Bk Contingent Cap TR I"/>
+    <SYMBOL2 c="DY" n="Dycom Industries"/>
+    <SYMBOL2 c="DYN" n="Dynegy Inc"/>
+    <SYMBOL2 c="DYN-A" n="Dynegy Inc."/>
+    <SYMBOL2 c="DYN.W" n="Dynegy Inc. Warrants"/>
+    <SYMBOL2 c="E" n="Eni S.P.A."/>
+    <SYMBOL2 c="EAA" n="Entergy Arkansas"/>
+    <SYMBOL2 c="EAB" n="First Mortgage Bonds"/>
+    <SYMBOL2 c="EAE" n="Entergy Arkansas Inc"/>
+    <SYMBOL2 c="EARN" n="Ellington Residential Mortgage"/>
+    <SYMBOL2 c="EAT" n="Brinker International"/>
+    <SYMBOL2 c="EBF" n="Ennis Inc"/>
+    <SYMBOL2 c="EBR" n="Centrais Elc Braz Pfb B Elbras"/>
+    <SYMBOL2 c="EBR.B" n="Centrais Elc Braz Pfb B Elbras"/>
+    <SYMBOL2 c="EBS" n="Emergent Biosolutions"/>
+    <SYMBOL2 c="EC" n="Ecopetrol S.A."/>
+    <SYMBOL2 c="ECA" n="Encana Corp"/>
+    <SYMBOL2 c="ECC" n="Eagle Point Credit Co. Inc."/>
+    <SYMBOL2 c="ECL" n="Ecolab Inc"/>
+    <SYMBOL2 c="ECOM" n="Channeladvisor Corp"/>
+    <SYMBOL2 c="ECR" n="Eclipse Resources Corp"/>
+    <SYMBOL2 c="ECT" n="Eca Marcellus Trust I"/>
+    <SYMBOL2 c="ED" n="Consolidated Edison Company of New York"/>
+    <SYMBOL2 c="EDD" n="Emerging Markets Domestic Debt Fund"/>
+    <SYMBOL2 c="EDE" n="Empire District Electric Company"/>
+    <SYMBOL2 c="EDF" n="Stone Harbor Emerging Markets"/>
+    <SYMBOL2 c="EDI" n="Stone Harbor Emerging Markets"/>
+    <SYMBOL2 c="EDN" n="Empresa Distribuidora Y Comercializadora"/>
+    <SYMBOL2 c="EDR" n="Education Realty Trust Inc"/>
+    <SYMBOL2 c="EDU" n="New Oriental Education & Technology Group"/>
+    <SYMBOL2 c="EE" n="El Paso Electric Company"/>
+    <SYMBOL2 c="EEA" n="European Equity Fund"/>
+    <SYMBOL2 c="EEP" n="Enbridge Energy L.P."/>
+    <SYMBOL2 c="EEQ" n="Enbridge Energy Management Llc"/>
+    <SYMBOL2 c="EFC" n="Ellington Financial Llc"/>
+    <SYMBOL2 c="EFF" n="Eaton Vance Floating-Rate Inco"/>
+    <SYMBOL2 c="EFM" n="Entergy Mississippi"/>
+    <SYMBOL2 c="EFR" n="Eaton Vance Senior Floating-Rate Fund"/>
+    <SYMBOL2 c="EFT" n="Eaton Vance Floating Rate Income Trust"/>
+    <SYMBOL2 c="EFX" n="Equifax Inc"/>
+    <SYMBOL2 c="EGF" n="Blackrock Enhanced Government Fund"/>
+    <SYMBOL2 c="EGL" n="Engility Holdings Inc. Common"/>
+    <SYMBOL2 c="EGN" n="Energen Corp"/>
+    <SYMBOL2 c="EGO" n="Eldorado Gold Corp"/>
+    <SYMBOL2 c="EGP" n="Eastgroup Properties"/>
+    <SYMBOL2 c="EGY" n="Vaalco Energy Inc"/>
+    <SYMBOL2 c="EHI" n="Western Asset Global High"/>
+    <SYMBOL2 c="EIG" n="Employers Holdings Inc"/>
+    <SYMBOL2 c="EIX" n="Edison International"/>
+    <SYMBOL2 c="EJ" n="E-House [China] Holdings"/>
+    <SYMBOL2 c="EL" n="Estee Lauder Companies"/>
+    <SYMBOL2 c="ELA" n="Entergy Louisiana Llc"/>
+    <SYMBOL2 c="ELB" n="Entergy Louisiana"/>
+    <SYMBOL2 c="ELJ" n="Entergy Louisiana Llc"/>
+    <SYMBOL2 c="ELLI" n="Ellie Mae Inc"/>
+    <SYMBOL2 c="ELP" n="Companhia Paranaense De Energia"/>
+    <SYMBOL2 c="ELS" n="Equity Lifestyle Properties"/>
+    <SYMBOL2 c="ELS-C" n="Eqty Lifestyle Properties Inc"/>
+    <SYMBOL2 c="ELU" n="Entergy Louisiana Llc First M"/>
+    <SYMBOL2 c="ELX" n="Emulex Corp"/>
+    <SYMBOL2 c="ELY" n="Callaway Golf Company"/>
+    <SYMBOL2 c="EMC" n="EMC Corp"/>
+    <SYMBOL2 c="EMD" n="Western Asset Emerging Markets Fund"/>
+    <SYMBOL2 c="EME" n="Emcor Group"/>
+    <SYMBOL2 c="EMES" n="Emerge Energy Services LP Commo"/>
+    <SYMBOL2 c="EMF" n="Templeton Emerging Markets Fund"/>
+    <SYMBOL2 c="EMN" n="Eastman Chemical Company"/>
+    <SYMBOL2 c="EMO" n="Clearbridge Energy MLP Opportu"/>
+    <SYMBOL2 c="EMQ" n="Entergy Mississippi"/>
+    <SYMBOL2 c="EMR" n="Emerson Electric Company"/>
+    <SYMBOL2 c="EMZ" n="Entergy Mississippi Inc. First"/>
+    <SYMBOL2 c="ENB" n="Enbridge Inc"/>
+    <SYMBOL2 c="ENBL" n="Enable Midstream Partners LP"/>
+    <SYMBOL2 c="END" n="Endeavor International Corp"/>
+    <SYMBOL2 c="ENH" n="Endurance Specialty Holdings Ltd"/>
+    <SYMBOL2 c="ENH-A" n="Endurance Spec Pfd"/>
+    <SYMBOL2 c="ENH-B" n="Endurance Specialty Holdings L"/>
+    <SYMBOL2 c="ENI" n="Enersis S A"/>
+    <SYMBOL2 c="ENJ" n="Entergy New Orleans Inc"/>
+    <SYMBOL2 c="ENL" n="Reed Elsevier Nv"/>
+    <SYMBOL2 c="ENLC" n="Enlink Midstream Llc"/>
+    <SYMBOL2 c="ENLK" n="Enlink Midstream Partners LP"/>
+    <SYMBOL2 c="ENR" n="Energizer Holdings"/>
+    <SYMBOL2 c="ENS" n="Enersys Inc"/>
+    <SYMBOL2 c="ENV" n="Envestnet Inc"/>
+    <SYMBOL2 c="ENZ" n="Enzo Biochem"/>
+    <SYMBOL2 c="EOC" n="Empresa Nacional De Electricidad S.A."/>
+    <SYMBOL2 c="EOD" n="Wells Fargo Global Dividend Opportunity"/>
+    <SYMBOL2 c="EOG" n="Eog Resources"/>
+    <SYMBOL2 c="EOI" n="Eaton Vance Enhance Equity"/>
+    <SYMBOL2 c="EOS" n="Eaton Vance Enhanced Equity II"/>
+    <SYMBOL2 c="EOT" n="Eaton Vance Muni Income Trust"/>
+    <SYMBOL2 c="EP-C" n="El Paso Egy Cap I Pr"/>
+    <SYMBOL2 c="EPAM" n="Epam Systems Inc"/>
+    <SYMBOL2 c="EPB" n="El Paso Pipeline Partners LP"/>
+    <SYMBOL2 c="EPD" n="Enterprise Products Partners L.P."/>
+    <SYMBOL2 c="EPE" n="Ep Energy Corp"/>
+    <SYMBOL2 c="EPR" n="Entertainment Properties Trust"/>
+    <SYMBOL2 c="EPR-C" n="Entertainment Prp Pf"/>
+    <SYMBOL2 c="EPR-E" n="Entertainment Ppty P"/>
+    <SYMBOL2 c="EPR-F" n="Entertainment Properties Trust"/>
+    <SYMBOL2 c="EQC" n="Equity Commonwealth"/>
+    <SYMBOL2 c="EQC-D" n="Eqty Commonwealth"/>
+    <SYMBOL2 c="EQC-E" n="Eqty Commonwealth"/>
+    <SYMBOL2 c="EQCN" n="Equity Commonwealth"/>
+    <SYMBOL2 c="EQCO" n="Equity Commonwealth"/>
+    <SYMBOL2 c="EQM" n="Equity Midstream Partners LP"/>
+    <SYMBOL2 c="EQR" n="Equity Residential"/>
+    <SYMBOL2 c="EQS" n="Equus Total Return"/>
+    <SYMBOL2 c="EQT" n="Eqt Corp"/>
+    <SYMBOL2 c="EQY" n="Equity One"/>
+    <SYMBOL2 c="ERA" n="Era Group Inc. Common Stock W"/>
+    <SYMBOL2 c="ERF" n="Enerplus Corp"/>
+    <SYMBOL2 c="ERJ" n="Embraer-Empresa Brasileira De Aeronautica"/>
+    <SYMBOL2 c="EROS" n="Eros International Plc"/>
+    <SYMBOL2 c="ESD" n="Western Asset Emerging Markets Debt Fund Inc"/>
+    <SYMBOL2 c="ESE" n="Esco Technologies Inc"/>
+    <SYMBOL2 c="ESI" n="Itt Educational Services"/>
+    <SYMBOL2 c="ESL" n="Esterline Technologies Corp"/>
+    <SYMBOL2 c="ESNT" n="Essent Group Ltd"/>
+    <SYMBOL2 c="ESRT" n="Empire State Realty Trust Inc"/>
+    <SYMBOL2 c="ESS" n="Essex Property Trust"/>
+    <SYMBOL2 c="ESS-H" n="Essex Property Trust Inc. 7.12"/>
+    <SYMBOL2 c="ESV" n="Ensco Plc"/>
+    <SYMBOL2 c="ETB" n="Eaton Vance Tax-Managed Buy-Write"/>
+    <SYMBOL2 c="ETE" n="Energy Transfer Equity LP"/>
+    <SYMBOL2 c="ETG" n="Eaton Vance Tax-Advantaged Global Dividend"/>
+    <SYMBOL2 c="ETH" n="Ethan Allen Interiors Inc"/>
+    <SYMBOL2 c="ETJ" n="Eaton Vance Risk-Managed Diversified Equity"/>
+    <SYMBOL2 c="ETM" n="Entercom Communications Corp"/>
+    <SYMBOL2 c="ETN" n="Eaton Corp"/>
+    <SYMBOL2 c="ETO" n="Eaton Vance Tax-Advantage Global Dividend Opp"/>
+    <SYMBOL2 c="ETP" n="Energy Transfer Partners"/>
+    <SYMBOL2 c="ETR" n="Entergy Corp"/>
+    <SYMBOL2 c="ETV" n="Eaton Vance Corp"/>
+    <SYMBOL2 c="ETW" n="Eaton Vance Corp"/>
+    <SYMBOL2 c="ETX" n="Eaton Vance Municipal Income T"/>
+    <SYMBOL2 c="ETY" n="Eaton Vance Tax-Managed Diversified Equity"/>
+    <SYMBOL2 c="EV" n="Eaton Vance Corp"/>
+    <SYMBOL2 c="EVC" n="Entravision Communications Corp"/>
+    <SYMBOL2 c="EVDY" n="Everyday Health Inc."/>
+    <SYMBOL2 c="EVE-A" n="Everbank Financial Corp. Deposi"/>
+    <SYMBOL2 c="EVER" n="Everbank Financial Corp"/>
+    <SYMBOL2 c="EVF" n="Eaton Vance Senior Income Trust"/>
+    <SYMBOL2 c="EVG" n="Eaton Vance Short Diversified"/>
+    <SYMBOL2 c="EVGN" n="Evogene Ltd Ord"/>
+    <SYMBOL2 c="EVHC" n="Envision Healthcare Holdings"/>
+    <SYMBOL2 c="EVN" n="Eaton Vance Muni Income Trust"/>
+    <SYMBOL2 c="EVR" n="Evercore Partners Inc"/>
+    <SYMBOL2 c="EVT" n="Eaton Vance Tax Advantaged Dividend"/>
+    <SYMBOL2 c="EVTC" n="Evertec Inc. Common Stock"/>
+    <SYMBOL2 c="EW" n="Edwards Lifesciences Corp"/>
+    <SYMBOL2 c="EXAM" n="Examworks Group"/>
+    <SYMBOL2 c="EXAR" n="Exar Corp"/>
+    <SYMBOL2 c="EXC" n="Exelon Corp"/>
+    <SYMBOL2 c="EXCU" n="Exelon Corp"/>
+    <SYMBOL2 c="EXD" n="Eaton Vance Tax-Advantaged Bond"/>
+    <SYMBOL2 c="EXG" n="Eaton Vance Tax-Managed Global Diversified Equit"/>
+    <SYMBOL2 c="EXH" n="Exterran Holdings"/>
+    <SYMBOL2 c="EXK" n="Endeavour Silver Corp"/>
+    <SYMBOL2 c="EXL" n="Excel Trust"/>
+    <SYMBOL2 c="EXL-B" n="Excel Trust Inc"/>
+    <SYMBOL2 c="EXP" n="Eagle Materials Inc"/>
+    <SYMBOL2 c="EXPR" n="Express Inc"/>
+    <SYMBOL2 c="EXR" n="Extra Space Storage Inc"/>
+    <SYMBOL2 c="EZT" n="First Mortgage Bonds"/>
+    <SYMBOL2 c="F" n="Ford Motor Company"/>
+    <SYMBOL2 c="FAC" n="Liberte Investors Inc"/>
+    <SYMBOL2 c="FAF" n="First American Corp"/>
+    <SYMBOL2 c="FAM" n="First Trust/Aberdeen Global Opportunity"/>
+    <SYMBOL2 c="FAV" n="Active Dividend"/>
+    <SYMBOL2 c="FBC" n="Flagstar Bancorp"/>
+    <SYMBOL2 c="FBHS" n="Fortune Brands Home & Security"/>
+    <SYMBOL2 c="FBP" n="First Bancorp"/>
+    <SYMBOL2 c="FBR" n="Fibria Celulose S.A."/>
+    <SYMBOL2 c="FBS-A" n="First Pfd Cp IV 8.15"/>
+    <SYMBOL2 c="FC" n="Franklin Covey Company"/>
+    <SYMBOL2 c="FCAU" n="Fiat Chrysler Automobiles N.V."/>
+    <SYMBOL2 c="FCB" n="Fcb Financial Holdings Inc."/>
+    <SYMBOL2 c="FCE.A" n="Forest City Ent Cl A"/>
+    <SYMBOL2 c="FCE.B" n="Forest City Ent Cl B"/>
+    <SYMBOL2 c="FCF" n="First Commonwealth Financial Corp"/>
+    <SYMBOL2 c="FCH" n="Felcor Lodging Trust Inc"/>
+    <SYMBOL2 c="FCH-A" n="Felcor Lodg Pr A"/>
+    <SYMBOL2 c="FCH-C" n="Felcor Lodging Dep S"/>
+    <SYMBOL2 c="FCN" n="Fti Consulting"/>
+    <SYMBOL2 c="FCT" n="Senior Floating Rate II"/>
+    <SYMBOL2 c="FCX" n="Freeport-Mcmoran Inc."/>
+    <SYMBOL2 c="FDI" n="Fort Dearborn Income Securities"/>
+    <SYMBOL2 c="FDO" n="Family Dollar Stores"/>
+    <SYMBOL2 c="FDP" n="Fresh Del Monte Produce"/>
+    <SYMBOL2 c="FDS" n="Factset Research Systems Inc"/>
+    <SYMBOL2 c="FDX" n="Fedex Corp"/>
+    <SYMBOL2 c="FE" n="Firstenergy Corp"/>
+    <SYMBOL2 c="FEI" n="First Trust MLP and Energy Inc"/>
+    <SYMBOL2 c="FELP" n="Foresight Energy LP"/>
+    <SYMBOL2 c="FENG" n="Phoenix New Media Limited"/>
+    <SYMBOL2 c="FEO" n="First Trust/Aberdeen Emerging Opportunity Fund"/>
+    <SYMBOL2 c="FET" n="Forum Energy Technologies Inc"/>
+    <SYMBOL2 c="FF" n="Futurefuel Corp"/>
+    <SYMBOL2 c="FFA" n="First Trust Enhanced Equity Income Fund"/>
+    <SYMBOL2 c="FFC" n="Flaherty Crumrine/Claymore Preferred Securities"/>
+    <SYMBOL2 c="FFG" n="Fbl Financial Group"/>
+    <SYMBOL2 c="FGB" n="Specialty Finance and Financial Fund"/>
+    <SYMBOL2 c="FGL" n="Fidelity & Guaranty"/>
+    <SYMBOL2 c="FGP" n="Ferrellgas Partners L.P."/>
+    <SYMBOL2 c="FHN" n="First Tennessee National Corp"/>
+    <SYMBOL2 c="FHN-A" n="First Horizon National Corpora"/>
+    <SYMBOL2 c="FHY" n="Strategic High II"/>
+    <SYMBOL2 c="FI" n="Frank's International N.V."/>
+    <SYMBOL2 c="FICO" n="Fair Isaac and Company Inc"/>
+    <SYMBOL2 c="FIF" n="First Trust Energy Infrastruct"/>
+    <SYMBOL2 c="FIG" n="Fortress Investment Group"/>
+    <SYMBOL2 c="FII" n="Federated Investors"/>
+    <SYMBOL2 c="FIS" n="Fidelity National Information Services"/>
+    <SYMBOL2 c="FIX" n="Comfort Systems USA"/>
+    <SYMBOL2 c="FL" n="Footlocker Inc"/>
+    <SYMBOL2 c="FLC" n="Flaherty & Crumrine/Claymore Total Return"/>
+    <SYMBOL2 c="FLO" n="Flowers Foods"/>
+    <SYMBOL2 c="FLR" n="Fluor Corp"/>
+    <SYMBOL2 c="FLS" n="Flowserve Corp"/>
+    <SYMBOL2 c="FLT" n="Fleetcor Technologies"/>
+    <SYMBOL2 c="FLTX" n="Fleetmatics Group Plc"/>
+    <SYMBOL2 c="FLY" n="Fly Leasing Limited"/>
+    <SYMBOL2 c="FMC" n="FMC Corp"/>
+    <SYMBOL2 c="FMD" n="First Marblehead Corp"/>
+    <SYMBOL2 c="FME-A" n="Firstmerit Corporation Deposita"/>
+    <SYMBOL2 c="FMN" n="Federated Premier Muni"/>
+    <SYMBOL2 c="FMO" n="Fiduciary/Claymore MLP Opportunity Fund"/>
+    <SYMBOL2 c="FMS" n="Fresenius Medical Care Corp"/>
+    <SYMBOL2 c="FMSA" n="Fmsa Holdings Inc"/>
+    <SYMBOL2 c="FMX" n="Fomento Economico Mexicano S.A.B. De C.V."/>
+    <SYMBOL2 c="FMY" n="First Trust/Fidac Mortgage Income Fund"/>
+    <SYMBOL2 c="FN" n="Fabrinet"/>
+    <SYMBOL2 c="FNB" n="F.N.B. Corp"/>
+    <SYMBOL2 c="FNB-E" n="F.N.B. Corporation Representin"/>
+    <SYMBOL2 c="FNF" n="Fidelity National Financial"/>
+    <SYMBOL2 c="FNF-B" n="First Niagara Financial Group"/>
+    <SYMBOL2 c="FNFV" n="Fnfv Group of Fidelity National"/>
+    <SYMBOL2 c="FNV" n="Franco Nev Corp"/>
+    <SYMBOL2 c="FOE" n="Ferro Corp"/>
+    <SYMBOL2 c="FOF" n="Cohen & Steers Closed-End Opportunity Fund"/>
+    <SYMBOL2 c="FOR" n="Forestar Group Inc"/>
+    <SYMBOL2 c="FPF" n="First Trust Intermediate Durat"/>
+    <SYMBOL2 c="FPL" n="First Trust New Opportunities M"/>
+    <SYMBOL2 c="FPO" n="First Potomac Realty Trust"/>
+    <SYMBOL2 c="FPO-A" n="First Potomac Realty Trust Cumu"/>
+    <SYMBOL2 c="FPT" n="Federated Premier Intermediate Muni"/>
+    <SYMBOL2 c="FR" n="First Industrial Realty Trust"/>
+    <SYMBOL2 c="FRA" n="Blackrock Floating Rate Income Fund"/>
+    <SYMBOL2 c="FRC" n="First Republic Bank"/>
+    <SYMBOL2 c="FRC-A" n="First Republic Bank 6.70%"/>
+    <SYMBOL2 c="FRC-B" n="First Republic Bank"/>
+    <SYMBOL2 c="FRC-C" n="First Republic Bank"/>
+    <SYMBOL2 c="FRC-D" n="First Republic Bank San Francis"/>
+    <SYMBOL2 c="FRC-E" n="First Republic Bank"/>
+    <SYMBOL2 c="FRF" n="Fortegra Financial Corp"/>
+    <SYMBOL2 c="FRM" n="Furmanite Corp"/>
+    <SYMBOL2 c="FRO" n="Frontline Ltd"/>
+    <SYMBOL2 c="FRT" n="Federal Realty Investment Trust"/>
+    <SYMBOL2 c="FSCE" n="Fifth Street Finance Corp"/>
+    <SYMBOL2 c="FSD" n="High Income Long Short Fund"/>
+    <SYMBOL2 c="FSIC" n="FS Investment Corp"/>
+    <SYMBOL2 c="FSL" n="Freescale Semiconductor Holdin"/>
+    <SYMBOL2 c="FSM" n="Fortuna Silver Mines"/>
+    <SYMBOL2 c="FSS" n="Federal Signal Corp"/>
+    <SYMBOL2 c="FST" n="Forest Oil Corp"/>
+    <SYMBOL2 c="FT" n="Franklin Universal Trust"/>
+    <SYMBOL2 c="FTI" n="FMC Technologies"/>
+    <SYMBOL2 c="FTK" n="Flotek Industries"/>
+    <SYMBOL2 c="FTT" n="Federated Enhanced Treasury Income"/>
+    <SYMBOL2 c="FUL" n="H. B. Fuller Company"/>
+    <SYMBOL2 c="FUN" n="Cedar Fair L.P."/>
+    <SYMBOL2 c="FUR" n="Winthrop Realty Trust"/>
+    <SYMBOL2 c="FVE" n="Five Star Quality Care"/>
+    <SYMBOL2 c="FXCM" n="FXCM Inc"/>
+    <SYMBOL2 c="G" n="Genpact Limited"/>
+    <SYMBOL2 c="GAB" n="Gabelli Equity Trust"/>
+    <SYMBOL2 c="GAB-D" n="Gabelli Eq TR Pfd D"/>
+    <SYMBOL2 c="GAB-G" n="The Gabelli Equity Trust Inc"/>
+    <SYMBOL2 c="GAB-H" n="The Gabelli Eqty Trust Inc"/>
+    <SYMBOL2 c="GAB.P" n="GABELLI EQUITY TRUST INC"/>
+    <SYMBOL2 c="GAM" n="General American Investors"/>
+    <SYMBOL2 c="GAM-B" n="Genl Amer Invs Pfd"/>
+    <SYMBOL2 c="GAS" n="Agl Resources"/>
+    <SYMBOL2 c="GB" n="Greatbatch"/>
+    <SYMBOL2 c="GBAB" n="Guggenheim Build America Bonds"/>
+    <SYMBOL2 c="GBL" n="Gamco Investors"/>
+    <SYMBOL2 c="GBX" n="Greenbrier Companies"/>
+    <SYMBOL2 c="GCA" n="Global Cash Access Holdings"/>
+    <SYMBOL2 c="GCAP" n="Gain Capital Holdings"/>
+    <SYMBOL2 c="GCH" n="Greater China Fund"/>
+    <SYMBOL2 c="GCI" n="Gannett Co."/>
+    <SYMBOL2 c="GCO" n="Genesco Inc"/>
+    <SYMBOL2 c="GCV" n="Gabelli Convertible and Income Securities"/>
+    <SYMBOL2 c="GCV-B" n="Gabelli 6.00% Pfd B"/>
+    <SYMBOL2 c="GD" n="General Dynamics Corp"/>
+    <SYMBOL2 c="GDF" n="Western Asset Global Partners"/>
+    <SYMBOL2 c="GDL" n="The Gdl Fund"/>
+    <SYMBOL2 c="GDL-B" n="The Gdl Fund Series B Cumulativ"/>
+    <SYMBOL2 c="GDO" n="Western Asset Global Corporate Defined"/>
+    <SYMBOL2 c="GDOT" n="Green Dot Corp"/>
+    <SYMBOL2 c="GDP" n="Goodrich Petroleum Corp"/>
+    <SYMBOL2 c="GDP-C" n="Goodrich Petroleum Corp"/>
+    <SYMBOL2 c="GDP-D" n="Goodrich Petroleum Coproration"/>
+    <SYMBOL2 c="GDV" n="Gabelli Dividend"/>
+    <SYMBOL2 c="GDV-A" n="Gabelli Dv"/>
+    <SYMBOL2 c="GDV-D" n="Gabelli Pref D"/>
+    <SYMBOL2 c="GE" n="General Electric Company"/>
+    <SYMBOL2 c="GEB" n="General Electric Capital Corpo"/>
+    <SYMBOL2 c="GEF" n="Greif Bros. Corp"/>
+    <SYMBOL2 c="GEF.B" n="Greif Bros. Corp"/>
+    <SYMBOL2 c="GEH" n="General Electric Capital Corpo"/>
+    <SYMBOL2 c="GEK" n="General Electric Capital Corpo"/>
+    <SYMBOL2 c="GEL" n="Genesis Energy L.P."/>
+    <SYMBOL2 c="GEO" n="Geo Group Inc"/>
+    <SYMBOL2 c="GEQ" n="Guggenheim Equal Weight Enhance"/>
+    <SYMBOL2 c="GER" n="Goldman Sachs MLP Energy Renai"/>
+    <SYMBOL2 c="GES" n="Guess Inc"/>
+    <SYMBOL2 c="GF" n="New Germany Fund"/>
+    <SYMBOL2 c="GFA" n="Gafisa Sa"/>
+    <SYMBOL2 c="GFF" n="Griffon Corp"/>
+    <SYMBOL2 c="GFI" n="Gold Fields Ltd"/>
+    <SYMBOL2 c="GFIG" n="Gfi Group Inc"/>
+    <SYMBOL2 c="GFY" n="Western Asset Variable Rate Strategic"/>
+    <SYMBOL2 c="GG" n="Goldcorp Inc"/>
+    <SYMBOL2 c="GGB" n="Gerdau S.A."/>
+    <SYMBOL2 c="GGE" n="Claymore Dividend & Income Fund"/>
+    <SYMBOL2 c="GGG" n="Graco Inc"/>
+    <SYMBOL2 c="GGM" n="Guggenheim Credit Allocation F"/>
+    <SYMBOL2 c="GGP" n="General Growth Properties"/>
+    <SYMBOL2 c="GGP-A" n="General Growth Properties Inc"/>
+    <SYMBOL2 c="GGT" n="Gabelli Global Multi-Media Trust"/>
+    <SYMBOL2 c="GGT-B" n="Gabelli Global Multi-Media Trus"/>
+    <SYMBOL2 c="GGZ" n="Gabelli Global Small and Mid CA"/>
+    <SYMBOL2 c="GHC" n="Graham Holdings Company"/>
+    <SYMBOL2 c="GHI" n="Global High Income Dollar Fund"/>
+    <SYMBOL2 c="GHL" n="Greenhill & Co. Inc"/>
+    <SYMBOL2 c="GHM" n="Graham Corp"/>
+    <SYMBOL2 c="GHY" n="Prudential Global Short Durati"/>
+    <SYMBOL2 c="GIB" n="CGI Group"/>
+    <SYMBOL2 c="GIL" n="Gildan Activewear"/>
+    <SYMBOL2 c="GIM" n="Templeton Global"/>
+    <SYMBOL2 c="GIMO" n="Gigamon Inc"/>
+    <SYMBOL2 c="GIS" n="General Mills"/>
+    <SYMBOL2 c="GJH" n="Strats Sm Trust For United States Cellular Corp"/>
+    <SYMBOL2 c="GJO" n="Strats Sm Trust For Wal-Mart Stores Inc Securiti"/>
+    <SYMBOL2 c="GJP" n="Strats Sm Trust For Dominion Resources Inc Secur"/>
+    <SYMBOL2 c="GJR" n="Strats Sm Trust For The Procter & Gamble Co Secu"/>
+    <SYMBOL2 c="GJS" n="Strats Sm Trust For Goldman Sachs Group Securiti"/>
+    <SYMBOL2 c="GJT" n="Strats Sm Trust For Allstate Corp Securities Ser"/>
+    <SYMBOL2 c="GJV" n="Strats Sm Trust For News Corp Securities Series"/>
+    <SYMBOL2 c="GLF" n="Gulfmark Offshore"/>
+    <SYMBOL2 c="GLOB" n="Globant S.A."/>
+    <SYMBOL2 c="GLOG" n="Gaslog Ltd"/>
+    <SYMBOL2 c="GLOP" n="Gaslog Partners LP"/>
+    <SYMBOL2 c="GLP" n="Global Partners LP"/>
+    <SYMBOL2 c="GLPW" n="Global Power Equipment Group Inc"/>
+    <SYMBOL2 c="GLT" n="Glatfelter"/>
+    <SYMBOL2 c="GLW" n="Corning Inc"/>
+    <SYMBOL2 c="GM" n="General Motors Company"/>
+    <SYMBOL2 c="GM.A" n="General Mtrs"/>
+    <SYMBOL2 c="GM.B" n="General Mtrs"/>
+    <SYMBOL2 c="GM.C" n="General Motors Company"/>
+    <SYMBOL2 c="GME" n="Gamestop Corp"/>
+    <SYMBOL2 c="GMED" n="Globus Medical Inc"/>
+    <SYMBOL2 c="GMK" n="Gruma S.A. De C.V."/>
+    <SYMBOL2 c="GMT" n="GATX Corp"/>
+    <SYMBOL2 c="GMZ" n="Goldman Sachs MLP Income Oppor"/>
+    <SYMBOL2 c="GNC" n="GNC Holdings Inc"/>
+    <SYMBOL2 c="GNE" n="Genie Energy Ltd. Class B Commo"/>
+    <SYMBOL2 c="GNE-A" n="Genie Energy Ltd. Series"/>
+    <SYMBOL2 c="GNI" n="Great Northern Iron Ore Properties"/>
+    <SYMBOL2 c="GNRC" n="Generac Holdings Inc"/>
+    <SYMBOL2 c="GNT" n="Gabelli Natural Resources Gold"/>
+    <SYMBOL2 c="GNW" n="Genworth Financial Inc"/>
+    <SYMBOL2 c="GOF" n="Claymore/Guggenheim Strategic Fund"/>
+    <SYMBOL2 c="GOL" n="Gol Linhas Aereas Inteligentes S.A."/>
+    <SYMBOL2 c="GOV" n="Government Properties Income Trust"/>
+    <SYMBOL2 c="GPC" n="Genuine Parts Company"/>
+    <SYMBOL2 c="GPE-A" n="Ga Pwr Co Cl A Pfd"/>
+    <SYMBOL2 c="GPI" n="Group 1 Automotive"/>
+    <SYMBOL2 c="GPK" n="Graphic Packaging Holding Company"/>
+    <SYMBOL2 c="GPM" n="Guggenheim Enhanced Equity"/>
+    <SYMBOL2 c="GPN" n="Global Payments Inc"/>
+    <SYMBOL2 c="GPRK" n="Geopark Hldgs Lmtd"/>
+    <SYMBOL2 c="GPS" n="Gap Inc"/>
+    <SYMBOL2 c="GPT" n="Gramercy Capital Corp."/>
+    <SYMBOL2 c="GPT-B" n="Gramercy Property Trust Inc"/>
+    <SYMBOL2 c="GPX" n="Gp Strategies Corp"/>
+    <SYMBOL2 c="GRA" n="W.R. Grace & Company"/>
+    <SYMBOL2 c="GRAM" n="Graa Y Montero S.A.A."/>
+    <SYMBOL2 c="GRO" n="Agria Corp"/>
+    <SYMBOL2 c="GRP.U" n="Granite Real Estate Investment"/>
+    <SYMBOL2 c="GRR" n="Asia Tigers Fund"/>
+    <SYMBOL2 c="GRT" n="Glimcher Realty Trust"/>
+    <SYMBOL2 c="GRT-G" n="Glimcher Rlty Pfd G"/>
+    <SYMBOL2 c="GRT-H" n="Glimcher Realty Trust"/>
+    <SYMBOL2 c="GRT-I" n="Glimcher Realty Trust"/>
+    <SYMBOL2 c="GRUB" n="Grubhub Inc."/>
+    <SYMBOL2 c="GRX" n="The Gabelli Healthcare & Wellness Trust"/>
+    <SYMBOL2 c="GRX-A" n="The Gabelli Healthcare & Welln"/>
+    <SYMBOL2 c="GRX-B" n="The Gabelli Healthcare & Welln"/>
+    <SYMBOL2 c="GS" n="Goldman Sachs Group"/>
+    <SYMBOL2 c="GS-A" n="Goldman Sachs Pfd"/>
+    <SYMBOL2 c="GS-B" n="Goldman Dep Sh"/>
+    <SYMBOL2 c="GS-C" n="Goldman Dep Sh"/>
+    <SYMBOL2 c="GS-D" n="Goldman Sachs Dep Sh"/>
+    <SYMBOL2 c="GS-I" n="The Goldman Sachs Group Inc"/>
+    <SYMBOL2 c="GS-J" n="Goldman Sachs Group Inc"/>
+    <SYMBOL2 c="GS-K" n="Goldman Sachs Group Inc. The"/>
+    <SYMBOL2 c="GSF" n="Goldman Sachs Group"/>
+    <SYMBOL2 c="GSH" n="Guangshen Railway Company"/>
+    <SYMBOL2 c="GSI" n="General Steel Holdings"/>
+    <SYMBOL2 c="GSJ" n="Goldman Sachs Group Inc. [The]"/>
+    <SYMBOL2 c="GSK" n="Glaxosmithkline Plc"/>
+    <SYMBOL2 c="GSL" n="Global Ship Lease Inc"/>
+    <SYMBOL2 c="GSL-B" n="Global Ship Lease Inc."/>
+    <SYMBOL2 c="GTI" n="Graftech International Ltd"/>
+    <SYMBOL2 c="GTN" n="Gray Television"/>
+    <SYMBOL2 c="GTN.A" n="Gray Television"/>
+    <SYMBOL2 c="GTS" n="Triple-S Management Corp"/>
+    <SYMBOL2 c="GTY" n="Getty Realty Corp"/>
+    <SYMBOL2 c="GUA" n="Gulf Power Company Series 2011A"/>
+    <SYMBOL2 c="GUT" n="Gabelli Utility Trust"/>
+    <SYMBOL2 c="GUT-A" n="Gabelli Util Pfd A"/>
+    <SYMBOL2 c="GVA" n="Granite Construction Inc"/>
+    <SYMBOL2 c="GWB" n="Great Western Bancorp Inc."/>
+    <SYMBOL2 c="GWR" n="Genesee & Wyoming"/>
+    <SYMBOL2 c="GWRE" n="Guidewire Software Inc. Common"/>
+    <SYMBOL2 c="GWRU" n="Genesee & Wyoming"/>
+    <SYMBOL2 c="GWW" n="W.W. Grainger"/>
+    <SYMBOL2 c="GXP" n="Great Plains Energy Inc"/>
+    <SYMBOL2 c="GXP-A" n="Great Plains Energy 3.8%"/>
+    <SYMBOL2 c="GXP-D" n="Great Plains Energy 4.35%"/>
+    <SYMBOL2 c="GXP-E" n="Great Plains Energy 4.5%"/>
+    <SYMBOL2 c="GY" n="Gencorp Inc"/>
+    <SYMBOL2 c="GYB" n="Cabco Series 2004-101 Trust"/>
+    <SYMBOL2 c="GYC" n="Corporate Asset Backed Corp Cabco"/>
+    <SYMBOL2 c="GZT" n="Gazit-Globe Ltd"/>
+    <SYMBOL2 c="H" n="Hyatt Hotels Corp"/>
+    <SYMBOL2 c="HAE" n="Haemonetics Corp"/>
+    <SYMBOL2 c="HAL" n="Halliburton Company"/>
+    <SYMBOL2 c="HAR" n="Harman International Industries Inc"/>
+    <SYMBOL2 c="HASI" n="Hannon Armstrong Sustainable In"/>
+    <SYMBOL2 c="HBI" n="Hanesbrands Inc"/>
+    <SYMBOL2 c="HBM" n="Hudbay Minerals Inc"/>
+    <SYMBOL2 c="HCA" n="Hca Holdings Inc. Common Stock"/>
+    <SYMBOL2 c="HCC" n="Hcc Insurance Holdings"/>
+    <SYMBOL2 c="HCI" n="Homeowners Choice"/>
+    <SYMBOL2 c="HCJ" n="Homeowners Choice Inc"/>
+    <SYMBOL2 c="HCLP" n="Hi-Crush Partners LP"/>
+    <SYMBOL2 c="HCN" n="Health Care REIT"/>
+    <SYMBOL2 c="HCN-I" n="Health Care REIT Inc"/>
+    <SYMBOL2 c="HCN-J" n="Health Care REIT Inc"/>
+    <SYMBOL2 c="HCP" n="HCP Inc"/>
+    <SYMBOL2 c="HD" n="Home Depot"/>
+    <SYMBOL2 c="HDB" n="Hdfc Bank Limited"/>
+    <SYMBOL2 c="HDY" n="Hyperdynamics Corp"/>
+    <SYMBOL2 c="HE" n="Hawaiian Electric Industries"/>
+    <SYMBOL2 c="HE-U" n="Heco Cap III 6.50"/>
+    <SYMBOL2 c="HEI" n="Heico Corp"/>
+    <SYMBOL2 c="HEI.A" n="Heico Cp Cl A"/>
+    <SYMBOL2 c="HELI" n="Chc Group Ltd."/>
+    <SYMBOL2 c="HEP" n="Holly Energy Partners L.P."/>
+    <SYMBOL2 c="HEQ" n="John Hancock Hedged Eqty & Inc"/>
+    <SYMBOL2 c="HES" n="Hess Corp"/>
+    <SYMBOL2 c="HF" n="HFF Inc"/>
+    <SYMBOL2 c="HFC" n="Hollyfrontier Corp"/>
+    <SYMBOL2 c="HGG" n="Hhgregg Inc"/>
+    <SYMBOL2 c="HGH" n="The Hartford Financial Srvcs G"/>
+    <SYMBOL2 c="HGR" n="Hanger Orthopedic Group"/>
+    <SYMBOL2 c="HGT" n="Hugoton Royalty Trust"/>
+    <SYMBOL2 c="HHC" n="Howard Hughes Corp"/>
+    <SYMBOL2 c="HHS" n="Harte-Hanks"/>
+    <SYMBOL2 c="HHY" n="Helios High Yield Fund"/>
+    <SYMBOL2 c="HI" n="Hillenbrand Inc"/>
+    <SYMBOL2 c="HIG" n="Hartford Financial Services Group"/>
+    <SYMBOL2 c="HIG.W" n="Hartford Financial Services Group"/>
+    <SYMBOL2 c="HII" n="Huntington Ingalls Industries"/>
+    <SYMBOL2 c="HIL" n="Hill International"/>
+    <SYMBOL2 c="HIO" n="Western Asset High"/>
+    <SYMBOL2 c="HIVE" n="Aerohive Networks Inc"/>
+    <SYMBOL2 c="HIW" n="Highwoods Properties"/>
+    <SYMBOL2 c="HIX" n="Western Asset High Income Fund II Inc"/>
+    <SYMBOL2 c="HJV" n="MS S.A.C. Saturns Ge Series 2002-14"/>
+    <SYMBOL2 c="HK" n="Halcon Resources"/>
+    <SYMBOL2 c="HL" n="Hecla Mining Company"/>
+    <SYMBOL2 c="HL-B" n="Hecla Mining Pfd B"/>
+    <SYMBOL2 c="HLF" n="Herbalife Ltd"/>
+    <SYMBOL2 c="HLS" n="Healthsouth Corp"/>
+    <SYMBOL2 c="HLT" n="Hilton Worldwide Holdings Inc."/>
+    <SYMBOL2 c="HLX" n="Helix Energy Solutions Group"/>
+    <SYMBOL2 c="HMC" n="Honda Motor Company"/>
+    <SYMBOL2 c="HME" n="Home Properties"/>
+    <SYMBOL2 c="HMLP" n="Hoegh Lng Partners LP"/>
+    <SYMBOL2 c="HMN" n="Horace Mann Educators Corp"/>
+    <SYMBOL2 c="HMY" n="Harmony Gold Mining Co. Ltd"/>
+    <SYMBOL2 c="HNI" n="Hon Industries Inc"/>
+    <SYMBOL2 c="HNP" n="Huaneng Power Intl"/>
+    <SYMBOL2 c="HNR" n="Harvest Natural Resources Inc"/>
+    <SYMBOL2 c="HNT" n="Health Net Inc"/>
+    <SYMBOL2 c="HOG" n="Harley-Davidson Inc"/>
+    <SYMBOL2 c="HON" n="Honeywell International Inc"/>
+    <SYMBOL2 c="HOS" n="Hornbeck Offshore Services"/>
+    <SYMBOL2 c="HOT" n="Starwood Hotels & Resorts Worldwide"/>
+    <SYMBOL2 c="HOV" n="Hovnanian Enterprises Inc"/>
+    <SYMBOL2 c="HP" n="Helmerich & Payne"/>
+    <SYMBOL2 c="HPF" n="John Hancock Pfd II"/>
+    <SYMBOL2 c="HPI" n="John Hancock Preferred"/>
+    <SYMBOL2 c="HPP" n="Hudson Pacific Properties"/>
+    <SYMBOL2 c="HPP-B" n="Hudson Pacific Properties Inc"/>
+    <SYMBOL2 c="HPQ" n="Hewlett-Packard Company"/>
+    <SYMBOL2 c="HPS" n="John Hancock Preferred Income Fund III"/>
+    <SYMBOL2 c="HPT" n="Hospitality Properites Trust"/>
+    <SYMBOL2 c="HPT-D" n="Hospitality Properties Trust"/>
+    <SYMBOL2 c="HPY" n="Heartland Payment Systems"/>
+    <SYMBOL2 c="HQH" n="Tekla Healthcare Investors"/>
+    <SYMBOL2 c="HQL" n="Tekla Life Sciences Investors"/>
+    <SYMBOL2 c="HR" n="Healthcare Realty Trust Inc"/>
+    <SYMBOL2 c="HRB" n="H&R Block"/>
+    <SYMBOL2 c="HRC" n="Hill-Rom Holdings Inc"/>
+    <SYMBOL2 c="HRG" n="Harbinger Group Inc"/>
+    <SYMBOL2 c="HRL" n="Hormel Foods Corp"/>
+    <SYMBOL2 c="HRS" n="Harris Corp"/>
+    <SYMBOL2 c="HRTG" n="Heritage Insurance Holdings"/>
+    <SYMBOL2 c="HSB-A" n="HSBC Holdings Plc"/>
+    <SYMBOL2 c="HSBC" n="HSBC Holdings Plc"/>
+    <SYMBOL2 c="HSC" n="Harsco Corp"/>
+    <SYMBOL2 c="HSEA" n="HSBC Holdings Plc. Perpetual S"/>
+    <SYMBOL2 c="HSEB" n="HSBC Holdings Plc Perp Sub Cap"/>
+    <SYMBOL2 c="HSF-B" n="HSBC Finance Corp Dep. Shares R"/>
+    <SYMBOL2 c="HSP" n="Hospira Inc"/>
+    <SYMBOL2 c="HST" n="Host Marriott Financial Trust"/>
+    <SYMBOL2 c="HSY" n="Hershey Foods Corp"/>
+    <SYMBOL2 c="HT" n="Hersha Hospitality Trust"/>
+    <SYMBOL2 c="HT-B" n="Hersha Hospitality Trust"/>
+    <SYMBOL2 c="HT-C" n="Hersha Hospitality Trust"/>
+    <SYMBOL2 c="HTA" n="Healthcare Trust of America I"/>
+    <SYMBOL2 c="HTD" n="John Hancock Tax Advantaged Dividend"/>
+    <SYMBOL2 c="HTF" n="Horizon Technology Finance Cor"/>
+    <SYMBOL2 c="HTGC" n="Hercules Technology Growth Capital"/>
+    <SYMBOL2 c="HTGX" n="Hercules Technology Growth Cap"/>
+    <SYMBOL2 c="HTGY" n="Hercules Technology Growth Cap"/>
+    <SYMBOL2 c="HTGZ" n="Hercules Technology Growth Capi"/>
+    <SYMBOL2 c="HTH" n="Hilltop Holdings Inc"/>
+    <SYMBOL2 c="HTR" n="Hyperion Brookfield Total Return Fund"/>
+    <SYMBOL2 c="HTS" n="Hatteras Financial Corp"/>
+    <SYMBOL2 c="HTS-A" n="Hatteras Financial Corp Cum Red"/>
+    <SYMBOL2 c="HTY" n="John Hancock Tax-Advantaged Global"/>
+    <SYMBOL2 c="HTZ" n="Hertz Global Holdings Inc"/>
+    <SYMBOL2 c="HUB.A" n="Hubbell Inc A"/>
+    <SYMBOL2 c="HUB.B" n="Hubbell Inc B"/>
+    <SYMBOL2 c="HUBS" n="Hubspot Inc"/>
+    <SYMBOL2 c="HUM" n="Humana Inc"/>
+    <SYMBOL2 c="HUN" n="Huntsman Corp"/>
+    <SYMBOL2 c="HUS-D" n="HSBC USA Cum Pfd D"/>
+    <SYMBOL2 c="HUS-F" n="HSBC USA Pfd F"/>
+    <SYMBOL2 c="HUS-G" n="HSBC Dep Sh Pfd G"/>
+    <SYMBOL2 c="HUS-H" n="HSBC USA Dep Sh H"/>
+    <SYMBOL2 c="HUS-Z" n="HSBC USA 2.8575 Pfd"/>
+    <SYMBOL2 c="HVB" n="Hudson Valley Holding Corp. Com"/>
+    <SYMBOL2 c="HVT" n="Haverty Furniture Companies"/>
+    <SYMBOL2 c="HVT.A" n="Haverty Furn Cl A SC"/>
+    <SYMBOL2 c="HW" n="Headwaters Inc"/>
+    <SYMBOL2 c="HXL" n="Hexcel Corp"/>
+    <SYMBOL2 c="HY" n="Hyster-Yale Materials Handling"/>
+    <SYMBOL2 c="HYB" n="New America High"/>
+    <SYMBOL2 c="HYF" n="Managed High Yield Plus Fund"/>
+    <SYMBOL2 c="HYI" n="Western Asset High Yield Defined"/>
+    <SYMBOL2 c="HYL" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="HYT" n="Blackrock High Yield Fund Vi Inc"/>
+    <SYMBOL2 c="HZO" n="Marinemax Inc"/>
+    <SYMBOL2 c="I" n="Intelsat S.A. Common Shares"/>
+    <SYMBOL2 c="I-A" n="Intelsat S.A."/>
+    <SYMBOL2 c="IAE" n="ING Asia Pacific High Dividend Equity"/>
+    <SYMBOL2 c="IAG" n="Iamgold Corp"/>
+    <SYMBOL2 c="IBA" n="Industrias Bachoco S.A. De C.V."/>
+    <SYMBOL2 c="IBM" n="International Business Machines Corp"/>
+    <SYMBOL2 c="IBN" n="Icici Bank Limited"/>
+    <SYMBOL2 c="IBP" n="Installed Building Products I"/>
+    <SYMBOL2 c="ICA" n="Empresas Ica Soc Contrladora"/>
+    <SYMBOL2 c="ICB" n="MS Income Securities"/>
+    <SYMBOL2 c="ICD" n="Independence Contract Drilling Inc."/>
+    <SYMBOL2 c="ICE" n="Intercontinental Exchange"/>
+    <SYMBOL2 c="ICL" n="Israel Chemicals Ltd."/>
+    <SYMBOL2 c="IDA" n="Idacorp Inc"/>
+    <SYMBOL2 c="IDE" n="ING Infrastructure Industrial"/>
+    <SYMBOL2 c="IDG" n="ING Group N.V."/>
+    <SYMBOL2 c="IDT" n="IDT Corp"/>
+    <SYMBOL2 c="IEH" n="Integrys Energy Group Inc"/>
+    <SYMBOL2 c="IEX" n="Idex Corp"/>
+    <SYMBOL2 c="IFF" n="International Flavors & Fragrances"/>
+    <SYMBOL2 c="IFN" n="India Fund"/>
+    <SYMBOL2 c="IFT" n="Imperial Holdings"/>
+    <SYMBOL2 c="IGA" n="ING Global Advantage and Premium"/>
+    <SYMBOL2 c="IGD" n="ING Global Equity Dividend and Premium"/>
+    <SYMBOL2 c="IGI" n="Western Asset Investment Grade Defined"/>
+    <SYMBOL2 c="IGR" n="ING Clarion Global Real Estate"/>
+    <SYMBOL2 c="IGT" n="International Game Technology"/>
+    <SYMBOL2 c="IHC" n="Independence Holding Company"/>
+    <SYMBOL2 c="IHD" n="ING Emerging Markets High Dividend"/>
+    <SYMBOL2 c="IHG" n="Intercontinental Hotels Group"/>
+    <SYMBOL2 c="IHS" n="IHS Inc"/>
+    <SYMBOL2 c="IID" n="ING International High Dividend Equity"/>
+    <SYMBOL2 c="IIF" n="Morgan Stanley India Investment Fund Inc"/>
+    <SYMBOL2 c="IIM" n="Invesco Insured Muni Income Trust"/>
+    <SYMBOL2 c="IL" n="Intralinks Holdings"/>
+    <SYMBOL2 c="IM" n="Ingram Micro Inc"/>
+    <SYMBOL2 c="IMAX" n="Imax Corp"/>
+    <SYMBOL2 c="IMN" n="Imation Corp"/>
+    <SYMBOL2 c="IMPR" n="Imprivata Inc"/>
+    <SYMBOL2 c="IMPV" n="Imperva Inc"/>
+    <SYMBOL2 c="IMS" n="Ims Health Holdings Inc."/>
+    <SYMBOL2 c="INB" n="Cohen & Steers Global Income Builder"/>
+    <SYMBOL2 c="IND" n="ING Group N.V."/>
+    <SYMBOL2 c="INF" n="Brookfield Global Listed Infra"/>
+    <SYMBOL2 c="INFY" n="Infosys Limited"/>
+    <SYMBOL2 c="ING" n="ING Group N.V."/>
+    <SYMBOL2 c="INGR" n="Ingredion Inc"/>
+    <SYMBOL2 c="INN" n="Summit Hotel Properties"/>
+    <SYMBOL2 c="INN-A" n="Summit Hotel Properties Inc"/>
+    <SYMBOL2 c="INN-B" n="Summit Hotel Properties Inc"/>
+    <SYMBOL2 c="INN-C" n="Summit Hotel Properties Inc"/>
+    <SYMBOL2 c="INT" n="World Fuel Services Corp"/>
+    <SYMBOL2 c="INVN" n="Invensense Inc"/>
+    <SYMBOL2 c="INXN" n="Interxion Holding N.V."/>
+    <SYMBOL2 c="INZ" n="ING Group N.V."/>
+    <SYMBOL2 c="IO" n="ION Geophysical Corp"/>
+    <SYMBOL2 c="IOC" n="Interoil Corp"/>
+    <SYMBOL2 c="IP" n="International Paper Company"/>
+    <SYMBOL2 c="IPG" n="Interpublic Group of Companies"/>
+    <SYMBOL2 c="IPHI" n="Inphi Corp"/>
+    <SYMBOL2 c="IPI" n="Intrepid Potash Inc"/>
+    <SYMBOL2 c="IPL-D" n="Interstate Power and Light Co."/>
+    <SYMBOL2 c="IQI" n="Invesco Quality Muni Income Trust"/>
+    <SYMBOL2 c="IR" n="Ingersoll-Rand Plc (Ireland)"/>
+    <SYMBOL2 c="IRC" n="Inland Real Estate Corp"/>
+    <SYMBOL2 c="IRC-A" n="Inland Real Estate Corp"/>
+    <SYMBOL2 c="IRC-B" n="Inland Real Estate Corporation"/>
+    <SYMBOL2 c="IRE" n="Governor and Company of The Bank of Ireland"/>
+    <SYMBOL2 c="IRE-B" n="Investors Real Estate Trust 7.9"/>
+    <SYMBOL2 c="IRE.P" n="The Governor and Company of The Bank of Ireland"/>
+    <SYMBOL2 c="IRET" n="Investors Real Estate Trust"/>
+    <SYMBOL2 c="IRF" n="International Rectifier Corp"/>
+    <SYMBOL2 c="IRL" n="Irish Investment Fund"/>
+    <SYMBOL2 c="IRM" n="Iron Mountain Inc"/>
+    <SYMBOL2 c="IRR" n="ING Risk Managed Natural Resources Fund"/>
+    <SYMBOL2 c="IRS" n="Irsa Inversiones Y Representaciones S.A."/>
+    <SYMBOL2 c="ISD" n="Prudential Short Duration High"/>
+    <SYMBOL2 c="ISF" n="ING Group N.V."/>
+    <SYMBOL2 c="ISG" n="ING Group N.V."/>
+    <SYMBOL2 c="ISH" n="International Shipholding Corp"/>
+    <SYMBOL2 c="ISH-A" n="International Shipholding Copr"/>
+    <SYMBOL2 c="ISH-B" n="International Shipholding Corp"/>
+    <SYMBOL2 c="ISP" n="ING Group N.V."/>
+    <SYMBOL2 c="IT" n="Gartner Inc"/>
+    <SYMBOL2 c="ITC" n="Itc Holdings"/>
+    <SYMBOL2 c="ITG" n="Investment Technology Group"/>
+    <SYMBOL2 c="ITT" n="Itt Industries"/>
+    <SYMBOL2 c="ITUB" n="Itau Unibanco Banco Holding Sa"/>
+    <SYMBOL2 c="ITW" n="Illinois Tool Works Inc"/>
+    <SYMBOL2 c="IVC" n="Invacare Corp"/>
+    <SYMBOL2 c="IVH" n="Ivy High Income Opportunities"/>
+    <SYMBOL2 c="IVR" n="Invesco Mortgage Capital Inc"/>
+    <SYMBOL2 c="IVR-A" n="Invesco Mortgage Capital Inc"/>
+    <SYMBOL2 c="IVR-B" n="Invesco Mortgage Capital Inc."/>
+    <SYMBOL2 c="IVZ" n="Invesco Plc"/>
+    <SYMBOL2 c="IX" n="Orix Corp Ads"/>
+    <SYMBOL2 c="JAH" n="Jarden Corp"/>
+    <SYMBOL2 c="JBJ" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="JBK" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="JBL" n="Jabil Circuit"/>
+    <SYMBOL2 c="JBN" n="Select Asset Inc"/>
+    <SYMBOL2 c="JBR" n="Select Asset Inc"/>
+    <SYMBOL2 c="JBT" n="John Bean Technologies Corp"/>
+    <SYMBOL2 c="JCE" n="Nuveen Core Equity Alpha Fund"/>
+    <SYMBOL2 c="JCI" n="Johnson Controls"/>
+    <SYMBOL2 c="JCP" n="J.C. Penney Company Inc"/>
+    <SYMBOL2 c="JDD" n="Nuveen Diversified Dividend and"/>
+    <SYMBOL2 c="JE" n="Just Energy Group Inc"/>
+    <SYMBOL2 c="JEC" n="Jacobs Engineering Group Inc"/>
+    <SYMBOL2 c="JEQ" n="Japan Equity Fund"/>
+    <SYMBOL2 c="JFC" n="Jf China Region Fund"/>
+    <SYMBOL2 c="JFR" n="Nuveen Floating Rate"/>
+    <SYMBOL2 c="JGG" n="Nuveen Global Government Enhanced"/>
+    <SYMBOL2 c="JGT" n="Nuveen Multi-Currency Short-Term Government"/>
+    <SYMBOL2 c="JGV" n="Nuveen Global Value Opportunities Fund"/>
+    <SYMBOL2 c="JGW" n="Jgwpt Holdings Inc"/>
+    <SYMBOL2 c="JHI" n="John Hancock Investors Trust"/>
+    <SYMBOL2 c="JHP" n="Nuveen Quality Preferred Income Fund 3"/>
+    <SYMBOL2 c="JHS" n="John Hancock Income Securities Trust"/>
+    <SYMBOL2 c="JHX" n="James Hardie Industries Se"/>
+    <SYMBOL2 c="JKS" n="Jinkosolar Holding Company Limited"/>
+    <SYMBOL2 c="JLA" n="Nuveen Equity Premium Advantage Fund"/>
+    <SYMBOL2 c="JLL" n="Jones Lang Lasalle Inc"/>
+    <SYMBOL2 c="JLS" n="Nuveen Mortgage Opportunity Term Fund"/>
+    <SYMBOL2 c="JMEI" n="Jumei International Holding Ltd"/>
+    <SYMBOL2 c="JMF" n="Nuveen Energy MLP Total Return Fund"/>
+    <SYMBOL2 c="JMI" n="Javelin Mortgage Investment Co"/>
+    <SYMBOL2 c="JMLP" n="Nuveen All Cap Energy MLP Oppo"/>
+    <SYMBOL2 c="JMM" n="Nuveen Multi-Market Income Fund Inc."/>
+    <SYMBOL2 c="JMP" n="JMP Group Inc"/>
+    <SYMBOL2 c="JMPB" n="JMP Group Inc"/>
+    <SYMBOL2 c="JMPC" n="JMP Group Inc."/>
+    <SYMBOL2 c="JMT" n="Nuven Mortgage Opportunity Term Fund 2"/>
+    <SYMBOL2 c="JNJ" n="Johnson & Johnson"/>
+    <SYMBOL2 c="JNPR" n="Juniper Networks"/>
+    <SYMBOL2 c="JNS" n="Janus Capital Group Inc"/>
+    <SYMBOL2 c="JOE" n="St. Joe Company"/>
+    <SYMBOL2 c="JOF" n="Japan Smaller Capitalization Fund Inc"/>
+    <SYMBOL2 c="JONE" n="Jones Energy Inc"/>
+    <SYMBOL2 c="JOY" n="Joy Global Inc"/>
+    <SYMBOL2 c="JPC" n="Nuveen Preferred and Convertible"/>
+    <SYMBOL2 c="JPEP" n="JP Energy Partners LP"/>
+    <SYMBOL2 c="JPG" n="Nuveen Equity Premium and Growth Fund"/>
+    <SYMBOL2 c="JPI" n="Nuveen Preferred and Income Term Fund"/>
+    <SYMBOL2 c="JPM" n="JP Morgan Chase & Co"/>
+    <SYMBOL2 c="JPM-A" n="JP Morgan Chase & Co."/>
+    <SYMBOL2 c="JPM-B" n="Jpmorgan Chase & Co. 6.70%"/>
+    <SYMBOL2 c="JPM-C" n="JP Morgan Chase Capital Xxix 6.7"/>
+    <SYMBOL2 c="JPM-D" n="JP Morgan Chase & Co."/>
+    <SYMBOL2 c="JPM-E" n="Jpmorgan Chase & Co."/>
+    <SYMBOL2 c="JPM.W" n="JP Morgan Chase & Co"/>
+    <SYMBOL2 c="JPS" n="Nuveen Quality Preferred 2"/>
+    <SYMBOL2 c="JPW" n="Nuveen Flexible Investment Inc"/>
+    <SYMBOL2 c="JPZ" n="Nuveen Equity Premium"/>
+    <SYMBOL2 c="JQC" n="Nuveen Preferred and Convertible 2"/>
+    <SYMBOL2 c="JRI" n="Nuveen Real Asset Income and Gr"/>
+    <SYMBOL2 c="JRN" n="Journal Communications"/>
+    <SYMBOL2 c="JRO" n="Nuveen Floating Rate Income Opportuntiy"/>
+    <SYMBOL2 c="JSD" n="Nuveen Short Duration Credit O"/>
+    <SYMBOL2 c="JSN" n="Nuveen Equity Premium Opportunity"/>
+    <SYMBOL2 c="JTA" n="Nuveen Tax-Advantaged Total Return"/>
+    <SYMBOL2 c="JTD" n="Nuveen Tax-Advantaged Dividend Growth"/>
+    <SYMBOL2 c="JTP" n="Nuveen Quality Preferred"/>
+    <SYMBOL2 c="JW.A" n="John Wiley Sons Cl A"/>
+    <SYMBOL2 c="JW.B" n="John Wiley Sons Cl B"/>
+    <SYMBOL2 c="JWN" n="Nordstrom"/>
+    <SYMBOL2 c="K" n="Kellogg Company"/>
+    <SYMBOL2 c="KAI" n="Kadant Inc"/>
+    <SYMBOL2 c="KAMN" n="Kaman Corp"/>
+    <SYMBOL2 c="KAP" n="Kcap Financial Inc"/>
+    <SYMBOL2 c="KAR" n="Kar Auction Services Inc"/>
+    <SYMBOL2 c="KATE" n="Kate Spade & Company"/>
+    <SYMBOL2 c="KB" n="KB Financial Group Inc"/>
+    <SYMBOL2 c="KBH" n="KB Home"/>
+    <SYMBOL2 c="KBR" n="KBR Inc"/>
+    <SYMBOL2 c="KCC" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="KCG" n="Kcg Holdings Inc"/>
+    <SYMBOL2 c="KED" n="Kayne Anderson Energy Development Company"/>
+    <SYMBOL2 c="KEF" n="Korea Equity Fund"/>
+    <SYMBOL2 c="KEG" n="Key Energy Services"/>
+    <SYMBOL2 c="KEM" n="Kemet Corp"/>
+    <SYMBOL2 c="KEP" n="Korea Electric Power Corp"/>
+    <SYMBOL2 c="KEX" n="Kirby Corp"/>
+    <SYMBOL2 c="KEY" n="Keycorp"/>
+    <SYMBOL2 c="KEY-G" n="Keycorp Pfd Ser A"/>
+    <SYMBOL2 c="KF" n="Korea Fund"/>
+    <SYMBOL2 c="KFH" n="KKR Financial Holdings Llc"/>
+    <SYMBOL2 c="KFI" n="KKR Financial Holdings Llc"/>
+    <SYMBOL2 c="KFN.P" n="KKR Financial Holdings Llc Pfd"/>
+    <SYMBOL2 c="KFS" n="Kingsway Financial Services"/>
+    <SYMBOL2 c="KFY" n="Korn/Ferry International"/>
+    <SYMBOL2 c="KGC" n="Kinross Gold Corp"/>
+    <SYMBOL2 c="KHI" n="Scudder High Income Trust"/>
+    <SYMBOL2 c="KIM" n="Kimco Realty Corp"/>
+    <SYMBOL2 c="KIM-H" n="Kimco Realty Corporation Deposi"/>
+    <SYMBOL2 c="KIM-I" n="Kimco Realty Corporation Deposi"/>
+    <SYMBOL2 c="KIM-J" n="Kimco Realty Corporation Class"/>
+    <SYMBOL2 c="KIM-K" n="Kimco Realty Corporation Class"/>
+    <SYMBOL2 c="KING" n="King Digital Entertainment Plc"/>
+    <SYMBOL2 c="KIO" n="KKR Income Opportunities Fund"/>
+    <SYMBOL2 c="KKD" n="Krispy Kreme Doughnuts"/>
+    <SYMBOL2 c="KKR" n="KKR & Co. L.P."/>
+    <SYMBOL2 c="KMB" n="Kimberly-Clark Corp"/>
+    <SYMBOL2 c="KMF" n="Kayne Anderson Midstream Energy Fund"/>
+    <SYMBOL2 c="KMG" n="KMG Chemicals"/>
+    <SYMBOL2 c="KMI" n="Kinder Morgan"/>
+    <SYMBOL2 c="KMI.W" n="Kinder Morgan Inc. W/I"/>
+    <SYMBOL2 c="KMM" n="Scudder Multi-Market Income Trust"/>
+    <SYMBOL2 c="KMP" n="Kinder Morgan Energy Partners L.P."/>
+    <SYMBOL2 c="KMPA" n="Kemper Corporation 7.375% Subor"/>
+    <SYMBOL2 c="KMPR" n="Unitrin"/>
+    <SYMBOL2 c="KMR" n="Kinder Morgan Management Llc"/>
+    <SYMBOL2 c="KMT" n="Kennametal Inc"/>
+    <SYMBOL2 c="KMX" n="Carmax Inc"/>
+    <SYMBOL2 c="KN" n="Knowles Corporation Common Stoc"/>
+    <SYMBOL2 c="KND" n="Kindred Healthcare"/>
+    <SYMBOL2 c="KNL" n="Knoll Inc"/>
+    <SYMBOL2 c="KNM" n="Konami Corp"/>
+    <SYMBOL2 c="KNOP" n="Knot Offshore Partners LP Commo"/>
+    <SYMBOL2 c="KNX" n="Knight Transportation"/>
+    <SYMBOL2 c="KO" n="Coca-Cola Company"/>
+    <SYMBOL2 c="KODK" n="Eastman Kodak"/>
+    <SYMBOL2 c="KOF" n="Coca Cola Femsa S.A.B. De C.V."/>
+    <SYMBOL2 c="KOG" n="Kodiak Oil"/>
+    <SYMBOL2 c="KOP" n="Koppers Holdings Inc"/>
+    <SYMBOL2 c="KORS" n="Michael Kors Holdings Limited"/>
+    <SYMBOL2 c="KOS" n="Kosmos Energy Ltd"/>
+    <SYMBOL2 c="KR" n="Kroger Company"/>
+    <SYMBOL2 c="KRA" n="Kraton Performance Polymers Inc"/>
+    <SYMBOL2 c="KRC" n="Kilroy Realty Corp"/>
+    <SYMBOL2 c="KRC-G" n="Kilroy Realty Corp"/>
+    <SYMBOL2 c="KRC-H" n="Kilroy Realty Corp"/>
+    <SYMBOL2 c="KRG" n="Kite Realty Group Trust"/>
+    <SYMBOL2 c="KRG-A" n="Kite Realty Group Trust"/>
+    <SYMBOL2 c="KRO" n="Kronos Worldwide Inc"/>
+    <SYMBOL2 c="KS" n="Kapstone Paper and Packaging Corp"/>
+    <SYMBOL2 c="KSM" n="Scudder Strategic Municiple Income Trust"/>
+    <SYMBOL2 c="KSS" n="Kohl's Corp"/>
+    <SYMBOL2 c="KST" n="Scudder Strategic Income Trust"/>
+    <SYMBOL2 c="KSU" n="Kansas City Southern"/>
+    <SYMBOL2 c="KSU.P" n="Kansas Cty Sthn 4%"/>
+    <SYMBOL2 c="KT" n="Korea Telecom Corp"/>
+    <SYMBOL2 c="KTF" n="Scudder Municiple Income Trust"/>
+    <SYMBOL2 c="KTH" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="KTN" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="KTP" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="KW" n="Kennedy-Wilson Holdings Inc"/>
+    <SYMBOL2 c="KWK" n="Quicksilver Resources Inc"/>
+    <SYMBOL2 c="KWN" n="Kennedy-Wilson Holdings Inc"/>
+    <SYMBOL2 c="KWR" n="Quaker Chemical Corp"/>
+    <SYMBOL2 c="KYE" n="Kayne Anderson Energy Total Return Fund"/>
+    <SYMBOL2 c="KYN" n="Kayne Anderson MLP Investment Company"/>
+    <SYMBOL2 c="KYN-E" n="Kayne Anderson MLP Investment"/>
+    <SYMBOL2 c="KYN-F" n="Kayne Anderson MLP Investment"/>
+    <SYMBOL2 c="KYN-G" n="Kayne Anderson MLP Investment"/>
+    <SYMBOL2 c="KYO" n="Kyocera Corp"/>
+    <SYMBOL2 c="L" n="Loews Corp"/>
+    <SYMBOL2 c="LAD" n="Lithia Motors"/>
+    <SYMBOL2 c="LADR" n="Ladder Capital Corp"/>
+    <SYMBOL2 c="LAS" n="Lentuo International Inc"/>
+    <SYMBOL2 c="LAZ" n="Lazard Ltd"/>
+    <SYMBOL2 c="LB" n="L Brands Inc"/>
+    <SYMBOL2 c="LBF" n="Scudder Global High"/>
+    <SYMBOL2 c="LCI" n="Lannett Co Inc"/>
+    <SYMBOL2 c="LCM" n="Advent/Claymore Enhanced Growth &"/>
+    <SYMBOL2 c="LDF" n="Latin American Discovery Fund"/>
+    <SYMBOL2 c="LDL" n="Lydall Inc"/>
+    <SYMBOL2 c="LDOS" n="Leidos Holdings Inc"/>
+    <SYMBOL2 c="LDP" n="Cohen & Steers Ltd Duration Preferred Income Fun"/>
+    <SYMBOL2 c="LDR" n="Landauer Inc"/>
+    <SYMBOL2 c="LEA" n="Lear Corp"/>
+    <SYMBOL2 c="LEAF" n="Springleaf Holdings Inc"/>
+    <SYMBOL2 c="LEE" n="Lee Enterprises Inc"/>
+    <SYMBOL2 c="LEG" n="Leggett & Platt Inc"/>
+    <SYMBOL2 c="LEJU" n="Leju Holdings Ltd"/>
+    <SYMBOL2 c="LEN" n="Lennar Corp"/>
+    <SYMBOL2 c="LEN.B" n="Lennar Corp"/>
+    <SYMBOL2 c="LEO" n="Dreyfus Strategic Municipals"/>
+    <SYMBOL2 c="LEU" n="Centrus Energy Corp"/>
+    <SYMBOL2 c="LF" n="Leapfrog Enterprises Inc"/>
+    <SYMBOL2 c="LFC" n="China Life Insurance Company Limited"/>
+    <SYMBOL2 c="LFL" n="Latam Airlines Group Sa"/>
+    <SYMBOL2 c="LG" n="Laclede Group"/>
+    <SYMBOL2 c="LGF" n="Lions Gate Entertainment Corp"/>
+    <SYMBOL2 c="LGI" n="Lazard Global Total Return and"/>
+    <SYMBOL2 c="LGP" n="Lehigh Gas Partners LP"/>
+    <SYMBOL2 c="LH" n="Laboratory Corporation of America Holdings"/>
+    <SYMBOL2 c="LHO" n="Lasalle Hotel Properties"/>
+    <SYMBOL2 c="LHO-H" n="Lasalle Hotl 8.375 B"/>
+    <SYMBOL2 c="LHO-I" n="Lasalle Hotel Properties"/>
+    <SYMBOL2 c="LII" n="Lennox International"/>
+    <SYMBOL2 c="LIN" n="Lin Media Llc"/>
+    <SYMBOL2 c="LITB" n="Lightinthebox Holding Co. Ltd"/>
+    <SYMBOL2 c="LL" n="Lumber Liquidators Holdings Inc"/>
+    <SYMBOL2 c="LLL" n="L-3 Communications Holdings"/>
+    <SYMBOL2 c="LLY" n="Eli Lilly and Company"/>
+    <SYMBOL2 c="LM" n="Legg Mason Inc"/>
+    <SYMBOL2 c="LMT" n="Lockheed Martin Corp"/>
+    <SYMBOL2 c="LNC" n="Lincoln National Corp"/>
+    <SYMBOL2 c="LNC.W" n="Lincoln National Corp"/>
+    <SYMBOL2 c="LND" n="Brasilagro Brazi ADR"/>
+    <SYMBOL2 c="LNKD" n="Linkedin"/>
+    <SYMBOL2 c="LNN" n="Lindsay Corp"/>
+    <SYMBOL2 c="LNT" n="Alliant Energy Corp"/>
+    <SYMBOL2 c="LO" n="Lorillard Inc"/>
+    <SYMBOL2 c="LOCK" n="Lifelock Inc"/>
+    <SYMBOL2 c="LOR" n="Lazard World Dividend &"/>
+    <SYMBOL2 c="LOW" n="Lowe's Companies"/>
+    <SYMBOL2 c="LPG" n="Dorian Lpg Ltd."/>
+    <SYMBOL2 c="LPI" n="Laredo Petroleum Holdings Inc"/>
+    <SYMBOL2 c="LPL" n="Lg Display Co. Limited American"/>
+    <SYMBOL2 c="LPT" n="Liberty Property Trust"/>
+    <SYMBOL2 c="LPX" n="Louisiana-Pacific Corp"/>
+    <SYMBOL2 c="LQ" n="La Quinta Holdings Inc."/>
+    <SYMBOL2 c="LRE" n="Lrr Energy L.P."/>
+    <SYMBOL2 c="LRN" n="K12 Inc"/>
+    <SYMBOL2 c="LTC" n="Ltc Properties"/>
+    <SYMBOL2 c="LTM" n="Life Time Fitness"/>
+    <SYMBOL2 c="LUB" n="Luby's Inc"/>
+    <SYMBOL2 c="LUK" n="Leucadia National Corp"/>
+    <SYMBOL2 c="LUV" n="Southwest Airlines Company"/>
+    <SYMBOL2 c="LUX" n="Luxottica Group S.P.A."/>
+    <SYMBOL2 c="LVLT" n="Level 3 Communications"/>
+    <SYMBOL2 c="LVS" n="Las Vegas Sands"/>
+    <SYMBOL2 c="LXFR" n="Luxfer Holdings Plc"/>
+    <SYMBOL2 c="LXFT" n="Luxoft Holding Inc"/>
+    <SYMBOL2 c="LXK" n="Lexmark International"/>
+    <SYMBOL2 c="LXP" n="Lexington Realty Trust"/>
+    <SYMBOL2 c="LXP-C" n="Lexington Realty Tru"/>
+    <SYMBOL2 c="LXU" n="Lsb Industries Inc"/>
+    <SYMBOL2 c="LYB" n="Lyondellbasell Industries Nv"/>
+    <SYMBOL2 c="LYG" n="Lloyds Banking Group Plc"/>
+    <SYMBOL2 c="LYG-A" n="Lloyds Banking Group Plc"/>
+    <SYMBOL2 c="LYV" n="Live Nation Entertainment"/>
+    <SYMBOL2 c="LZB" n="La-Z-Boy Inc"/>
+    <SYMBOL2 c="M" n="Macy's Inc"/>
+    <SYMBOL2 c="MA" n="Mastercard Inc"/>
+    <SYMBOL2 c="MAA" n="Mid-America Apartment Communities"/>
+    <SYMBOL2 c="MAC" n="Macerich Company"/>
+    <SYMBOL2 c="MAIN" n="Main Street Capital Corp"/>
+    <SYMBOL2 c="MAN" n="Manpower Inc"/>
+    <SYMBOL2 c="MANU" n="Manchester United Ltd"/>
+    <SYMBOL2 c="MAS" n="Masco Corp"/>
+    <SYMBOL2 c="MATX" n="Matson Inc"/>
+    <SYMBOL2 c="MAV" n="Pioneer Muni High Income Advantage Trust"/>
+    <SYMBOL2 c="MBI" n="MBIA Inc"/>
+    <SYMBOL2 c="MBLY" n="Mobileye N.V."/>
+    <SYMBOL2 c="MBT" n="Mobile Telesystems"/>
+    <SYMBOL2 c="MC" n="Moelis"/>
+    <SYMBOL2 c="MCA" n="Blackrock Muniyield California Insured Fund"/>
+    <SYMBOL2 c="MCC" n="Medley Capital Corp"/>
+    <SYMBOL2 c="MCD" n="McDonald's Corp"/>
+    <SYMBOL2 c="MCI" n="Massmutual Corporate Investors"/>
+    <SYMBOL2 c="MCK" n="Mckesson Corp"/>
+    <SYMBOL2 c="MCN" n="Madison/Claymore Covered Call & Equity Strategy"/>
+    <SYMBOL2 c="MCO" n="Moody's Corp"/>
+    <SYMBOL2 c="MCP" n="Molycorp Inc"/>
+    <SYMBOL2 c="MCQ" n="Medley Capital Corporation 7.12"/>
+    <SYMBOL2 c="MCR" n="MFS Charter Income Trust"/>
+    <SYMBOL2 c="MCS" n="Marcus Corp"/>
+    <SYMBOL2 c="MCV" n="Medley Capital Corp"/>
+    <SYMBOL2 c="MCY" n="Mercury General Corp"/>
+    <SYMBOL2 c="MD" n="Mednax Inc"/>
+    <SYMBOL2 c="MDC" n="M.D.C. Holdings"/>
+    <SYMBOL2 c="MDLY" n="Medley Management Inc."/>
+    <SYMBOL2 c="MDP" n="Meredith Corp"/>
+    <SYMBOL2 c="MDR" n="McDermott International"/>
+    <SYMBOL2 c="MDT" n="Medtronic Inc"/>
+    <SYMBOL2 c="MDU" n="Mdu Res Group Inc"/>
+    <SYMBOL2 c="MED" n="Medifast Inc"/>
+    <SYMBOL2 c="MEG" n="Media General"/>
+    <SYMBOL2 c="MEI" n="Methode Electronics"/>
+    <SYMBOL2 c="MEN" n="Blackrock Munienhanced Fund"/>
+    <SYMBOL2 c="MEP" n="Midcoast Energy Partners L.P."/>
+    <SYMBOL2 c="MER-D" n="Merrill Lyn 7.0 Topr"/>
+    <SYMBOL2 c="MER-E" n="M L Cap TR 7.12"/>
+    <SYMBOL2 c="MER-F" n="Merrill Ly Cap V7.28"/>
+    <SYMBOL2 c="MER-K" n="ML 6.45% Trust Pfd"/>
+    <SYMBOL2 c="MER-M" n="ML Cap TR II 6.45% P"/>
+    <SYMBOL2 c="MER-P" n="ML Cap TR III 7.375%"/>
+    <SYMBOL2 c="MET" n="Metlife Inc"/>
+    <SYMBOL2 c="MET-A" n="Metlife Pfd A Fltg"/>
+    <SYMBOL2 c="MET-B" n="Metlife Inc Pfd B"/>
+    <SYMBOL2 c="MFA" n="MFA Financial Inc"/>
+    <SYMBOL2 c="MFA-B" n="MFA Financial Inc"/>
+    <SYMBOL2 c="MFC" n="Manulife Financial Corp"/>
+    <SYMBOL2 c="MFD" n="Macquarie/First Trust Global"/>
+    <SYMBOL2 c="MFG" n="Mizuho Financial Group"/>
+    <SYMBOL2 c="MFL" n="Blackrock Muniholdings Investment Quality Fund"/>
+    <SYMBOL2 c="MFM" n="MFS Muni Income Trust"/>
+    <SYMBOL2 c="MFO" n="MFA Financial Inc"/>
+    <SYMBOL2 c="MFT" n="Blackrock Muniyield Investment Qualityfund"/>
+    <SYMBOL2 c="MFV" n="MFS Special Value Trust"/>
+    <SYMBOL2 c="MG" n="Mistras Group Inc"/>
+    <SYMBOL2 c="MGA" n="Magna International"/>
+    <SYMBOL2 c="MGF" n="MFS Government Markets Income Trust"/>
+    <SYMBOL2 c="MGM" n="MGM Resorts International"/>
+    <SYMBOL2 c="MGR" n="Affiliated Managers Group Inc"/>
+    <SYMBOL2 c="MGU" n="Macquarie Global Infrastructure Total Return Fun"/>
+    <SYMBOL2 c="MH-A" n="Maiden Holdings Ltd. 8.25%"/>
+    <SYMBOL2 c="MHD" n="Blackrock Muniholdings Fund"/>
+    <SYMBOL2 c="MHF" n="Western Asset Muni High"/>
+    <SYMBOL2 c="MHFI" n="The McGraw-Hill Companies Inc"/>
+    <SYMBOL2 c="MHG" n="Marine Harvest ASA Sponsored Ad"/>
+    <SYMBOL2 c="MHI" n="Pioneer Muni High Income Trust"/>
+    <SYMBOL2 c="MHK" n="Mohawk Industries"/>
+    <SYMBOL2 c="MHN" n="Blackrock Muniholdings New York Quality Fund"/>
+    <SYMBOL2 c="MHNA" n="Maiden Holdings North America"/>
+    <SYMBOL2 c="MHNB" n="Maiden Holdings North America"/>
+    <SYMBOL2 c="MHNC" n="Maiden Holdings North America"/>
+    <SYMBOL2 c="MHO" n="M/I Homes"/>
+    <SYMBOL2 c="MHO-A" n="M/I Homes Sr A Pf Ds"/>
+    <SYMBOL2 c="MHR" n="Magnum Hunter Resources Corp"/>
+    <SYMBOL2 c="MHY" n="Western Asset Managed High"/>
+    <SYMBOL2 c="MIC" n="Macquarie Infrastructure Company Trust"/>
+    <SYMBOL2 c="MIE" n="Cohen & Steers MLP Income and"/>
+    <SYMBOL2 c="MIG" n="Meadowbrook Insurance Group"/>
+    <SYMBOL2 c="MIL" n="Mfc Industrial Ltd"/>
+    <SYMBOL2 c="MIL-C" n="Mfc Industrial Ltd"/>
+    <SYMBOL2 c="MIL-D" n="Mfc Industrial Ltd"/>
+    <SYMBOL2 c="MILL" n="Miller Petroleum"/>
+    <SYMBOL2 c="MIN" n="MFS Intermediate Income Trust"/>
+    <SYMBOL2 c="MIT-A" n="Ag Mortgage Investment Trust"/>
+    <SYMBOL2 c="MIT-B" n="Ag Mortgage Investment Trust I"/>
+    <SYMBOL2 c="MITT" n="Ag Mortgage Investment Trust"/>
+    <SYMBOL2 c="MIXT" n="Mix Telematics Limited"/>
+    <SYMBOL2 c="MIY" n="Blackrock Muniyield Michigan Quality Fund"/>
+    <SYMBOL2 c="MJI" n="Blackrock Muniyield New Jersey Quality Fund"/>
+    <SYMBOL2 c="MJN" n="Mead Johnson Nutrition Company"/>
+    <SYMBOL2 c="MKC" n="Mccormick & Company Inc"/>
+    <SYMBOL2 c="MKC.V" n="Mccormick & Company Inc"/>
+    <SYMBOL2 c="MKL" n="Markel Corp"/>
+    <SYMBOL2 c="MLI" n="Mueller Industries"/>
+    <SYMBOL2 c="MLM" n="Martin Marietta Materials"/>
+    <SYMBOL2 c="MLP" n="Maui Land & Pineapple Company"/>
+    <SYMBOL2 c="MLR" n="Miller Industries"/>
+    <SYMBOL2 c="MLU" n="Metlife Inc"/>
+    <SYMBOL2 c="MM" n="Millennial Media Inc"/>
+    <SYMBOL2 c="MMC" n="Marsh & Mclennan Companies"/>
+    <SYMBOL2 c="MMD" n="Mainstay Defined Muni Opp Fund"/>
+    <SYMBOL2 c="MMI" n="Marcus & Millichap"/>
+    <SYMBOL2 c="MMM" n="3M Company"/>
+    <SYMBOL2 c="MMP" n="Magellan Midstream Partners L.P."/>
+    <SYMBOL2 c="MMS" n="Maximus Inc"/>
+    <SYMBOL2 c="MMT" n="MFS Multimarket Income Trust"/>
+    <SYMBOL2 c="MMU" n="Western Asset Managed Municipals Fund"/>
+    <SYMBOL2 c="MN" n="Manning & Napier Inc"/>
+    <SYMBOL2 c="MNE" n="Blackrock Muni New York Intermediate Duration Fu"/>
+    <SYMBOL2 c="MNI" n="Mcclatchy Company"/>
+    <SYMBOL2 c="MNK" n="Mallinckrodt Plc Ordinary Share"/>
+    <SYMBOL2 c="MNP" n="Western Asset Muni Partners Fund"/>
+    <SYMBOL2 c="MNR" n="Monmouth Real Estate Investment Corp"/>
+    <SYMBOL2 c="MNR-A" n="Monmouth Real Estate Inv"/>
+    <SYMBOL2 c="MNR-B" n="Monmouth Real Estate Investmen"/>
+    <SYMBOL2 c="MO" n="Altria Group"/>
+    <SYMBOL2 c="MOD" n="Modine Manufacturing Company"/>
+    <SYMBOL2 c="MODN" n="Model N Inc. Common Stock"/>
+    <SYMBOL2 c="MOG.A" n="Moog Inc"/>
+    <SYMBOL2 c="MOG.B" n="Moog Inc"/>
+    <SYMBOL2 c="MOH" n="Molina Healthcare Inc"/>
+    <SYMBOL2 c="MON" n="Monsanto Company"/>
+    <SYMBOL2 c="MOS" n="Mosaic Company"/>
+    <SYMBOL2 c="MOV" n="Movado Group Inc"/>
+    <SYMBOL2 c="MP-D" n="Mississippi Pr 5.25"/>
+    <SYMBOL2 c="MPA" n="Blackrock Muniyield Pennsylvania Quality Fund"/>
+    <SYMBOL2 c="MPC" n="Marathon Petroleum Corp"/>
+    <SYMBOL2 c="MPLX" n="Mplx LP"/>
+    <SYMBOL2 c="MPO" n="Midstates Petroleum Company I"/>
+    <SYMBOL2 c="MPV" n="Massmutual Participation Investors"/>
+    <SYMBOL2 c="MPW" n="Medical Properties Trust"/>
+    <SYMBOL2 c="MPX" n="Marine Products Corp"/>
+    <SYMBOL2 c="MQT" n="Blackrock Muniyield Quality Fund II"/>
+    <SYMBOL2 c="MQY" n="Blackrock Muniyield Quality Fund"/>
+    <SYMBOL2 c="MR" n="Mindray Medical International Limited"/>
+    <SYMBOL2 c="MRC" n="Mrc Global Inc"/>
+    <SYMBOL2 c="MRH" n="Montpelier Re Holdings Ltd"/>
+    <SYMBOL2 c="MRH-A" n="Montpelier Re Holdings Ltd"/>
+    <SYMBOL2 c="MRIN" n="Marin Sotfware Incorporated"/>
+    <SYMBOL2 c="MRK" n="Merck & Company"/>
+    <SYMBOL2 c="MRO" n="Marathon Oil Corp"/>
+    <SYMBOL2 c="MS" n="Morgan Stanley"/>
+    <SYMBOL2 c="MS-A" n="Morgan Stanley Prfd 'A'"/>
+    <SYMBOL2 c="MS-E" n="Morgan Stanley"/>
+    <SYMBOL2 c="MS-F" n="Morgan Stanley"/>
+    <SYMBOL2 c="MS-G" n="Morgan Stanley 6.625%"/>
+    <SYMBOL2 c="MS-I" n="Morgan Stanley"/>
+    <SYMBOL2 c="MSA" n="Msa Safety Inc."/>
+    <SYMBOL2 c="MSB" n="Mesabi Trust"/>
+    <SYMBOL2 c="MSCA" n="Main Street Capital Corporatio"/>
+    <SYMBOL2 c="MSCI" n="MSCI Inc"/>
+    <SYMBOL2 c="MSD" n="Morgan Stanley Emerging Markets Debt"/>
+    <SYMBOL2 c="MSF" n="Morgan Stanley Emerging Markets Fund Inc"/>
+    <SYMBOL2 c="MSI" n="Motorola Solutions"/>
+    <SYMBOL2 c="MSJ" n="Morgan Stanley Cap Trust Vi Cap Securities"/>
+    <SYMBOL2 c="MSK" n="Morgan Stanley Cap TR ViII Gdt Cap Securities"/>
+    <SYMBOL2 c="MSL" n="Midsouth Bancorp"/>
+    <SYMBOL2 c="MSM" n="Msc Industrial Direct Company"/>
+    <SYMBOL2 c="MSO" n="Martha Stewart Living Omnimedia"/>
+    <SYMBOL2 c="MSP" n="Madison Strategic Sector Premium Fund"/>
+    <SYMBOL2 c="MSZ" n="Morgan Stanley Capital Trust Vii Cap Secs"/>
+    <SYMBOL2 c="MT" n="Arcelormittal"/>
+    <SYMBOL2 c="MTB" n="M&T Bank Corp"/>
+    <SYMBOL2 c="MTB-C" n="M&T Bank Corporation Fixed Rate"/>
+    <SYMBOL2 c="MTB.P" n="M&T Bank Corporation Fixed Rate"/>
+    <SYMBOL2 c="MTB.W" n="M&T Bank Corporation Warrants"/>
+    <SYMBOL2 c="MTCN" n="Arcelormittal"/>
+    <SYMBOL2 c="MTD" n="Mettler-Toledo International"/>
+    <SYMBOL2 c="MTDR" n="Matador Resources Company"/>
+    <SYMBOL2 c="MTG" n="Mgic Investment Corp"/>
+    <SYMBOL2 c="MTH" n="Meritage Corp"/>
+    <SYMBOL2 c="MTL" n="Mechel Steel Group Oao"/>
+    <SYMBOL2 c="MTL.P" n="Mechel Steel Group Oao American"/>
+    <SYMBOL2 c="MTN" n="Vail Resorts"/>
+    <SYMBOL2 c="MTOR" n="Arvinmeritor"/>
+    <SYMBOL2 c="MTR" n="Mesa Royalty Trust"/>
+    <SYMBOL2 c="MTRN" n="Brush Wellman Inc"/>
+    <SYMBOL2 c="MTS" n="Montgomery Street Income Securities"/>
+    <SYMBOL2 c="MTT" n="Western Asset Muni Defined Opportunity Trust Inc"/>
+    <SYMBOL2 c="MTU" n="Mitsubishi Ufj Financial Group Inc"/>
+    <SYMBOL2 c="MTW" n="Manitowoc Company"/>
+    <SYMBOL2 c="MTX" n="Minerals Technologies Inc"/>
+    <SYMBOL2 c="MTZ" n="Mastec Inc"/>
+    <SYMBOL2 c="MUA" n="Blackrock Muniassets Fund"/>
+    <SYMBOL2 c="MUC" n="Blackrock Muniholdings California Quality Fund"/>
+    <SYMBOL2 c="MUE" n="Blackrock Muniholdings Quality Fund II"/>
+    <SYMBOL2 c="MUH" n="Blackrock Muniholdings Fund II"/>
+    <SYMBOL2 c="MUI" n="Blackrock Muni Intermediate Duration Fund Inc"/>
+    <SYMBOL2 c="MUJ" n="Blackrock Muniholdings New Jersey Insured Fund"/>
+    <SYMBOL2 c="MUR" n="Murphy Oil Corp"/>
+    <SYMBOL2 c="MUS" n="Blackrock Muniholdings Quality Fund"/>
+    <SYMBOL2 c="MUSA" n="Murphy USA Inc. Common Stock Wh"/>
+    <SYMBOL2 c="MUX" n="Mcewen Mining Inc"/>
+    <SYMBOL2 c="MVC" n="MVC Capital"/>
+    <SYMBOL2 c="MVCB" n="MVC Capital Inc"/>
+    <SYMBOL2 c="MVNR" n="Mavenir Systems Inc. Common ST"/>
+    <SYMBOL2 c="MVO" n="Mv Oil Trust"/>
+    <SYMBOL2 c="MVT" n="Blackrock Munivest Fund II"/>
+    <SYMBOL2 c="MW" n="Men's Wearhouse"/>
+    <SYMBOL2 c="MWA" n="Mueller Water Products"/>
+    <SYMBOL2 c="MWE" n="Markwest Energy Partners LP"/>
+    <SYMBOL2 c="MWG" n="Morgan Stanley Cap TR IV Gtd Cap Secs"/>
+    <SYMBOL2 c="MWO" n="Morgan Stanley Cap TR V Gtd Cap Secs"/>
+    <SYMBOL2 c="MWR" n="Morgan Stanley Cap TR III Capital Trust Securiti"/>
+    <SYMBOL2 c="MWV" n="Meadwestvaco Corp"/>
+    <SYMBOL2 c="MWW" n="Monster Worldwide"/>
+    <SYMBOL2 c="MX" n="Magnachip Semiconductor Corp"/>
+    <SYMBOL2 c="MXE" n="Mexico Equity and"/>
+    <SYMBOL2 c="MXF" n="Mexico Fund"/>
+    <SYMBOL2 c="MXL" n="Maxlinear Inc"/>
+    <SYMBOL2 c="MXT" n="Maxcom Telecomunicaciones Sab De Cv"/>
+    <SYMBOL2 c="MY" n="China Ming Yang Wind Power Group Limited"/>
+    <SYMBOL2 c="MYC" n="Blackrock Muniyield California Fund"/>
+    <SYMBOL2 c="MYCC" n="Clubcorp Holdings Inc"/>
+    <SYMBOL2 c="MYD" n="Blackrock Muniyield Fund"/>
+    <SYMBOL2 c="MYE" n="Myers Industries"/>
+    <SYMBOL2 c="MYF" n="Blackrock Muniyield Investment Fund"/>
+    <SYMBOL2 c="MYI" n="Blackrock Muniyield Quality Fund III"/>
+    <SYMBOL2 c="MYJ" n="Blackrock Muniyield New Jersey Fund"/>
+    <SYMBOL2 c="MYM" n="Blackrock Muniyield Michigan Quality Fund II"/>
+    <SYMBOL2 c="MYN" n="Blackrock Muniyield New York Quality Fund"/>
+    <SYMBOL2 c="MZF" n="Managed Duration Investment Grade Fund"/>
+    <SYMBOL2 c="N" n="Netsuite Inc"/>
+    <SYMBOL2 c="NAC" n="Nuveen California Divadv Fund"/>
+    <SYMBOL2 c="NAD" n="Nuveen Divadv Fund"/>
+    <SYMBOL2 c="NADL" n="North Atlantic Drilling Ltd. Co"/>
+    <SYMBOL2 c="NAN" n="Nuveen New York Divadv Fund"/>
+    <SYMBOL2 c="NAO" n="Nordic American Offshore Ltd."/>
+    <SYMBOL2 c="NAT" n="Nordic American Tanker Shipping Limited"/>
+    <SYMBOL2 c="NAV" n="Navistar International Corp"/>
+    <SYMBOL2 c="NAV-D" n="Navistar Intl Pfd D"/>
+    <SYMBOL2 c="NAZ" n="Nuveen Arizona Premium Fund"/>
+    <SYMBOL2 c="NBB" n="Nuveen Build America Bond Fund"/>
+    <SYMBOL2 c="NBD" n="Nuveen Build America Bond Opportunity Fund"/>
+    <SYMBOL2 c="NBG" n="National Bank of Greece Sa"/>
+    <SYMBOL2 c="NBG-A" n="Natl Bk of Gr Pfd Ad"/>
+    <SYMBOL2 c="NBHC" n="National Bank Holdings Corp"/>
+    <SYMBOL2 c="NBL" n="Noble Energy Inc"/>
+    <SYMBOL2 c="NBR" n="Nabors Industries"/>
+    <SYMBOL2 c="NC" n="Nacco Industries"/>
+    <SYMBOL2 c="NCA" n="Nuveen California Muni Value Fund"/>
+    <SYMBOL2 c="NCFT" n="Norcraft Companies Inc"/>
+    <SYMBOL2 c="NCI" n="Navigant Consulting"/>
+    <SYMBOL2 c="NCR" n="NCR Corp"/>
+    <SYMBOL2 c="NCS" n="NCI Building Systems"/>
+    <SYMBOL2 c="NCT" n="Newcastle Investment Corp"/>
+    <SYMBOL2 c="NCT-B" n="Newcastle Inv Pfd B"/>
+    <SYMBOL2 c="NCT-C" n="Newcastle Investment Corporatio"/>
+    <SYMBOL2 c="NCT-D" n="Newcastle Invt Corp"/>
+    <SYMBOL2 c="NCT.P" n="Newcastle Investment Corp."/>
+    <SYMBOL2 c="NCV" n="Agic Convertible &"/>
+    <SYMBOL2 c="NCZ" n="Agic Convertible & II"/>
+    <SYMBOL2 c="NDP" n="Tortoise Energy Independence F"/>
+    <SYMBOL2 c="NDRO" n="Enduro Royalty Trust"/>
+    <SYMBOL2 c="NE" n="Noble Corp"/>
+    <SYMBOL2 c="NEA" n="Nuveen Insured Tax-Free Advantage Fund"/>
+    <SYMBOL2 c="NEE" n="Nextera Energy"/>
+    <SYMBOL2 c="NEE-C" n="Fpl Group Inc. 5 7/8% Preferre"/>
+    <SYMBOL2 c="NEE-G" n="Nextera Energy Capital Holding"/>
+    <SYMBOL2 c="NEE-H" n="Nextera Energy Capital Holding"/>
+    <SYMBOL2 c="NEE-I" n="Nextera Energy Capital Holding"/>
+    <SYMBOL2 c="NEE-J" n="Nextera Energy Capital Holding"/>
+    <SYMBOL2 c="NEE-O" n="Nextera Energy Inc"/>
+    <SYMBOL2 c="NEE-P" n="Nextera Energy Inc"/>
+    <SYMBOL2 c="NEM" n="Newmont Mining Corp"/>
+    <SYMBOL2 c="NEP" n="Nextera Energy Partners LP"/>
+    <SYMBOL2 c="NES" n="Nuverra Environmental Solutions Inc"/>
+    <SYMBOL2 c="NEU" n="Newmarket Corp"/>
+    <SYMBOL2 c="NEV" n="Nuveen Enhanced Muni Value Fund"/>
+    <SYMBOL2 c="NEWM" n="New Media Investment Group Inc."/>
+    <SYMBOL2 c="NFG" n="National Fuel Gas Company"/>
+    <SYMBOL2 c="NFJ" n="Nfj Dividend Interest & Premium Strategy Fund"/>
+    <SYMBOL2 c="NFX" n="Newfield Exploration Company"/>
+    <SYMBOL2 c="NGG" n="National Grid Transco Plc"/>
+    <SYMBOL2 c="NGL" n="Ngl Energy Partners LP"/>
+    <SYMBOL2 c="NGLS" n="Targa Resources Partners LP"/>
+    <SYMBOL2 c="NGS" n="Natural Gas Services Group"/>
+    <SYMBOL2 c="NGVC" n="Natural Grocers By Vitamin Cottage Inc"/>
+    <SYMBOL2 c="NHF" n="Nexpoint Credit Strategies Fund"/>
+    <SYMBOL2 c="NHI" n="National Health Investors"/>
+    <SYMBOL2 c="NI" n="NiSource Inc"/>
+    <SYMBOL2 c="NID" n="Nuveen Intermediate Duration M"/>
+    <SYMBOL2 c="NIE" n="Agic Equity & Convertible"/>
+    <SYMBOL2 c="NIM" n="Nuveen Maturities Fund"/>
+    <SYMBOL2 c="NIO" n="Nuveen Insured Muni Opportunity Fund"/>
+    <SYMBOL2 c="NIQ" n="Nuveen Intermediate Duration Q"/>
+    <SYMBOL2 c="NJ" n="Nidec Corp"/>
+    <SYMBOL2 c="NJR" n="Newjersey Resources Corp"/>
+    <SYMBOL2 c="NKA" n="Niska Gas Storage Partners Llc"/>
+    <SYMBOL2 c="NKE" n="Nike Inc"/>
+    <SYMBOL2 c="NKG" n="Nuveen Georgia Divadv Fund 2"/>
+    <SYMBOL2 c="NKX" n="Nuveen Insured California Tax-Free"/>
+    <SYMBOL2 c="NKX-C" n="Nuveen California Amt-Free Mun"/>
+    <SYMBOL2 c="NL" n="NL Industries"/>
+    <SYMBOL2 c="NLS" n="Nautilus Group"/>
+    <SYMBOL2 c="NLSN" n="Nielsen Holdings N.V."/>
+    <SYMBOL2 c="NLY" n="Annaly Capital Management Inc"/>
+    <SYMBOL2 c="NLY-A" n="Annaly Capital Manag"/>
+    <SYMBOL2 c="NLY-C" n="Annaly Capital Management Inc"/>
+    <SYMBOL2 c="NLY-D" n="Annaly Capital Management Inc"/>
+    <SYMBOL2 c="NM" n="Navios Maritime Holdings Inc"/>
+    <SYMBOL2 c="NM-G" n="Navios Maritime"/>
+    <SYMBOL2 c="NM-H" n="Navios Maritime Holdngs Inc."/>
+    <SYMBOL2 c="NMA" n="Nuveen Muni Advantage Fund"/>
+    <SYMBOL2 c="NMBL" n="Nimble Storage Inc."/>
+    <SYMBOL2 c="NMFC" n="New Mountain Finance Corporati"/>
+    <SYMBOL2 c="NMI" n="Nuveen Muni"/>
+    <SYMBOL2 c="NMK-B" n="Niagara Mohawk Holdings Inc. P"/>
+    <SYMBOL2 c="NMK-C" n="Niagara Mohawk 3.60"/>
+    <SYMBOL2 c="NMM" n="Navios Maritime Partners LP"/>
+    <SYMBOL2 c="NMO" n="Nuveen Muni Market Opportunity Fund"/>
+    <SYMBOL2 c="NMR" n="Nomura Holdings Inc ADR"/>
+    <SYMBOL2 c="NMS" n="Nuveen Minnesota Municipal Inco"/>
+    <SYMBOL2 c="NMT" n="Nuveen Massachusetts Premium Fund"/>
+    <SYMBOL2 c="NMY" n="Nuveen Maryland Premium Fund"/>
+    <SYMBOL2 c="NNA" n="Navios Maritime Acquisition Corp"/>
+    <SYMBOL2 c="NNC" n="Nuveen North Carolina Premium Fund"/>
+    <SYMBOL2 c="NNI" n="Nelnet Inc"/>
+    <SYMBOL2 c="NNJ" n="Nuveen New Jersey Premium Fund"/>
+    <SYMBOL2 c="NNN" n="National Retail Properties"/>
+    <SYMBOL2 c="NNN-D" n="National Retail Properties In"/>
+    <SYMBOL2 c="NNN-E" n="National Retail Properties Depo"/>
+    <SYMBOL2 c="NNP" n="Nuveen New York Performance Plus Fund"/>
+    <SYMBOL2 c="NNY" n="Nuveen New York Muni Value Fund"/>
+    <SYMBOL2 c="NOA" n="North American Energy Partners"/>
+    <SYMBOL2 c="NOAH" n="Noah Holdings Ltd"/>
+    <SYMBOL2 c="NOC" n="Northrop Grumman Corp"/>
+    <SYMBOL2 c="NOK" n="Nokia Corp"/>
+    <SYMBOL2 c="NOM-C" n="Nuveen Missouri Premium Income"/>
+    <SYMBOL2 c="NOR" n="Noranda Aluminum Holding Corp"/>
+    <SYMBOL2 c="NORD" n="Nord Anglia Education Inc."/>
+    <SYMBOL2 c="NOV" n="National-Oilwell"/>
+    <SYMBOL2 c="NOW" n="Servicenow Inc"/>
+    <SYMBOL2 c="NP" n="Neenah Paper"/>
+    <SYMBOL2 c="NPD" n="China Nepstar Chain Drugstore Ltd"/>
+    <SYMBOL2 c="NPF" n="Nuveen Premier Muni"/>
+    <SYMBOL2 c="NPI" n="Nuveen Premium Fund"/>
+    <SYMBOL2 c="NPK" n="National Presto Industries"/>
+    <SYMBOL2 c="NPM" n="Nuveen Premium Fund II"/>
+    <SYMBOL2 c="NPO" n="Enpro Industries"/>
+    <SYMBOL2 c="NPP" n="Nuveen Performance Plus Fund"/>
+    <SYMBOL2 c="NPT" n="Nuveen Premium Fund IV"/>
+    <SYMBOL2 c="NPTN" n="Neophotonics Corp"/>
+    <SYMBOL2 c="NPV" n="Nuveen Virginia Premium Fund"/>
+    <SYMBOL2 c="NQ" n="Netqin Mobile Inc"/>
+    <SYMBOL2 c="NQI" n="Nuveen Insured Quality Fund"/>
+    <SYMBOL2 c="NQJ" n="Nuveen New Jersey Investment"/>
+    <SYMBOL2 c="NQM" n="Nuveen Investment Quality Fund"/>
+    <SYMBOL2 c="NQP" n="Nuveen Pennsylvania Investment"/>
+    <SYMBOL2 c="NQS" n="Nuveen Quality Fund"/>
+    <SYMBOL2 c="NQU" n="Nuveen Quality"/>
+    <SYMBOL2 c="NR" n="Newpark Resources"/>
+    <SYMBOL2 c="NRF" n="Northstar Realty Finance"/>
+    <SYMBOL2 c="NRF-A" n="Northstar Realty Pfd"/>
+    <SYMBOL2 c="NRF-B" n="Northstar Rlty Ser B"/>
+    <SYMBOL2 c="NRF-C" n="Northstar Realty Finance Corp"/>
+    <SYMBOL2 c="NRF-D" n="Northstar Realty Finance Corp"/>
+    <SYMBOL2 c="NRF-E" n="Northstar Realty Finance Corp"/>
+    <SYMBOL2 c="NRG" n="NRG Energy"/>
+    <SYMBOL2 c="NRK" n="Nuveen Insured New York Tax-Free"/>
+    <SYMBOL2 c="NRP" n="Natural Resource Partners LP"/>
+    <SYMBOL2 c="NRT" n="North European Oil Royality Trust"/>
+    <SYMBOL2 c="NRZ" n="New Residential Investment Corp"/>
+    <SYMBOL2 c="NS" n="Nustar Energy L.P."/>
+    <SYMBOL2 c="NSAM" n="Northstar Asset Management Grou"/>
+    <SYMBOL2 c="NSC" n="Norfolk Southern Corp"/>
+    <SYMBOL2 c="NSH" n="Nustar Gp Holdings Llc"/>
+    <SYMBOL2 c="NSL" n="Nuveen Senior"/>
+    <SYMBOL2 c="NSLP" n="New Source Energy Partners L.P"/>
+    <SYMBOL2 c="NSM" n="Nationstar Mortgage Holdngs I"/>
+    <SYMBOL2 c="NSP" n="Insperity Inc"/>
+    <SYMBOL2 c="NSR" n="Neustar Inc"/>
+    <SYMBOL2 c="NSS" n="Nustar Logistics L.P."/>
+    <SYMBOL2 c="NTC" n="Nuveen Connecticut Premium Fund"/>
+    <SYMBOL2 c="NTG" n="Tortoise MLP Fund"/>
+    <SYMBOL2 c="NTI" n="Northern Tier Energy LP"/>
+    <SYMBOL2 c="NTL" n="Nortel Inversora Sa ADR"/>
+    <SYMBOL2 c="NTP" n="Nam Tai Electronics"/>
+    <SYMBOL2 c="NTT" n="Nippon Telegraph and Telephone Corp"/>
+    <SYMBOL2 c="NTX" n="Nuveen Texas Quality"/>
+    <SYMBOL2 c="NTX-C" n="Nuveen Texas Quality Income Mu"/>
+    <SYMBOL2 c="NTZ" n="Natuzzi S.P.A."/>
+    <SYMBOL2 c="NU" n="Northeast Utilities"/>
+    <SYMBOL2 c="NUE" n="Nucor Corp"/>
+    <SYMBOL2 c="NUJ-C" n="Nuveen New Jersey Dividend Adv"/>
+    <SYMBOL2 c="NUM" n="Nuveen Michigan Quality"/>
+    <SYMBOL2 c="NUO" n="Nuveen Ohio Quality"/>
+    <SYMBOL2 c="NUS" n="Nu Skin Enterprises"/>
+    <SYMBOL2 c="NUV" n="Nuveen Muni Value Fund"/>
+    <SYMBOL2 c="NUW" n="Nuveen Muni Value Fund"/>
+    <SYMBOL2 c="NVGS" n="Navigator Holdings"/>
+    <SYMBOL2 c="NVO" n="Novo Nordisk A/S"/>
+    <SYMBOL2 c="NVR" n="NVR Inc"/>
+    <SYMBOL2 c="NVS" n="Novartis Ag"/>
+    <SYMBOL2 c="NW-C" n="Natl Wstmst Ads 19C3"/>
+    <SYMBOL2 c="NWE" n="Northwestern Corp"/>
+    <SYMBOL2 c="NWHM" n="New Home Co Llc"/>
+    <SYMBOL2 c="NWL" n="Newell Rubbermaid Inc"/>
+    <SYMBOL2 c="NWN" n="Northwest Natural Gas Company"/>
+    <SYMBOL2 c="NWY" n="New York & Company"/>
+    <SYMBOL2 c="NX" n="Quanex Building Products Corp"/>
+    <SYMBOL2 c="NXC" n="Nuveen California Tax-Free Income"/>
+    <SYMBOL2 c="NXN" n="Nuveen Insured New York Tax-Free"/>
+    <SYMBOL2 c="NXP" n="Nuveen Tax Free Income Portfolio"/>
+    <SYMBOL2 c="NXQ" n="Nuveen Tax Free Income Portfolio II"/>
+    <SYMBOL2 c="NXR" n="Nuveen Tax Free Income Portfolio III"/>
+    <SYMBOL2 c="NYC-U" n="New York Community Bancorp Inc"/>
+    <SYMBOL2 c="NYCB" n="New York Community Bancorp"/>
+    <SYMBOL2 c="NYLD" n="NRG Yield Inc"/>
+    <SYMBOL2 c="NYRT" n="New York REIT Inc."/>
+    <SYMBOL2 c="NYT" n="New York Times Company"/>
+    <SYMBOL2 c="O" n="Realty Income Corp"/>
+    <SYMBOL2 c="O-E" n="Realty Income Pfd E"/>
+    <SYMBOL2 c="O-F" n="Realty Income Corp"/>
+    <SYMBOL2 c="OAK" n="Oaktree Capital Group Llc"/>
+    <SYMBOL2 c="OAK-A" n="Five Oaks Investment Corp. 8.75"/>
+    <SYMBOL2 c="OAKS" n="Five Oaks Investment Corp"/>
+    <SYMBOL2 c="OAS" n="Oasis Petroleum Inc"/>
+    <SYMBOL2 c="OB" n="Onebeacon Insurance Group"/>
+    <SYMBOL2 c="OC" n="Owens Corning Inc"/>
+    <SYMBOL2 c="OCIP" n="Oci Partners LP"/>
+    <SYMBOL2 c="OCIR" n="Oci Resources LP"/>
+    <SYMBOL2 c="OCN" n="Ocwen Financial Corp"/>
+    <SYMBOL2 c="OCR" n="Omnicare"/>
+    <SYMBOL2 c="OCR-A" n="Omnicare Cap TR 1"/>
+    <SYMBOL2 c="OCR-B" n="Omnicare Cap TR II"/>
+    <SYMBOL2 c="ODC" n="Oil-Dri Corporation of America"/>
+    <SYMBOL2 c="OEC" n="Orion Engineered Carbons S.A R."/>
+    <SYMBOL2 c="OFC" n="Corporate Office Properties"/>
+    <SYMBOL2 c="OFC-L" n="Corp Office Properties Trust"/>
+    <SYMBOL2 c="OFG" n="Oriental Financial Group"/>
+    <SYMBOL2 c="OFG-A" n="Oriental Fin Mips A"/>
+    <SYMBOL2 c="OFG-B" n="Oriental Finl Pfd B"/>
+    <SYMBOL2 c="OFG-D" n="Oriental Financial Group Inc"/>
+    <SYMBOL2 c="OGE" n="Oge Energy Corp"/>
+    <SYMBOL2 c="OGS" n="One Gas Inc."/>
+    <SYMBOL2 c="OHI" n="Omega Healthcare Investors"/>
+    <SYMBOL2 c="OI" n="Owens-Illinois"/>
+    <SYMBOL2 c="OIA" n="Invesco Muni Income Trust"/>
+    <SYMBOL2 c="OIB.C" n="Oi Sa"/>
+    <SYMBOL2 c="OIBR" n="Oi S.A. Ads"/>
+    <SYMBOL2 c="OII" n="Oceaneering International"/>
+    <SYMBOL2 c="OILT" n="Oiltanking Partners L.P."/>
+    <SYMBOL2 c="OIS" n="Oil States International"/>
+    <SYMBOL2 c="OKE" n="Oneok Inc"/>
+    <SYMBOL2 c="OKS" n="Oneok Partners L.P."/>
+    <SYMBOL2 c="OLN" n="Olin Corp"/>
+    <SYMBOL2 c="OLP" n="One Liberty Properties"/>
+    <SYMBOL2 c="OMAM" n="Om Asset Management Ltd"/>
+    <SYMBOL2 c="OMC" n="Omnicom Group Inc"/>
+    <SYMBOL2 c="OME" n="Omega Protein Corp"/>
+    <SYMBOL2 c="OMG" n="Om Group"/>
+    <SYMBOL2 c="OMI" n="Owens & Minor"/>
+    <SYMBOL2 c="OMN" n="Omnova Solutions Inc"/>
+    <SYMBOL2 c="ONE" n="Higher One Holdings"/>
+    <SYMBOL2 c="OPK" n="Opko Health Inc"/>
+    <SYMBOL2 c="OPWR" n="Opower Inc."/>
+    <SYMBOL2 c="OPY" n="Oppenheimer Holdings"/>
+    <SYMBOL2 c="ORA" n="Ormat Technologies"/>
+    <SYMBOL2 c="ORAN" n="Orange Ads"/>
+    <SYMBOL2 c="ORB" n="Orbital Sciences Corp"/>
+    <SYMBOL2 c="ORC" n="Orchid Island Capital Inc. Com"/>
+    <SYMBOL2 c="ORCL" n="Oracle Corp"/>
+    <SYMBOL2 c="ORI" n="Old Republic International Corp"/>
+    <SYMBOL2 c="ORN" n="Orion Marine Group Inc"/>
+    <SYMBOL2 c="OSK" n="Oshkosh Truck Corp"/>
+    <SYMBOL2 c="OWW" n="Orbitz Worldwide"/>
+    <SYMBOL2 c="OXF" n="Oxford Resource Partners LP"/>
+    <SYMBOL2 c="OXM" n="Oxford Industries"/>
+    <SYMBOL2 c="OXY" n="Occidental Petroleum Corp"/>
+    <SYMBOL2 c="OZM" n="Och-Ziff Capital Management"/>
+    <SYMBOL2 c="P" n="Pandora Media Inc"/>
+    <SYMBOL2 c="PAA" n="Plains All American Pipeline L.P."/>
+    <SYMBOL2 c="PAC" n="Grupo Aeroportuario Del Pacifico"/>
+    <SYMBOL2 c="PACD" n="Pacific Drilling S.A."/>
+    <SYMBOL2 c="PAG" n="Penske Automotive Group"/>
+    <SYMBOL2 c="PAGP" n="Plains Gp Holdings L.P."/>
+    <SYMBOL2 c="PAH" n="Platform Specialty Products Corp."/>
+    <SYMBOL2 c="PAI" n="Pacific American Income Shares"/>
+    <SYMBOL2 c="PAM" n="Pampa Energia S.A."/>
+    <SYMBOL2 c="PANW" n="Palo Alto Networks Inc"/>
+    <SYMBOL2 c="PAR" n="Par Technology Corp"/>
+    <SYMBOL2 c="PAY" n="Verifone Systems"/>
+    <SYMBOL2 c="PAYC" n="Paycom Software Inc."/>
+    <SYMBOL2 c="PB" n="Prosperity Bancshares"/>
+    <SYMBOL2 c="PBA" n="Pembina Pipeline Cor"/>
+    <SYMBOL2 c="PBF" n="PBF Energy Inc"/>
+    <SYMBOL2 c="PBFX" n="PBF Logistics LP"/>
+    <SYMBOL2 c="PBH" n="Prestige Brand Holdings"/>
+    <SYMBOL2 c="PBI" n="Pitney Bowes Inc"/>
+    <SYMBOL2 c="PBI-A" n="Pitney Bowes Inc"/>
+    <SYMBOL2 c="PBI-B" n="Pitney Bowes Inc .6.70% Notes"/>
+    <SYMBOL2 c="PBR" n="Petroleo Brasileiro S.A.- Petrobras"/>
+    <SYMBOL2 c="PBR.A" n="Petroleo Brasileiro S.A.- Petrobras"/>
+    <SYMBOL2 c="PBT" n="Permian Basin Royalty Trust"/>
+    <SYMBOL2 c="PBY" n="Pep Boys-Manny Moe & Jack"/>
+    <SYMBOL2 c="PBYI" n="Puma Biotechnology"/>
+    <SYMBOL2 c="PCF" n="Putnam High Income Bond Fund"/>
+    <SYMBOL2 c="PCG" n="Pacific Gas & Electric Co."/>
+    <SYMBOL2 c="PCI" n="Pimco Dynamic Credit Income Fun"/>
+    <SYMBOL2 c="PCK" n="Pimco California Muni II"/>
+    <SYMBOL2 c="PCL" n="Plum Creek Timber Company"/>
+    <SYMBOL2 c="PCM" n="Pimco Commercial Mortgage Securities"/>
+    <SYMBOL2 c="PCN" n="Pimco Corporate"/>
+    <SYMBOL2 c="PCP" n="Precision Castparts Corp"/>
+    <SYMBOL2 c="PCQ" n="Pimco California Muni"/>
+    <SYMBOL2 c="PDI" n="Pimco Dynamic Income Fund"/>
+    <SYMBOL2 c="PDM" n="Piedmont Office Realty Trust"/>
+    <SYMBOL2 c="PDS" n="Precision Drilling Corp"/>
+    <SYMBOL2 c="PDT" n="John Hancock Premium Dividend Fund"/>
+    <SYMBOL2 c="PE" n="Parsley Energy"/>
+    <SYMBOL2 c="PEB" n="Pebblebrook Hotel Trust"/>
+    <SYMBOL2 c="PEB-A" n="Pebblebrook Hotel Trust Pfd Ser"/>
+    <SYMBOL2 c="PEB-B" n="Pebblebrook Hotel Trust"/>
+    <SYMBOL2 c="PEB-C" n="Pebblebrook Hotel Trust"/>
+    <SYMBOL2 c="PEG" n="Public Service Enterprise Group Inc"/>
+    <SYMBOL2 c="PEI" n="Pennsylvania Real Estate Investment"/>
+    <SYMBOL2 c="PEI-A" n="Penn Real Estate Invest Trust"/>
+    <SYMBOL2 c="PEI-B" n="Pennsylvania Real Estate Inves"/>
+    <SYMBOL2 c="PEO" n="Petroleum Resources Corp"/>
+    <SYMBOL2 c="PEP" n="Pepsico Inc"/>
+    <SYMBOL2 c="PER" n="Sandridge Permian Trust"/>
+    <SYMBOL2 c="PES" n="Pioneer Energy Services Corp"/>
+    <SYMBOL2 c="PF" n="Pinnacle Foods Inc. Common Sto"/>
+    <SYMBOL2 c="PFD" n="Flaherty & Crumrine Preferred Inc"/>
+    <SYMBOL2 c="PFE" n="Pfizer Inc"/>
+    <SYMBOL2 c="PFG" n="Principal Financial Group Inc"/>
+    <SYMBOL2 c="PFG-B" n="Prin Fin Grp Ser B"/>
+    <SYMBOL2 c="PFH" n="Cabco TR Jcp 7.625"/>
+    <SYMBOL2 c="PFK" n="Prudential Financial Inflation-Linked"/>
+    <SYMBOL2 c="PFL" n="Pimco Income Strategy Fund"/>
+    <SYMBOL2 c="PFN" n="Pimco Income Strategy Fund II"/>
+    <SYMBOL2 c="PFO" n="Flaherty & Crumrine Preferred Fund"/>
+    <SYMBOL2 c="PFS" n="Provident Financial Services"/>
+    <SYMBOL2 c="PFSI" n="Pennymac Financial Services In"/>
+    <SYMBOL2 c="PFX" n="Phoenix Companies"/>
+    <SYMBOL2 c="PG" n="Procter & Gamble Company"/>
+    <SYMBOL2 c="PGEM" n="Ply Gem Holdings Inc"/>
+    <SYMBOL2 c="PGH" n="Pengrowth Energy Corp"/>
+    <SYMBOL2 c="PGI" n="Ptek Holdings"/>
+    <SYMBOL2 c="PGN" n="Paragon Offshore Plc Ordinary S"/>
+    <SYMBOL2 c="PGP" n="Pimco Global Stocksplus & Income"/>
+    <SYMBOL2 c="PGR" n="Progressive Corp"/>
+    <SYMBOL2 c="PGZ" n="Principal Real Estate Income F"/>
+    <SYMBOL2 c="PH" n="Parker-Hannifin Corp"/>
+    <SYMBOL2 c="PHD" n="Pioneer Floating Rate Trust"/>
+    <SYMBOL2 c="PHG" n="Koninklijke Philips Electronics"/>
+    <SYMBOL2 c="PHH" n="Phh Corp"/>
+    <SYMBOL2 c="PHI" n="Philippine Long Distance Telephone"/>
+    <SYMBOL2 c="PHK" n="Pimco High"/>
+    <SYMBOL2 c="PHM" n="Pultegroup"/>
+    <SYMBOL2 c="PHT" n="Pioneer High Income Trust"/>
+    <SYMBOL2 c="PHX" n="Panhandle Royalty Company"/>
+    <SYMBOL2 c="PII" n="Polaris Industries Inc"/>
+    <SYMBOL2 c="PIKE" n="Pike Electric"/>
+    <SYMBOL2 c="PIM" n="Putnam Master Intermediate Income"/>
+    <SYMBOL2 c="PIR" n="Pier 1 Imports"/>
+    <SYMBOL2 c="PIY" n="Merrill Lynch Depositor"/>
+    <SYMBOL2 c="PJC" n="Piper Jaffray Companies"/>
+    <SYMBOL2 c="PJH" n="Prudential Financial Inc"/>
+    <SYMBOL2 c="PJS" n="Preferredplus Trust"/>
+    <SYMBOL2 c="PKD" n="Parker Drilling Company"/>
+    <SYMBOL2 c="PKE" n="Park Electrochemical Corp"/>
+    <SYMBOL2 c="PKG" n="Packaging Corporation of America"/>
+    <SYMBOL2 c="PKI" n="Perkinelmer"/>
+    <SYMBOL2 c="PKO" n="Pimco Income Opportunity Fund"/>
+    <SYMBOL2 c="PKX" n="Pohang Iron & Steel Co."/>
+    <SYMBOL2 c="PKY" n="Parkway Properties"/>
+    <SYMBOL2 c="PL" n="Protective Life Corp"/>
+    <SYMBOL2 c="PL-B" n="Plc Cap TR V"/>
+    <SYMBOL2 c="PL-C" n="Protective Life Corp"/>
+    <SYMBOL2 c="PL-E" n="Protective Life Corporation 6.0"/>
+    <SYMBOL2 c="PLD" n="Prologis Inc"/>
+    <SYMBOL2 c="PLL" n="Pall Corp"/>
+    <SYMBOL2 c="PLOW" n="Douglas Dynamics"/>
+    <SYMBOL2 c="PLP" n="Protective Life Corp"/>
+    <SYMBOL2 c="PLT" n="Plantronics"/>
+    <SYMBOL2 c="PM" n="Philip Morris International Inc"/>
+    <SYMBOL2 c="PMC" n="Pharmerica Corp"/>
+    <SYMBOL2 c="PMF" n="Pimco Muni"/>
+    <SYMBOL2 c="PML" n="Pimco Muni II"/>
+    <SYMBOL2 c="PMM" n="Putnam Managed Muni Income Trust"/>
+    <SYMBOL2 c="PMO" n="Putnam Muni Opportunities Trust"/>
+    <SYMBOL2 c="PMT" n="Pennymac Mortgage Investment Trust"/>
+    <SYMBOL2 c="PMX" n="Pimco Muni Income Fund III"/>
+    <SYMBOL2 c="PNC" n="PNC Bank"/>
+    <SYMBOL2 c="PNC-P" n="PNC Financial Services Group I"/>
+    <SYMBOL2 c="PNC-Q" n="The PNC Financial Services Gro"/>
+    <SYMBOL2 c="PNC.W" n="The PNC Financial Services Group"/>
+    <SYMBOL2 c="PNF" n="Pimco New York Muni"/>
+    <SYMBOL2 c="PNI" n="Pimco New York Muni II"/>
+    <SYMBOL2 c="PNK" n="Pinnacle Entertainment"/>
+    <SYMBOL2 c="PNM" n="PNM Resources Inc"/>
+    <SYMBOL2 c="PNR" n="Pentair Ltd"/>
+    <SYMBOL2 c="PNTA" n="Pennantpark Investment Corpora"/>
+    <SYMBOL2 c="PNW" n="Pinnacle West Capital Corp"/>
+    <SYMBOL2 c="PNX" n="Phoenix Companies"/>
+    <SYMBOL2 c="PNY" n="Piedmont Natural Gas Company"/>
+    <SYMBOL2 c="POL" n="Polyone Corp"/>
+    <SYMBOL2 c="POM" n="Potomac Electric Power Company"/>
+    <SYMBOL2 c="POR" n="Portland General Electric Company"/>
+    <SYMBOL2 c="POST" n="Post Holdings Inc."/>
+    <SYMBOL2 c="POT" n="Potash Corp. of Saskatchewan Inc"/>
+    <SYMBOL2 c="POWR" n="Powersecure International Inc"/>
+    <SYMBOL2 c="PPG" n="PPG Industries"/>
+    <SYMBOL2 c="PPL" n="PPL Corp"/>
+    <SYMBOL2 c="PPO" n="Polypore International Inc"/>
+    <SYMBOL2 c="PPP" n="Primero Mining Corp"/>
+    <SYMBOL2 c="PPR" n="ING Prime Rate Trust"/>
+    <SYMBOL2 c="PPS" n="Post Properties"/>
+    <SYMBOL2 c="PPS-A" n="Post Prop. 8.5 Pra"/>
+    <SYMBOL2 c="PPT" n="Putnam Premier Income Trust"/>
+    <SYMBOL2 c="PPX" n="PPL Capital Funding Inc"/>
+    <SYMBOL2 c="PQ" n="Petroquest Energy Inc"/>
+    <SYMBOL2 c="PRA" n="Pro-Assurance Corp"/>
+    <SYMBOL2 c="PRE" n="Partnerre Ltd"/>
+    <SYMBOL2 c="PRE-D" n="Partnerre Ltd Pfd D"/>
+    <SYMBOL2 c="PRE-E" n="Partnerre Ltd"/>
+    <SYMBOL2 c="PRE-F" n="Partnerre Ltd"/>
+    <SYMBOL2 c="PRGO" n="Perrigo Company"/>
+    <SYMBOL2 c="PRH" n="Prudential Financial Inc"/>
+    <SYMBOL2 c="PRI" n="Primerica Inc"/>
+    <SYMBOL2 c="PRLB" n="Proto Labs Inc"/>
+    <SYMBOL2 c="PRO" n="Pros Holdings"/>
+    <SYMBOL2 c="PRU" n="Prudential Financial Inflation Retail"/>
+    <SYMBOL2 c="PRY" n="Prospect Capital Corp"/>
+    <SYMBOL2 c="PSA" n="Public Storage"/>
+    <SYMBOL2 c="PSA-O" n="Public Storage Depositary Share"/>
+    <SYMBOL2 c="PSA-P" n="Public Storage"/>
+    <SYMBOL2 c="PSA-Q" n="Public Storage"/>
+    <SYMBOL2 c="PSA-R" n="Depositary Shares Each Represe"/>
+    <SYMBOL2 c="PSA-S" n="Public Storage"/>
+    <SYMBOL2 c="PSA-T" n="Public Storage"/>
+    <SYMBOL2 c="PSA-U" n="Public Storage"/>
+    <SYMBOL2 c="PSA-V" n="Public Storage"/>
+    <SYMBOL2 c="PSA-W" n="Public Storage"/>
+    <SYMBOL2 c="PSA-X" n="Public Storage"/>
+    <SYMBOL2 c="PSA-Y" n="Public Storagedepositary Share"/>
+    <SYMBOL2 c="PSA-Z" n="Public Storage"/>
+    <SYMBOL2 c="PSB" n="Business Parks"/>
+    <SYMBOL2 c="PSB-R" n="PS Business Parks Inc. 6.875%"/>
+    <SYMBOL2 c="PSB-S" n="PS Business Parks Inc"/>
+    <SYMBOL2 c="PSB-T" n="PS Business Parks Inc"/>
+    <SYMBOL2 c="PSB-U" n="PS Business Parks Inc"/>
+    <SYMBOL2 c="PSB-V" n="PS Business Pks Inc Calif Dep"/>
+    <SYMBOL2 c="PSF" n="Cohen & Steers Preferred Fund"/>
+    <SYMBOL2 c="PSG" n="Performance Sports Group Ltd."/>
+    <SYMBOL2 c="PSO" n="Pearson Plc"/>
+    <SYMBOL2 c="PSX" n="Phillips 66 Common Stock"/>
+    <SYMBOL2 c="PSXP" n="Phillips 66 Partners LP"/>
+    <SYMBOL2 c="PT" n="Portugal Telecom Sgps S.A ."/>
+    <SYMBOL2 c="PTP" n="Platinum Underwriters Holdings Ltd"/>
+    <SYMBOL2 c="PTR" n="Petrochina Company Limited"/>
+    <SYMBOL2 c="PTY" n="Pimco Corporate Opportunity Fund"/>
+    <SYMBOL2 c="PUK" n="Prudential Public Limited Company"/>
+    <SYMBOL2 c="PUK-A" n="Pru Plc Perp Sub Cap"/>
+    <SYMBOL2 c="PUK.P" n="Prudential 6.75%"/>
+    <SYMBOL2 c="PULS" n="Pulse Electronics Corp"/>
+    <SYMBOL2 c="PVA" n="Penn Virginia Corp"/>
+    <SYMBOL2 c="PVG" n="Pretium Res Inc"/>
+    <SYMBOL2 c="PVH" n="Phillips-Van Heusen Corp"/>
+    <SYMBOL2 c="PVTD" n="Privatebancorp Inc"/>
+    <SYMBOL2 c="PWE" n="Penn West Petroleum Ltd"/>
+    <SYMBOL2 c="PWR" n="Quanta Services"/>
+    <SYMBOL2 c="PX" n="Praxair"/>
+    <SYMBOL2 c="PXD" n="Pioneer Natural Resources Company"/>
+    <SYMBOL2 c="PYB" n="Pplus Trust"/>
+    <SYMBOL2 c="PYN" n="Pimco New York Muni Income Fund III"/>
+    <SYMBOL2 c="PYS" n="Pplus Trust"/>
+    <SYMBOL2 c="PYT" n="Pplus Trust"/>
+    <SYMBOL2 c="PZB" n="Merrill Lynch Depositor"/>
+    <SYMBOL2 c="PZC" n="Pimco California Muni Income Fund III"/>
+    <SYMBOL2 c="PZE" n="Petrobras Argentina S.A."/>
+    <SYMBOL2 c="PZN" n="Pzena Investment Management Inc"/>
+    <SYMBOL2 c="Q" n="Quintiles Transitional Holdings"/>
+    <SYMBOL2 c="QEP" n="Qep Resources"/>
+    <SYMBOL2 c="QEPM" n="Qep Midstream Partners LP"/>
+    <SYMBOL2 c="QIHU" n="Qihoo 360 Technology Co. Ltd"/>
+    <SYMBOL2 c="QRE" n="Qr Energy LP"/>
+    <SYMBOL2 c="QTM" n="Quantum Corp"/>
+    <SYMBOL2 c="QTS" n="Qts Realty Trust Inc"/>
+    <SYMBOL2 c="QTWO" n="Q2 Holdings Inc"/>
+    <SYMBOL2 c="QUAD" n="Quad Graphics Inc"/>
+    <SYMBOL2 c="R" n="Ryder System"/>
+    <SYMBOL2 c="RAD" n="Rite Aid Corp"/>
+    <SYMBOL2 c="RAI" n="Reynolds American Inc"/>
+    <SYMBOL2 c="RALY" n="Rally Software"/>
+    <SYMBOL2 c="RAS" n="Rait Financial Trust"/>
+    <SYMBOL2 c="RAS-A" n="Rait Financial TR Pf"/>
+    <SYMBOL2 c="RAS-B" n="Rait Financial TR Pf"/>
+    <SYMBOL2 c="RAS-C" n="Rait Fin TR Pfd C"/>
+    <SYMBOL2 c="RATE" n="Bankrate Inc"/>
+    <SYMBOL2 c="RAX" n="Rackspace Hosting Inc"/>
+    <SYMBOL2 c="RBA" n="Ritchie Bros. Auctioneers Inc"/>
+    <SYMBOL2 c="RBC" n="Regal-Beloit Corp"/>
+    <SYMBOL2 c="RBS" n="Royal Bank Scotland Group Plc"/>
+    <SYMBOL2 c="RBS-E" n="RBS Cap Fndg TR V"/>
+    <SYMBOL2 c="RBS-F" n="Royal Bank Scotland F"/>
+    <SYMBOL2 c="RBS-G" n="RBS Capital Trustvii"/>
+    <SYMBOL2 c="RBS-H" n="Royal Bank Scot Hadssc"/>
+    <SYMBOL2 c="RBS-I" n="RBS Cap Fdg TR Vi"/>
+    <SYMBOL2 c="RBS-L" n="Royal Bank Scotland"/>
+    <SYMBOL2 c="RBS-M" n="Royal Bank Scotland M"/>
+    <SYMBOL2 c="RBS-N" n="RBS Series N Ads Pfd"/>
+    <SYMBOL2 c="RBS-P" n="Royal Bank Scotland"/>
+    <SYMBOL2 c="RBS-Q" n="Royal Bank ADR"/>
+    <SYMBOL2 c="RBS-R" n="Royal Bank Scotland"/>
+    <SYMBOL2 c="RBS-S" n="Royal Bank Scotland"/>
+    <SYMBOL2 c="RBS-T" n="Royal Bank Pfd"/>
+    <SYMBOL2 c="RCAP" n="RCS Capital Corp"/>
+    <SYMBOL2 c="RCI" n="Rogers Communication"/>
+    <SYMBOL2 c="RCL" n="Royal Caribbean Cruises Ltd"/>
+    <SYMBOL2 c="RCS" n="Rcm Strategic Global Government Fund"/>
+    <SYMBOL2 c="RDC" n="Rowan Companies"/>
+    <SYMBOL2 c="RDN" n="Radian Group Inc"/>
+    <SYMBOL2 c="RDS.A" n="Royal Dutch Shell Plc"/>
+    <SYMBOL2 c="RDS.B" n="Royal Dutch Shell"/>
+    <SYMBOL2 c="RDY" n="Dr. Reddy's Laboratories Ltd"/>
+    <SYMBOL2 c="RE" n="Everest Re Group"/>
+    <SYMBOL2 c="REG" n="Regency Centers Corp"/>
+    <SYMBOL2 c="REG-F" n="Regency Centers Corp"/>
+    <SYMBOL2 c="REG-G" n="Regency Centers Corporation Pfd"/>
+    <SYMBOL2 c="REN" n="Resolute Energy Corp"/>
+    <SYMBOL2 c="RENN" n="Renren Inc"/>
+    <SYMBOL2 c="RES" n="RPC Inc"/>
+    <SYMBOL2 c="RESI" n="Altisource Residential Corporat"/>
+    <SYMBOL2 c="REV" n="Revlon Inc"/>
+    <SYMBOL2 c="REX" n="Rex American Resources Corporation"/>
+    <SYMBOL2 c="REXR" n="Rexford Industrial Realty Inc"/>
+    <SYMBOL2 c="RF" n="Regions Financial Corp"/>
+    <SYMBOL2 c="RF-A" n="Regions Financial Corp"/>
+    <SYMBOL2 c="RF-B" n="Regions Financial Corporation"/>
+    <SYMBOL2 c="RFI" n="Cohen & Steers Total Return Realty Fund"/>
+    <SYMBOL2 c="RFP" n="Resolute Forest Products Inc"/>
+    <SYMBOL2 c="RFT" n="Rait Financial Trust"/>
+    <SYMBOL2 c="RFTA" n="Rait Financial Trust"/>
+    <SYMBOL2 c="RGA" n="Reinsurance Group of America Inc"/>
+    <SYMBOL2 c="RGC" n="Regal Entertainment Group"/>
+    <SYMBOL2 c="RGP" n="Ross Group Plc"/>
+    <SYMBOL2 c="RGR" n="Sturm Ruger & Company"/>
+    <SYMBOL2 c="RGS" n="Regis Corp"/>
+    <SYMBOL2 c="RGT" n="Royce Global Value Trust Inc"/>
+    <SYMBOL2 c="RH" n="Restoration Hardware Holdings"/>
+    <SYMBOL2 c="RHI" n="Robert Half International Inc"/>
+    <SYMBOL2 c="RHP" n="Gaylord Entertainment Company"/>
+    <SYMBOL2 c="RHT" n="Red Hat Inc"/>
+    <SYMBOL2 c="RICE" n="Rice Energy Inc."/>
+    <SYMBOL2 c="RIG" n="Transocean Inc"/>
+    <SYMBOL2 c="RIGP" n="Transocean Partners Llc"/>
+    <SYMBOL2 c="RIO" n="Rio Tinto Plc"/>
+    <SYMBOL2 c="RIOM" n="Rio Alto Mining Limited"/>
+    <SYMBOL2 c="RIT" n="Lmp Real Estate"/>
+    <SYMBOL2 c="RJD" n="Raymond James Financial Inc"/>
+    <SYMBOL2 c="RJF" n="Raymond James Financial"/>
+    <SYMBOL2 c="RKT" n="Rock-Tenn Company"/>
+    <SYMBOL2 c="RKUS" n="Ruckus Wireless Inc"/>
+    <SYMBOL2 c="RL" n="Ralph Lauren Corp"/>
+    <SYMBOL2 c="RLD" n="Reald Inc"/>
+    <SYMBOL2 c="RLGY" n="Realogy Holdings Corp"/>
+    <SYMBOL2 c="RLH" n="Westcoast Hospitality Corp"/>
+    <SYMBOL2 c="RLH-A" n="Red Lion Htls Cap TR"/>
+    <SYMBOL2 c="RLI" n="Rli Corp"/>
+    <SYMBOL2 c="RLJ" n="Rlj Lodging Trust"/>
+    <SYMBOL2 c="RM" n="Regional Managment Corp"/>
+    <SYMBOL2 c="RMAX" n="Re/Max Holdings Inc"/>
+    <SYMBOL2 c="RMD" n="Resmed Inc"/>
+    <SYMBOL2 c="RMT" n="Royce Micro-Cap Trust"/>
+    <SYMBOL2 c="RNDY" n="Roundy's Inc. Common Stock"/>
+    <SYMBOL2 c="RNE" n="Morgan Stanley East. Euro"/>
+    <SYMBOL2 c="RNF" n="Rentech Nitrogen Partners L.P"/>
+    <SYMBOL2 c="RNG" n="Ringcentral Inc"/>
+    <SYMBOL2 c="RNO" n="Rhino Resource Partners LP"/>
+    <SYMBOL2 c="RNP" n="Cohen & Steers REIT and Preferred"/>
+    <SYMBOL2 c="RNR" n="Renaissancere Holdings Ltd"/>
+    <SYMBOL2 c="RNR-C" n="Renaissancere 6.08 C"/>
+    <SYMBOL2 c="RNR-E" n="Renaissancere Holdings Ltd"/>
+    <SYMBOL2 c="ROC" n="Rockwood Holdings"/>
+    <SYMBOL2 c="ROG" n="Rogers Corp"/>
+    <SYMBOL2 c="ROK" n="Rockwell Automation Inc"/>
+    <SYMBOL2 c="ROL" n="Rollins"/>
+    <SYMBOL2 c="ROP" n="Roper Industries"/>
+    <SYMBOL2 c="ROYT" n="Pacific Coast Oil Trust"/>
+    <SYMBOL2 c="RPA-A" n="Retail Properties of America I"/>
+    <SYMBOL2 c="RPAI" n="Retail Properties of America"/>
+    <SYMBOL2 c="RPM" n="RPM International Inc"/>
+    <SYMBOL2 c="RPT" n="Ramco-Gershenson Properties Trust"/>
+    <SYMBOL2 c="RPT-D" n="Ramco-Gershenson Properties Tru"/>
+    <SYMBOL2 c="RQI" n="Cohen & Steers Quality Income Realty Fund Inc"/>
+    <SYMBOL2 c="RRC" n="Range Resources Corp"/>
+    <SYMBOL2 c="RRMS" n="Rose Rock Midstream L.P."/>
+    <SYMBOL2 c="RRTS" n="Roadrunner Transportation Systems Inc"/>
+    <SYMBOL2 c="RS" n="Reliance Steel & Aluminum Company"/>
+    <SYMBOL2 c="RSE" n="Rouse Properties Inc. Common S"/>
+    <SYMBOL2 c="RSG" n="Republic Services"/>
+    <SYMBOL2 c="RSH" n="Radioshack Corp"/>
+    <SYMBOL2 c="RSO" n="Resource Capital"/>
+    <SYMBOL2 c="RSO-A" n="Resource Capital Corp"/>
+    <SYMBOL2 c="RSO-B" n="Resource Capital Corp.8.25% Se"/>
+    <SYMBOL2 c="RSO-C" n="Resource Capital Corp. Preferre"/>
+    <SYMBOL2 c="RSPP" n="Rsp Permian Inc."/>
+    <SYMBOL2 c="RST" n="Rosetta Stone"/>
+    <SYMBOL2 c="RT" n="Ruby Tuesday"/>
+    <SYMBOL2 c="RTEC" n="Rudolph Technologies"/>
+    <SYMBOL2 c="RTI" n="Rti International Metals"/>
+    <SYMBOL2 c="RTN" n="Raytheon Company"/>
+    <SYMBOL2 c="RUBI" n="The Rubicon Project Inc."/>
+    <SYMBOL2 c="RUK" n="Reed Elsevier Plc"/>
+    <SYMBOL2 c="RVT" n="Royce Value Trust"/>
+    <SYMBOL2 c="RWT" n="Redwood Trust"/>
+    <SYMBOL2 c="RXN" n="Rexnord Corp"/>
+    <SYMBOL2 c="RY" n="Royal Bank of Canada"/>
+    <SYMBOL2 c="RYAM" n="Rayonier Advanced Materials Inc"/>
+    <SYMBOL2 c="RYI" n="Ryerson Holding Corp."/>
+    <SYMBOL2 c="RYL" n="Ryland Group"/>
+    <SYMBOL2 c="RYN" n="Rayonier Inc. REIT"/>
+    <SYMBOL2 c="RZA" n="Reinsurance Group of America I"/>
+    <SYMBOL2 c="S" n="Sprint Corporation"/>
+    <SYMBOL2 c="SA" n="Seabridge Gold"/>
+    <SYMBOL2 c="SAH" n="Sonic Automotive"/>
+    <SYMBOL2 c="SAIC" n="Science Applications Internatio"/>
+    <SYMBOL2 c="SALT" n="Scorpio Bulkers Inc. Common Sto"/>
+    <SYMBOL2 c="SAM" n="Boston Beer Company"/>
+    <SYMBOL2 c="SAN" n="Banco Santander"/>
+    <SYMBOL2 c="SAN-A" n="Banco Santander S.A. 6.80% Non"/>
+    <SYMBOL2 c="SAN-B" n="Santander Finance Preferred Sa"/>
+    <SYMBOL2 c="SAN-C" n="Banco Santander S.A. 6.50% Non"/>
+    <SYMBOL2 c="SAN-I" n="Banco Santander Central Hispano"/>
+    <SYMBOL2 c="SAP" n="SAP Ag"/>
+    <SYMBOL2 c="SAQ" n="Saratoga Investment Corp"/>
+    <SYMBOL2 c="SAR" n="Saratoga Investment Corp"/>
+    <SYMBOL2 c="SB" n="Safe Bulkers Inc"/>
+    <SYMBOL2 c="SB-B" n="Safe Bulkers Inc"/>
+    <SYMBOL2 c="SB-C" n="Safe Bulkers Inc."/>
+    <SYMBOL2 c="SB-D" n="Safe Bulkers Inc."/>
+    <SYMBOL2 c="SBGL" n="Sibanye Gold Limited American D"/>
+    <SYMBOL2 c="SBH" n="Sally Beauty Holdings"/>
+    <SYMBOL2 c="SBNA" n="Scorpio Tankers Inc."/>
+    <SYMBOL2 c="SBR" n="Sabine Royalty Trust"/>
+    <SYMBOL2 c="SBS" n="Cia De Saneamento Basico Do Estado"/>
+    <SYMBOL2 c="SBW" n="Western Asset Worldwide Income Fund Inc"/>
+    <SYMBOL2 c="SBY" n="Silver Bay Realty Trust Corp"/>
+    <SYMBOL2 c="SC" n="Santander Consumer USA Holdings"/>
+    <SYMBOL2 c="SCCO" n="Southern Peru Copper Corp"/>
+    <SYMBOL2 c="SCD" n="Lmp Capital and Income Fund Inc"/>
+    <SYMBOL2 c="SCE-F" n="Sce Trust I"/>
+    <SYMBOL2 c="SCE-G" n="Sce Trust II"/>
+    <SYMBOL2 c="SCE-H" n="Sce Trust III 5.75%"/>
+    <SYMBOL2 c="SCG" n="Scana Corp"/>
+    <SYMBOL2 c="SCH-B" n="Schwab Charles Corporation Depo"/>
+    <SYMBOL2 c="SCHW" n="The Charles Schwab Corp"/>
+    <SYMBOL2 c="SCI" n="Service Corporation International"/>
+    <SYMBOL2 c="SCL" n="Stepan Company"/>
+    <SYMBOL2 c="SCM" n="Stellus Capital Investment Cor"/>
+    <SYMBOL2 c="SCQ" n="Stellus Capital Investment Cor"/>
+    <SYMBOL2 c="SCS" n="Steelcase Inc"/>
+    <SYMBOL2 c="SCU" n="Scana Corp"/>
+    <SYMBOL2 c="SCX" n="L.S. Starrett Company"/>
+    <SYMBOL2 c="SD" n="Sandridge Energy Inc"/>
+    <SYMBOL2 c="SDLP" n="Seadrill Partners Llc"/>
+    <SYMBOL2 c="SDR" n="Sandridge Mississippian Trust"/>
+    <SYMBOL2 c="SDRL" n="Seadrill Limited"/>
+    <SYMBOL2 c="SDT" n="Sandridge Mississippian Trust I"/>
+    <SYMBOL2 c="SE" n="Spectra Energy Corp"/>
+    <SYMBOL2 c="SEAS" n="Seaworld Entertainment Inc. Co"/>
+    <SYMBOL2 c="SEE" n="Sealed Air Corp"/>
+    <SYMBOL2 c="SEM" n="Select Medical Holdings Corp"/>
+    <SYMBOL2 c="SEM.W" n="Select Medical Holdings Warrent"/>
+    <SYMBOL2 c="SEMG" n="Semgroup Corp"/>
+    <SYMBOL2 c="SEP" n="Spectra Energy Partners LP"/>
+    <SYMBOL2 c="SERV" n="Servicemaster Global Holdings I"/>
+    <SYMBOL2 c="SF" n="Stifel Financial Corp"/>
+    <SYMBOL2 c="SFB" n="Stifel Financial Corp.6.70% Se"/>
+    <SYMBOL2 c="SFE" n="Safeguard Scientifics"/>
+    <SYMBOL2 c="SFG" n="Stancorp Financial Group"/>
+    <SYMBOL2 c="SFL" n="Ship Finance International"/>
+    <SYMBOL2 c="SFN" n="Stifel Financial Corp"/>
+    <SYMBOL2 c="SFS" n="Smart"/>
+    <SYMBOL2 c="SFUN" n="Soufun Holdings"/>
+    <SYMBOL2 c="SFY" n="Swift Energy Company"/>
+    <SYMBOL2 c="SGF" n="Singapore Fund"/>
+    <SYMBOL2 c="SGL" n="Strategic Global"/>
+    <SYMBOL2 c="SGM" n="Stonegate Mortgage Corp"/>
+    <SYMBOL2 c="SGU" n="Star Gas Partners L.P."/>
+    <SYMBOL2 c="SGY" n="Stone Energy Corp"/>
+    <SYMBOL2 c="SGZA" n="Selective Insurance Group Inc"/>
+    <SYMBOL2 c="SHG" n="Shinhan Financial Group Co Ltd"/>
+    <SYMBOL2 c="SHI" n="Sinopec Shangai Petrochemical Company Ltd"/>
+    <SYMBOL2 c="SHLX" n="Shell Midstream Partners L.P."/>
+    <SYMBOL2 c="SHO" n="Sunstone Hotel Investors"/>
+    <SYMBOL2 c="SHO-D" n="Sunstone Hotel Investors Inc"/>
+    <SYMBOL2 c="SHW" n="Sherwin-Williams Company"/>
+    <SYMBOL2 c="SID" n="National Steel Corp"/>
+    <SYMBOL2 c="SIG" n="Signet Jewelers Limited"/>
+    <SYMBOL2 c="SIR" n="Select Income REIT Common Share"/>
+    <SYMBOL2 c="SIX" n="Six Flags Entertainment Corp"/>
+    <SYMBOL2 c="SJI" n="South Jersey Industries"/>
+    <SYMBOL2 c="SJM" n="J.M. Smucker Company"/>
+    <SYMBOL2 c="SJR" n="Shaw Communications Inc"/>
+    <SYMBOL2 c="SJT" n="San Juan Basin Royalty Trust"/>
+    <SYMBOL2 c="SJW" n="SJW Corp"/>
+    <SYMBOL2 c="SKH" n="Skilled Healthcare Group"/>
+    <SYMBOL2 c="SKM" n="Sk Telecom Corp"/>
+    <SYMBOL2 c="SKT" n="Tanger Factory Outlet Centers"/>
+    <SYMBOL2 c="SKX" n="Skechers U.S.A."/>
+    <SYMBOL2 c="SLB" n="Schlumberger N.V."/>
+    <SYMBOL2 c="SLCA" n="U.S. Silica Holdings Inc"/>
+    <SYMBOL2 c="SLF" n="Sun Life Financial Inc"/>
+    <SYMBOL2 c="SLG" n="SL Green Realty Corp"/>
+    <SYMBOL2 c="SLG-I" n="SL Green Realty Corp"/>
+    <SYMBOL2 c="SLH" n="Solera Holdings"/>
+    <SYMBOL2 c="SLRA" n="Solar Capital Ltd"/>
+    <SYMBOL2 c="SLTB" n="Scorpio Bulkers Inc. 7.50% Seni"/>
+    <SYMBOL2 c="SLW" n="Silver Wheaton Corp"/>
+    <SYMBOL2 c="SM" n="Sm Energy Company"/>
+    <SYMBOL2 c="SMA" n="Symmetry Medical Inc"/>
+    <SYMBOL2 c="SMF" n="Salient MLP and Energy Infrast"/>
+    <SYMBOL2 c="SMFG" n="Sumitomo Mitsui Financial Group Inc"/>
+    <SYMBOL2 c="SMG" n="Scotts Miracle-Gro Company"/>
+    <SYMBOL2 c="SMI" n="Semiconductor Manufacturing International"/>
+    <SYMBOL2 c="SMLP" n="Summit Midstream Partners LP"/>
+    <SYMBOL2 c="SMM" n="Salient Midstream & MLP Fund"/>
+    <SYMBOL2 c="SMP" n="Standard Motor Products"/>
+    <SYMBOL2 c="SN" n="Sanchez Energy Corp"/>
+    <SYMBOL2 c="SNA" n="Snap-On Inc"/>
+    <SYMBOL2 c="SNE" n="Sony Corp"/>
+    <SYMBOL2 c="SNH" n="Senior Housing Properties Trust"/>
+    <SYMBOL2 c="SNHN" n="Senior Housing Properties Trus"/>
+    <SYMBOL2 c="SNI" n="Scripps Networks Interactive Inc"/>
+    <SYMBOL2 c="SNN" n="Smith & Nephew Snats"/>
+    <SYMBOL2 c="SNOW" n="Intrawest Resorts Holdings Inc"/>
+    <SYMBOL2 c="SNP" n="China Petroleum & Chemical Corp"/>
+    <SYMBOL2 c="SNV" n="Synovus Financial Corp"/>
+    <SYMBOL2 c="SNV-C" n="Synovus Financial Corp. Fixed-"/>
+    <SYMBOL2 c="SNX" n="Synnex Corp"/>
+    <SYMBOL2 c="SNY" n="Sanofi-Aventis Sa"/>
+    <SYMBOL2 c="SO" n="Southern Company"/>
+    <SYMBOL2 c="SOL" n="Renesola Ltd"/>
+    <SYMBOL2 c="SON" n="Sonoco Products Company"/>
+    <SYMBOL2 c="SOR" n="Source Capital"/>
+    <SYMBOL2 c="SOV-C" n="Sovereign Banc Dep S"/>
+    <SYMBOL2 c="SPA" n="Sparton Corp"/>
+    <SYMBOL2 c="SPB" n="Spectrum Brands Holdings"/>
+    <SYMBOL2 c="SPE" n="Special Opportunities Fund Inc"/>
+    <SYMBOL2 c="SPF" n="Standard Pacific LP"/>
+    <SYMBOL2 c="SPG" n="Simon Property Group"/>
+    <SYMBOL2 c="SPG-J" n="Simon Prop Grp Pfd J"/>
+    <SYMBOL2 c="SPH" n="Suburban Propane Partners L.P."/>
+    <SYMBOL2 c="SPLP" n="Steel Partners Hldgs"/>
+    <SYMBOL2 c="SPN" n="Superior Energy Services"/>
+    <SYMBOL2 c="SPR" n="Spirit Aerosystems Holdings"/>
+    <SYMBOL2 c="SPW" n="SPX Corp"/>
+    <SYMBOL2 c="SQM" n="Sociedad Quimica Y Minera S.A."/>
+    <SYMBOL2 c="SQNS" n="Sequans Communications S A"/>
+    <SYMBOL2 c="SR" n="Standard Register Company"/>
+    <SYMBOL2 c="SRC" n="Spirit Realty Capital Inc"/>
+    <SYMBOL2 c="SRE" n="Sempra Energy"/>
+    <SYMBOL2 c="SRF" n="The Cushing Royalty & Income Fund"/>
+    <SYMBOL2 c="SRI" n="Stoneridge Inc"/>
+    <SYMBOL2 c="SRLP" n="Sprague Resources LP"/>
+    <SYMBOL2 c="SRT" n="Startek Inc"/>
+    <SYMBOL2 c="SRV" n="The Cushing MLP Total Return Fund"/>
+    <SYMBOL2 c="SSD" n="Simpson Manufacturing Company"/>
+    <SYMBOL2 c="SSE" n="Seventy Seven Energy Inc."/>
+    <SYMBOL2 c="SSI" n="Stage Stores"/>
+    <SYMBOL2 c="SSL" n="Sasol Ltd"/>
+    <SYMBOL2 c="SSLT" n="Sesa Goa Limited"/>
+    <SYMBOL2 c="SSNI" n="Silver Spring Networks Inc. Co"/>
+    <SYMBOL2 c="SSP" n="E.W. Scripps Company"/>
+    <SYMBOL2 c="SSS" n="Sovran Self Storage"/>
+    <SYMBOL2 c="SSTK" n="Shutterstock Inc"/>
+    <SYMBOL2 c="SSW" n="Seaspan Corp"/>
+    <SYMBOL2 c="SSW-C" n="Seaspan Corp"/>
+    <SYMBOL2 c="SSW-D" n="Seaspan Corp"/>
+    <SYMBOL2 c="SSW-E" n="Seaspan Corporation"/>
+    <SYMBOL2 c="SSWN" n="Seaspan Corporation"/>
+    <SYMBOL2 c="ST" n="Sensata Technologies Holding N.V."/>
+    <SYMBOL2 c="STA-A" n="Stag Industrial Inc. Preferred"/>
+    <SYMBOL2 c="STA-B" n="Stag Industrial Inc. Cum Pfd S"/>
+    <SYMBOL2 c="STA-D" n="Istar Financial Inc. Preferred"/>
+    <SYMBOL2 c="STA-E" n="Istar Financial Inc. 7.875% Pre"/>
+    <SYMBOL2 c="STA-F" n="Istar Financial Inc. Series F P"/>
+    <SYMBOL2 c="STA-G" n="Istar Financial Inc. Preferred"/>
+    <SYMBOL2 c="STA-I" n="Istar Financial Inc. Preferred"/>
+    <SYMBOL2 c="STAG" n="STI Inc"/>
+    <SYMBOL2 c="STAR" n="Istar Financial Inc"/>
+    <SYMBOL2 c="STAY" n="Extended Stay America Inc"/>
+    <SYMBOL2 c="STC" n="Stewart Information Services Corp"/>
+    <SYMBOL2 c="STE" n="Steris Corp"/>
+    <SYMBOL2 c="STI" n="Suntrust Banks"/>
+    <SYMBOL2 c="STI-A" n="Suntrust Bks Dep Sh"/>
+    <SYMBOL2 c="STI-E" n="Suntrust Banks Inc. Series E"/>
+    <SYMBOL2 c="STI.A" n="Suntrust Banks Inc Class A"/>
+    <SYMBOL2 c="STI.B" n="Suntrust Banks Inc Class B"/>
+    <SYMBOL2 c="STJ" n="St. Jude Medical"/>
+    <SYMBOL2 c="STK" n="Columbia Seligman Premium Technology"/>
+    <SYMBOL2 c="STL" n="Sterling Bancorp"/>
+    <SYMBOL2 c="STM" n="Stmicroelectronics N.V."/>
+    <SYMBOL2 c="STN" n="Stantec Inc"/>
+    <SYMBOL2 c="STNG" n="Scorpio Tankers Inc"/>
+    <SYMBOL2 c="STO" n="Statoil ASA"/>
+    <SYMBOL2 c="STON" n="Stonemor Partners L.P."/>
+    <SYMBOL2 c="STR" n="Questar Corp"/>
+    <SYMBOL2 c="STRI" n="Str Holdings Inc"/>
+    <SYMBOL2 c="STT" n="State Street Corp"/>
+    <SYMBOL2 c="STT-C" n="State Street Corporation Dep Sh"/>
+    <SYMBOL2 c="STT-D" n="State Street Corporation Serie"/>
+    <SYMBOL2 c="STV" n="China Digital TV Holding Co."/>
+    <SYMBOL2 c="STWD" n="Starwood Property Trust"/>
+    <SYMBOL2 c="STZ" n="Constellation Brands Inc"/>
+    <SYMBOL2 c="STZ.B" n="Constellation Brd B"/>
+    <SYMBOL2 c="SU" n="Suncor Energy Inc"/>
+    <SYMBOL2 c="SUI" n="Sun Communities"/>
+    <SYMBOL2 c="SUI-A" n="Sun Communities Inc"/>
+    <SYMBOL2 c="SUN" n="Sunoco L.P."/>
+    <SYMBOL2 c="SUNE" n="Sunedison Inc"/>
+    <SYMBOL2 c="SUP" n="Superior Industries International"/>
+    <SYMBOL2 c="SUSP" n="Susser Petroleum Partners LP"/>
+    <SYMBOL2 c="SVM" n="Silvercorp Metals Inc"/>
+    <SYMBOL2 c="SVU" n="Supervalu Inc"/>
+    <SYMBOL2 c="SWAY" n="Starwood Waypoint Residential T"/>
+    <SYMBOL2 c="SWC" n="Stillwater Mining Company"/>
+    <SYMBOL2 c="SWFT" n="Swift Transportation Company"/>
+    <SYMBOL2 c="SWH" n="Stanley Black & Decker Inc."/>
+    <SYMBOL2 c="SWI" n="Solarwinds Inc"/>
+    <SYMBOL2 c="SWJ" n="Stanley Black & Decker Inc"/>
+    <SYMBOL2 c="SWK" n="Stanley Black & Decker Inc"/>
+    <SYMBOL2 c="SWM" n="Schweitzer-Mauduit International"/>
+    <SYMBOL2 c="SWN" n="Southwestern Energy Company"/>
+    <SYMBOL2 c="SWS" n="SWS Group"/>
+    <SYMBOL2 c="SWU" n="Stanley Black & Decker Inc"/>
+    <SYMBOL2 c="SWX" n="Southwest Gas Corp"/>
+    <SYMBOL2 c="SWY" n="Safeway Inc"/>
+    <SYMBOL2 c="SWZ" n="Swiss Helvetia Fund"/>
+    <SYMBOL2 c="SXC" n="Suncoke Energy Inc"/>
+    <SYMBOL2 c="SXCP" n="Suncoke Energy Partners L.P."/>
+    <SYMBOL2 c="SXE" n="Southcross Energy Partners L."/>
+    <SYMBOL2 c="SXI" n="Standex International Corp"/>
+    <SYMBOL2 c="SXL" n="Sunoco Logistics Partners LP"/>
+    <SYMBOL2 c="SXT" n="Sensient Technologies Corp"/>
+    <SYMBOL2 c="SYA" n="Symetra Financial Corp"/>
+    <SYMBOL2 c="SYF" n="Synchrony Financial"/>
+    <SYMBOL2 c="SYK" n="Stryker Corp"/>
+    <SYMBOL2 c="SYT" n="Syngenta Ag"/>
+    <SYMBOL2 c="SYX" n="Systemax Inc"/>
+    <SYMBOL2 c="SYY" n="Sysco Corp"/>
+    <SYMBOL2 c="SZC" n="The Cushing Renaissance Fund"/>
+    <SYMBOL2 c="T" n="AT&T Inc"/>
+    <SYMBOL2 c="TA" n="Travelcenters of America Llc"/>
+    <SYMBOL2 c="TAC" n="Transalta Corp"/>
+    <SYMBOL2 c="TAHO" n="Tahoe Res Inc"/>
+    <SYMBOL2 c="TAI" n="Transamerica Income Shares"/>
+    <SYMBOL2 c="TAL" n="Tal International Group"/>
+    <SYMBOL2 c="TAM" n="Taminco Corporation Common Stoc"/>
+    <SYMBOL2 c="TANN" n="Travelcenters of America Llc 8."/>
+    <SYMBOL2 c="TAOM" n="Taomee Holdings Limited"/>
+    <SYMBOL2 c="TAP" n="Molson Coors Brewing Company"/>
+    <SYMBOL2 c="TAP.A" n="Molson Coors Brewing Company"/>
+    <SYMBOL2 c="TARO" n="Taro Pharm Inds"/>
+    <SYMBOL2 c="TBI" n="Trueblue Inc"/>
+    <SYMBOL2 c="TC" n="Thompson Creek Metals Company Inc"/>
+    <SYMBOL2 c="TCAP" n="Triangle Capital Corp"/>
+    <SYMBOL2 c="TCB" n="TCF Financial Corp"/>
+    <SYMBOL2 c="TCB-B" n="TCF Financial Corp"/>
+    <SYMBOL2 c="TCB-C" n="TCF Financial Corp"/>
+    <SYMBOL2 c="TCB.W" n="TCF Financial Corp"/>
+    <SYMBOL2 c="TCC" n="Triangle Capital Coproration"/>
+    <SYMBOL2 c="TCCA" n="Triangle Capital Corp"/>
+    <SYMBOL2 c="TCI" n="Transcontinental Realty Investors"/>
+    <SYMBOL2 c="TCK" n="Teck Resources Ltd"/>
+    <SYMBOL2 c="TCO" n="Taubman Centers"/>
+    <SYMBOL2 c="TCO-J" n="Taubman Centers Inc Preferred"/>
+    <SYMBOL2 c="TCO-K" n="Taubman Centers Inc"/>
+    <SYMBOL2 c="TCP" n="Trident Performance Group"/>
+    <SYMBOL2 c="TCPI" n="TCP International Holdings Ltd."/>
+    <SYMBOL2 c="TCS" n="The Container Store Group Inc"/>
+    <SYMBOL2 c="TD" n="Toronto Dominion Bank"/>
+    <SYMBOL2 c="TDA" n="Telephone and Data Systems Inc"/>
+    <SYMBOL2 c="TDC" n="Teradata Corp"/>
+    <SYMBOL2 c="TDE" n="Telephone and Data Systems"/>
+    <SYMBOL2 c="TDF" n="Templeton Dragon Fund"/>
+    <SYMBOL2 c="TDG" n="Transdigm Group Inc"/>
+    <SYMBOL2 c="TDI" n="Telephone and Data Systems"/>
+    <SYMBOL2 c="TDJ" n="Telephone and Data Systems Inc"/>
+    <SYMBOL2 c="TDS" n="Telephone and Data Systems"/>
+    <SYMBOL2 c="TDW" n="Tidewater Inc"/>
+    <SYMBOL2 c="TDY" n="Teledyne Technologies Inc"/>
+    <SYMBOL2 c="TE" n="Teco Energy"/>
+    <SYMBOL2 c="TEF" n="Telefonica Sa"/>
+    <SYMBOL2 c="TEG" n="Integrys Energy Group"/>
+    <SYMBOL2 c="TEI" n="Templeton Emerging Markets"/>
+    <SYMBOL2 c="TEL" n="Te Connectivity Ltd"/>
+    <SYMBOL2 c="TEN" n="Tenneco Automotive"/>
+    <SYMBOL2 c="TEO" n="Telecom Argentina Stet - France Telecom S.A."/>
+    <SYMBOL2 c="TEP" n="Tallgrass Energy Partners LP"/>
+    <SYMBOL2 c="TER" n="Teradyne Inc"/>
+    <SYMBOL2 c="TEU" n="Box Ships Inc"/>
+    <SYMBOL2 c="TEU-C" n="Box Ships Inc"/>
+    <SYMBOL2 c="TEVA" n="Teva Pharmaceutical Industries Ltd"/>
+    <SYMBOL2 c="TEX" n="Terex Corp"/>
+    <SYMBOL2 c="TFG" n="Fixed Income Trust For Goldman"/>
+    <SYMBOL2 c="TFX" n="Teleflex Inc"/>
+    <SYMBOL2 c="TG" n="Tredegar Corp"/>
+    <SYMBOL2 c="TGH" n="Textainer Group Holdings"/>
+    <SYMBOL2 c="TGI" n="Triumph Group"/>
+    <SYMBOL2 c="TGP" n="Teekay Lng Partners L.P."/>
+    <SYMBOL2 c="TGS" n="Transportadora De Gas Sa Ord B"/>
+    <SYMBOL2 c="TGT" n="Target Corp"/>
+    <SYMBOL2 c="THC" n="Tenet Healthcare Corp"/>
+    <SYMBOL2 c="THG" n="The Hanover Insurance Group"/>
+    <SYMBOL2 c="THGA" n="The Hanover Insurance Group I"/>
+    <SYMBOL2 c="THI" n="Tim Hortons Inc"/>
+    <SYMBOL2 c="THO" n="Thor Industries"/>
+    <SYMBOL2 c="THQ" n="Tekla Healthcare Opportunities"/>
+    <SYMBOL2 c="THR" n="Thermon Group Holdings Inc"/>
+    <SYMBOL2 c="THS" n="Treehouse Foods"/>
+    <SYMBOL2 c="TI" n="Telecom Italia S.P.A."/>
+    <SYMBOL2 c="TI.A" n="Telecom Italia S.P.A."/>
+    <SYMBOL2 c="TIF" n="Tiffany & Co."/>
+    <SYMBOL2 c="TIME" n="Time Inc. Common Stock When Iss"/>
+    <SYMBOL2 c="TISI" n="Team Inc"/>
+    <SYMBOL2 c="TJX" n="Tjx Companies"/>
+    <SYMBOL2 c="TK" n="Teekay Shipping Corp"/>
+    <SYMBOL2 c="TKC" n="Turkcell Iletisim Hizmetleri As"/>
+    <SYMBOL2 c="TKF" n="Turkish Investment Fund"/>
+    <SYMBOL2 c="TKR" n="Timken Company"/>
+    <SYMBOL2 c="TLI" n="Lmp Corporate Loan Fund Inc"/>
+    <SYMBOL2 c="TLK" n="P.T. Telekomunikasi Indonesia Tbk."/>
+    <SYMBOL2 c="TLLP" n="Tesoro Logistics LP Common Unit"/>
+    <SYMBOL2 c="TLM" n="Talisman Energy Inc"/>
+    <SYMBOL2 c="TLP" n="Transmontaigne Partners L.P."/>
+    <SYMBOL2 c="TLYS" n="Tilly's Inc"/>
+    <SYMBOL2 c="TM" n="Toyota Motor Corp Ltd Ord"/>
+    <SYMBOL2 c="TMH" n="Team Health Holdings"/>
+    <SYMBOL2 c="TMHC" n="Taylor Morrison Home Corporatio"/>
+    <SYMBOL2 c="TMK" n="Torchmark Corp"/>
+    <SYMBOL2 c="TMK-B" n="Torchmark Corp"/>
+    <SYMBOL2 c="TMO" n="Thermo Fisher Scientific Inc"/>
+    <SYMBOL2 c="TMST" n="Timken Steel Corporation Common"/>
+    <SYMBOL2 c="TMUS" n="T-Mobile US Inc"/>
+    <SYMBOL2 c="TNC" n="Tennant Company"/>
+    <SYMBOL2 c="TNET" n="Trinet Group Inc"/>
+    <SYMBOL2 c="TNH" n="Terra Nitrogen Company L.P."/>
+    <SYMBOL2 c="TNK" n="Teekay Tankers Ltd"/>
+    <SYMBOL2 c="TNP" n="Tsakos Energy Navigation Ltd"/>
+    <SYMBOL2 c="TNP-B" n="Tsakos Energy Navigation Limit"/>
+    <SYMBOL2 c="TNP-C" n="Tsakos Energy Navigation Limit"/>
+    <SYMBOL2 c="TOL" n="Toll Brothers Inc"/>
+    <SYMBOL2 c="TOO" n="Teekay Offshore Partners L.P."/>
+    <SYMBOL2 c="TOO-A" n="Teekay Offshore Partners L.P."/>
+    <SYMBOL2 c="TOT" n="Totalfinaelf S.A."/>
+    <SYMBOL2 c="TOWR" n="Tower International"/>
+    <SYMBOL2 c="TPC" n="Tutor Perini Corp"/>
+    <SYMBOL2 c="TPH" n="Tri Pointe Homes Inc. Common S"/>
+    <SYMBOL2 c="TPL" n="Texas Pacific Land Trust"/>
+    <SYMBOL2 c="TPRE" n="Third Point Reinsurance Ltd. Co"/>
+    <SYMBOL2 c="TPUB" n="Tribune Publishing Company Comm"/>
+    <SYMBOL2 c="TPVG" n="Triplepoint Venture Growth Bdc"/>
+    <SYMBOL2 c="TPX" n="Tempur-Pedic International Inc"/>
+    <SYMBOL2 c="TPZ" n="Tortoise Power and Energy"/>
+    <SYMBOL2 c="TR" n="Tootsie Roll Industries"/>
+    <SYMBOL2 c="TRC" n="Tejon Ranch Company"/>
+    <SYMBOL2 c="TREC" n="Trecora Resources"/>
+    <SYMBOL2 c="TREX" n="Trex Company"/>
+    <SYMBOL2 c="TRF" n="Templeton Russia Fund"/>
+    <SYMBOL2 c="TRGP" n="Targa Resources"/>
+    <SYMBOL2 c="TRI" n="Thomson Reuters Corp"/>
+    <SYMBOL2 c="TRK" n="Speedway Motorsports"/>
+    <SYMBOL2 c="TRLA" n="Trulia Inc"/>
+    <SYMBOL2 c="TRMR" n="Tremor Video Inc"/>
+    <SYMBOL2 c="TRN" n="Trinity Industries"/>
+    <SYMBOL2 c="TRN-A" n="Terreno Realty Corporation Pref"/>
+    <SYMBOL2 c="TRNO" n="Terreno Realty Corp"/>
+    <SYMBOL2 c="TROX" n="Tronox Inc"/>
+    <SYMBOL2 c="TRP" n="Transcananda Pipelines"/>
+    <SYMBOL2 c="TRQ" n="Turquoise Hill Resources Ltd"/>
+    <SYMBOL2 c="TRR" n="Trc Companies"/>
+    <SYMBOL2 c="TRUP" n="Trupanion Inc."/>
+    <SYMBOL2 c="TRV" n="The Travelers Companies Inc"/>
+    <SYMBOL2 c="TRW" n="Trw Automotive Holdings Corp"/>
+    <SYMBOL2 c="TS" n="Tenaris S.A."/>
+    <SYMBOL2 c="TSE" n="Trinseo S.A."/>
+    <SYMBOL2 c="TSI" n="Tcw Strategic"/>
+    <SYMBOL2 c="TSL" n="Trina Solar Limited"/>
+    <SYMBOL2 c="TSLF" n="THL Credit Senior Loan Fund"/>
+    <SYMBOL2 c="TSLX" n="Tpg Specialty Lending Inc"/>
+    <SYMBOL2 c="TSM" n="Taiwan Semiconductor Manufacturing"/>
+    <SYMBOL2 c="TSN" n="Tyson Foods"/>
+    <SYMBOL2 c="TSNU" n="Tyson Foods Inc"/>
+    <SYMBOL2 c="TSO" n="Tesoro Petroleum Corp"/>
+    <SYMBOL2 c="TSQ" n="Townsquare Media Llc"/>
+    <SYMBOL2 c="TSS" n="Total System Services"/>
+    <SYMBOL2 c="TSU" n="Tim Participacoes S.A."/>
+    <SYMBOL2 c="TTC" n="Toro Company"/>
+    <SYMBOL2 c="TTF" n="Thai Fund"/>
+    <SYMBOL2 c="TTI" n="Tetra Technologies"/>
+    <SYMBOL2 c="TTM" n="Tata Motors Ltd"/>
+    <SYMBOL2 c="TTP" n="Tortoise Pipeline & Energy Fund"/>
+    <SYMBOL2 c="TU" n="Telus Corp. Non Voting Shares"/>
+    <SYMBOL2 c="TUMI" n="Tumi Holdings Inc"/>
+    <SYMBOL2 c="TUP" n="Tupperware Corp"/>
+    <SYMBOL2 c="TV" n="Grupo Televisa S.A."/>
+    <SYMBOL2 c="TVC" n="Tennessee Valley Authority"/>
+    <SYMBOL2 c="TVE" n="Tennessee Valley Authority"/>
+    <SYMBOL2 c="TVPT" n="Travelport Worldwide Ltd"/>
+    <SYMBOL2 c="TW" n="Towers Watson & Co"/>
+    <SYMBOL2 c="TWC" n="Time Warner Cable Inc"/>
+    <SYMBOL2 c="TWI" n="Titan International"/>
+    <SYMBOL2 c="TWN" n="Taiwan Fund"/>
+    <SYMBOL2 c="TWO" n="Two Harbors Investments Corp"/>
+    <SYMBOL2 c="TWTR" n="Twitter Inc"/>
+    <SYMBOL2 c="TWX" n="Time Warner Inc"/>
+    <SYMBOL2 c="TX" n="Ternium S.A."/>
+    <SYMBOL2 c="TXT" n="Textron Inc"/>
+    <SYMBOL2 c="TXTR" n="Textura Corp"/>
+    <SYMBOL2 c="TY" n="Tri Continental Corp"/>
+    <SYMBOL2 c="TY.P" n="Tri Contl Cp 2.50 Pr"/>
+    <SYMBOL2 c="TYC" n="Tyco International Ltd"/>
+    <SYMBOL2 c="TYG" n="Tortoise Energy Infrastructure Corp"/>
+    <SYMBOL2 c="TYG-B" n="Tortoise Energy Infrastructure"/>
+    <SYMBOL2 c="TYG-C" n="Tortoise Energy Infrastructure"/>
+    <SYMBOL2 c="TYL" n="Tyler Technologies"/>
+    <SYMBOL2 c="TZF" n="Bear Stearns Depositor"/>
+    <SYMBOL2 c="UA" n="Under Armour"/>
+    <SYMBOL2 c="UAL" n="United Continental Holdings"/>
+    <SYMBOL2 c="UAM" n="Universal American Financial"/>
+    <SYMBOL2 c="UAN" n="Cvr Partners LP Common Units R"/>
+    <SYMBOL2 c="UBA" n="Urstadt Biddle Properties Inc"/>
+    <SYMBOL2 c="UBP" n="Urstadt Biddle Properties Inc"/>
+    <SYMBOL2 c="UBP-D" n="Urstadt Biddle Prf D"/>
+    <SYMBOL2 c="UBP-F" n="Privatebancorp Inc"/>
+    <SYMBOL2 c="UBP-G" n="Urstadt Biddle Properties Inc."/>
+    <SYMBOL2 c="UBS" n="UBS Ag"/>
+    <SYMBOL2 c="UBS-D" n="UBS Pfd Fndg TR IV"/>
+    <SYMBOL2 c="UCP" n="Ucp. Inc"/>
+    <SYMBOL2 c="UDR" n="United Dominion Realty Trust"/>
+    <SYMBOL2 c="UFI" n="Unifi Inc"/>
+    <SYMBOL2 c="UFS" n="Domtar Corp"/>
+    <SYMBOL2 c="UGI" n="Ugi Corp"/>
+    <SYMBOL2 c="UGP" n="Ultrapar Participacoes S.A."/>
+    <SYMBOL2 c="UHS" n="Universal Health Services"/>
+    <SYMBOL2 c="UHT" n="Universal Health Realty Income Trust"/>
+    <SYMBOL2 c="UIL" n="Uil Holdings Corp"/>
+    <SYMBOL2 c="UIS" n="Unisys Corp"/>
+    <SYMBOL2 c="UL" n="Unilever Plc"/>
+    <SYMBOL2 c="UMC" n="United Microelectronics Corp"/>
+    <SYMBOL2 c="UMH" n="Umh Properties"/>
+    <SYMBOL2 c="UMH-A" n="Umh Properties Inc. 8.25% Seri"/>
+    <SYMBOL2 c="UN" n="Unilever Nv"/>
+    <SYMBOL2 c="UNF" n="Unifirst Corp"/>
+    <SYMBOL2 c="UNH" n="Unitedhealth Group Inc"/>
+    <SYMBOL2 c="UNM" n="Unumprovident Corp"/>
+    <SYMBOL2 c="UNP" n="Union Pacific Corp"/>
+    <SYMBOL2 c="UNT" n="Unit Corp"/>
+    <SYMBOL2 c="UPL" n="Ultra Petroleum"/>
+    <SYMBOL2 c="UPS" n="United Parcel Service"/>
+    <SYMBOL2 c="URI" n="United Rentals"/>
+    <SYMBOL2 c="URS" n="Urs Corp"/>
+    <SYMBOL2 c="USA" n="Liberty All-Star Equity Fund"/>
+    <SYMBOL2 c="USAC" n="USA Compression Partners LP"/>
+    <SYMBOL2 c="USB" n="U.S. Bancorp"/>
+    <SYMBOL2 c="USB-A" n="U.S. Bancorp Depositary Shares"/>
+    <SYMBOL2 c="USB-H" n="U.S. Bancorp Dep Sh"/>
+    <SYMBOL2 c="USB-M" n="U.S. Bancorp"/>
+    <SYMBOL2 c="USB-N" n="U.S. Bancorp"/>
+    <SYMBOL2 c="USB-O" n="U.S. Bancorp"/>
+    <SYMBOL2 c="USDP" n="USD Partners LP"/>
+    <SYMBOL2 c="USG" n="USG Corp"/>
+    <SYMBOL2 c="USM" n="United States Cellular Corp"/>
+    <SYMBOL2 c="USNA" n="Usana Health Sciences Inc"/>
+    <SYMBOL2 c="USPH" n="U.S. Physical Therapy"/>
+    <SYMBOL2 c="UTF" n="Cohen & Steers Infrastructure Fund"/>
+    <SYMBOL2 c="UTI" n="Universal Technical Institute Inc"/>
+    <SYMBOL2 c="UTL" n="Unitil Corp"/>
+    <SYMBOL2 c="UTX" n="United Technologies Corp"/>
+    <SYMBOL2 c="UTX-A" n="United Technologies Corporatio"/>
+    <SYMBOL2 c="UVE" n="Universal Insurance Holdings Inc"/>
+    <SYMBOL2 c="UVV" n="Universal Corp"/>
+    <SYMBOL2 c="UZA" n="United States Cellular Corp"/>
+    <SYMBOL2 c="V" n="Visa Inc"/>
+    <SYMBOL2 c="VAC" n="Marriot Vacations Worldwide Cor"/>
+    <SYMBOL2 c="VAL" n="Valspar Corp"/>
+    <SYMBOL2 c="VAL.P" n="Vale S.A."/>
+    <SYMBOL2 c="VALE" n="Vale S.A."/>
+    <SYMBOL2 c="VAR" n="Varian Medical Systems"/>
+    <SYMBOL2 c="VBF" n="Invesco Van Kampen Bond Fund"/>
+    <SYMBOL2 c="VC" n="Visteon Corp"/>
+    <SYMBOL2 c="VCO" n="Vina Concha Y Toro"/>
+    <SYMBOL2 c="VCRA" n="Vocera Communications Inc"/>
+    <SYMBOL2 c="VCV" n="Invesco California Value Muni Income Trust"/>
+    <SYMBOL2 c="VE" n="Veolia Environnement"/>
+    <SYMBOL2 c="VEC" n="Vectrus Inc. Common Stock"/>
+    <SYMBOL2 c="VEEV" n="Veeva Systems Inc"/>
+    <SYMBOL2 c="VEL-E" n="Virginia El 5.00 10"/>
+    <SYMBOL2 c="VET" n="Vermilion Energy Inc"/>
+    <SYMBOL2 c="VFC" n="V.F. Corp"/>
+    <SYMBOL2 c="VG" n="Vonage Holdings"/>
+    <SYMBOL2 c="VGI" n="Virtus Global Multi-Sector Inc"/>
+    <SYMBOL2 c="VGM" n="Invesco Trust For Investment Grade Municipals"/>
+    <SYMBOL2 c="VGR" n="Vector Group Ltd"/>
+    <SYMBOL2 c="VHI" n="Valhi Inc"/>
+    <SYMBOL2 c="VIPS" n="Vipshop Holdings Limited"/>
+    <SYMBOL2 c="VIV" n="Telecomunicacoes De Sao Paulo S/A Ads"/>
+    <SYMBOL2 c="VJET" n="Voxeljet Ag"/>
+    <SYMBOL2 c="VKQ" n="Invesco Muni Trust"/>
+    <SYMBOL2 c="VLO" n="Valero Energy Corp"/>
+    <SYMBOL2 c="VLP" n="Valero Energy Partners LP"/>
+    <SYMBOL2 c="VLRS" n="Controladora Vuela Compaia De"/>
+    <SYMBOL2 c="VLT" n="Invesco High"/>
+    <SYMBOL2 c="VLY" n="Valley National Bancorp"/>
+    <SYMBOL2 c="VLY.W" n="Valley National Bancorp"/>
+    <SYMBOL2 c="VMC" n="Vulcan Materials Company"/>
+    <SYMBOL2 c="VMEM" n="Violin Memory Inc"/>
+    <SYMBOL2 c="VMI" n="Valmont Industries"/>
+    <SYMBOL2 c="VMO" n="Invesco Muni Opportunity Trust"/>
+    <SYMBOL2 c="VMW" n="Vmware Inc"/>
+    <SYMBOL2 c="VNCE" n="Vince Holding Corp. Common Stoc"/>
+    <SYMBOL2 c="VNO" n="Vornado Realty Trust"/>
+    <SYMBOL2 c="VNO-G" n="Vornado Rlty Pfd G"/>
+    <SYMBOL2 c="VNO-I" n="Vornado Rlty Pfd I"/>
+    <SYMBOL2 c="VNO-J" n="Vornado Realty Trust Pfd Cumula"/>
+    <SYMBOL2 c="VNO-K" n="Vornado Realty Trust"/>
+    <SYMBOL2 c="VNO-L" n="Vornado Realty Trust"/>
+    <SYMBOL2 c="VNTV" n="Vantiv Inc"/>
+    <SYMBOL2 c="VOC" n="Voc Energy Trust"/>
+    <SYMBOL2 c="VOYA" n="ING US Inc"/>
+    <SYMBOL2 c="VPG" n="Vishay Precision Group"/>
+    <SYMBOL2 c="VPV" n="Invesco Pennsylvania Muni"/>
+    <SYMBOL2 c="VR" n="Validus Holdings"/>
+    <SYMBOL2 c="VRS" n="Verso Paper"/>
+    <SYMBOL2 c="VRTV" n="Veritiv Corporation Common Stoc"/>
+    <SYMBOL2 c="VRX" n="Valeant Pharmaceuticals International"/>
+    <SYMBOL2 c="VSH" n="Vishay Intertechnology"/>
+    <SYMBOL2 c="VSI" n="Vitamin Shoppe Inc"/>
+    <SYMBOL2 c="VSLR" n="Vivint Solar Inc."/>
+    <SYMBOL2 c="VTA" n="Invesco Dynamic Credit Fund"/>
+    <SYMBOL2 c="VTN" n="Invesco Trust New York Muni"/>
+    <SYMBOL2 c="VTR" n="Ventas Inc"/>
+    <SYMBOL2 c="VTRB" n="Ventas Realty Limited Partner"/>
+    <SYMBOL2 c="VTTI" n="Vtti Energy Partners LP"/>
+    <SYMBOL2 c="VVC" n="Vectren Corp"/>
+    <SYMBOL2 c="VVI" n="Viad Corp"/>
+    <SYMBOL2 c="VVR" n="Invesco Senior Income Trust"/>
+    <SYMBOL2 c="VZ" n="Verizon Communications Inc"/>
+    <SYMBOL2 c="VZA" n="Verizon Communications Inc. 5.9"/>
+    <SYMBOL2 c="W" n="Wayfair Inc."/>
+    <SYMBOL2 c="WAB" n="Wabtec Corp"/>
+    <SYMBOL2 c="WAC" n="Walter Investment Management Corp"/>
+    <SYMBOL2 c="WAG" n="Walgreen Company"/>
+    <SYMBOL2 c="WAGE" n="Wageworks Inc"/>
+    <SYMBOL2 c="WAIR" n="Wesco Aircraft Holdings Inc"/>
+    <SYMBOL2 c="WAL" n="Western Alliance Bancorporation"/>
+    <SYMBOL2 c="WAT" n="Waters Corp"/>
+    <SYMBOL2 c="WBAI" n="500Wan.Com Limited"/>
+    <SYMBOL2 c="WBC" n="Wabco Holdings Inc"/>
+    <SYMBOL2 c="WBK" n="Westpac Banking Corp"/>
+    <SYMBOL2 c="WBS" n="Webster Financial Corp"/>
+    <SYMBOL2 c="WBS-E" n="Webster Financial Corp"/>
+    <SYMBOL2 c="WBS.W" n="Webster Financial Corp"/>
+    <SYMBOL2 c="WCC" n="Wesco International"/>
+    <SYMBOL2 c="WCG" n="Wellcare Group"/>
+    <SYMBOL2 c="WCIC" n="Wci Communities Inc"/>
+    <SYMBOL2 c="WCN" n="Waste Connections Inc"/>
+    <SYMBOL2 c="WD" n="Walker & Dunlop"/>
+    <SYMBOL2 c="WDAY" n="Workday Inc"/>
+    <SYMBOL2 c="WDR" n="Waddell & Reed Financial"/>
+    <SYMBOL2 c="WEA" n="Western Asset Bond Fund"/>
+    <SYMBOL2 c="WEC" n="Wisconsin Energy Corp"/>
+    <SYMBOL2 c="WES" n="Western Gas Partners LP"/>
+    <SYMBOL2 c="WEX" n="Wex Inc"/>
+    <SYMBOL2 c="WF" n="Woori Finance Holdings Co Ltd"/>
+    <SYMBOL2 c="WFC" n="Wells Fargo & Company"/>
+    <SYMBOL2 c="WFC-J" n="Wells Fargo Pfd J"/>
+    <SYMBOL2 c="WFC-L" n="Wells Fargo Pfd L"/>
+    <SYMBOL2 c="WFC-N" n="Wells Fargo & Company Dep Shs R"/>
+    <SYMBOL2 c="WFC-O" n="Wells Fargo & Company"/>
+    <SYMBOL2 c="WFC-P" n="Wells Fargo & Company Ser P"/>
+    <SYMBOL2 c="WFC-Q" n="Wells Fargo & Co."/>
+    <SYMBOL2 c="WFC-R" n="Wells Fargo"/>
+    <SYMBOL2 c="WFC-T" n="Wells Fargo & Company Series T"/>
+    <SYMBOL2 c="WFC.W" n="Wells Fargo and Co"/>
+    <SYMBOL2 c="WFT" n="Weatherford International Ltd"/>
+    <SYMBOL2 c="WG" n="Willbros Group"/>
+    <SYMBOL2 c="WGL" n="WGL Holdings Inc"/>
+    <SYMBOL2 c="WGO" n="Winnebago Industries"/>
+    <SYMBOL2 c="WGP" n="Western Gas Eqty Partners LP"/>
+    <SYMBOL2 c="WHG" n="Westwood Holdings Group Inc"/>
+    <SYMBOL2 c="WHR" n="Whirlpool Corp"/>
+    <SYMBOL2 c="WHX" n="Whiting USA Trust I"/>
+    <SYMBOL2 c="WHZ" n="Whiting USA Trust II"/>
+    <SYMBOL2 c="WIA" n="U.S. Treasury Inflation Prot Secs Fd"/>
+    <SYMBOL2 c="WIT" n="Wipro Limited"/>
+    <SYMBOL2 c="WIW" n="U.S Treasury Inflation Prot Secs Fd 2"/>
+    <SYMBOL2 c="WLH" n="William Lyon Homes"/>
+    <SYMBOL2 c="WLK" n="Westlake Chemical Corp"/>
+    <SYMBOL2 c="WLKP" n="Westlake Chemical Partners LP"/>
+    <SYMBOL2 c="WLL" n="Whiting Petroleum Corp"/>
+    <SYMBOL2 c="WLP" n="Wellpoint Health Networks Inc"/>
+    <SYMBOL2 c="WLT" n="Walter Energy"/>
+    <SYMBOL2 c="WM" n="Waste Management"/>
+    <SYMBOL2 c="WMB" n="Williams Companies"/>
+    <SYMBOL2 c="WMC" n="Western Asset Mortgage Capital"/>
+    <SYMBOL2 c="WMK" n="Weis Markets"/>
+    <SYMBOL2 c="WMS" n="Advanced Drainage Systems Inc."/>
+    <SYMBOL2 c="WMT" n="Wal-Mart Stores"/>
+    <SYMBOL2 c="WNC" n="Wabash National Corp"/>
+    <SYMBOL2 c="WNR" n="Western Refining"/>
+    <SYMBOL2 c="WNRL" n="Western Refining Logistics LP"/>
+    <SYMBOL2 c="WNS" n="Wns Limited"/>
+    <SYMBOL2 c="WOR" n="Worthington Industries"/>
+    <SYMBOL2 c="WPC" n="W.P. Carey & Co. Llc"/>
+    <SYMBOL2 c="WPG" n="Washington Prime Group Inc. Com"/>
+    <SYMBOL2 c="WPP" n="Wausau-Mosinee Paper Corp"/>
+    <SYMBOL2 c="WPT" n="World Point Terminals LP"/>
+    <SYMBOL2 c="WPX" n="Wpx Energy Inc. Common Stock W"/>
+    <SYMBOL2 c="WPZ" n="Williams Partners L.P."/>
+    <SYMBOL2 c="WR" n="Westar Energy"/>
+    <SYMBOL2 c="WRB" n="W.R. Berkley Corp"/>
+    <SYMBOL2 c="WRB-B" n="W.R. Berkley Corp"/>
+    <SYMBOL2 c="WRE" n="Washington Real Estate Investment"/>
+    <SYMBOL2 c="WRI" n="Weingarten Realty Investors"/>
+    <SYMBOL2 c="WRI-F" n="Weingarten Dep Shs"/>
+    <SYMBOL2 c="WRT" n="Winthrop Realty Trust 7.75% Sen"/>
+    <SYMBOL2 c="WSH" n="Willis Group Holdings"/>
+    <SYMBOL2 c="WSM" n="Williams-Sonoma"/>
+    <SYMBOL2 c="WSO" n="Watsco Inc"/>
+    <SYMBOL2 c="WSO.B" n="Watsco Inc Cl B"/>
+    <SYMBOL2 c="WSR" n="Whitestone REIT"/>
+    <SYMBOL2 c="WST" n="West Pharmaceutical Services"/>
+    <SYMBOL2 c="WTI" n="W&T Offshore"/>
+    <SYMBOL2 c="WTM" n="White Mountains Insurance Group"/>
+    <SYMBOL2 c="WTR" n="Aqua America"/>
+    <SYMBOL2 c="WTS" n="Watts Water Technologies"/>
+    <SYMBOL2 c="WTW" n="Weight Watchers International Inc"/>
+    <SYMBOL2 c="WU" n="Western Union Company"/>
+    <SYMBOL2 c="WUBA" n="58.Com Inc"/>
+    <SYMBOL2 c="WWAV" n="The Whitewave Foods Company"/>
+    <SYMBOL2 c="WWE" n="World Wrestling Entertainment"/>
+    <SYMBOL2 c="WWW" n="Wolverine World Wide"/>
+    <SYMBOL2 c="WX" n="Wuxi Pharmatech [Cayman] Inc"/>
+    <SYMBOL2 c="WY" n="Weyerhaeuser Company"/>
+    <SYMBOL2 c="WY-A" n="Weyerhaeuser Co."/>
+    <SYMBOL2 c="WYN" n="Wyndham Worldwide Corp"/>
+    <SYMBOL2 c="X" n="United States Steel Corp"/>
+    <SYMBOL2 c="XAA" n="American Muni Income Portfolio"/>
+    <SYMBOL2 c="XCO" n="Exco Resources NL"/>
+    <SYMBOL2 c="XEC" n="Cimarex Energy Co"/>
+    <SYMBOL2 c="XEL" n="Xcel Energy Inc"/>
+    <SYMBOL2 c="XIN" n="Xinyuan Real Estate Co Ltd"/>
+    <SYMBOL2 c="XKE" n="Lehman Abs Corp"/>
+    <SYMBOL2 c="XL" n="XL Company Switzerland Gmbh"/>
+    <SYMBOL2 c="XLS" n="Exelis Inc. Common Stock New Wh"/>
+    <SYMBOL2 c="XNY" n="China Xiniya Fashion"/>
+    <SYMBOL2 c="XOM" n="Exxon Mobil Corp"/>
+    <SYMBOL2 c="XON" n="Intrexon Corp"/>
+    <SYMBOL2 c="XOXO" n="Xoxo Group Inc"/>
+    <SYMBOL2 c="XPO" n="Express-1 Expedited Solutions"/>
+    <SYMBOL2 c="XRM" n="Xerium Technologies"/>
+    <SYMBOL2 c="XRS" n="Tal Education Group"/>
+    <SYMBOL2 c="XRX" n="Xerox Corp"/>
+    <SYMBOL2 c="XUE" n="Xueda Education Group"/>
+    <SYMBOL2 c="XYL" n="Xylem Inc. Common Stock New Whe"/>
+    <SYMBOL2 c="Y" n="Alleghany Corp"/>
+    <SYMBOL2 c="YDKN" n="Yadkin Valley Financial Corp"/>
+    <SYMBOL2 c="YELP" n="Yelp Inc"/>
+    <SYMBOL2 c="YGE" n="Yingli Green Energy Holding Company"/>
+    <SYMBOL2 c="YOKU" n="Youku.Com Inc"/>
+    <SYMBOL2 c="YPF" n="Ypf Sociedad Anonima"/>
+    <SYMBOL2 c="YUM" n="Yum! Brands"/>
+    <SYMBOL2 c="YUME" n="Yume Inc"/>
+    <SYMBOL2 c="YZC" n="Yanzhou Coal Mining Company"/>
+    <SYMBOL2 c="ZA" n="Zuoan Fashion Limited American"/>
+    <SYMBOL2 c="ZAYO" n="Zayo Group Holdings Inc."/>
+    <SYMBOL2 c="ZB-A" n="Zions Bc Dp Shs A"/>
+    <SYMBOL2 c="ZB-F" n="Zions Bancorporation"/>
+    <SYMBOL2 c="ZB-G" n="Zions Bancorporation"/>
+    <SYMBOL2 c="ZB-H" n="Zions Bancorporation"/>
+    <SYMBOL2 c="ZBK" n="Zion Bancorporation"/>
+    <SYMBOL2 c="ZEN" n="Zendesk Inc."/>
+    <SYMBOL2 c="ZEP" n="Zep Inc"/>
+    <SYMBOL2 c="ZF" n="Zweig Fund"/>
+    <SYMBOL2 c="ZFC" n="Zais Financial Corp. Common Sto"/>
+    <SYMBOL2 c="ZMH" n="Zimmer Holdings"/>
+    <SYMBOL2 c="ZNH" n="China Southern Airlines Company"/>
+    <SYMBOL2 c="ZOES" n="Zoe&#39S Kitchen Inc."/>
+    <SYMBOL2 c="ZPIN" n="Zhaopin Ltd"/>
+    <SYMBOL2 c="ZQK" n="Quiksilver"/>
+    <SYMBOL2 c="ZTR" n="Zweig Total Return Fund"/>
+    <SYMBOL2 c="ZTS" n="Zoetis Inc. Class A Common Stoc"/>
+    <SYMBOL2 c="ZX" n="China Zenix Auto International"/>
+  </SYMBOLS2>
+</RESPONSE>

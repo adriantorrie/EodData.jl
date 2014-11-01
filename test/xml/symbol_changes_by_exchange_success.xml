@@ -1,0 +1,8 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.SymbolChangesByExchange" Message="Success" Date="2014-11-01T04:04:15.696625-05:00">
+  <SYMBOLCHANGES>
+    <SYMBOLCHANGE DateTime="2014-09-08T00:00:00" OldSymbol="MRF" NewSymbol="JMM" ExchangeCode="NYSE" NewExchangeCode="NYSE"/>
+    <SYMBOLCHANGE DateTime="2014-09-16T00:00:00" OldSymbol="WH" NewSymbol="WSHLY" ExchangeCode="NYSE" NewExchangeCode="OTCBB"/>
+    <SYMBOLCHANGE DateTime="2014-09-23T00:00:00" OldSymbol="PRIS" NewSymbol="PRISY" ExchangeCode="NYSE" NewExchangeCode="OTCBB"/>
+    <SYMBOLCHANGE DateTime="2014-10-06T00:00:00" OldSymbol="LGP" NewSymbol="CAPL" ExchangeCode="NYSE" NewExchangeCode="NYSE"/>
+  </SYMBOLCHANGES>
+</RESPONSE>

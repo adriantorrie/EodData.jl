@@ -1,0 +1,3 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.SymbolGet" Message="Success" Date="2014-11-01T04:10:25.102875-05:00">
+  <SYMBOL Code="C" Name="Citigroup Inc" LongName="Citigroup Inc" DateTime="2014-10-31T00:00:00"/>
+</RESPONSE>

@@ -1,0 +1,3 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.SymbolChart" Message="Success" Date="2014-11-01T04:08:46.056-05:00">
+  <CHART>http://chart.eoddata.com?e=nyse&s=C</CHART>
+</RESPONSE>

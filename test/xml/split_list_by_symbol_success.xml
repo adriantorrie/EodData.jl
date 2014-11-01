@@ -1,0 +1,6 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.SplitListBySymbol" Message="Success" Date="2014-11-01T04:02:02.165375-05:00">
+  <SPLITS>
+    <SPLIT Exchange="NYSE" Symbol="NCT" DateTime="2014-10-23T00:00:00" Ratio="1-2"/>
+    <SPLIT Exchange="NYSE" Symbol="NCT" DateTime="2014-08-19T00:00:00" Ratio="1-3"/>
+  </SPLITS>
+</RESPONSE>

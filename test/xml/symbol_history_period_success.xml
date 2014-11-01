@@ -1,0 +1,12 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.SymbolHistoryPeriod" Message="Success" Date="0001-01-01T00:00:00">
+  <QUOTES>
+    <QUOTE Symbol="c" Description="" Name="" DateTime="2014-10-30T09:00:00" Open="52.47" High="52.5" Low="52.47" Close="52.5" Volume="1500" OpenInterest="0" Previous="0" Change="0" Bid="0" Ask="0" PreviousClose="0" NextOpen="0" Modified="0001-01-01T00:00:00"/>
+    <QUOTE Symbol="c" Description="" Name="" DateTime="2014-10-30T10:00:00" Open="52.53" High="52.54" Low="52.38" Close="52.52" Volume="483564" OpenInterest="0" Previous="0" Change="0" Bid="0" Ask="0" PreviousClose="0" NextOpen="0" Modified="0001-01-01T00:00:00"/>
+    <QUOTE Symbol="c" Description="" Name="" DateTime="2014-10-30T11:00:00" Open="52.77" High="52.89" Low="52.77" Close="52.81" Volume="288519" OpenInterest="0" Previous="0" Change="0" Bid="0" Ask="0" PreviousClose="0" NextOpen="0" Modified="0001-01-01T00:00:00"/>
+    <QUOTE Symbol="c" Description="" Name="" DateTime="2014-10-30T12:00:00" Open="52.97" High="52.98" Low="52.92" Close="52.92" Volume="139848" OpenInterest="0" Previous="0" Change="0" Bid="0" Ask="0" PreviousClose="0" NextOpen="0" Modified="0001-01-01T00:00:00"/>
+    <QUOTE Symbol="c" Description="" Name="" DateTime="2014-10-30T13:00:00" Open="52.97" High="52.99" Low="52.97" Close="52.98" Volume="40518" OpenInterest="0" Previous="0" Change="0" Bid="0" Ask="0" PreviousClose="0" NextOpen="0" Modified="0001-01-01T00:00:00"/>
+    <QUOTE Symbol="c" Description="" Name="" DateTime="2014-10-30T14:00:00" Open="53.3" High="53.3" Low="53.28" Close="53.3" Volume="45611" OpenInterest="0" Previous="0" Change="0" Bid="0" Ask="0" PreviousClose="0" NextOpen="0" Modified="0001-01-01T00:00:00"/>
+    <QUOTE Symbol="c" Description="" Name="" DateTime="2014-10-30T15:00:00" Open="53.07" High="53.12" Low="53.05" Close="53.12" Volume="246989" OpenInterest="0" Previous="0" Change="0" Bid="0" Ask="0" PreviousClose="0" NextOpen="0" Modified="0001-01-01T00:00:00"/>
+    <QUOTE Symbol="c" Description="" Name="" DateTime="2014-10-30T16:00:00" Open="53.15" High="53.15" Low="52.64" Close="52.64" Volume="948272" OpenInterest="0" Previous="0" Change="0" Bid="0" Ask="0" PreviousClose="0" NextOpen="0" Modified="0001-01-01T00:00:00"/>
+  </QUOTES>
+</RESPONSE>
