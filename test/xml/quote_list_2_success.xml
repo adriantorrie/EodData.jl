@@ -1,0 +1,5 @@
+<RESPONSE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.eoddata.com/Data" Source="Data.QuoteList2" Message="Success" Date="2014-11-01T02:01:46.83725-05:00">
+  <QUOTES>
+    <QUOTE Symbol="C" Description="Citigroup Inc" Name="Citigroup Inc" DateTime="2014-10-31T00:00:00" Open="53.4" High="53.9" Low="52.99" Close="53.53" Volume="27642700" OpenInterest="0" Previous="53.15" Change="0.38" Bid="9.88" Ask="50.24" PreviousClose="0" NextOpen="0" Modified="2014-11-01T01:43:47.973"/>
+  </QUOTES>
+</RESPONSE>
