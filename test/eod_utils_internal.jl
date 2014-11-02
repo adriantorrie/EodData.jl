@@ -67,5 +67,4 @@ nyse = exchanges["NYSE"]
 # validate_http_response()
 # build a response that succeeeds, and another that fails to for a @test_throws
 response = HTTPC.post("http://requestb.in/api/v1/bins", "")
-validate_http_response(response)
-@test response.http_code == 200 ? validate_http_response(response) : true
+@test response.http_code == 200 ? EodData.validate_http_response(response) : true
