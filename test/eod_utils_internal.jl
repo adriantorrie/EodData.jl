@@ -15,11 +15,11 @@ const MODULE_HOME = joinpath(homedir(), ".julia",  "v" * string(VERSION.major) *
 
 # set_countries()
 # ---------------
-xml_tree_c_i_t = xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "countries_invalid_token.xml")))
-@test_throws ErrorException validate_xml(xml_tree_c_i_t)
+xml_tree_c_i_t = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "countries_invalid_token.xml")))
+@test_throws ErrorException EodData.validate_xml(xml_tree_c_i_t)
 
-xml_tree_c_s = xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "countries_success.xml")))
-@test validate_xml(xml_tree_c_s)
+xml_tree_c_s = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "countries_success.xml")))
+@test EodData.validate_xml(xml_tree_c_s)
 
 countries = EodData.set_countries(xml_tree_c_s)
 @test length(countries) == 243
@@ -31,8 +31,8 @@ usa = countries["US"]
 
 # set_data_formats()
 # ------------------
-xml_tree_df_i_t = xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "data_formats_invalid_token.xml")))
-@test_throws ErrorException validate_xml(xml_tree_df_i_t)
+xml_tree_df_i_t = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "data_formats_invalid_token.xml")))
+@test_throws ErrorException EodData.validate_xml(xml_tree_df_i_t)
 
 # xp_parse is failing to read the xml file
 # xml_tree_df_s = xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "data_formats_success.xml")))
@@ -40,11 +40,11 @@ xml_tree_df_i_t = xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "data
 
 # set_exchanges()
 # --------------
-xml_tree_el_i_t = xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "exchange_list_invalid_token.xml")))
-@test_throws ErrorException validate_xml(xml_tree_el_i_t)
+xml_tree_el_i_t = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "exchange_list_invalid_token.xml")))
+@test_throws ErrorException EodData.validate_xml(xml_tree_el_i_t)
 
-xml_tree_el_s = xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "exchange_list_success.xml")))
-@test validate_xml(xml_tree_el_s)
+xml_tree_el_s = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "exchange_list_success.xml")))
+@test EodData.validate_xml(xml_tree_el_s)
 
 exchanges = EodData.set_exchanges(xml_tree_el_s)
 @test length(exchanges) == 33
