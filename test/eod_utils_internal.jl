@@ -1,11 +1,11 @@
 #=
-	Unit tests for EodData internal utility functions
+    Unit tests for EodData internal utility functions
 =#
 using Base.Test
 if VERSION < v"0.4-"
-	using Dates
+    using Dates
 else
-	using Base.Dates
+    using Base.Dates
 end
 using EodData
 using HTTPClient.HTTPC

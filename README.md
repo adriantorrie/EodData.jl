@@ -144,6 +144,8 @@ println(nyse.name)
 println(nyse.advances)
 println(nyse.declines)
 println("Advance/Decline Ratio \= $(nyse.advances / nyse.declines)")
+
+intraday_exchanges = filter((k,v) -> v.is_intraday == true, exchanges)
 ```
 
 ### exchange_months()

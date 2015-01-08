@@ -1,5 +1,5 @@
 #=
-	EodData external utility functions
+    EodData external utility functions
 =#
 export set_date_string
 
@@ -13,5 +13,5 @@ export set_date_string
 # OUTPUT: Xml tree of the type ::ETree
 # http://ws.eoddata.com/data.asmx?op=CountryList
 function set_date_string(dt)
-	return string(year(dt)) * ("0" * string(month(dt)))[end - 1:end] * ("0" * string(day(dt)))[end - 1:end]
+    return string(year(dt)) * ("0" * string(month(dt)))[end - 1:end] * ("0" * string(day(dt)))[end - 1:end]
 end

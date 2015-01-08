@@ -1,12 +1,12 @@
 #=
-	Unit tests for EodData external utility functions
+    Unit tests for EodData external utility functions
 =#
 using Base.Test
 using EodData
 if VERSION < v"0.4-"
-	using Dates
+    using Dates
 else
-	using Base.Dates
+    using Base.Dates
 end
 
 dt = DateTime("20140101", "yyyymmdd")

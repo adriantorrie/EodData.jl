@@ -4,7 +4,7 @@ const USERNAME = "string"
 const PASSWORD = "string"
 
 #=
-	EodData Web Service Calls
+    EodData Web Service Calls
 =#
 
 # login()
@@ -45,7 +45,7 @@ csv = formats["CSV"]
 println(csv.name)
 println(csv.format_header)
 for column=values(csv.columns)
-	println("$(column.column_name) | $(column.column_header)")
+    println("$(column.column_name) | $(column.column_header)")
 end
 
 # exchange_get()
@@ -72,6 +72,8 @@ println(nyse.advances)
 println(nyse.declines)
 println("Advance/Decline Ratio \= $(nyse.advances / nyse.declines)")
 
+intraday_exchanges = filter((k,v) -> v.is_intraday == true, exchanges)
+
 # exchange_months()
 # -----------------
 # Call and assign the number of months history available to download
@@ -88,7 +90,7 @@ nzx_fundamentals = fundamental_list(resp.token,"NZX")
 
 nzx_market_cap = 0.0
 for listing = values(nzx_fundamentals)
-	nzx_market_cap += listing.market_cap
+    nzx_market_cap += listing.market_cap
 end
 println(nzx_market_cap)
 @sprintf "%.2f" nzx_market_cap
@@ -137,7 +139,7 @@ println(my_quotes)
 # The collection can be iterated over if you wish
 nyse_20140605 = quote_list_by_date(resp.token, "NYSE", "20140605")
 for qt = values(nyse_20140605)
-	println("$(qt.name) | $(qt.close)")
+    println("$(qt.name) | $(qt.close)")
 end
 
 # quote_list_by_date_2()
@@ -147,7 +149,7 @@ end
 # The collection can be iterated over if you wish
 asx_20131203 = quote_list_by_date_2(resp.token, "ASX", "20131203")
 for qt = values(asx_20131203)
-	println("$(qt.ticker_code) | $(qt.close)")
+    println("$(qt.ticker_code) | $(qt.close)")
 end
 
 # quote_list_by_date_period()
@@ -159,11 +161,11 @@ end
 cme_20141008_h = quote_list_by_date_period(resp.token, "CME", "20141008", "h")
 
 for k = keys(cme_20141008_h)
-	println(k)
+    println(k)
 end
 
 for qt = values(cme_20141008_h)
-	println("$(qt.ticker_code)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
+    println("$(qt.ticker_code)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
 end
 
 cme_h = collect(cme_20141008_h)
@@ -177,11 +179,11 @@ cme_h = collect(cme_20141008_h)
 cme_20141008_h_2 = quote_list_by_date_period_2(resp.token, "CME", "20141008", "h")
 
 for k = keys(cme_20141008_h_2)
-	println(k)
+    println(k)
 end
 
 for qt = values(cme_20141008_h_2)
-	println("$(qt.ticker_code)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
+    println("$(qt.ticker_code)\t|\tDate Time: $(qt.date_time)\t|\tClose: $(qt.close)\t|\tVolume: $(qt.volume)")
 end
 
 cme_h_2 = collect(cme_20141008_h_2)
@@ -198,7 +200,7 @@ println(splits)
 # Call and assign the most recent splits for a given symbol on a particular exchange
 nct_splits = split_list_by_symbol(resp.token, "NYSE", "NCT")
 for sp = values(nct_splits)
-	println("$(sp.exchange_code)\t|\t$(sp.ticker_code)\t|\tDate Time: $(sp.date_time)\t|\tRatio: $(sp.ratio)\t|\tPrice Multiplier: $(sp.price_multiplier)\t|\tReverse Split: $(sp.is_reverse_split)")
+    println("$(sp.exchange_code)\t|\t$(sp.ticker_code)\t|\tDate Time: $(sp.date_time)\t|\tRatio: $(sp.ratio)\t|\tPrice Multiplier: $(sp.price_multiplier)\t|\tReverse Split: $(sp.is_reverse_split)")
 end
 
 # symbol_changes_by_exchange()
@@ -207,7 +209,7 @@ end
 # and changes to exchanges
 amex_changes = symbol_changes_by_exchange(resp.token, "AMEX")
 for sc = values(amex_changes)
-	println(sc)
+    println(sc)
 end
 
 # symbol_chart()
@@ -277,7 +279,7 @@ println(pg_2014102_h)
 # * next_open
 # * modified
 amzn_20141020_20141024_30 =
-	symbol_history_period_by_date_range(resp.token, "NASDAQ", "AMZN", "20141020", "20141024", "30")
+    symbol_history_period_by_date_range(resp.token, "NASDAQ", "AMZN", "20141020", "20141024", "30")
 println(amzn_20141020_20141024_30)
 
 # symbol_list()
@@ -328,7 +330,7 @@ validate_access(resp.token, "NYSE", set_date_string(today()), "h")
 
 
 #=
-	EodData external utility functions
+    EodData external utility functions
 =#
 # set_date_string()
 # -----------------
