@@ -32,9 +32,9 @@ end
 # --------------
 # Returns a collection of countries
 # INPUT: XML tree
-# OUTPUT:  Dict() of countries of type ::Dict{String, Country}
+# OUTPUT:  Dict() of countries of type ::OrderedDict{String, Country}
 function set_countries(xml_tree::ETree)
-    countries = Dict{String, Country}()
+    countries = OrderedDict{String, Country}()
     for c_xml in find(xml_tree, "/RESPONSE/COUNTRIES/CountryBase")
         countries[c.code] = c = Country(c_xml)
     end
@@ -45,9 +45,9 @@ end
 # --------------
 # Returns a collection of data formats
 # INPUT: XML tree
-# OUTPUT:  Dict() of data formats of type ::Dict{String, Exchange}
+# OUTPUT:  Dict() of data formats of type ::OrderedDict{String, Exchange}
 function set_data_formats(xml_tree::ETree)
-    formats = Dict{String, DataFormat}()
+    formats = OrderedDict{String, DataFormat}()
     for df_xml in find(xml_tree, "/RESPONSE/DATAFORMATS/DATAFORMAT")
         formats[df.code] = df = DataFormat(df_xml)
     end
@@ -58,9 +58,9 @@ end
 # --------------
 # Returns a collection of exchanges
 # INPUT: XML tree
-# OUTPUT:  Dict() of exchanges of type ::Dict{String, Exchange}
+# OUTPUT:  Dict() of exchanges of type ::OrderedDict{String, Exchange}
 function set_exchanges(xml_tree::ETree)
-    exchanges = Dict{String, Exchange}()
+    exchanges = OrderedDict{String, Exchange}()
     for ex_xml in find(xml_tree, "/RESPONSE/EXCHANGES/EXCHANGE")
         exchanges[ex.code] = ex = Exchange(ex_xml)
     end
@@ -71,9 +71,9 @@ end
 # --------------
 # Returns a collection of fundamentals
 # INPUT: XML tree
-# OUTPUT:  Dict() of fundamentals of type ::Dict{String, Fundamental}
+# OUTPUT:  Dict() of fundamentals of type ::OrderedDict{String, Fundamental}
 function set_fundamentals(xml_tree::ETree)
-    fundamentals = Dict{String, Fundamental}()
+    fundamentals = OrderedDict{String, Fundamental}()
     for fl_xml in find(xml_tree, "/RESPONSE/FUNDAMENTALS/FUNDAMENTAL")
         fundamentals[fl.ticker_code] = fl = Fundamental(fl_xml)
     end
@@ -84,9 +84,9 @@ end
 # --------------
 # Returns a collection of quotes
 # INPUT: XML tree
-# OUTPUT:  Dict() of quotes of type ::Dict{String, Quote}
+# OUTPUT:  Dict() of quotes of type ::OrderedDict{String, Quote}
 function set_quotes(xml_tree::ETree)
-    quotes = Dict{String, Quote}()
+    quotes = OrderedDict{String, Quote}()
     for qt_xml in find(xml_tree, "/RESPONSE/QUOTES/QUOTE")
         quotes[qt.ticker_code * "_" * string(qt.date_time)] = qt = Quote(qt_xml)
     end
@@ -97,9 +97,9 @@ end
 # --------------
 # Returns a collection of quotes
 # INPUT: XML tree
-# OUTPUT:  Dict() of quotes of type ::Dict{String, Quote_2}
+# OUTPUT:  Dict() of quotes of type ::OrderedDict{String, Quote_2}
 function set_quotes_2(xml_tree::ETree)
-    quotes = Dict{String, Quote_2}()
+    quotes = OrderedDict{String, Quote_2}()
     for qt_2_xml in find(xml_tree, "/RESPONSE/QUOTES2/QUOTE2")
         quotes[qt_2.ticker_code * "_" * string(qt_2.date_time)] = qt_2 = Quote_2(qt_2_xml)
     end
@@ -110,9 +110,9 @@ end
 # --------------
 # Returns a collection of splits
 # INPUT: XML tree
-# OUTPUT:  Dict() of splits of type ::Dict{String, Split}
+# OUTPUT:  Dict() of splits of type ::OrderedDict{String, Split}
 function set_splits(xml_tree::ETree)
-    splits = Dict{String, Split}()
+    splits = OrderedDict{String, Split}()
     for sp_xml in find(xml_tree, "/RESPONSE/SPLITS/SPLIT")
         splits[sp.ticker_code * "_" * string(sp.date_time)] = sp = Split(sp_xml)
     end
@@ -123,10 +123,10 @@ end
 # --------------
 # Returns a collection of technicals
 # INPUT: XML tree
-# OUTPUT: Dict() of technicals of type ::Dict{String, Technical}
+# OUTPUT: Dict() of technicals of type ::OrderedDict{String, Technical}
 function set_technicals(xml_tree::ETree)
-    # Shred xml_tree into a Dict{String, Technical}
-    technicals = Dict{String, Technical}()
+    # Shred xml_tree into a OrderedDict{String, Technical}
+    technicals = OrderedDict{String, Technical}()
     for tl_xml in find(xml_tree, "/RESPONSE/TECHNICALS/TECHNICAL")
         technicals[tl.ticker_code] = tl = Technical(tl_xml)
     end
@@ -137,9 +137,9 @@ end
 # --------------
 # Returns a collection of tickers
 # INPUT: XML tree
-# OUTPUT: Dict() of tickers of type ::Dict{String, Ticker}
+# OUTPUT: Dict() of tickers of type ::OrderedDict{String, Ticker}
 function set_tickers(xml_tree::ETree)
-    tickers = Dict{String, Ticker}()
+    tickers = OrderedDict{String, Ticker}()
     for tk_xml in find(xml_tree, "/RESPONSE/SYMBOLS/SYMBOL")
         tickers[tk.code] = tk = Ticker(tk_xml)
     end
@@ -150,9 +150,9 @@ end
 # --------------
 # Returns a collection of tickers
 # INPUT: XML tree
-# OUTPUT: Dict() of tickers of type ::Dict{String, Ticker_2}
+# OUTPUT: Dict() of tickers of type ::OrderedDict{String, Ticker_2}
 function set_tickers_2(xml_tree::ETree)
-    tickers = Dict{String, Ticker_2}()
+    tickers = OrderedDict{String, Ticker_2}()
     for tk_2_xml in find(xml_tree, "/RESPONSE/SYMBOLS2/SYMBOL2")
         tickers[tk_2.code] = tk_2 = Ticker_2(tk_2_xml)
     end
@@ -163,9 +163,9 @@ end
 # --------------
 # Returns a collection of ticker changes
 # INPUT: XML tree
-# OUTPUT: Dict() of ticker changes of type ::Dict{String, TickerChange}
+# OUTPUT: Dict() of ticker changes of type ::OrderedDict{String, TickerChange}
 function set_ticker_changes(xml_tree::ETree)
-    ticker_changes = Dict{String, TickerChange}()
+    ticker_changes = OrderedDict{String, TickerChange}()
     for tc_xml in find(xml_tree, "/RESPONSE/SYMBOLCHANGES/SYMBOLCHANGE")
         ticker_changes[tc.old_ticker_code * "_" * string(tc.date_time)] = tc = TickerChange(tc_xml)
     end

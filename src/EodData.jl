@@ -28,6 +28,7 @@ module EodData
     - https://github.com/amitmurthy/LibExpat.jl
     - http://nbviewer.ipython.org/github/amitmurthy/LibExpat.jl/blob/master/libexpat_test.ipynb
 =#
+using DataStructures
 if VERSION < v"0.4-"
     using Dates
 else
@@ -122,7 +123,7 @@ type DataFormat
     exchange_filename_format_date_range::String
     ticker_filename_format_date::String
     ticker_filename_format_date_range::String
-    columns::Dict{Int, DataFormatColumn}
+    columns::OrderedDict{Int, DataFormatColumn}
 
     # Default constructor
     DataFormat(code::String, name::String, header_format::Vector{String}, date_format::String,
@@ -131,7 +132,7 @@ type DataFormat
                filename_exchange_code::String, filename_date::Bool, include_header_row::Bool,
                hour_format::String, datetime_seperator::String, exchange_filename_format_date::String,
                exchange_filename_format_date_range::String, ticker_filename_format_date::String,
-               ticker_filename_format_date_range::String, columns::Dict{Int, DataFormatColumn}) =
+               ticker_filename_format_date_range::String, columns::OrderedDict{Int, DataFormatColumn}) =
         new(code, name, header_format, date_format, extension, include_suffix, tab_column_seperator,
             column_seperator, text_qualifier, filename_prefix, filename_exchange_code, filename_date,
             include_header_row, hour_format, datetime_seperator, exchange_filename_format_date,
@@ -160,7 +161,7 @@ type DataFormat
         ticker_filename_format_date::String = strip(get(df.attr,"SymbolFilenameFormatDate",""))
         ticker_filename_format_date_range::String = strip(get(df.attr,"SymbolFilenameFormatDateRange",""))
 
-        columns = Dict{Int, DataFormatColumn}()
+        columns = OrderedDict{Int, DataFormatColumn}()
         for col_xml in find(df, "COLUMNS/DATAFORMAT_COLUMN")
             columns[col.sort_order] = col = DataFormatColumn(col_xml)
         end
