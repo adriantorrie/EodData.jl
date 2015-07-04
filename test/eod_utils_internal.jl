@@ -11,7 +11,7 @@ using EodData
 using HTTPClient.HTTPC
 using LibExpat
 
-const MODULE_HOME = joinpath(homedir(), ".julia",  "v" * string(VERSION.major) * "." * string(VERSION.minor), "EodDataEodDataTestXml")
+const MODULE_HOME = joinpath(homedir(), ".julia",  "v" * string(VERSION.major) * "." * string(VERSION.minor), "EodDataTestXml")
 const TEST_HOME = joinpath("$MODULE_HOME", "xml")
 
 # set_countries()
