@@ -10,7 +10,6 @@ for in-depth documentation, and references.
 
 ## Package Dependencies
 * [EodData Web Service (Membership required)](http://ws.eoddata.com/data.asmx)
-
 * [Dates.jl](https://github.com/JuliaLang/julia/tree/master/base/dates)
 * [HTTPClient.jl](https://github.com/JuliaWeb/HTTPClient.jl)
 * [LibExpat.jl](https://github.com/amitmurthy/LibExpat.jl)
