@@ -1,5 +1,6 @@
 # EodData.jl
 [![Build Status](https://travis-ci.org/adriantorrie/EodData.jl.svg?branch=master)](https://travis-ci.org/adriantorrie/EodData.jl)
+[![Coverage Status](https://coveralls.io/repos/adriantorrie/EodData.jl/badge.svg?branch=master)](https://coveralls.io/r/adriantorrie/EodData.jl?branch=master)
 
 Julia package for connecting to EodData.com and downloading financial markets data.
 
