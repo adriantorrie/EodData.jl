@@ -11,14 +11,15 @@ using EodData
 using HTTPClient.HTTPC
 using LibExpat
 
-const MODULE_HOME = joinpath(homedir(), ".julia",  "v" * string(VERSION.major) * "." * string(VERSION.minor), "EodData")
+const MODULE_HOME = joinpath(homedir(), ".julia",  "v" * string(VERSION.major) * "." * string(VERSION.minor), "EodDataEodDataTestXml")
+const TEST_HOME = joinpath("$MODULE_HOME", "xml")
 
 # set_countries()
 # ---------------
-xml_tree_c_i_t = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "countries_invalid_token.xml")))
+xml_tree_c_i_t = LibExpat.xp_parse(readall(joinpath("$TEST_HOME", "countries_invalid_token.xml")))
 @test_throws ErrorException EodData.validate_xml(xml_tree_c_i_t)
 
-xml_tree_c_s = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "countries_success.xml")))
+xml_tree_c_s = LibExpat.xp_parse(readall(joinpath("$TEST_HOME", "countries_success.xml")))
 @test EodData.validate_xml(xml_tree_c_s)
 
 countries = EodData.set_countries(xml_tree_c_s)
@@ -31,7 +32,7 @@ usa = countries["US"]
 
 # set_data_formats()
 # ------------------
-xml_tree_df_i_t = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "data_formats_invalid_token.xml")))
+xml_tree_df_i_t = LibExpat.xp_parse(readall(joinpath("$TEST_HOME", "data_formats_invalid_token.xml")))
 @test_throws ErrorException EodData.validate_xml(xml_tree_df_i_t)
 
 # xp_parse is failing to read the xml file
@@ -40,10 +41,10 @@ xml_tree_df_i_t = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xm
 
 # set_exchanges()
 # --------------
-xml_tree_el_i_t = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "exchange_list_invalid_token.xml")))
+xml_tree_el_i_t = LibExpat.xp_parse(readall(joinpath("$TEST_HOME", "exchange_list_invalid_token.xml")))
 @test_throws ErrorException EodData.validate_xml(xml_tree_el_i_t)
 
-xml_tree_el_s = LibExpat.xp_parse(readall(joinpath("$MODULE_HOME", "test", "xml", "exchange_list_success.xml")))
+xml_tree_el_s = LibExpat.xp_parse(readall(joinpath("$TEST_HOME", "exchange_list_success.xml")))
 @test EodData.validate_xml(xml_tree_el_s)
 
 exchanges = EodData.set_exchanges(xml_tree_el_s)
